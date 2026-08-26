@@ -532,12 +532,12 @@
       position: relative;
       width: 100%;
       max-width: 780px;
-      height: 225px;
+      min-height: 245px;
       padding: 0;
       border: 0;
       background: transparent;
       box-shadow: none;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .team-quote-slide {
@@ -552,9 +552,8 @@
     }
 
     .team-quote-slide blockquote {
-      max-height: 148px;
       margin: 0 0 22px;
-      overflow: hidden;
+      overflow: visible;
       color: var(--white);
       font-size: clamp(18px, 1.5vw, 23px);
       line-height: 1.42;
@@ -859,12 +858,14 @@
       }
 
       .quote-carousel {
-        height: 190px;
+        height: 230px;
       }
 
       .team-quote-slide blockquote {
-        max-height: 112px;
+        max-height: none;
+        overflow: visible;
         font-size: 18px;
+        line-height: 1.42;
       }
 
       .team-quote-slide blockquote::before {
