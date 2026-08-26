@@ -1,0 +1,2627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Exotic Dairy — Experience Hub</title>
+
+  <meta
+    name="description"
+    content="Discover the future Exotic Dairy Experience Hub — an integrated ecosystem bringing together animals, research, product development, production, education and public participation."
+  />
+
+  <meta property="og:title" content="Exotic Dairy — Experience Hub" />
+  <meta property="og:description" content="Science. Nature. Experience." />
+  <meta property="og:image" content="https://exoticdairy.com/assets/images/experience-hub.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exoticdairy.com/experience-hub.html" />
+  <meta property="og:site_name" content="Exotic Dairy" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Exotic Dairy — Experience Hub" />
+  <meta name="twitter:description" content="Science. Nature. Experience." />
+  <meta name="twitter:image" content="https://exoticdairy.com/assets/images/experience-hub.png" />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .hub-hero {
+      background: var(--navy);
+    }
+
+    .hub-hero-inner {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6, 16, 31, .98) 0%,
+          rgba(6, 16, 31, .90) 34%,
+          rgba(6, 16, 31, .54) 64%,
+          rgba(6, 16, 31, .12) 100%
+        ),
+        url("assets/images/experience-hub.png") center right / cover no-repeat;
+    }
+
+    .hub-hero-content {
+      max-width: 760px;
+      padding: 100px 7vw;
+      color: var(--white);
+      position:relative;
+      z-index:5;
+    }
+
+    .hub-hero-content .eyebrow {
+      color: #8fd2ff;
+    }
+
+    .hub-hero-content h1 {
+      margin: 18px 0 26px;
+      font-size: clamp(52px, 6vw, 90px);
+      line-height: .92;
+      letter-spacing: -2px;
+    }
+
+    .hub-hero-text {
+      max-width: 610px;
+      color: #d7e3f2;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .hub-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hub-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid rgba(255, 255, 255, .55);
+      border-radius: 999px;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: .25s ease;
+    }
+
+    .hub-btn-outline:hover {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .hub-pillars {
+      padding: 46px 7vw;
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hub-pillars-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .hub-pillar {
+      padding: 8px 28px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .hub-pillar:last-child {
+      border-right: 0;
+    }
+
+    .hub-pillar-icon {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 50%;
+      background: #f5faff;
+      color: var(--blue);
+    }
+
+    .hub-pillar-icon svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .hub-pillar h3 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .hub-pillar p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .hub-concept {
+      padding: 100px 7vw;
+      background: var(--bg);
+    }
+
+    .hub-concept-inner {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 70px;
+      align-items: center;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .hub-concept-copy h2 {
+      margin: 12px 0 24px;
+      color: var(--navy);
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1;
+    }
+
+    .hub-concept-copy p {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .hub-masterplan {
+      position: relative;
+      overflow: hidden;
+      min-height: 470px;
+      border-radius: 24px;
+      background: #dfeaf5;
+      box-shadow: var(--shadow);
+    }
+
+    .hub-masterplan > img {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hub-map-point {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--white);
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 10px 25px rgba(7, 21, 40, .25);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .hub-map-point:nth-of-type(1) {
+      top: 53%;
+      left: 14%;
+    }
+
+    .hub-map-point:nth-of-type(2) {
+      top: 29%;
+      left: 39%;
+    }
+
+    .hub-map-point:nth-of-type(3) {
+      top: 45%;
+      left: 61%;
+    }
+
+    .hub-map-point:nth-of-type(4) {
+      top: 63%;
+      left: 78%;
+    }
+
+    .hub-map-point:nth-of-type(5) {
+      top: 24%;
+      left: 82%;
+    }
+
+    .hub-zones {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      max-width: 1240px;
+      margin: 48px auto 0;
+    }
+
+    .hub-zone {
+      position: relative;
+      padding-top: 16px;
+      border-top: 2px solid var(--line);
+    }
+
+    .hub-zone-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 27px;
+      height: 27px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .hub-zone h3 {
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .hub-zone p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hub-experiences {
+      padding: 100px 7vw;
+      background: var(--white);
+    }
+
+    .hub-section-head {
+      max-width: 760px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+
+    .hub-section-head h2 {
+      margin: 12px 0 16px;
+      color: var(--navy);
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1;
+    }
+
+    .hub-section-head > p:last-child {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .hub-experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 34px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .hub-experience-card {
+      min-width: 0;
+    }
+
+    .hub-experience-trigger {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .hub-experience-image {
+      position: relative;
+      height: 370px;
+      overflow: hidden;
+      border-radius: 22px;
+      background: #edf4fa;
+    }
+
+    .hub-experience-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .hub-experience-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(6, 16, 31, .40) 100%
+      );
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    .hub-experience-open {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      z-index: 3;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 12px 30px rgba(7, 21, 40, .24);
+      font-size: 25px;
+      line-height: 1;
+      transition: .3s ease;
+    }
+
+    .hub-experience-trigger:hover .hub-experience-image img {
+      transform: scale(1.045);
+    }
+
+    .hub-experience-trigger:hover .hub-experience-image::after {
+      opacity: 1;
+    }
+
+    .hub-experience-trigger:hover .hub-experience-open {
+      transform: rotate(90deg) scale(1.06);
+    }
+
+    .hub-experience-copy {
+      padding: 24px 4px 0;
+    }
+
+    .hub-experience-copy .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .hub-experience-copy h3 {
+      margin-bottom: 13px;
+      color: var(--navy);
+      font-size: 29px;
+      line-height: 1.05;
+    }
+
+    .hub-experience-copy p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hub-experience-copy .eyebrow {
+    margin-bottom: 8px;
+    color: var(--blue);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 900;
+    }
+
+    .hub-journey {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .hub-journey-arrow {
+      color: #9eb2c8;
+    }
+
+    .hub-sustainability {
+      padding: 72px 7vw;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6, 16, 31, .97) 0%,
+          rgba(6, 16, 31, .90) 48%,
+          rgba(6, 16, 31, .72) 100%
+        ),
+        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .hub-sustainability-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .hub-sustainability-head {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .hub-sustainability-head .eyebrow {
+    color: #8fd2ff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 900;
+    }
+
+    .hub-sustainability-head h2 {
+      margin: 12px 0 14px;
+      font-size: clamp(36px, 4vw, 54px);
+      line-height: 1.02;
+    }
+
+    .hub-sustainability-head p {
+      color: #d7e3f2;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .hub-sustainability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .hub-sustainability-item {
+      padding: 24px 24px 8px 0;
+      border-right: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .hub-sustainability-item:last-child {
+      border-right: 0;
+    }
+
+    .hub-sustainability-item svg {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 17px;
+      color: #8fd2ff;
+    }
+
+    .hub-sustainability-item h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+
+    .hub-sustainability-item p {
+      color: #bfd0e2;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .hub-coming {
+      padding: 88px 7vw;
+      background: #071a33;
+      color: var(--white);
+    }
+
+    .hub-coming-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 60px;
+      align-items: center;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .hub-coming .eyebrow {
+    color: #8fd2ff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 900;
+    }
+
+    .hub-coming h2 {
+      max-width: 700px;
+      margin: 12px 0 18px;
+      font-size: clamp(38px, 4.5vw, 62px);
+      line-height: 1;
+    }
+
+    .hub-coming p {
+      max-width: 770px;
+      color: #cad9e9;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .hub-coming-badge {
+      min-width: 230px;
+      padding: 28px;
+      border: 1px solid rgba(143, 210, 255, .28);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .05);
+      text-align: center;
+    }
+
+    .hub-coming-badge span {
+      display: block;
+      color: #8fd2ff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 900;
+    }
+
+    .hub-coming-badge strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .hub-participation {
+      padding: 100px 7vw;
+      background: var(--bg);
+    }
+
+    .hub-participation {
+    padding: 100px 7vw;
+    background: var(--bg);
+    }
+
+    #crowd-participation {
+    scroll-margin-top: 86px;
+    }
+
+    .participation-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .participation-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 520px;
+      padding: 34px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: 0 18px 50px rgba(7, 21, 40, .07);
+    }
+
+    .participation-card.featured {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .participation-icon {
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 28px;
+      border-radius: 50%;
+      background: #eff7fe;
+      color: var(--blue);
+    }
+
+    .participation-card.featured .participation-icon {
+      background: rgba(255, 255, 255, .09);
+      color: #8fd2ff;
+    }
+
+    .participation-icon svg {
+      width: 31px;
+      height: 31px;
+    }
+
+    .participation-number {
+      margin-bottom: 9px;
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: .08em;
+      font-weight: 900;
+    }
+
+    .participation-card.featured .participation-number {
+      color: #8fd2ff;
+    }
+
+    .participation-card h3 {
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: 30px;
+      line-height: 1.05;
+    }
+
+    .participation-card.featured h3 {
+      color: var(--white);
+    }
+
+    .participation-card > p {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .participation-card.featured > p {
+      color: #c7d7e8;
+    }
+
+    .participation-list {
+      display: grid;
+      gap: 11px;
+      margin-bottom: 30px;
+    }
+
+    .participation-list span {
+      position: relative;
+      padding-left: 22px;
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .participation-card.featured .participation-list span {
+      color: #d9e5f0;
+    }
+
+    .participation-list span::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .participation-card.featured .participation-list span::before {
+      color: #8fd2ff;
+    }
+
+    .participation-card .btn,
+    .participation-card .hub-btn-outline {
+      margin-top: auto;
+      width: fit-content;
+    }
+
+    .participation-note {
+      max-width: 900px;
+      margin: 40px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .hub-final-cta {
+      padding: 90px 7vw;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6, 16, 31, .96) 0%,
+          rgba(6, 16, 31, .88) 45%,
+          rgba(6, 16, 31, .62) 100%
+        ),
+        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .hub-final-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .hub-final-inner h2 {
+      margin-bottom: 16px;
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.04;
+    }
+
+    .hub-final-inner p {
+      max-width: 720px;
+      color: #d7e3f2;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 24px;
+      z-index: 9999;
+    }
+
+    .modal.is-open {
+      display: grid;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 16, 31, .72);
+      backdrop-filter: blur(7px);
+    }
+
+    .modal-panel {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+    }
+
+    .hub-detail-panel {
+      width: min(900px, calc(100% - 24px));
+      max-height: calc(100dvh - 48px);
+      overflow: auto;
+      padding: 0;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .30);
+    }
+
+    .hub-detail-panel .modal-x,
+    .participation-modal-panel .modal-x {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 5;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .95);
+      color: var(--blue);
+      box-shadow: 0 12px 28px rgba(7, 21, 40, .20);
+      font-size: 0;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .hub-detail-panel .modal-x::before,
+    .hub-detail-panel .modal-x::after,
+    .participation-modal-panel .modal-x::before,
+    .participation-modal-panel .modal-x::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 2.5px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .hub-detail-panel .modal-x::before,
+    .participation-modal-panel .modal-x::before {
+      transform: rotate(45deg);
+    }
+
+    .hub-detail-panel .modal-x::after,
+    .participation-modal-panel .modal-x::after {
+      transform: rotate(-45deg);
+    }
+
+    .hub-detail-panel .modal-x:hover,
+    .participation-modal-panel .modal-x:hover {
+      background: var(--blue);
+      transform: scale(1.06);
+    }
+
+    .hub-detail-panel .modal-x:hover::before,
+    .hub-detail-panel .modal-x:hover::after,
+    .participation-modal-panel .modal-x:hover::before,
+    .participation-modal-panel .modal-x:hover::after {
+      background: var(--white);
+    }
+
+    .hub-detail-hero {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .hub-detail-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hub-detail-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(6, 16, 31, .08),
+        rgba(6, 16, 31, .64)
+      );
+    }
+
+    .hub-detail-heading {
+      position: absolute;
+      left: 38px;
+      right: 90px;
+      bottom: 34px;
+      z-index: 2;
+      color: var(--white);
+    }
+
+    .hub-detail-heading .eyebrow {
+      color: #8fd2ff;
+    }
+
+    .hub-detail-heading h2 {
+      margin-top: 9px;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1;
+    }
+
+    .hub-detail-content {
+      padding: 38px;
+    }
+
+    .hub-detail-content p {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .hub-detail-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 24px;
+      margin-top: 28px;
+    }
+
+    .hub-detail-list span {
+      position: relative;
+      padding-left: 23px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .hub-detail-list span::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+    }
+
+    .participation-modal-panel {
+      width: min(760px, calc(100% - 24px));
+      max-height: calc(100dvh - 48px);
+      overflow: auto;
+      padding: 44px;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .30);
+    }
+
+    .participation-modal-icon {
+      width: 70px;
+      height: 70px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      border-radius: 50%;
+      background: #eef7fe;
+      color: var(--blue);
+    }
+
+    .participation-modal-icon svg {
+      width: 35px;
+      height: 35px;
+    }
+
+    .participation-modal-panel .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .participation-modal-panel h2 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: clamp(34px, 4vw, 48px);
+      line-height: 1;
+    }
+
+    .participation-modal-subtitle {
+      margin-bottom: 24px;
+      color: var(--blue);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .participation-modal-panel > p {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .participation-modal-benefits {
+      display: grid;
+      gap: 11px;
+      margin: 28px 0;
+    }
+
+    .participation-modal-benefits span {
+      position: relative;
+      padding-left: 24px;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .participation-modal-benefits span::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .participation-coming-box {
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 14px;
+      background: #eef6fd;
+      color: var(--navy);
+    }
+
+    .participation-coming-box strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--blue);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .participation-coming-box p {
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .adoption-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media(max-width: 1050px) {
+      .hub-pillars-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hub-pillar {
+        padding: 28px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hub-pillar:nth-child(2) {
+        border-right: 0;
+      }
+
+      .hub-pillar:nth-child(3),
+      .hub-pillar:nth-child(4) {
+        border-bottom: 0;
+      }
+
+      .hub-concept-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hub-zones {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hub-sustainability-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hub-sustainability-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .participation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .participation-card {
+        min-height: 0;
+      }
+    }
+
+    @media(max-width: 820px) {
+      .hub-hero-inner {
+        min-height: 620px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(6, 16, 31, .94) 0%,
+            rgba(6, 16, 31, .76) 54%,
+            rgba(6, 16, 31, .40) 100%
+          ),
+          url("assets/images/experience-hub.png") center / cover no-repeat;
+      }
+
+      .hub-hero-content {
+        padding: 70px 7vw;
+      }
+
+      .hub-experience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hub-zones {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hub-coming-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hub-coming-badge {
+        width: fit-content;
+      }
+
+      .hub-final-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hub-final-inner p {
+        margin: 0 auto;
+      }
+
+      .hub-detail-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 620px) {
+      .hub-hero-inner {
+        min-height: 580px;
+      }
+
+      .hub-hero-content {
+        padding: 60px 22px;
+      }
+
+      .hub-hero-content h1 {
+        letter-spacing: -1px;
+      }
+
+      .hub-hero-text {
+        font-size: 16px;
+      }
+
+      .hub-pillars,
+      .hub-concept,
+      .hub-experiences,
+      .hub-sustainability,
+      .hub-coming,
+      .hub-participation,
+      .hub-final-cta {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .hub-pillars-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hub-pillar {
+        padding: 22px 12px;
+      }
+
+      .hub-pillar-icon {
+        width: 50px;
+        height: 50px;
+      }
+
+      .hub-pillar h3 {
+        font-size: 15px;
+      }
+
+      .hub-pillar p {
+        font-size: 12px;
+      }
+
+      .hub-masterplan,
+      .hub-masterplan > img {
+        min-height: 310px;
+      }
+
+      .hub-map-point {
+        width: 31px;
+        height: 31px;
+        border-width: 2px;
+        font-size: 11px;
+      }
+
+      .hub-zones {
+        grid-template-columns: 1fr;
+      }
+
+      .hub-experience-image {
+        height: 270px;
+      }
+
+      .hub-sustainability-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hub-sustainability-item {
+        padding: 20px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .16);
+      }
+
+      .hub-sustainability-item:last-child {
+        border-bottom: 0;
+      }
+
+      .participation-card {
+        padding: 28px 24px;
+      }
+
+      .hub-detail-panel,
+      .participation-modal-panel {
+        width: calc(100% - 12px);
+        max-height: calc(100dvh - 20px);
+        border-radius: 20px;
+      }
+
+      .hub-detail-hero {
+        height: 310px;
+      }
+
+      .hub-detail-heading {
+        left: 24px;
+        bottom: 24px;
+      }
+
+      .hub-detail-content {
+        padding: 28px 24px;
+      }
+
+      .participation-modal-panel {
+        padding: 34px 24px 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.png" alt="Exotic Dairy logo" />
+      <span>EXOTIC<br>DAIRY</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      
+        <a href="products.html">Products</a>
+        <a href="our-solution.html">Our Solution</a>
+        <a class="active" href="experience-hub.html">Experience Hub</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="about.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+  
+        <a
+          class="mobile-contact-btn modal-trigger"
+          href="#"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#"
+      data-modal="contactModal"
+      data-interest="Experience Hub"
+    >
+      Get in touch
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="hub-hero">
+      <div class="hub-hero-inner">
+        <div class="hub-hero-content">
+          <p class="eyebrow">
+            Experience Hub • Coming Soon
+          </p>
+
+          <h1>
+            Science.<br>
+            Nature.<br>
+            Experience.
+          </h1>
+
+          <p class="hub-hero-text">
+            A new kind of destination bringing together research,
+            responsible animal breeding, product innovation and
+            immersive experiences around camel and donkey milk.
+          </p>
+
+          <div class="hub-hero-actions">
+            <a class="btn" href="#concept">
+              Explore the Concept
+            </a>
+
+            <a
+              class="hub-btn-outline modal-trigger"
+              href="#"
+              data-modal="contactModal"
+              data-interest="Experience Hub"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-pillars">
+      <div class="hub-pillars-inner">
+        <article class="hub-pillar">
+          <div class="hub-pillar-icon">
+            <svg 
+                viewBox="0 0 512 512" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M511.874,92.334c-3.346-26.823-23.47-32.411-34.645-32.411c-11.174,0-21.517,0-21.517,0
+                    s-4.187-17.602-16.762-17.602c-5.587,0-34.365,0-34.365,0l-17.882-5.587
+                    c-6.7,4.474,2.234,16.762,2.234,16.762s-12.295,9.782-12.295,47.78
+                    c0,37.998,0,51.414,0,63.702c0,24.591-39.975,31.344-56.48,5.709
+                    C290.589,124.745,252.583,120.271,228,82.28c-16.868-26.074-34.153-34.706-45.933-35.069
+                    c-11.78-0.364-23.145,4.384-31.155,13.03L30.784,178.348
+                    C8.949,198.509,0,218.626,0,243.216c0,24.583,0,53.641,0,67.057
+                    c0,13.408,22.35,15.649,22.35,2.233c0-13.408,0-58.122,0-58.122
+                    s15.657-11.168,15.657,0c0,11.183,0,69.298,0,84.946
+                    c0,15.65-17.883,31.298-17.883,40.239c0,8.942,31.291,93.873,31.291,93.873
+                    h31.291c0,0-20.116-71.523-20.116-80.464c0-7.146,19.465-30.2,28.83-45.842
+                    c-0.954,14.506-14.347,29.852-13.491,38.022c0.931,8.896,40.891,90.11,40.891,90.11
+                    l31.117-3.255c0,0-27.445-69.04-28.376-77.936c-0.931-8.895,25.893-45.758,27.536-59.068
+                    c3.642-29.595,2.135-18.201,2.135-18.201c-0.977-9.305,2.43-15.793,9.07-19.949
+                    c36.538,0,83.394,0,98.544,0c20.116,0,17.876,15.649,15.65,24.591
+                    c-2.241,8.941-19.669,58.115-19.669,58.115l2.234,93.88h31.291
+                    c0,0,2.24-82.705,2.24-89.406c0-2.324,4.157-11.152,9.6-22.175
+                    c0.795,9.91,1.575,17.701,1.575,17.701l13.408,93.88h31.291
+                    c0,0-8.934-82.705-8.934-89.406c0-5.686,5.36-72.507,7.889-100.838
+                    c75.544-2.559,103.911-42.216,103.911-136.989
+                    c0-29.058,4.475-29.066,14.53-29.066c10.054,0,26.785,2.006,35.72-1.34
+                    c8.949-3.347,6.708-11.175,6.708-11.175S512.994,103.509,511.874,92.334z"
+                    fill="currentColor"
+                />
+            </svg>
+          </div>
+
+          <h3>Animals &amp; Breeding</h3>
+
+          <p>
+            Responsible breeding, animal welfare and livestock development.
+          </p>
+        </article>
+
+        <article class="hub-pillar">
+          <div class="hub-pillar-icon">
+            <svg width="48" height="48" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h25v24H0z" fill="none"/>
+                <path
+                  fill="#1477D4"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.461 2.3a2.25 2.25 0 0 0-3.073.823l-2.811 4.87a2.25 2.25 0 0 0 .823 3.073l.866.5a2.25 2.25 0 0 0 3.074-.824l1.742-3.018a5.642 5.642 0 0 1-4.052 9.56l-.007.001h-.006c-1.5-.002-2.733-.782-3.592-2.021h2.237a.75.75 0 1 0 0-1.5h-7a.75.75 0 0 0 0 1.5h3.015c.93 1.779 2.495 3.198 4.596 3.473V20.5h-3.25a.75.75 0 0 0 0 1.5h8a.75.75 0 1 0 0-1.5h-3.25v-1.754a7.143 7.143 0 0 0 4.083-12.362l.295-.51a2.25 2.25 0 0 0-.824-3.074zm-1.774 1.573A.75.75 0 0 1 14.71 3.6l.866.5a.75.75 0 0 1 .275 1.024l-2.811 4.87a.75.75 0 0 1-1.025.274l-.866-.5a.75.75 0 0 1-.274-1.025z"
+                />
+                <path
+                fill="#1477D4"
+                d="
+                M11.5 7.2
+                L13.9 3.05
+                L16.8 4.7
+                L14.4 8.85
+                Z
+                "
+              />
+              <path
+                fill="#1477D4"
+                d="M9.5 18.9H16.1V21H9.5V18.9Z"
+                />
+              </svg>
+          </div>
+
+          <h3>Research &amp; Innovation</h3>
+
+          <p>
+            Applied research around rare milk, functional nutrition and future products.
+          </p>
+        </article>
+
+        <article class="hub-pillar">
+          <div class="hub-pillar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="currentColor" d="M2 22V9.975L9 7v2l5-2v3h8v12zm9-4h2v-4h-2zm-4 0h2v-4H7zm8 0h2v-4h-2zm6.8-9.5h-4.625l.85-6.5H21z" />
+              </svg>
+          </div>
+
+          <h3>Production &amp; Products</h3>
+
+          <p>
+            Connecting science, processing and real product development.
+          </p>
+        </article>
+
+        <article class="hub-pillar">
+          <div class="hub-pillar-icon">
+            <svg 
+            viewBox="0 0 24 24" 
+            fill="currentColor" 
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path 
+                d="M19 13.431v2.569c0 2.398 -3.205 4 -7 4s-7 -1.602 -7 -4v-2.569l5.886 2.354a3 3 0 0 0 2.011 .078l.217 -.078zm2 -2.955l-8.629 3.452a1 1 0 0 1 -.742 0l-10 -4c-.839 -.335 -.839 -1.521 0 -1.856l10 -4a1 1 0 0 1 .245 -.064l.126 -.008l.126 .008a1 1 0 0 1 .245 .064l10.032 4.013l.108 .055l.099 .068l.088 .076l.075 .082l.035 .044l.073 .115l.052 .115l.034 .102l.025 .135l.006 .058l.002 6.065a1 1 0 0 1 -2 0z"
+            />
+            </svg>
+          </div>
+
+          <h3>Experience &amp; Education</h3>
+
+          <p>
+            A place to learn, discover, taste and connect with the ecosystem.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="hub-concept" id="concept">
+      <div class="hub-concept-inner">
+        <div class="hub-concept-copy">
+          <p class="eyebrow">
+            One Integrated Ecosystem
+          </p>
+
+          <h2>
+            More Than a Visitor Center.
+          </h2>
+
+          <p>
+            The Exotic Dairy Experience Hub is designed as a living
+            ecosystem where animals, research, product development,
+            production and public experience come together in one place.
+          </p>
+
+          <p>
+            Visitors will be able to discover the complete world behind
+            rare milk — from responsible animal breeding and scientific
+            research to product development, tasting and future innovation.
+          </p>
+        </div>
+
+        <div class="hub-masterplan">
+          <img
+            src="assets/images/hub-main.png"
+            alt="Exotic Dairy Experience Hub masterplan"
+          >
+
+          <span class="hub-map-point">1</span>
+          <span class="hub-map-point">2</span>
+          <span class="hub-map-point">3</span>
+          <span class="hub-map-point">4</span>
+          <span class="hub-map-point">5</span>
+        </div>
+      </div>
+
+      <div class="hub-zones">
+        <article class="hub-zone">
+            <span class="hub-zone-number">1</span>
+  
+            <h3>Visitor &amp; Education Areas</h3>
+  
+            <p>
+              Guided experiences, education and direct connection with the ecosystem.
+            </p>
+          </article>
+
+        <article class="hub-zone">
+          <span class="hub-zone-number">2</span>
+
+          <h3>Research &amp; Development Center</h3>
+
+          <p>
+            Laboratories and development facilities where science becomes products.
+          </p>
+        </article>
+      
+        <article class="hub-zone">
+          <span class="hub-zone-number">3</span>
+
+          <h3>Showroom &amp; Tasting Area</h3>
+
+          <p>
+            Products, prototypes, tasting and future innovations.
+          </p>
+        </article>
+
+        <article class="hub-zone">
+            <span class="hub-zone-number">4</span>
+  
+            <h3>Animal Areas</h3>
+  
+            <p>
+              Controlled and professionally managed camel and donkey environments.
+            </p>
+          </article>
+          
+          <article class="hub-zone">
+            <span class="hub-zone-number">5</span>
+  
+            <h3>Production &amp; Demonstration</h3>
+  
+            <p>
+              Processing, testing and practical product development.
+            </p>
+          </article>
+        
+      </div>
+    </section>
+
+    <section class="hub-experiences">
+      <div class="hub-section-head">
+        <p class="eyebrow">Inside the Hub</p>
+
+        <h2>
+          Experience the Entire Journey.
+        </h2>
+
+        <p>
+          From responsible animal care and scientific research to products,
+          tasting and public education — every part of the Hub connects.
+        </p>
+      </div>
+
+      <div class="hub-experience-grid">
+        <article class="hub-experience-card">
+          <button
+            class="hub-experience-trigger modal-trigger"
+            type="button"
+            data-modal="researchModal"
+          >
+            <div class="hub-experience-image">
+              <img
+                src="assets/images/rd-lab.png"
+                alt="Exotic Dairy Research Center"
+              >
+
+              <span class="hub-experience-open">+</span>
+            </div>
+
+            <div class="hub-experience-copy">
+              <p class="eyebrow">Research Center</p>
+
+              <h3>
+                Where Research Becomes Reality.
+              </h3>
+
+              <p>
+                Focused on understanding the unique properties of camel
+                and donkey milk and transforming scientific knowledge
+                into future products.
+              </p>
+            </div>
+          </button>
+        </article>
+
+        <article class="hub-experience-card">
+          <button
+            class="hub-experience-trigger modal-trigger"
+            type="button"
+            data-modal="animalsModal"
+          >
+            <div class="hub-experience-image">
+              <img
+                src="assets/images/camel-hero.png"
+                alt="Camel and animal experience"
+              >
+
+              <span class="hub-experience-open">+</span>
+            </div>
+
+            <div class="hub-experience-copy">
+              <p class="eyebrow">Animal Experience</p>
+
+              <h3>
+                Meet the Animals Behind the Story.
+              </h3>
+
+              <p>
+                Discover camels and donkeys through professionally managed
+                environments where welfare, responsible breeding and
+                education come first.
+              </p>
+            </div>
+          </button>
+        </article>
+
+        <article class="hub-experience-card">
+          <button
+            class="hub-experience-trigger modal-trigger"
+            type="button"
+            data-modal="journeyModal"
+          >
+            <div class="hub-experience-image">
+              <img
+                src="assets/images/products-hero.png"
+                alt="Exotic Dairy product journey"
+              >
+
+              <span class="hub-experience-open">+</span>
+            </div>
+
+            <div class="hub-experience-copy">
+              <p class="eyebrow">From Milk to Product</p>
+
+              <h3>
+                Follow the Journey.
+              </h3>
+
+              <p>
+                Discover how rare milk moves through science,
+                development and production before becoming an
+                Exotic Dairy product.
+              </p>
+
+              <div class="hub-journey">
+                <span>Animals</span>
+                <span class="hub-journey-arrow">→</span>
+                <span>Research</span>
+                <span class="hub-journey-arrow">→</span>
+                <span>Production</span>
+                <span class="hub-journey-arrow">→</span>
+                <span>Products</span>
+                <span class="hub-journey-arrow">→</span>
+                <span>Experience</span>
+              </div>
+            </div>
+          </button>
+        </article>
+
+        <article class="hub-experience-card">
+          <button
+            class="hub-experience-trigger modal-trigger"
+            type="button"
+            data-modal="showroomModal"
+          >
+            <div class="hub-experience-image">
+              <img
+                src="assets/images/hub-showroom.png"
+                alt="Exotic Dairy showroom and tasting area"
+              >
+
+              <span class="hub-experience-open">+</span>
+            </div>
+
+            <div class="hub-experience-copy">
+              <p class="eyebrow">Showroom &amp; Tasting</p>
+
+              <h3>
+                Taste the Innovation.
+              </h3>
+
+              <p>
+                A dedicated space where visitors can discover Exotic Dairy
+                products, prototypes and future innovations.
+              </p>
+            </div>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <section class="hub-sustainability">
+      <div class="hub-sustainability-inner">
+        <div class="hub-sustainability-head">
+          <p class="eyebrow">
+            Designed Responsibly
+          </p>
+
+          <h2>
+            Sustainability Is Built Into the System.
+          </h2>
+
+          <p>
+            Sustainability is not a separate feature of the Hub.
+            It is designed into the way animals are cared for,
+            resources are used, products are developed and the ecosystem grows.
+          </p>
+        </div>
+
+        <div class="hub-sustainability-grid">
+          <article class="hub-sustainability-item">
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M24 42S8 33 8 20C8 13 13 9 18 9C21 9 23 11 24 13C25 11 27 9 30 9C35 9 40 13 40 20C40 33 24 42 24 42Z" stroke="currentColor" stroke-width="2.3"/>
+            </svg>
+
+            <h3>Animal Welfare</h3>
+
+            <p>
+              Responsible care and professionally managed animal environments.
+            </p>
+          </article>
+
+          <article class="hub-sustainability-item">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 38V21L19 16V21L29 16V24H40V38H8Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+                <path d="M34 24L35 10H39L40 24" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+                <path d="M13 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M18 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M23 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M30 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                <path d="M35 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+
+            <h3>Responsible Production</h3>
+
+            <p>
+              Efficient and responsible processing and development practices.
+            </p>
+          </article>
+
+          <article class="hub-sustainability-item">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <path d="M0 0h24v24H0z" fill="none"/>
+                
+                <path 
+                d="M5 21c.5-4.5 2.5-8 7-10" 
+                stroke="currentColor" 
+                stroke-width="1" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+                />
+                
+                <path 
+                d="M9 18c6.218 0 10.5-3.288 11-12v-2h-4.014c-9 0-11.986 4-12 9c0 1 0 3 2 5h3l.014 0" 
+                stroke="currentColor" 
+                stroke-width="1" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+                />
+                
+                </svg>
+
+            <h3>Resource Efficiency</h3>
+
+            <p>
+              Smarter use of energy, water, materials and natural resources.
+            </p>
+          </article>
+
+          <article class="hub-sustainability-item">
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.3"/>
+              <path d="M24 14V24L31 30" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/>
+            </svg>
+
+            <h3>Research-Led Sustainability</h3>
+
+            <p>
+              Science guides long-term decisions for animals, products and people.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-coming">
+      <div class="hub-coming-inner">
+        <div>
+          <p class="eyebrow">Coming Soon</p>
+
+          <h2>
+            Help Bring the Experience Hub to Life.
+          </h2>
+
+          <p>
+            The Exotic Dairy Experience Hub is currently in development.
+            As the project progresses, we plan to open participation
+            opportunities for people who want to support its creation
+            and become part of the community behind it.
+          </p>
+        </div>
+
+        <div class="hub-coming-badge">
+          <span>Future Program</span>
+
+          <strong>
+            Crowd Participation<br>
+            Coming Soon
+          </strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="hub-participation" id="crowd-participation">
+      <div class="hub-section-head">
+        <p class="eyebrow">Crowd Participation</p>
+
+        <h2>
+          Be Part of the Journey.
+        </h2>
+
+        <p>
+          Different ways to participate. One shared goal —
+          helping bring the Experience Hub and its ecosystem to life.
+        </p>
+      </div>
+
+      <div class="participation-grid">
+        <article class="participation-card">
+          <div class="participation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+
+            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/>
+
+            <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25"/>
+
+            <path d="M12.5 15.5l2 2"/>
+
+            <path d="M15 13l2 2"/>
+
+            </svg>
+          </div>
+
+          <div class="participation-number">
+            01 • ONE-TIME
+          </div>
+
+          <h3>
+            Support the Hub Once.
+          </h3>
+
+          <p>
+            Make a one-time contribution toward the development of
+            the Experience Hub and become part of its founding community.
+          </p>
+
+          <div class="participation-list">
+            <span>Digital participant status</span>
+            <span>Project updates</span>
+            <span>Future Hub benefits</span>
+            <span>Priority access to selected experiences</span>
+            <span>Community recognition where applicable</span>
+          </div>
+
+          <button
+            class="btn modal-trigger"
+            type="button"
+            data-modal="oneTimeModal"
+          >
+            I'm Interested
+          </button>
+        </article>
+
+        <article class="participation-card">
+          <div class="participation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+
+            <circle cx="12" cy="7" r="4"/>
+
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h2"/>
+
+            <path d="M16 22l5 -5"/>
+
+            <path d="M21 21.5v-4.5h-4.5"/>
+
+            </svg>
+          </div>
+
+          <div class="participation-number">
+            02 • MEMBERSHIP
+          </div>
+
+          <h3>
+            Stay Connected to the Journey.
+          </h3>
+
+          <p>
+            Participate through a recurring monthly or annual model
+            and support the continuing development of the Hub and its activities.
+          </p>
+
+          <div class="participation-list">
+            <span>Member status</span>
+            <span>Regular development updates</span>
+            <span>Future visitor privileges</span>
+            <span>Selected product and experience benefits</span>
+            <span>Early access to Hub activities</span>
+          </div>
+
+          <button
+            class="btn modal-trigger"
+            type="button"
+            data-modal="membershipModal"
+          >
+            Join the Waitlist
+          </button>
+        </article>
+
+        <article class="participation-card featured">
+          <div class="participation-icon">
+            <svg 
+            viewBox="0 0 512 512" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+                d="M511.874 92.334C508.528 65.511 488.404 59.923 477.229 59.923H455.712C455.712 59.923 451.525 42.321 438.95 42.321H404.585L386.703 36.734C380.003 41.208 388.937 53.496 388.937 53.496C376.642 63.278 364.347 73.06 364.347 110.975V174.677C364.347 199.268 324.372 206.021 307.867 180.386C290.589 152.745 252.583 148.271 228 110.28C211.132 84.206 193.847 75.574 182.067 75.211C170.287 74.847 158.922 79.595 150.912 88.241L30.784 178.348C8.949 198.509 0 218.626 0 243.216V310.273C0 323.681 22.35 325.923 22.35 312.506V254.384C22.35 243.201 38.007 232.033 38.007 243.216V328.162C38.007 343.812 20.124 359.46 20.124 368.402C20.124 377.344 51.415 471.217 51.415 471.217H82.706C82.706 471.217 62.59 399.694 62.59 390.753C62.59 383.607 82.055 360.553 91.42 344.911C90.466 359.417 77.073 374.763 77.929 382.933C78.86 391.829 119.751 481.939 119.751 481.939L150.868 478.684C150.868 478.684 123.423 409.644 122.492 400.748C121.561 391.853 147.454 346.095 149.097 332.785C152.739 303.19 151.232 314.584 151.232 314.584C150.255 305.279 153.662 298.791 160.302 294.635H258.846C278.962 294.635 276.722 310.284 274.496 319.225C272.255 328.166 252.586 377.34 252.586 377.34L254.82 471.22H286.111C286.111 471.22 288.351 388.515 288.351 381.814C288.351 379.49 292.508 370.662 297.951 359.639C298.746 369.549 299.526 377.34 299.526 377.34L312.934 471.22H344.225C344.225 471.22 335.291 388.515 335.291 381.814C335.291 376.128 340.651 303.621 343.18 275.29C418.724 272.731 447.091 233.074 447.091 138.311C447.091 109.253 451.566 109.245 461.621 109.245H497.341C506.29 105.898 504.049 98.071 504.049 98.071C504.049 98.071 512.994 103.509 511.874 92.334Z"
+                stroke="currentColor"
+                stroke-width="18"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+            </svg>
+          </div>
+
+          <div class="participation-number">
+            03 • ADOPT
+          </div>
+
+          <h3>
+            Adopt a Camel or Donkey.
+          </h3>
+
+          <p>
+            Support the care and long-term development of an animal
+            within the Exotic Dairy ecosystem and build a personal
+            connection with its story.
+          </p>
+
+          <div class="participation-list">
+            <span>Individual animal profile</span>
+            <span>Photos and regular updates</span>
+            <span>Milestones and development</span>
+            <span>Animal welfare information</span>
+            <span>Future visit opportunities</span>
+            <span>Digital adoption status</span>
+          </div>
+
+          <button
+            class="hub-btn-outline modal-trigger"
+            type="button"
+            data-modal="adoptionModal"
+          >
+            Discover Adoption
+          </button>
+        </article>
+      </div>
+
+      <p class="participation-note">
+        Participation options, benefits, pricing and applicable terms
+        will be announced before the official launch of the program.
+      </p>
+    </section>
+
+    <section class="hub-final-cta">
+      <div class="hub-final-inner">
+        <div>
+          <h2>
+            Be Part of What Comes Next.
+          </h2>
+
+          <p>
+            Interested in the Experience Hub, future participation opportunities,
+            research collaboration or another way to work with Exotic Dairy?
+          </p>
+        </div>
+
+        <a
+          class="btn modal-trigger"
+          href="#"
+          data-modal="contactModal"
+          data-interest="Experience Hub"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+  
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+          >
+  
+          <span>
+            EXOTIC<br>
+            DAIRY
+          </span>
+        </div>
+  
+        <p>
+          Building the future of functional bio-dairy through rare milk,
+          research, premium products and ecosystem innovation.
+        </p>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Explore</h3>
+  
+        <a href="products.html">
+          Products
+        </a>
+  
+        <a href="our-solution.html">
+          Our Solution
+        </a>
+  
+        <a href="experience-hub.html">
+          Experience Hub
+        </a>
+  
+        <a href="partnerships.html">
+          Partnerships
+        </a>
+  
+        <a href="about.html">
+          About Us
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Products</h3>
+  
+        <a href="products.html">
+          All Products
+        </a>
+  
+        <a href="products.html?category=camel">
+          Camel Milk Products
+        </a>
+  
+        <a href="products.html?category=donkey">
+          Donkey Milk Products
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Participate</h3>
+  
+        <a href="experience-hub.html#crowd-participation">
+          Crowd Participation
+        </a>
+  
+        <a href="partnerships.html">
+          Founder Partnership
+        </a>
+  
+        <a
+          href="#"
+          class="modal-trigger"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Resources</h3>
+  
+        <a href="faq.html">
+          FAQ
+        </a>
+  
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+  
+        <a href="terms.html">
+          Terms of Use
+        </a>
+  
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Contact</h3>
+  
+        <p>
+          Plovdiv, Bulgaria
+        </p>
+  
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+  
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+  
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+  
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="researchModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel hub-detail-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="hub-detail-hero">
+        <img
+          src="assets/images/rd-lab.png"
+          alt="Exotic Dairy Research Center"
+        >
+
+        <div class="hub-detail-heading">
+          <p class="eyebrow">Research Center</p>
+
+          <h2>
+            Where Research Becomes Reality.
+          </h2>
+        </div>
+      </div>
+
+      <div class="hub-detail-content">
+        <p>
+          At the heart of the Experience Hub will be a research and
+          innovation environment focused on understanding the unique
+          properties of camel and donkey milk.
+        </p>
+
+        <p>
+          The center is designed to connect scientific knowledge with
+          practical product development, creating a physical platform
+          where researchers, producers and technology partners can
+          work toward new functional products and applications.
+        </p>
+
+        <div class="hub-detail-list">
+          <span>Rare milk research</span>
+          <span>Product development</span>
+          <span>Testing and validation</span>
+          <span>Scientific collaboration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="animalsModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel hub-detail-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="hub-detail-hero">
+        <img
+          src="assets/images/camel-hero.png"
+          alt="Camel Experience"
+        >
+
+        <div class="hub-detail-heading">
+          <p class="eyebrow">Animal Experience</p>
+
+          <h2>
+            Meet the Animals Behind the Story.
+          </h2>
+        </div>
+      </div>
+
+      <div class="hub-detail-content">
+        <p>
+          The Experience Hub will bring visitors closer to camels
+          and donkeys while keeping responsible breeding, professional
+          care and animal welfare at the center of every interaction.
+        </p>
+
+        <p>
+          Animals will live in controlled and professionally managed
+          environments designed around their welfare rather than
+          unrestricted visitor interaction.
+        </p>
+
+        <div class="hub-detail-list">
+          <span>Guided encounters</span>
+          <span>Responsible breeding</span>
+          <span>Animal welfare</span>
+          <span>Education and awareness</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="journeyModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel hub-detail-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="hub-detail-hero">
+        <img
+          src="assets/images/products-hero.png"
+          alt="From Milk to Product"
+        >
+
+        <div class="hub-detail-heading">
+          <p class="eyebrow">From Milk to Product</p>
+
+          <h2>
+            Follow the Journey.
+          </h2>
+        </div>
+      </div>
+
+      <div class="hub-detail-content">
+        <p>
+          One of the central ideas behind the Experience Hub is to
+          make the complete Exotic Dairy journey visible and understandable.
+        </p>
+
+        <p>
+          Visitors will be able to see how responsible animal breeding
+          connects with research, how research becomes product development,
+          and how those products eventually reach the consumer.
+        </p>
+
+        <div class="hub-detail-list">
+          <span>Animals and raw milk</span>
+          <span>Scientific research</span>
+          <span>Product development</span>
+          <span>Production and experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="showroomModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel hub-detail-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="hub-detail-hero">
+        <img
+          src="assets/images/hub-showroom.png"
+          alt="Exotic Dairy showroom"
+        >
+
+        <div class="hub-detail-heading">
+          <p class="eyebrow">Showroom &amp; Tasting</p>
+
+          <h2>
+            Taste the Innovation.
+          </h2>
+        </div>
+      </div>
+
+      <div class="hub-detail-content">
+        <p>
+          The Hub will include a dedicated showroom and tasting environment
+          where visitors can discover the products emerging from the
+          Exotic Dairy research and development ecosystem.
+        </p>
+
+        <p>
+          The space can also become a platform for prototypes,
+          future product launches, educational tastings and direct
+          feedback from visitors.
+        </p>
+
+        <div class="hub-detail-list">
+          <span>Product tastings</span>
+          <span>New product previews</span>
+          <span>Future innovations</span>
+          <span>Exotic Dairy showroom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="oneTimeModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel participation-modal-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="participation-modal-icon">
+        <svg viewBox="0 0 48 48" fill="none">
+          <circle cx="17" cy="17" r="6" stroke="currentColor" stroke-width="2.3"/>
+          <circle cx="31" cy="17" r="6" stroke="currentColor" stroke-width="2.3"/>
+          <path d="M24 26V40M17 33H31" stroke="currentColor" stroke-width="2.3"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">Crowd Participation</p>
+
+      <h2>
+        One-Time Participation
+      </h2>
+
+      <div class="participation-modal-subtitle">
+        Support the Hub once.
+      </div>
+
+      <p>
+        Make a one-time contribution toward the development of
+        the Experience Hub and become part of its founding community.
+      </p>
+
+      <div class="participation-modal-benefits">
+        <span>Digital participant status</span>
+        <span>Project development updates</span>
+        <span>Future Hub benefits</span>
+        <span>Priority access to selected experiences</span>
+        <span>Community recognition where applicable</span>
+      </div>
+
+      <div class="participation-coming-box">
+        <strong>Coming Soon</strong>
+
+        <p>
+          Participation levels, benefits, pricing and program terms
+          will be announced before launch.
+        </p>
+      </div>
+
+      <button
+        class="btn hub-contact-trigger"
+        type="button"
+        data-message="I would like to receive information about the One-Time Crowd Participation Program for the Exotic Dairy Experience Hub."
+      >
+        Notify Me When It Opens
+      </button>
+    </div>
+  </div>
+
+  <div class="modal" id="membershipModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel participation-modal-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="participation-modal-icon">
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M12 16C16 11 22 9 28 11C35 13 39 20 37 27" stroke="currentColor" stroke-width="2.3"/>
+          <path d="M36 32C32 37 26 39 20 37C13 35 9 28 11 21" stroke="currentColor" stroke-width="2.3"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">Crowd Participation</p>
+
+      <h2>
+        Membership
+      </h2>
+
+      <div class="participation-modal-subtitle">
+        Stay connected to the journey.
+      </div>
+
+      <p>
+        Participate through a recurring monthly or annual model
+        and support the long-term development of the Hub and its activities.
+      </p>
+
+      <div class="participation-modal-benefits">
+        <span>Member status</span>
+        <span>Regular project updates</span>
+        <span>Future visitor privileges</span>
+        <span>Selected product and experience benefits</span>
+        <span>Early access to future Hub activities</span>
+      </div>
+
+      <div class="participation-coming-box">
+        <strong>Coming Soon</strong>
+
+        <p>
+          Membership levels, subscription options and benefits
+          will be announced before the program launches.
+        </p>
+      </div>
+
+      <button
+        class="btn hub-contact-trigger"
+        type="button"
+        data-message="I would like to join the waitlist for the Exotic Dairy Experience Hub Membership Program."
+      >
+        Join the Waitlist
+      </button>
+    </div>
+  </div>
+
+  <div class="modal" id="adoptionModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel participation-modal-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="participation-modal-icon">
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M24 42S8 33 8 20C8 13 13 9 18 9C21 9 23 11 24 13C25 11 27 9 30 9C35 9 40 13 40 20C40 33 24 42 24 42Z" stroke="currentColor" stroke-width="2.3"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">Crowd Participation</p>
+
+      <h2>
+        Adopt an Animal
+      </h2>
+
+      <div class="participation-modal-subtitle">
+        Create a personal connection.
+      </div>
+
+      <p>
+        Support the care and long-term development of a camel
+        or donkey within the Exotic Dairy ecosystem and follow
+        its individual story.
+      </p>
+
+      <div class="participation-modal-benefits">
+        <span>Individual animal profile</span>
+        <span>Photos and regular updates</span>
+        <span>Milestones and development</span>
+        <span>Animal welfare information</span>
+        <span>Future visit opportunities</span>
+        <span>Digital adoption status</span>
+      </div>
+
+      <div class="participation-coming-box">
+        <strong>Coming Soon</strong>
+
+        <p>
+          Adoption options, benefits and applicable terms
+          will be announced before the program launches.
+        </p>
+      </div>
+
+      <div class="adoption-actions">
+        <button
+          class="btn hub-contact-trigger"
+          type="button"
+          data-message="I would like to receive information about adopting a camel through the Exotic Dairy Experience Hub program."
+        >
+          Adopt a Camel
+        </button>
+
+        <button
+          class="btn hub-contact-trigger"
+          type="button"
+          data-message="I would like to receive information about adopting a donkey through the Exotic Dairy Experience Hub program."
+        >
+          Adopt a Donkey
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="contactModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel contact-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <p class="eyebrow">Contact</p>
+
+      <h2>
+        Let's Build the Future Together
+      </h2>
+
+      <p class="modal-intro">
+        Connect with the Exotic Dairy team to discuss the Experience Hub,
+        future participation opportunities, research and partnerships.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Exotic Dairy Experience Hub Inquiry"
+        >
+
+        <div class="form-row">
+          <label>Name *</label>
+          <input type="text" name="name" minlength="2" required>
+        </div>
+
+        <div class="form-row">
+          <label>Email *</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+          <label>Company</label>
+          <input type="text" name="company">
+        </div>
+
+        <div class="form-row">
+          <label>Country</label>
+          <input type="text" name="country">
+        </div>
+
+        <div class="form-row">
+          <label>Interest</label>
+
+          <select name="interest">
+            <option>Experience Hub</option>
+            <option>Crowd Participation</option>
+            <option>Research</option>
+            <option>Products</option>
+            <option>Distribution</option>
+            <option>Partnerships</option>
+            <option>Media</option>
+          </select>
+        </div>
+
+        <div class="form-row full">
+          <label>Message *</label>
+
+          <textarea
+            name="message"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-row full">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="consent"
+              value="yes"
+              required
+            >
+
+            I agree to the Privacy Policy and consent to being contacted.
+          </label>
+        </div>
+
+        <button class="btn" type="submit">
+          Send inquiry
+        </button>
+
+        <div id="form-success" style="display:none;">
+          Thank you for contacting Exotic Dairy.
+          We will get back to you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+    document.querySelectorAll("[data-interest]").forEach(trigger => {
+      trigger.addEventListener("click", () => {
+        const modal = document.getElementById(trigger.dataset.modal);
+        const interestSelect = modal?.querySelector('select[name="interest"]');
+
+        if (interestSelect) {
+          interestSelect.value = trigger.dataset.interest;
+        }
+      });
+    });
+
+    document.querySelectorAll(".hub-contact-trigger").forEach(trigger => {
+      trigger.addEventListener("click", () => {
+        const contactModal = document.getElementById("contactModal");
+
+        if (!contactModal) return;
+
+        document.querySelectorAll(".modal").forEach(modal => {
+          modal.classList.remove("is-open");
+        });
+
+        const interestSelect =
+          contactModal.querySelector('select[name="interest"]');
+
+        const messageField =
+          contactModal.querySelector('textarea[name="message"]');
+
+        const subjectField =
+          contactModal.querySelector('input[name="_subject"]');
+
+        if (interestSelect) {
+          interestSelect.value = "Crowd Participation";
+        }
+
+        if (messageField) {
+          messageField.value = trigger.dataset.message || "";
+        }
+
+        if (subjectField) {
+          subjectField.value =
+            "Exotic Dairy Experience Hub — Crowd Participation Inquiry";
+        }
+
+        contactModal.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+      });
+    });
+  </script>
+</body>
+</html>

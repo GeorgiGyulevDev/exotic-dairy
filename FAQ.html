@@ -1,0 +1,4073 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Exotic Dairy — Frequently Asked Questions</title>
+
+  <meta
+    name="description"
+    content="Explore frequently asked questions about Exotic Dairy, camel milk, donkey milk, products, research, the Experience Hub and partnership opportunities."
+  />
+
+  <meta property="og:title" content="Exotic Dairy — Frequently Asked Questions" />
+  <meta
+    property="og:description"
+    content="Explore the science, products, research and ecosystem behind Exotic Dairy."
+  />
+  <meta
+    property="og:image"
+    content="https://exoticdairy.com/assets/images/share.png"
+  />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://exoticdairy.com/faq.html"
+  />
+  <meta property="og:site_name" content="Exotic Dairy" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Exotic Dairy — Frequently Asked Questions"
+  />
+  <meta
+    name="twitter:description"
+    content="Explore the science, products, research and ecosystem behind Exotic Dairy."
+  />
+  <meta
+    name="twitter:image"
+    content="https://exoticdairy.com/assets/images/share.png"
+  />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* =========================
+       FAQ HERO
+    ========================= */
+
+    .faq-hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(
+          circle at 82% 20%,
+          rgba(20, 119, 212, .22),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #020810 0%,
+          #06101f 50%,
+          #0a2948 100%
+        );
+      color: var(--white);
+    }
+
+    .faq-hero-inner {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 90px 7vw;
+    }
+
+    .faq-hero .eyebrow {
+      color: #8fd2ff;
+    }
+
+    .faq-hero h1 {
+      max-width: 900px;
+      margin: 18px 0 26px;
+      color: var(--white);
+      font-size: clamp(50px, 6vw, 88px);
+      line-height: .94;
+      letter-spacing: -2px;
+    }
+
+    .faq-hero p:not(.eyebrow) {
+      max-width: 720px;
+      color: #d7e3f2;
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       FLOATING SEARCH
+    ========================= */
+
+    .faq-floating-search {
+      position: fixed;
+      top: 108px;
+      right: 24px;
+      z-index: 80;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .faq-search-shell {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 54px;
+      height: 54px;
+      overflow: hidden;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 27px;
+      background: rgba(255, 255, 255, .96);
+      box-shadow: 0 16px 42px rgba(7, 21, 40, .16);
+      transition:
+        width .32s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+      backdrop-filter: blur(12px);
+    }
+
+    .faq-floating-search.open .faq-search-shell {
+      width: min(430px, calc(100vw - 48px));
+      border-color: rgba(20, 119, 212, .35);
+      box-shadow: 0 18px 46px rgba(7, 21, 40, .20);
+    }
+
+    .faq-search-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--blue);
+      cursor: pointer;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease;
+    }
+
+    .faq-search-toggle:hover {
+      transform: scale(1.06);
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .faq-search-toggle svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+    }
+
+    .faq-floating-search.open .faq-search-toggle {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .faq-search-input-wrap {
+      width: 100%;
+      padding: 0 54px 0 18px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+    }
+
+    .faq-floating-search.open .faq-search-input-wrap {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .faq-search-input-wrap input {
+      width: 100%;
+      height: 52px;
+      padding: 0;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--navy);
+      font: inherit;
+      font-size: 15px;
+    }
+
+    .faq-search-input-wrap input::placeholder {
+      color: #8b99aa;
+    }
+
+    .faq-search-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      z-index: 4;
+      width: 44px;
+      height: 44px;
+      display: none;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--blue);
+      cursor: pointer;
+      transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+    }
+
+    .faq-floating-search.open .faq-search-close {
+      display: grid;
+    }
+
+    .faq-search-close:hover {
+      transform: scale(1.05);
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .faq-search-close::before,
+    .faq-search-close::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+    }
+
+    .faq-search-close::before {
+      transform: rotate(45deg);
+    }
+
+    .faq-search-close::after {
+      transform: rotate(-45deg);
+    }
+
+    /* =========================
+       FAQ MAIN
+    ========================= */
+
+    .faq-main {
+      padding: 100px 7vw 110px;
+      background: var(--white);
+    }
+
+    .faq-main-inner {
+      display: grid;
+      grid-template-columns: 230px minmax(0, 1fr);
+      gap: 70px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .faq-sidebar {
+      position: sticky;
+      top: 120px;
+      align-self: start;
+    }
+
+    .faq-sidebar > p {
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .faq-sidebar-nav {
+      display: grid;
+      gap: 4px;
+    }
+
+    .faq-sidebar-nav a {
+      padding: 11px 13px;
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition:
+        background .2s ease,
+        color .2s ease;
+    }
+
+    .faq-sidebar-nav a:hover,
+    .faq-sidebar-nav a.active {
+      background: #eaf5ff;
+      color: var(--blue);
+    }
+
+    .faq-content {
+      min-width: 0;
+    }
+
+    .faq-group {
+      scroll-margin-top: 120px;
+      margin-bottom: 88px;
+    }
+
+    .faq-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-group-head {
+      margin-bottom: 30px;
+    }
+
+    .faq-group-head .eyebrow {
+      margin-bottom: 12px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .faq-group-head h2 {
+      margin-bottom: 13px;
+      color: var(--navy);
+      font-size: clamp(34px, 3.6vw, 52px);
+      line-height: 1.03;
+      letter-spacing: -1px;
+    }
+
+    .faq-group-head p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    /* =========================
+       ACCORDION
+    ========================= */
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 42px;
+      align-items: center;
+      gap: 20px;
+      padding: 23px 0;
+      border: 0;
+      background: transparent;
+      color: var(--navy);
+      text-align: left;
+      font: inherit;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.4;
+      cursor: pointer;
+      transition: color .2s ease;
+    }
+
+    .faq-question:hover {
+      color: var(--blue);
+    }
+
+    .faq-toggle {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 50%;
+      background: #f6f9fd;
+    }
+
+    .faq-toggle::before,
+    .faq-toggle::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--blue);
+      transition: transform .25s ease;
+    }
+
+    .faq-toggle::after {
+      transform: rotate(90deg);
+    }
+
+    .faq-item.open .faq-toggle::after {
+      transform: rotate(0);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 60px 26px 0;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-answer p {
+      margin-bottom: 15px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-answer ul {
+      display: grid;
+      gap: 9px;
+      margin: 14px 0 16px 20px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .faq-answer strong {
+      color: var(--navy);
+    }
+
+    .faq-medical-note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-left: 3px solid var(--blue);
+      background: #f6f9fd;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       SEARCH STATES
+    ========================= */
+
+    .faq-item.search-hidden,
+    .faq-group.search-hidden {
+      display: none;
+    }
+
+    .faq-search-empty {
+      display: none;
+      padding: 50px 30px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--bg);
+      text-align: center;
+    }
+
+    .faq-search-empty.visible {
+      display: block;
+    }
+
+    .faq-search-empty h3 {
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: 24px;
+    }
+
+    .faq-search-empty p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .faq-final {
+    padding: 90px 7vw;
+    background:
+        linear-gradient(
+        90deg,
+        rgba(6, 16, 31, .96) 0%,
+        rgba(6, 16, 31, .88) 45%,
+        rgba(6, 16, 31, .62) 100%
+        ),
+        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
+    color: var(--white);
+    }
+
+    .faq-final-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .faq-final .eyebrow {
+      color: #8fd2ff;
+    }
+
+    .faq-final h2 {
+      margin: 12px 0 15px;
+      color: var(--white);
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.02;
+    }
+
+    .faq-final p:not(.eyebrow) {
+      max-width: 700px;
+      color: #d7e3f2;
+      font-size: 18px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1180px) {
+      .faq-main-inner {
+        grid-template-columns: 190px minmax(0, 1fr);
+        gap: 45px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .faq-main-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-sidebar {
+        position: sticky;
+        top: 86px;
+        z-index: 20;
+        overflow-x: auto;
+        margin-left: -7vw;
+        margin-right: -7vw;
+        padding: 12px 7vw;
+        background: rgba(255, 255, 255, .96);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(12px);
+      }
+
+      .faq-sidebar > p {
+        display: none;
+      }
+
+      .faq-sidebar-nav {
+        display: flex;
+        width: max-content;
+        gap: 7px;
+      }
+
+      .faq-sidebar-nav a {
+        white-space: nowrap;
+        border: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      .faq-final-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .faq-final p:not(.eyebrow) {
+        margin: 0 auto;
+      }
+
+      .faq-floating-search {
+        top: 100px;
+        right: 18px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .faq-hero-inner,
+      .faq-main,
+      .faq-final {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .faq-hero {
+        min-height: 520px;
+      }
+
+      .faq-hero-inner {
+        padding-top: 70px;
+        padding-bottom: 90px;
+      }
+
+      .faq-main {
+        padding-top: 70px;
+        padding-bottom: 90px;
+      }
+
+      .faq-sidebar {
+        margin-left: -22px;
+        margin-right: -22px;
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .faq-group {
+        margin-bottom: 70px;
+      }
+
+      .faq-question {
+        grid-template-columns: 1fr 36px;
+        padding: 20px 0;
+        font-size: 16px;
+      }
+
+      .faq-answer {
+        padding-right: 0;
+      }
+
+      .faq-answer p,
+      .faq-answer ul {
+        font-size: 15px;
+      }
+
+      .faq-floating-search {
+        right: 14px;
+      }
+
+      .faq-search-shell {
+        width: 50px;
+        height: 50px;
+      }
+
+      .faq-search-toggle {
+        width: 50px;
+        height: 50px;
+      }
+
+      .faq-floating-search.open .faq-search-shell {
+        width: calc(100vw - 28px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.png" alt="Exotic Dairy logo" />
+      <span>EXOTIC<br>DAIRY</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      
+      <a href="products.html">Products</a>
+      <a href="our-solution.html">Our Solution</a>
+      <a href="experience-hub.html">Experience Hub</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="about.html">About Us</a>
+      <a class="active" href="faq.html">FAQ</a>
+
+      <a
+        class="mobile-contact-btn modal-trigger"
+        href="#"
+        data-modal="contactModal"
+      >
+        Get in Touch
+      </a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#"
+      data-modal="contactModal"
+    >
+      Get in touch
+    </a>
+  </header>
+
+  <!-- =========================
+       FLOATING SEARCH
+  ========================== -->
+
+  <div class="faq-floating-search" id="faqFloatingSearch">
+    <div class="faq-search-shell">
+      <button
+        class="faq-search-toggle"
+        id="faqSearchToggle"
+        type="button"
+        aria-label="Search FAQ"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20L16.5 16.5"></path>
+        </svg>
+      </button>
+
+      <div class="faq-search-input-wrap">
+        <input
+          type="search"
+          id="faqSearch"
+          placeholder="Search questions..."
+          autocomplete="off"
+          aria-label="Search frequently asked questions"
+        >
+      </div>
+
+      <button
+        class="faq-search-close"
+        id="faqSearchClose"
+        type="button"
+        aria-label="Close search"
+      ></button>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="faq-hero">
+      <div class="faq-hero-inner">
+        <p class="eyebrow">
+          Knowledge &amp; Answers
+        </p>
+
+        <h1>
+          Frequently Asked<br>
+          Questions.
+        </h1>
+
+        <p>
+          Explore the science, products, research, Experience Hub and
+          partnership models behind Exotic Dairy.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================
+         FAQ MAIN
+    ========================== -->
+
+    <section class="faq-main">
+      <div class="faq-main-inner">
+        <aside class="faq-sidebar">
+          <p>Browse Topics</p>
+
+          <nav class="faq-sidebar-nav">
+            <a href="#about" class="active">About Exotic Dairy</a>
+            <a href="#camel">Camel Milk</a>
+            <a href="#donkey">Donkey Milk</a>
+            <a href="#products">Products</a>
+            <a href="#hub">Experience Hub</a>
+            <a href="#crowd">Crowd Participation</a>
+            <a href="#partnerships">Partnerships</a>
+          </nav>
+        </aside>
+
+        <div class="faq-content">
+          <div class="faq-search-empty" id="faqSearchEmpty">
+            <h3>No matching questions found.</h3>
+
+            <p>
+              Try another search term or contact the Exotic Dairy team.
+            </p>
+          </div>
+
+          <!-- =========================
+               ABOUT
+          ========================== -->
+
+          <section
+            class="faq-group"
+            id="about"
+            data-category="about"
+          >
+            <div class="faq-group-head">
+              <p class="eyebrow">About Exotic Dairy</p>
+
+              <h2>
+                Building a new rare-milk ecosystem.
+              </h2>
+
+              <p>
+                Learn more about the company, its multidisciplinary expertise
+                and the long-term vision behind Exotic Dairy.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>What is Exotic Dairy?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy is a Bulgarian research, development and
+                    production company focused on innovative products and
+                    processing technologies based on camel and donkey milk.
+                  </p>
+
+                  <p>
+                    The company combines research, animal expertise,
+                    product development, technology and business partnerships
+                    to transform rare milk sources into premium and functional
+                    products.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why does Exotic Dairy focus on camel and donkey milk?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel and donkey milk have nutritional, biological and
+                    technological characteristics that distinguish them from
+                    conventional dairy sources.
+                  </p>
+
+                  <p>
+                    Their limited production, unusual protein composition and
+                    processing challenges have also prevented many potential
+                    applications from becoming mainstream dairy products.
+                    Exotic Dairy focuses on turning those challenges into
+                    opportunities through research, technology and specialized
+                    product development.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What makes Exotic Dairy different from a traditional dairy company?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy is built around research and product innovation
+                    rather than conventional high-volume dairy production.
+                  </p>
+
+                  <p>
+                    Our model connects animal breeding and welfare, milk
+                    production, scientific research, processing technology,
+                    product development, testing, commercialization and market
+                    partnerships within one ecosystem.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>Who is behind Exotic Dairy?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy brings together professionals across business
+                    strategy, finance, animal breeding, veterinary and livestock
+                    expertise, nutrition, food technology, research and product
+                    development.
+                  </p>
+
+                  <p>
+                    The internal multidisciplinary team is complemented by
+                    external scientific and strategic expertise, allowing the
+                    company to approach rare milk from several interconnected
+                    disciplines rather than from a single production perspective.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What expertise does the Exotic Dairy team bring together?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Developing rare-milk products requires expertise across the
+                    entire value chain — from animal breeding, welfare,
+                    husbandry and nutrition to milk science, processing
+                    technology, functional nutrition, product development,
+                    commercialization and international partnerships.
+                  </p>
+
+                  <p>
+                    This multidisciplinary structure allows Exotic Dairy to
+                    treat rare milk as an integrated ecosystem rather than
+                    simply another dairy ingredient.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>What is Exotic Dairy’s long-term vision?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy aims to help build a new premium and functional
+                    rare-milk category based on science, responsible animal
+                    management, specialized technology and high-value products.
+                  </p>
+
+                  <p>
+                    The long-term model combines production, research,
+                    education, commercial partnerships and international market
+                    development.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+               CAMEL MILK
+          ========================== -->
+
+          <section
+            class="faq-group"
+            id="camel"
+            data-category="camel"
+          >
+            <div class="faq-group-head">
+              <p class="eyebrow">Camel Milk</p>
+
+              <h2>
+                A rare dairy source with distinctive characteristics.
+              </h2>
+
+              <p>
+                Explore the nutritional profile, scientific interest and
+                technological challenges associated with camel milk.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How does camel milk differ nutritionally from cow milk?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk has a broadly comparable basic nutritional
+                    composition to whole cow milk, but differs in several
+                    important respects.
+                  </p>
+
+                  <p>
+                    Studies report differences in fatty-acid composition,
+                    protein structure, vitamins and minerals. Camel milk is
+                    frequently reported to contain higher vitamin C levels and
+                    may contain a greater proportion of unsaturated fatty acids.
+                  </p>
+
+                  <p>
+                    Exact composition varies according to breed, diet,
+                    geography, lactation stage and production conditions.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What nutritional characteristics make camel milk unique?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk provides proteins, fats, lactose, vitamins and
+                    minerals, but its nutritional balance differs from
+                    conventional cow milk.
+                  </p>
+
+                  <ul>
+                    <li>
+                      Vitamin C is often reported at comparatively higher levels.
+                    </li>
+
+                    <li>
+                      It provides calcium, potassium, zinc and iron.
+                    </li>
+
+                    <li>
+                      Its protein profile differs significantly from cow milk.
+                    </li>
+
+                    <li>
+                      Its fatty-acid composition may contain a larger proportion
+                      of unsaturated fats.
+                    </li>
+
+                    <li>
+                      It naturally contains bioactive proteins including
+                      lactoferrin, lysozyme and immunoglobulins.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What makes the protein profile of camel milk different?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk contains a different balance of caseins and whey
+                    proteins compared with cow milk.
+                  </p>
+
+                  <p>
+                    One notable difference is that camel milk does not contain
+                    measurable β-lactoglobulin, one of the major whey proteins
+                    found in cow milk.
+                  </p>
+
+                  <p>
+                    Camel milk also contains naturally occurring lactoferrin,
+                    immunoglobulins, lysozyme and other proteins that continue
+                    to attract scientific interest.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can camel milk be easier to digest for some people?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Some people report better tolerance of camel milk compared
+                    with cow milk. Differences in protein composition and fat
+                    structure may contribute to these observations.
+                  </p>
+
+                  <p>
+                    Individual tolerance varies, however, and camel milk should
+                    not be regarded as universally easier to digest.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can camel milk be suitable for some people sensitive to cow milk?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk has a different protein profile from cow milk and
+                    does not contain measurable β-lactoglobulin.
+                  </p>
+
+                  <p>
+                    Research has therefore explored whether camel milk may be
+                    better tolerated by some people who react to cow-milk
+                    proteins.
+                  </p>
+
+                  <div class="faq-medical-note">
+                    People with diagnosed milk allergies should seek appropriate
+                    medical advice before introducing a new animal milk.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Does camel milk contain bioactive compounds?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. Camel milk naturally contains compounds including
+                    lactoferrin, lysozyme, immunoglobulins and other proteins
+                    that have been studied for their biological properties.
+                  </p>
+
+                  <p>
+                    Laboratory and scientific research has investigated
+                    antimicrobial, antioxidant and immune-related activity
+                    associated with some of these components.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Has camel milk been studied in relation to blood sugar and diabetes?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. Camel milk has been studied in relation to glucose
+                    metabolism, insulin-like proteins and blood-glucose control.
+                  </p>
+
+                  <p>
+                    Some clinical studies have reported potentially beneficial
+                    changes, but current evidence is not sufficient to consider
+                    camel milk a treatment for diabetes.
+                  </p>
+
+                  <div class="faq-medical-note">
+                    Camel milk must not replace insulin, prescribed medication
+                    or professional medical care.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Has camel milk been studied in relation to autism or neurological conditions?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk has been investigated in a limited number of
+                    studies involving autism spectrum disorder and selected
+                    neurological conditions.
+                  </p>
+
+                  <p>
+                    Some small studies have reported changes in selected
+                    behavioral or biochemical measures, but the evidence
+                    remains limited and is not sufficient to establish camel
+                    milk as a treatment.
+                  </p>
+
+                  <div class="faq-medical-note">
+                    Further high-quality clinical research is required.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can camel milk support immune-related functions?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk contains naturally occurring bioactive proteins
+                    such as lactoferrin, immunoglobulins and lysozyme.
+                  </p>
+
+                  <p>
+                    These compounds have been studied for antimicrobial,
+                    antioxidant and immune-related properties. Their presence
+                    is one reason camel milk is of interest in functional-food
+                    research.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>Is raw camel milk safe to drink?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Pasteurized camel milk is the safer choice.
+                  </p>
+
+                  <p>
+                    Like other raw animal milks, unpasteurized camel milk may
+                    carry pathogenic microorganisms and zoonotic risks.
+                    Controlled processing, hygiene and pasteurization are
+                    therefore important parts of safe commercial production.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can camel milk be part of a normal daily diet?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    When safely produced and properly processed, camel milk can
+                    be incorporated into a normal diet.
+                  </p>
+
+                  <p>
+                    It can be consumed as drinking milk or used in fermented
+                    products, yogurt, labneh, cheese, desserts, confectionery,
+                    sauces, baking and other food applications.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>What products can be made from camel milk?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk can be developed into drinking milk, yogurt,
+                    labneh, fermented products, cheeses, ice cream,
+                    confectionery, chocolate, functional foods and other
+                    dairy-based applications.
+                  </p>
+
+                  <p>
+                    Exotic Dairy focuses on products where the characteristics
+                    of camel milk can create meaningful nutritional,
+                    technological or premium-market value.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why are camel milk products difficult to find in conventional retail?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camel milk remains a relatively rare raw material and is
+                    more difficult to produce and process at scale than
+                    conventional dairy milk.
+                  </p>
+
+                  <p>
+                    Its protein and casein characteristics also make processes
+                    such as coagulation and cheese production technologically
+                    different from cow, goat, sheep or buffalo milk.
+                  </p>
+
+                  <p>
+                    Limited supply, specialized processing requirements and a
+                    relatively young commercial infrastructure all contribute
+                    to its rarity in retail markets.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why is making cheese from camel milk technologically challenging?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Conventional cheese-making methods cannot always be
+                    transferred directly from cow milk to camel milk.
+                  </p>
+
+                  <p>
+                    Differences in casein composition and coagulation behavior
+                    can lead to slower or weaker curd formation. Specialized
+                    cultures, enzymes, process conditions and technological
+                    know-how may therefore be required.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Which camel species are used for milk production?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The two main domesticated camel species are the
+                    one-humped dromedary
+                    <strong>(Camelus dromedarius)</strong> and the
+                    two-humped Bactrian camel
+                    <strong>(Camelus bactrianus)</strong>.
+                  </p>
+
+                  <p>
+                    Dromedaries account for most commercial camel milk
+                    production worldwide. Bactrian camels are also milked in
+                    some regions but generally have lower commercial milk
+                    availability.
+                  </p>
+
+                  <p>
+                    The wild camel <strong>(Camelus ferus)</strong> is a
+                    separate endangered species and is not a commercial dairy
+                    animal.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What is the difference between dromedary and Bactrian camel milk?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Milk composition differs between species and also between
+                    breeds, environments, feeding systems and stages of
+                    lactation.
+                  </p>
+
+                  <p>
+                    Bactrian camel milk is often reported to contain higher fat
+                    and protein concentrations, while dromedaries generally
+                    offer greater potential for commercial milk production.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>How much milk can a camel produce?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Milk yield varies considerably according to species, breed,
+                    genetics, nutrition, management, lactation stage and
+                    environment.
+                  </p>
+
+                  <p>
+                    Specialized dairy dromedaries can produce substantially
+                    more milk than animals managed under traditional extensive
+                    systems.
+                  </p>
+
+                  <p>
+                    This variability is one reason breeding, nutrition and herd
+                    management are important parts of commercial camel dairy
+                    development.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+               DONKEY MILK
+          ========================== -->
+
+          <section
+            class="faq-group"
+            id="donkey"
+            data-category="donkey"
+          >
+            <div class="faq-group-head">
+              <p class="eyebrow">Donkey Milk</p>
+
+              <h2>
+                Scarce, distinctive and technologically challenging.
+              </h2>
+
+              <p>
+                Discover why donkey milk is attracting scientific and
+                commercial interest despite remaining one of the world's
+                rarest dairy raw materials.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How does donkey milk differ nutritionally from cow milk?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk is generally lighter and lower in calories than
+                    cow milk, with significantly less fat and protein, a higher
+                    lactose content and a different protein composition.
+                  </p>
+
+                  <p>
+                    Its overall macronutrient pattern is often described as
+                    being somewhat closer to human milk than cow milk, although
+                    donkey milk is not equivalent to human breast milk.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why is donkey milk often compared with human milk?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk shares several compositional characteristics
+                    with human milk, including relatively low fat and casein,
+                    higher lactose and a comparatively high proportion of whey
+                    proteins.
+                  </p>
+
+                  <p>
+                    This similarity has attracted scientific interest, but
+                    donkey milk is not identical to human milk and should not
+                    automatically be considered a substitute for breast milk
+                    or regulated infant formula.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What nutritional characteristics can make donkey milk attractive for certain consumers?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk is naturally low in fat and energy, relatively
+                    high in lactose and has a substantially different protein
+                    profile from cow milk.
+                  </p>
+
+                  <p>
+                    It also contains vitamin C and naturally occurring
+                    bioactive proteins such as lysozyme and lactoferrin.
+                  </p>
+
+                  <p>
+                    Whether it is preferable depends on individual nutritional
+                    needs, tolerance and diagnosed allergies or intolerances.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What makes the protein composition of donkey milk distinctive?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk has relatively low casein and a comparatively
+                    high proportion of whey proteins.
+                  </p>
+
+                  <p>
+                    It also naturally contains proteins such as lysozyme and
+                    lactoferrin, which are among the reasons donkey milk
+                    continues to attract interest in nutrition and
+                    functional-food research.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can donkey milk be easier to tolerate than cow milk for some people?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Research suggests that donkey milk can be well tolerated by
+                    some people who cannot tolerate cow milk, particularly some
+                    children with confirmed cow-milk-protein allergy.
+                  </p>
+
+                  <p>
+                    Clinical studies have reported high tolerance rates in
+                    selected groups of children challenged with donkey milk.
+                    These findings are promising but do not mean that donkey
+                    milk is universally tolerated.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why has donkey milk been studied for people with cow-milk-protein allergy?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The distinctive casein-to-whey balance and different protein
+                    profile of donkey milk have led researchers to investigate
+                    it as a possible alternative for some people with
+                    cow-milk-protein allergy.
+                  </p>
+
+                  <div class="faq-medical-note">
+                    Anyone with a diagnosed milk allergy should use new animal
+                    milks only under appropriate medical guidance.
+                  </div>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>Is donkey milk hypoallergenic?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    No animal milk should be considered universally
+                    hypoallergenic.
+                  </p>
+
+                  <p>
+                    Donkey milk may be tolerated by some individuals who react
+                    to cow milk, but individual responses differ and allergic
+                    reactions remain possible.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Does donkey milk contain antimicrobial and immune-related compounds?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk naturally contains bioactive proteins including
+                    lysozyme and lactoferrin.
+                  </p>
+
+                  <p>
+                    These substances have been studied for antimicrobial and
+                    immune-modulating properties. Their presence does not mean
+                    that drinking donkey milk should be regarded as a treatment
+                    for infectious disease.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Is donkey milk traditionally associated with whooping cough?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk has a long history of traditional use in
+                    connection with whooping cough and respiratory complaints.
+                  </p>
+
+                  <p>
+                    This historical use is scientifically interesting, but
+                    there is currently no convincing clinical evidence that
+                    donkey milk cures or treats pertussis.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Has donkey milk been shown to help autism or neurological conditions?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    There is currently no good clinical evidence that donkey
+                    milk can treat autism spectrum disorder or neurological
+                    conditions.
+                  </p>
+
+                  <p>
+                    Research claims in this area are more often associated with
+                    camel milk, where several small human studies have been
+                    conducted. Even there, the evidence remains limited.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>Is raw donkey milk safe to drink?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Pasteurized donkey milk is the safer choice.
+                  </p>
+
+                  <p>
+                    Although donkey milk contains natural antimicrobial
+                    components, raw milk can still contain harmful
+                    microorganisms. Appropriate heat treatment substantially
+                    reduces microbiological risk.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>Can donkey milk be part of a normal diet?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. When safely processed and commercially available,
+                    donkey milk can be incorporated into a normal diet.
+                  </p>
+
+                  <p>
+                    Potential applications include pasteurized milk, yogurt,
+                    kefir and other fermented beverages, specialty cheeses,
+                    ice cream, chocolate and other premium products.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>What products can be made from donkey milk?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk can be developed into pasteurized milk,
+                    fermented products, yogurt, kefir, specialty cheeses,
+                    confectionery, ice cream, chocolate and other premium food
+                    applications.
+                  </p>
+
+                  <p>
+                    Powdered formats, naturally flavored products and selected
+                    functional applications may also be explored where
+                    technically and legally appropriate.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why are donkey milk products rare in ordinary retail?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk remains rare primarily because of production
+                    volume, economics, processing difficulty, logistics,
+                    regulation and animal-management requirements.
+                  </p>
+
+                  <p>
+                    Donkeys produce much smaller quantities of milk than
+                    conventional dairy animals, while responsible milking
+                    systems must also consider animal welfare and the needs of
+                    the foal.
+                  </p>
+
+                  <p>
+                    These factors make donkey milk a naturally scarce and
+                    premium raw material.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why is donkey milk difficult to process into cheese?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkey milk forms a relatively weak curd compared with cow,
+                    sheep or goat milk because of differences in casein
+                    composition and concentration.
+                  </p>
+
+                  <p>
+                    Conventional cheese-making methods therefore cannot always
+                    be transferred directly. Specialized cultures, enzymes and
+                    processing technologies may be required.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What is Exotic Dairy doing to overcome the limitations of donkey milk production?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy's strategy focuses on several interconnected
+                    priorities:
+                  </p>
+
+                  <ul>
+                    <li>
+                      Sustainable and welfare-focused expansion of milk production.
+                    </li>
+
+                    <li>
+                      Development of attractive, high-value products.
+                    </li>
+
+                    <li>
+                      Modern processing and preservation technologies.
+                    </li>
+
+                    <li>
+                      International safety, quality and traceability standards.
+                    </li>
+
+                    <li>
+                      Scientific and human research where appropriate.
+                    </li>
+                  </ul>
+
+                  <p>
+                    The objective is to help move donkey milk from a highly
+                    specialized niche toward a recognizable premium dairy and
+                    functional-food category without relying on exaggerated
+                    health claims.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How does Exotic Dairy approach traceability?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Traceability is an important part of the Exotic Dairy
+                    model.
+                  </p>
+
+                  <p>
+                    Future systems may allow consumers and partners to access
+                    information about product origin, production, batch
+                    control, testing and expiration through digital tools such
+                    as QR-based traceability.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>How large is the global donkey population?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Donkeys number in the tens of millions worldwide, with
+                    large populations across Africa, Asia and parts of Latin
+                    America.
+                  </p>
+
+                  <p>
+                    Despite the global population, only a small proportion of
+                    donkeys are managed specifically for organized dairy
+                    production, which helps explain why donkey milk remains
+                    scarce.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+               PRODUCTS
+          ========================== -->
+
+          <section
+            class="faq-group"
+            id="products"
+            data-category="products"
+          >
+            <div class="faq-group-head">
+              <p class="eyebrow">
+                Products &amp; Availability
+              </p>
+
+              <h2>
+                From development to market.
+              </h2>
+
+              <p>
+                Understand product status, market availability and how to
+                receive updates about specific Exotic Dairy products.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What products is Exotic Dairy developing?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy is developing a portfolio of camel and donkey
+                    milk products spanning dairy foods, fermented products,
+                    specialty cheeses, confectionery, functional nutrition and
+                    future bio-based applications.
+                  </p>
+
+                  <p>
+                    Individual products are shown on the Products page together
+                    with their current development status.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>What does “Launch Soon” mean?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    “Launch Soon” identifies products whose core development
+                    has been completed and which are being prepared for
+                    commercial production and market introduction.
+                  </p>
+
+                  <p>
+                    Availability may vary by market depending on production
+                    scaling, regulatory requirements and local distribution
+                    partnerships.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>What does “In Development” mean?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    “In Development” identifies products currently undergoing
+                    research, formulation, technological development, testing
+                    or preparation for future commercialization.
+                  </p>
+
+                  <p>
+                    Development timelines vary according to the technical
+                    requirements of each product.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Are Exotic Dairy products available worldwide?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Not necessarily. Product availability may differ by country
+                    and region.
+                  </p>
+
+                  <p>
+                    Exotic Dairy intends to introduce products market by market
+                    according to production capacity, regulatory requirements,
+                    logistics and local commercial partnerships.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why can product availability differ between countries?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Dairy and functional products may be subject to different
+                    regulatory approvals, labeling requirements, production
+                    arrangements, logistics and distribution networks
+                    depending on the country.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can I be notified when a product becomes available?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. Products that are not currently available for purchase
+                    include a <strong>Notify Me</strong> option.
+                  </p>
+
+                  <p>
+                    Registering your interest allows Exotic Dairy to notify you
+                    when the selected product becomes available in your market.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What happens when I select “Notify Me”?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Your request is associated with the specific product you
+                    selected and your market information.
+                  </p>
+
+                  <p>
+                    This allows Exotic Dairy to understand demand by product
+                    and country and to contact interested customers when
+                    availability changes.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Do people registered for notifications receive early access?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Registered users will be among the first to receive
+                    availability information and purchasing opportunities when
+                    the selected product becomes available in their market,
+                    subject to local distribution and product availability.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Does registering interest guarantee product availability?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    No. Registering interest does not guarantee that a product
+                    will become available in a specific market or by a specific
+                    date.
+                  </p>
+
+                  <p>
+                    It allows Exotic Dairy to keep interested users informed
+                    and helps us understand where future market demand exists.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+               EXPERIENCE HUB
+          ========================== -->
+
+          <section
+            class="faq-group"
+            id="hub"
+            data-category="hub"
+          >
+            <div class="faq-group-head">
+              <p class="eyebrow">
+                Experience Hub &amp; Research
+              </p>
+
+              <h2>
+                From animal to milk to product.
+              </h2>
+
+              <p>
+                The Experience Hub is designed as a closed ecosystem combining
+                animals, research, product development, education and visitor
+                experience.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What is the Exotic Dairy Experience Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Experience Hub is the physical ecosystem where animal
+                    breeding, responsible husbandry, milk production, research,
+                    product development, education and visitor experience are
+                    designed to work together.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why is the Experience Hub more than a farm?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Hub connects the complete value chain:
+                  </p>
+
+                  <p>
+                    <strong>
+                      Animal → Milk → Research → Technology → Product →
+                      Testing → Training → Education.
+                    </strong>
+                  </p>
+
+                  <p>
+                    Animals are therefore part of a broader research and
+                    innovation environment rather than only a farming or
+                    visitor attraction.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What role do animals play in the Experience Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Camels and donkeys form the biological foundation of the
+                    Hub ecosystem.
+                  </p>
+
+                  <p>
+                    Their responsible breeding, nutrition, welfare and milk
+                    production support research, specialist education and the
+                    development of new dairy products and technologies.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What happens to milk produced within the Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Depending on the animal, production stage and applicable
+                    requirements, milk produced within the Hub may be used for
+                    research, technological development, product creation,
+                    testing and specialist education.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What role does research play at the Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Rare milk cannot simply be treated as conventional cow milk
+                    with a different label.
+                  </p>
+
+                  <p>
+                    Understanding animal biology, milk composition, processing
+                    behavior, fermentation, product stability and nutrition is
+                    essential for developing commercially viable products.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will specialists be trained at the Experience Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Specialist education is part of the Hub concept.
+                  </p>
+
+                  <p>
+                    Training may include animal husbandry and welfare, milk
+                    handling, dairy technology, processing, research and
+                    product development.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will the Experience Hub be open to visitors?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. The Hub is designed to include public-facing
+                    educational and visitor experiences.
+                  </p>
+
+                  <p>
+                    Access will be organized around appropriate visitor areas,
+                    operating conditions and animal-welfare requirements.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What will visitors be able to experience?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Experience Hub is designed to allow visitors to
+                    understand the journey from animal care and milk production
+                    to research, product development and final products.
+                  </p>
+
+                  <p>
+                    Selected visitor formats may include educational
+                    experiences, animal observation, research interpretation,
+                    showroom activities and product tasting.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will there be open days and educational visits?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. Open days and organized educational formats are
+                    planned as part of the Hub's public-facing concept.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can schools, universities or organized groups visit the Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Educational groups, universities, professional visitors
+                    and other organized groups are expected to form an
+                    important part of the Hub's educational mission.
+                  </p>
+
+                  <p>
+                    Exact formats and access conditions will be announced as
+                    the Hub moves toward operation.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How does animal welfare fit into the Experience Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Animal welfare is a fundamental part of the Hub model.
+                  </p>
+
+                  <p>
+                    Breeding, nutrition, husbandry, veterinary care, milk
+                    production, visitor interaction and educational activities
+                    must all be designed around responsible animal management.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How does sustainability influence the Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Hub is being developed as an integrated ecosystem where
+                    animal management, resource efficiency, research,
+                    production and education are considered together rather
+                    than as separate activities.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+               CROWD PARTICIPATION
+          ========================== -->
+
+          <section
+            class="faq-group"
+            id="crowd"
+            data-category="crowd"
+          >
+            <div class="faq-group-head">
+              <p class="eyebrow">
+                Crowd Participation
+              </p>
+
+              <h2>
+                Become part of what the Hub creates.
+              </h2>
+
+              <p>
+                Crowd Participation is designed to give individuals a meaningful
+                way to support, experience and be recognized within the
+                development of the Experience Hub.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What is the Crowd Participation model?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Crowd Participation model allows individuals and
+                    supporters to become active contributors to the development
+                    of the Exotic Dairy Experience Hub.
+                  </p>
+
+                  <p>
+                    It is not designed simply as a donation program.
+                    Participants receive recognition, access benefits and other
+                    program privileges in return for their contribution while
+                    becoming part of the community helping build the Hub and
+                    its future products.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why is Crowd Participation part of the Experience Hub?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Experience Hub is intended to be more than a closed
+                    production or research facility.
+                  </p>
+
+                  <p>
+                    It is designed as an ecosystem connecting science, animals,
+                    products, education and people. Crowd Participation gives
+                    individuals a structured way to become part of that
+                    ecosystem and to see the impact of their contribution.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Who is Crowd Participation designed for?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Crowd Participation is primarily intended for individuals
+                    and supporters who want a closer relationship with the
+                    Experience Hub without entering a strategic business
+                    partnership.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What Crowd Participation options will be available first?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The first three participation formats planned for launch are:
+                  </p>
+
+                  <ul>
+                    <li>
+                      <strong>One-Time Participation</strong>
+                    </li>
+
+                    <li>
+                      <strong>Membership</strong>
+                    </li>
+
+                    <li>
+                      <strong>Adopt a Camel or Donkey</strong>
+                    </li>
+                  </ul>
+
+                  <p>
+                    Full terms, benefits and eligibility conditions will be
+                    published before each program officially opens.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What does One-Time Participation include?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    One-Time Participants contribute once toward the
+                    development of the Experience Hub.
+                  </p>
+
+                  <p>
+                    Planned benefits include recognition of their participation,
+                    a certificate and selected visitor-access benefits.
+                    Additional recognition may be connected with projects,
+                    milestones or products developed through the Hub.
+                  </p>
+
+                  <p>
+                    Exact benefits will be defined in the official program
+                    terms before launch.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>What does Membership include?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Membership is designed for people who want an ongoing
+                    relationship with the Experience Hub rather than a one-time
+                    participation.
+                  </p>
+
+                  <p>
+                    Members are expected to receive continuing recognition,
+                    updates, selected access privileges and participation
+                    benefits connected with future activities, products and
+                    educational experiences.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What does “Adopt a Camel or Donkey” mean?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    “Adopt a Camel or Donkey” is a guardianship-style
+                    participation model connected with a specific animal in the
+                    Experience Hub.
+                  </p>
+
+                  <p>
+                    Adoption does not transfer ownership of the animal. The
+                    camel or donkey remains part of the Exotic Dairy ecosystem
+                    and continues to contribute to the Hub's research,
+                    education and product-development activities.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Do I become the legal owner of the animal?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    No. The animal remains under the ownership, professional
+                    care and management of the applicable Exotic Dairy Hub
+                    structure.
+                  </p>
+
+                  <p>
+                    The participant becomes the recognized guardian associated
+                    with that animal under the participation program.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What does the animal's guardian receive?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The guardian is expected to receive a dedicated certificate
+                    and formal recognition connected with the selected camel or
+                    donkey.
+                  </p>
+
+                  <p>
+                    Additional benefits and experiences will be defined in the
+                    final adoption program terms.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will the guardian's name be visible to Hub visitors?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The program is intended to make the relationship between
+                    guardians and supported animals visible within the
+                    Experience Hub.
+                  </p>
+
+                  <p>
+                    The exact presentation format will be finalized before the
+                    program launches.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What happens to an adopted animal?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The animal remains fully integrated into the Experience Hub.
+                  </p>
+
+                  <p>
+                    It receives professional care and may participate, where
+                    appropriate, in breeding, milk production, research,
+                    specialist training and educational activities under
+                    applicable welfare and professional standards.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What happens to milk from an adopted animal?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Milk remains part of the Experience Hub ecosystem.
+                  </p>
+
+                  <p>
+                    Depending on production stage and applicable requirements,
+                    it may support research, technological development,
+                    product creation, testing and specialist education.
+                  </p>
+
+                  <p>
+                    Adoption does not create private ownership rights over the
+                    animal's milk or products.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How are participants recognized for what the Hub creates?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy intends to make participation visible and
+                    meaningful.
+                  </p>
+
+                  <p>
+                    Participants may receive certificates, digital recognition
+                    and a record of milestones, projects or products developed
+                    with the support of the Experience Hub.
+                  </p>
+
+                  <p>
+                    The objective is not simply to record that someone
+                    contributed, but to show what the ecosystem was able to
+                    create with that support.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will participants be able to see which products their contribution helped support?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The participation model is intended to connect supporters
+                    with real Hub outcomes.
+                  </p>
+
+                  <p>
+                    Where appropriate, future digital recognition may show
+                    products, research milestones or other developments
+                    associated with the Experience Hub and its participant
+                    community.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will participants have their own profile, certificates or recognition history?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Personal digital recognition, certificates and milestone
+                    history are planned as part of the wider participation
+                    concept.
+                  </p>
+
+                  <p>
+                    The final digital functionality will be announced before
+                    the program launches.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will participants receive complimentary or preferential Hub access?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Selected access benefits are planned across the
+                    participation models.
+                  </p>
+
+                  <p>
+                    Complimentary or preferential access will depend on the
+                    participation level and the final program terms.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Will there be bonus points or other Hub privileges?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Additional loyalty, bonus or participation privileges are
+                    being considered as part of the future program.
+                  </p>
+
+                  <p>
+                    The exact mechanics will be confirmed in the official terms
+                    before launch.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    When will Crowd Participation become available?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    One-Time Participation, Membership and Adopt a Camel or
+                    Donkey are planned as the first participation formats.
+                  </p>
+
+                  <p>
+                    Exact launch dates, conditions and benefits will be
+                    announced before registration opens.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How is Crowd Participation different from Founder Partnership?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Crowd Participation is designed primarily for individuals
+                    and supporters who want to contribute to the Experience Hub
+                    and receive recognition, access benefits and participation
+                    privileges.
+                  </p>
+
+                  <p>
+                    Founder Partnership is a separate business model intended
+                    for strategic partners whose companies, expertise,
+                    technology, distribution, production capabilities or
+                    market access can actively contribute to the wider Exotic
+                    Dairy ecosystem.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Is Crowd Participation the same as investing in Exotic Dairy?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    No. Crowd Participation is a separate community
+                    participation model connected primarily with the Experience
+                    Hub.
+                  </p>
+
+                  <p>
+                    It should not be understood as the purchase of shares or an
+                    automatic ownership interest in Exotic Dairy.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- =========================
+               PARTNERSHIPS
+          ========================== -->
+
+          <section
+            class="faq-group"
+            id="partnerships"
+            data-category="partnerships"
+          >
+            <div class="faq-group-head">
+              <p class="eyebrow">Partnerships</p>
+
+              <h2>
+                Capital with purpose. Business with participation.
+              </h2>
+
+              <p>
+                The Founder Partnership model is designed around active
+                strategic cooperation rather than purely passive capital.
+              </p>
+            </div>
+
+            <div class="faq-list">
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What is the Founder Partnership Program?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Founder Partnership Program is designed to build an
+                    active business ecosystem around Exotic Dairy.
+                  </p>
+
+                  <p>
+                    Founder Partners may contribute capital, capabilities,
+                    knowledge, production, distribution, technology, market
+                    access or other strategic resources that can create value
+                    for both sides.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why has Exotic Dairy created a Founder Partnership model?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy believes that strong business ecosystems are
+                    built through more than capital alone.
+                  </p>
+
+                  <p>
+                    The Founder Partnership model is intended to connect the
+                    company with businesses and professionals whose expertise,
+                    networks, production capabilities, technology or market
+                    access can contribute directly to long-term growth.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Who is the Founder Partnership Program designed for?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The program is designed for businesses, professionals,
+                    organizations and strategic participants who can bring
+                    meaningful capabilities or opportunities to the Exotic
+                    Dairy ecosystem.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can anyone become a Founder Partner?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    No. Founder Partnership is not based solely on the ability
+                    to provide capital.
+                  </p>
+
+                  <p>
+                    Potential participants are assessed for strategic
+                    compatibility with the Exotic Dairy ecosystem.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Is capital alone enough to become a Founder Partner?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Not necessarily.
+                  </p>
+
+                  <p>
+                    We look for partners whose business, knowledge, market,
+                    capabilities or network can create a meaningful reason for
+                    both sides to work together.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How does Exotic Dairy select potential Founder Partners?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Potential partners are evaluated for strategic
+                    compatibility, relevant capabilities and the potential for
+                    mutually beneficial cooperation.
+                  </p>
+
+                  <p>
+                    The exact assessment depends on the type of partner and the
+                    proposed relationship.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why does Exotic Dairy perform a compatibility assessment?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The objective is to avoid partnerships based only on
+                    financial participation where there is no meaningful
+                    strategic relationship.
+                  </p>
+
+                  <p>
+                    Compatibility assessment helps identify areas where the
+                    partner can contribute and where Exotic Dairy may create
+                    value for the partner in return.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What can a Founder Partner contribute besides capital?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <ul>
+                    <li>Production capabilities</li>
+                    <li>Distribution</li>
+                    <li>Market access</li>
+                    <li>Technology</li>
+                    <li>Scientific expertise</li>
+                    <li>Research and development</li>
+                    <li>Logistics</li>
+                    <li>Retail access</li>
+                    <li>Professional services</li>
+                    <li>Business networks</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How can Founder Partners actively participate in the ecosystem?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Depending on the partner, active participation may include
+                    supply, distribution, technology, research, product
+                    development, production, marketing, market entry or other
+                    collaborative business activities.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What kinds of collaboration opportunities can exist?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Collaboration may include supply relationships,
+                    distribution, co-development, scientific research,
+                    production, technological cooperation, market access,
+                    international development and other mutually relevant
+                    projects.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What does the Founder Contribution represent?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Founder Contribution forms part of the applicable
+                    Founder Partnership arrangement and establishes the
+                    participant's financial commitment to the program.
+                  </p>
+
+                  <p>
+                    Exact financial rights, benefits and obligations are
+                    defined in the relevant partnership agreement and program
+                    terms.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How long does a Founder Partnership last?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    The Founder Partnership model is designed as a long-term
+                    relationship.
+                  </p>
+
+                  <p>
+                    Current program structure includes a minimum five-year
+                    partnership period, subject to the applicable agreement and
+                    any specific terms agreed with the participant.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What does the minimum five-year partnership period mean?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    It reflects the long-term nature of the program and the
+                    time required to build meaningful business relationships,
+                    products and ecosystem value.
+                  </p>
+
+                  <p>
+                    Specific exit mechanisms remain governed by the applicable
+                    agreement.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How are the rights and benefits of each Founder Partner defined?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Rights, financial arrangements, access, participation
+                    opportunities and exit mechanisms are defined by the
+                    applicable Founder Partnership agreement and program terms.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Are the same terms offered to every Founder Partner?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Not necessarily. Different participation levels and
+                    strategic relationships may involve different rights,
+                    benefits and contractual conditions.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What happens if a Founder Partner wants to exit?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exit is handled according to the mechanisms defined in the
+                    applicable partnership agreement.
+                  </p>
+
+                  <p>
+                    Depending on the participation level, an agreement may
+                    include predefined exit or buy-back conditions.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What is the Platinum buy-back option?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Certain Platinum Founder arrangements may include an
+                    earlier predefined buy-back or exit option.
+                  </p>
+
+                  <p>
+                    The exact timing, conditions and financial terms are
+                    defined in the applicable agreement and should not be
+                    assumed to be identical for every participant.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>Are Founder Partnerships risk-free?</span>
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    No business participation should be considered risk-free.
+                  </p>
+
+                  <p>
+                    Exotic Dairy's model is designed to reduce avoidable
+                    strategic mismatches by evaluating potential partners
+                    before entering a relationship and by defining rights,
+                    responsibilities and exit mechanisms contractually.
+                  </p>
+
+                  <p>
+                    This does not eliminate commercial or business risk.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How is Founder Partnership different from simply buying shares?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Buying shares generally provides an economic interest in a
+                    company while operational decisions remain primarily with
+                    management and the company's governing bodies.
+                  </p>
+
+                  <p>
+                    Exotic Dairy's Founder Partnership model is designed around
+                    active cooperation. Partners are selected because their
+                    business, expertise, network or capabilities can contribute
+                    to the ecosystem and because there is a strategic reason
+                    for both sides to work together.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How is Founder Partnership different from keeping capital in a bank deposit?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    A bank deposit and a Founder Partnership serve fundamentally
+                    different purposes.
+                  </p>
+
+                  <p>
+                    A deposit is primarily a financial savings product. Founder
+                    Partnership is a business relationship designed around
+                    active participation, cooperation and the creation of
+                    commercial and strategic opportunities.
+                  </p>
+
+                  <p>
+                    They should therefore not be viewed as equivalent financial
+                    products.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Why does Exotic Dairy prefer active strategic partners over purely passive capital?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Exotic Dairy is not looking only for capital.
+                  </p>
+
+                  <p>
+                    We are building an ecosystem in which partners can
+                    contribute capabilities, expertise, production,
+                    distribution, technology, market access or business
+                    networks.
+                  </p>
+
+                  <p>
+                    The objective is not simply to raise funds but to combine
+                    complementary strengths that can create additional value
+                    for Exotic Dairy and for the partner.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Are international Founder Partners welcome?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. Exotic Dairy is open to international strategic
+                    relationships where there is a meaningful commercial,
+                    scientific, technological or market rationale.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Are international joint ventures automatically part of the Founder Partnership Program?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    No. Participation in the Founder Partnership Program does
+                    not automatically grant territorial rights, licenses or
+                    participation in a future international joint venture.
+                  </p>
+
+                  <p>
+                    International projects are evaluated and structured
+                    separately.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    How can an international Exotic Dairy partnership be structured?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    International projects may combine Exotic Dairy's research,
+                    product-development, engineering, technology and know-how
+                    with local capabilities such as farming, production,
+                    investment, distribution and market access.
+                  </p>
+
+                  <p>
+                    The specific structure depends on the country, regulatory
+                    environment, project and local partners involved.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    Can a local partner participate through production, farming or distribution?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Yes. Local production capacity, farms, processing
+                    infrastructure, distribution and market access can all form
+                    part of an international strategic partnership where they
+                    are relevant to the project.
+                  </p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <button class="faq-question" type="button">
+                  <span>
+                    What can Exotic Dairy contribute to an international joint venture?
+                  </span>
+
+                  <span class="faq-toggle"></span>
+                </button>
+
+                <div class="faq-answer">
+                  <p>
+                    Depending on the project, Exotic Dairy may contribute
+                    research, know-how, product development, processing
+                    technology, engineering, brand development, specialist
+                    expertise and access to the wider Exotic Dairy ecosystem.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="faq-final">
+      <div class="faq-final-inner">
+        <div>
+          <p class="eyebrow">
+            Still Have a Question?
+          </p>
+
+          <h2>
+            Let's talk.
+          </h2>
+
+          <p>
+            If you cannot find the answer you are looking for, connect
+            directly with the Exotic Dairy team.
+          </p>
+        </div>
+
+        <a
+          class="btn modal-trigger"
+          href="#"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+  
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+          >
+  
+          <span>
+            EXOTIC<br>
+            DAIRY
+          </span>
+        </div>
+  
+        <p>
+          Building the future of functional bio-dairy through rare milk,
+          research, premium products and ecosystem innovation.
+        </p>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Explore</h3>
+  
+        <a href="products.html">
+          Products
+        </a>
+  
+        <a href="our-solution.html">
+          Our Solution
+        </a>
+  
+        <a href="experience-hub.html">
+          Experience Hub
+        </a>
+  
+        <a href="partnerships.html">
+          Partnerships
+        </a>
+  
+        <a href="about.html">
+          About Us
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Products</h3>
+  
+        <a href="products.html">
+          All Products
+        </a>
+  
+        <a href="products.html?category=camel">
+          Camel Milk Products
+        </a>
+  
+        <a href="products.html?category=donkey">
+          Donkey Milk Products
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Participate</h3>
+  
+        <a href="experience-hub.html#crowd-participation">
+          Crowd Participation
+        </a>
+  
+        <a href="partnerships.html">
+          Founder Partnership
+        </a>
+  
+        <a
+          href="#"
+          class="modal-trigger"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Resources</h3>
+  
+        <a href="faq.html">
+          FAQ
+        </a>
+  
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+  
+        <a href="terms.html">
+          Terms of Use
+        </a>
+  
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Contact</h3>
+  
+        <p>
+          Plovdiv, Bulgaria
+        </p>
+  
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+  
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+  
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+  
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================
+       CONTACT MODAL
+  ========================== -->
+
+  <div class="modal" id="contactModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel contact-panel">
+      <button class="modal-x modal-close">
+        ×
+      </button>
+
+      <p class="eyebrow">
+        Contact
+      </p>
+
+      <h2>
+        Let's Build the Future Together
+      </h2>
+
+      <p class="modal-intro">
+        Connect with the Exotic Dairy team to discuss products, research,
+        partnerships and future opportunities.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Exotic Dairy Inquiry"
+        >
+
+        <div class="form-row">
+          <label>
+            Name *
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            minlength="2"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Email *
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Company
+          </label>
+
+          <input
+            type="text"
+            name="company"
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Country
+          </label>
+
+          <input
+            type="text"
+            name="country"
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Interest
+          </label>
+
+          <select name="interest">
+            <option>Research</option>
+            <option>Products</option>
+            <option>Distribution</option>
+            <option>Investment</option>
+            <option>Partnerships</option>
+            <option>Media</option>
+          </select>
+        </div>
+
+        <div class="form-row full">
+          <label>
+            Message *
+          </label>
+
+          <textarea
+            name="message"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-row full">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="consent"
+              value="yes"
+              required
+            >
+
+            I agree to the Privacy Policy and consent to being contacted.
+          </label>
+        </div>
+
+        <button
+          class="btn"
+          type="submit"
+        >
+          Send inquiry
+        </button>
+
+        <div
+          id="form-success"
+          style="display:none;"
+        >
+          Thank you for contacting Exotic Dairy.
+          We will get back to you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================
+       FAQ SCRIPT
+  ========================== -->
+
+  <script>
+    const faqItems =
+      document.querySelectorAll(".faq-item");
+
+    const faqGroups =
+      document.querySelectorAll(".faq-group");
+
+    const sidebarLinks =
+      document.querySelectorAll(".faq-sidebar-nav a");
+
+    const faqFloatingSearch =
+      document.getElementById("faqFloatingSearch");
+
+    const faqSearchToggle =
+      document.getElementById("faqSearchToggle");
+
+    const faqSearchClose =
+      document.getElementById("faqSearchClose");
+
+    const faqSearch =
+      document.getElementById("faqSearch");
+
+    const faqSearchEmpty =
+      document.getElementById("faqSearchEmpty");
+
+    /* =========================
+       ACCORDION
+    ========================= */
+
+    faqItems.forEach(item => {
+      const question =
+        item.querySelector(".faq-question");
+
+      question.addEventListener("click", () => {
+        const isOpen =
+          item.classList.contains("open");
+
+        const parentGroup =
+          item.closest(".faq-group");
+
+        parentGroup
+          .querySelectorAll(".faq-item.open")
+          .forEach(openItem => {
+            openItem.classList.remove("open");
+          });
+
+        if (!isOpen) {
+          item.classList.add("open");
+        }
+      });
+    });
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    function filterFaq() {
+      const query =
+        faqSearch.value
+          .trim()
+          .toLowerCase();
+
+      let visibleItems = 0;
+
+      faqGroups.forEach(group => {
+        let visibleInGroup = 0;
+
+        const items =
+          group.querySelectorAll(".faq-item");
+
+        items.forEach(item => {
+          const text =
+            item.textContent.toLowerCase();
+
+          const matches =
+            !query || text.includes(query);
+
+          item.classList.toggle(
+            "search-hidden",
+            !matches
+          );
+
+          if (matches) {
+            visibleInGroup++;
+            visibleItems++;
+          }
+        });
+
+        group.classList.toggle(
+          "search-hidden",
+          visibleInGroup === 0
+        );
+      });
+
+      faqSearchEmpty.classList.toggle(
+        "visible",
+        visibleItems === 0
+      );
+    }
+
+    function openFaqSearch() {
+      faqFloatingSearch.classList.add("open");
+
+      setTimeout(() => {
+        faqSearch.focus();
+      }, 220);
+    }
+
+    function closeFaqSearch() {
+      faqFloatingSearch.classList.remove("open");
+
+      faqSearch.value = "";
+
+      filterFaq();
+    }
+
+    faqSearchToggle.addEventListener(
+      "click",
+      openFaqSearch
+    );
+
+    faqSearchClose.addEventListener(
+      "click",
+      closeFaqSearch
+    );
+
+    faqSearch.addEventListener(
+      "input",
+      filterFaq
+    );
+
+    document.addEventListener("keydown", event => {
+      if (
+        event.key === "Escape" &&
+        faqFloatingSearch.classList.contains("open")
+      ) {
+        closeFaqSearch();
+      }
+    });
+
+    /* =========================
+       SIDEBAR NAVIGATION
+    ========================= */
+
+    sidebarLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        sidebarLinks.forEach(item => {
+          item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+      });
+    });
+
+    /* =========================
+       ACTIVE CATEGORY ON SCROLL
+    ========================= */
+
+    const observer =
+      new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const id =
+              entry.target.id;
+
+            sidebarLinks.forEach(link => {
+              link.classList.toggle(
+                "active",
+                link.getAttribute("href") === `#${id}`
+              );
+            });
+          });
+        },
+        {
+          rootMargin: "-25% 0px -65% 0px",
+          threshold: 0
+        }
+      );
+
+    faqGroups.forEach(group => {
+      observer.observe(group);
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

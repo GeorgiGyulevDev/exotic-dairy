@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Exotic Dairy — Partnerships</title>
+
+  <meta
+    name="description"
+    content="Join the Exotic Dairy Founder Partnership Program and become part of a growing ecosystem connecting science, innovation, production, business and market opportunities."
+  />
+
+  <meta property="og:title" content="Exotic Dairy — Partnerships" />
+  <meta property="og:description" content="Partnerships That Build the Future." />
+  <meta property="og:image" content="https://exoticdairy.com/assets/images/share.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exoticdairy.com/partnerships.html" />
+  <meta property="og:site_name" content="Exotic Dairy" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Exotic Dairy — Partnerships" />
+  <meta name="twitter:description" content="Partnerships That Build the Future." />
+  <meta name="twitter:image" content="https://exoticdairy.com/assets/images/share.png" />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .partnership-hero {
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6, 16, 31, .98) 0%,
+          rgba(6, 16, 31, .90) 35%,
+          rgba(6, 16, 31, .48) 66%,
+          rgba(6, 16, 31, .10) 100%
+        ),
+        url("assets/images/partnership.png") center / cover no-repeat;
+      background-color: var(--navy);
+    }
+
+    .partnership-hero-content {
+      max-width: 780px;
+      padding: 90px 7vw;
+      color: var(--white);
+    }
+
+    .partnership-hero-content .eyebrow {
+      color: #8fd2ff;
+    }
+
+    .partnership-hero-content h1 {
+      font-size: clamp(48px, 6vw, 88px);
+      line-height: .92;
+      letter-spacing: -2px;
+      margin: 18px 0 0;
+    }
+
+    .founder-program {
+      padding: 86px 7vw 94px;
+      background: var(--white);
+    }
+
+    .partnership-section-head {
+      max-width: 820px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .partnership-section-head h2 {
+      max-width: 820px;
+      margin: 10px auto 16px;
+      color: var(--navy);
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.05;
+    }
+
+    .partnership-section-head p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      max-width: 1320px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+
+    .founder-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: 0 18px 48px rgba(7, 21, 40, .08);
+      transition: border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .founder-card:hover {
+      border-color: rgba(20, 119, 212, .32);
+      box-shadow: 0 22px 54px rgba(7, 21, 40, .12);
+    }
+
+    .founder-card.gold {
+      border-color: rgba(201, 145, 39, .42);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255, 249, 236, .88),
+          rgba(255, 255, 255, 1) 45%
+        );
+    }
+
+    .founder-card.platinum {
+      border-color: rgba(7, 21, 40, .22);
+    }
+
+    .founder-card-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .founder-medal {
+      width: 70px;
+      height: 70px;
+      flex: 0 0 70px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      font-size: 30px;
+      font-weight: 800;
+      box-shadow: inset 0 0 0 4px rgba(255, 255, 255, .28);
+    }
+
+    .bronze .founder-medal {
+      color: #fff3e8;
+      background: linear-gradient(145deg, #d59150, #7d4219);
+    }
+
+    .silver .founder-medal {
+      color: #ffffff;
+      background: linear-gradient(145deg, #d9dde2, #666c73);
+    }
+
+    .gold .founder-medal {
+      color: #fff8dc;
+      background: linear-gradient(145deg, #e8b64f, #9a6515);
+    }
+
+    .platinum .founder-medal {
+      color: #ffffff;
+      background: linear-gradient(145deg, #aeb6c0, #373d45);
+    }
+
+    .founder-card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.05;
+      margin-bottom: 7px;
+    }
+
+    .founder-price {
+      color: var(--navy);
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .founder-deposit {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 800;
+    }
+
+    .founder-intro {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 17px;
+    }
+
+    .founder-benefits {
+      display: grid;
+      gap: 13px;
+      padding: 0;
+      margin: 0 0 28px;
+      list-style: none;
+    }
+
+    .founder-benefits li {
+      display: grid;
+      grid-template-columns: 25px 1fr;
+      gap: 10px;
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .founder-benefits span {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(20, 119, 212, .10);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .gold .founder-benefits span {
+      background: rgba(201, 145, 39, .12);
+      color: #b67b17;
+    }
+
+    .founder-card .btn {
+      width: 100%;
+      margin-top: auto;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .silver .btn {
+      background: #59616a;
+    }
+
+    .gold .btn {
+      background: linear-gradient(135deg, #c99327, #e5af3c);
+    }
+
+    .platinum .btn {
+      background: var(--navy);
+    }
+
+    .program-note {
+      max-width: 1100px;
+      margin: 22px auto 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .partnership-process {
+      padding: 86px 7vw 94px;
+      background: var(--bg);
+      text-align: center;
+    }
+
+    .partnership-process h2 {
+      margin: 10px auto 16px;
+      color: var(--navy);
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.05;
+    }
+
+    .partnership-process > p {
+      max-width: 720px;
+      margin: 0 auto 55px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .partnership-process-line {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 34px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .partnership-step {
+      position: relative;
+    }
+
+    .partnership-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      top: 28px;
+      right: -24px;
+      color: var(--blue);
+      font-size: 28px;
+      font-weight: 700;
+      opacity: .5;
+    }
+
+    .partnership-step-icon {
+      position: relative;
+      width: 84px;
+      height: 84px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 50%;
+      background: var(--navy);
+      box-shadow: 0 16px 40px rgba(7, 21, 40, .12);
+    }
+
+    .partnership-step-number {
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: 27px;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #c99327;
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .partnership-step-icon svg {
+      width: 39px;
+      height: 39px;
+      stroke: var(--white);
+    }
+
+    .partnership-step h3 {
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-size: 20px;
+    }
+
+    .partnership-step p {
+      max-width: 240px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .process-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 760px;
+      margin: 44px auto 0;
+      padding: 13px 18px;
+      border: 1px solid rgba(201, 145, 39, .30);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .78);
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .process-note svg {
+      width: 21px;
+      height: 21px;
+      flex: 0 0 21px;
+      stroke: #c99327;
+    }
+
+    .mutual-growth {
+      padding: 90px 7vw;
+      background: var(--white);
+      text-align: center;
+    }
+
+    .mutual-growth h2 {
+      max-width: 820px;
+      margin: 10px auto 16px;
+      color: var(--navy);
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.05;
+    }
+
+    .mutual-growth > p {
+      max-width: 780px;
+      margin: 0 auto 50px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .growth-equation {
+      display: grid;
+      grid-template-columns: 1fr 70px 1fr 70px 1fr;
+      align-items: center;
+      gap: 20px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px;
+      border-radius: 22px;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(20, 119, 212, .16),
+          transparent 38%
+        ),
+        linear-gradient(135deg, #06101f, #0a2948);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .growth-block {
+      min-width: 0;
+    }
+
+    .growth-block h3 {
+      margin-bottom: 15px;
+      color: #8fd2ff;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .growth-block.shared h3 {
+      color: #e4ad43;
+    }
+
+    .growth-block p {
+      color: #d7e3f2;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .growth-symbol {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: #c99327;
+      color: var(--white);
+      font-size: 30px;
+      font-weight: 900;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+    }
+
+    .growth-statement {
+      max-width: 930px;
+      margin: 30px auto 0;
+      color: var(--navy);
+      font-size: 17px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .partnership-final-cta {
+      padding: 90px 7vw;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6, 16, 31, .96) 0%,
+          rgba(6, 16, 31, .88) 45%,
+          rgba(6, 16, 31, .62) 100%
+        ),
+        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .partnership-final-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .partnership-final-inner h2 {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+
+    .partnership-final-inner p {
+      max-width: 720px;
+      color: #d7e3f2;
+      font-size: 18px;
+    }
+
+    @media(max-width: 1180px) {
+      .founder-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .partnership-process-line {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 46px 34px;
+      }
+
+      .partnership-step::after {
+        display: none;
+      }
+    }
+
+    @media(max-width: 900px) {
+      .partnership-hero {
+        min-height: 560px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(6, 16, 31, .92) 0%,
+            rgba(6, 16, 31, .70) 50%,
+            rgba(6, 16, 31, .30) 100%
+          ),
+          url("assets/images/partnership.png") center / cover no-repeat;
+      }
+
+      .partnership-hero-content {
+        padding: 60px 24px;
+      }
+
+      .growth-equation {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        padding: 38px 28px;
+      }
+
+      .growth-symbol {
+        width: 52px;
+        height: 52px;
+      }
+
+      .partnership-final-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .partnership-final-inner p {
+        margin: 0 auto;
+      }
+    }
+
+    /* Keep partnership section labels consistent with hero eyebrow */
+    .founder-program .eyebrow,
+    .partnership-process .eyebrow,
+    .mutual-growth .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    @media(max-width: 680px) {
+      .founder-program,
+      .partnership-process,
+      .mutual-growth,
+      .partnership-final-cta {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .founder-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .founder-card {
+        padding: 26px;
+      }
+
+      .partnership-process-line {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .partnership-step {
+        display: grid;
+        grid-template-columns: 74px 1fr;
+        gap: 18px;
+        align-items: start;
+        text-align: left;
+      }
+
+      .partnership-step-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0;
+      }
+
+      .partnership-step-icon svg {
+        width: 34px;
+        height: 34px;
+      }
+
+      .partnership-step h3 {
+        margin-top: 5px;
+      }
+
+      .partnership-step p {
+        max-width: none;
+        margin: 0;
+      }
+
+      .process-note {
+        text-align: left;
+      }
+
+      .growth-equation {
+        padding: 34px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.png" alt="Exotic Dairy logo" />
+      <span>EXOTIC<br>DAIRY</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      
+      <a href="products.html">Products</a>
+      <a href="our-solution.html">Our Solution</a>
+      <a href="experience-hub.html">Experience Hub</a>
+      <a class="active" href="partnerships.html">Partnerships</a>
+      <a href="about.html">About Us</a>
+      <a href="faq.html">FAQ</a>
+
+      <a
+        class="mobile-contact-btn modal-trigger"
+        href="#"
+        data-modal="contactModal"
+      >
+        Get in Touch
+      </a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#"
+      data-modal="contactModal"
+    >
+      Get in touch
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="partnership-hero">
+      <div class="partnership-hero-content">
+        <p class="eyebrow">Partnership Network</p>
+
+        <h1>
+          Partnerships<br>
+          That Build the Future.
+        </h1>
+      </div>
+    </section>
+
+    <section class="founder-program">
+      <div class="partnership-section-head">
+        <p class="eyebrow">Founder Partnership Program</p>
+
+        <h2>
+          Grow With Exotic Dairy.
+        </h2>
+
+        <p>
+          Join a growing ecosystem built around cooperation, innovation and shared opportunities.
+          Founder Partners become part of the Exotic Dairy network, connecting businesses, producers, researchers and market partners to create long-term value together.
+        </p>
+      </div>
+
+      <div class="founder-grid">
+        <article class="founder-card bronze">
+          <div class="founder-card-head">
+            <div class="founder-medal">◆</div>
+
+            <div>
+              <h3>Bronze Founder</h3>
+              <div class="founder-price">€5,000</div>
+              <span class="founder-deposit">Founder Contribution</span>
+            </div>
+          </div>
+
+          <ul class="founder-benefits">
+            <li>
+              <span>✓</span>
+              Founder Partner status
+            </li>
+
+            <li>
+              <span>✓</span>
+              Partner updates
+            </li>
+
+            <li>
+              <span>✓</span>
+              Access to the partnership network
+            </li>
+
+            <li>
+              <span>✓</span>
+              Online presentations and webinars
+            </li>
+
+            <li>
+              <span>✓</span>
+              Recognition within the ecosystem
+            </li>
+
+            <li>
+              <span>✓</span>
+              Participation in partnership opportunities
+            </li>
+          </ul>
+
+          <a
+            class="btn founder-package-trigger modal-trigger"
+            href="#"
+            data-modal="contactModal"
+            data-package="Bronze Founder Partnership"
+            data-price="€5,000"
+          >
+            Choose Bronze
+          </a>
+        </article>
+
+        <article class="founder-card silver">
+          <div class="founder-card-head">
+            <div class="founder-medal">◆</div>
+
+            <div>
+              <h3>Silver Founder</h3>
+              <div class="founder-price">€10,000</div>
+              <span class="founder-deposit">Founder Contribution</span>
+            </div>
+          </div>
+
+          <p class="founder-intro">
+            Everything in Bronze, plus:
+          </p>
+
+          <ul class="founder-benefits">
+            <li>
+              <span>✓</span>
+              Product and R&amp;D updates
+            </li>
+
+            <li>
+              <span>✓</span>
+              Invitations to Partner Events and Meetings
+            </li>
+
+            <li>
+              <span>✓</span>
+              Networking opportunities
+            </li>
+
+            <li>
+              <span>✓</span>
+              Priority consideration for collaborative projects
+            </li>
+          </ul>
+
+          <a
+            class="btn founder-package-trigger modal-trigger"
+            href="#"
+            data-modal="contactModal"
+            data-package="Silver Founder Partnership"
+            data-price="€10,000"
+          >
+            Choose Silver
+          </a>
+        </article>
+
+        <article class="founder-card gold">
+          <div class="founder-card-head">
+            <div class="founder-medal">◆</div>
+
+            <div>
+              <h3>Gold Founder</h3>
+              <div class="founder-price">€50,000</div>
+              <span class="founder-deposit">Founder Contribution</span>
+            </div>
+          </div>
+
+          <p class="founder-intro">
+            Everything in Silver, plus:
+          </p>
+
+          <ul class="founder-benefits">
+            <li>
+              <span>✓</span>
+              Early involvement in new products and innovation initiatives
+            </li>
+
+            <li>
+              <span>✓</span>
+              Co-branding opportunities where applicable
+            </li>
+
+            <li>
+              <span>✓</span>
+              Participation in strategic projects
+            </li>
+
+            <li>
+              <span>✓</span>
+              Business development support
+            </li>
+
+            <li>
+              <span>✓</span>
+              Priority access to co-development opportunities
+            </li>
+          </ul>
+
+          <a
+            class="btn founder-package-trigger modal-trigger"
+            href="#"
+            data-modal="contactModal"
+            data-package="Gold Founder Partnership"
+            data-price="€50,000"
+          >
+            Choose Gold
+          </a>
+        </article>
+
+        <article class="founder-card platinum">
+          <div class="founder-card-head">
+            <div class="founder-medal">◆</div>
+
+            <div>
+              <h3>Platinum Founder</h3>
+              <div class="founder-price">€100,000+</div>
+              <span class="founder-deposit">Founder Contribution</span>
+            </div>
+          </div>
+
+          <p class="founder-intro">
+            Everything in Gold, plus:
+          </p>
+
+          <ul class="founder-benefits">
+            <li>
+              <span>✓</span>
+              Strategic advisory access
+            </li>
+
+            <li>
+              <span>✓</span>
+              Direct access to leadership
+            </li>
+
+            <li>
+              <span>✓</span>
+              Joint venture opportunities
+            </li>
+
+            <li>
+              <span>✓</span>
+              Priority co-development opportunities
+            </li>
+
+            <li>
+              <span>✓</span>
+              Strategic participation opportunities
+            </li>
+
+            <li>
+              <span>✓</span>
+              Earlier exit / buy-back option under predefined terms
+            </li>
+          </ul>
+
+          <a
+            class="btn founder-package-trigger modal-trigger"
+            href="#"
+            data-modal="contactModal"
+            data-package="Platinum Founder Partnership"
+            data-price="€100,000+"
+          >
+            Discuss Platinum
+          </a>
+        </article>
+      </div>
+
+      <p class="program-note">
+        Founder Partnership participation, financial arrangements and any applicable exit mechanisms are governed by the partnership agreement and program terms.
+      </p>
+    </section>
+
+    <section class="partnership-process">
+      <p class="eyebrow">How It Works</p>
+
+      <h2>
+        How the partnership works.
+      </h2>
+
+      <p>
+        More than a financial contribution — a long-term partnership designed to connect businesses, expertise and opportunities within the Exotic Dairy ecosystem.
+      </p>
+
+      <div class="partnership-process-line">
+        <div class="partnership-step">
+          <div class="partnership-step-icon">
+            <span class="partnership-step-number">1</span>
+
+            <svg viewBox="0 0 48 48" fill="none">
+              <circle cx="17" cy="17" r="6" stroke-width="2.4"/>
+              <circle cx="31" cy="17" r="6" stroke-width="2.4"/>
+              <path d="M7 36C7 29.4 11.5 25 17 25C22.5 25 27 29.4 27 36" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M21 36C21 29.4 25.5 25 31 25C36.5 25 41 29.4 41 36" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h3>Join</h3>
+
+            <p>
+              Your Founder Contribution establishes your participation in the Exotic Dairy ecosystem.
+            </p>
+          </div>
+        </div>
+
+        <div class="partnership-step">
+          <div class="partnership-step-icon">
+            <span class="partnership-step-number">2</span>
+
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M13 7H30L37 14V41H13V7Z" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M30 7V14H37" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M19 22H31" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M19 28H31" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M19 34H27" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h3>Participate</h3>
+
+            <p>
+              While the partnership is active, you participate according to the terms defined in your Founder Partnership agreement.
+            </p>
+          </div>
+        </div>
+
+        <div class="partnership-step">
+          <div class="partnership-step-icon">
+            <span class="partnership-step-number">3</span>
+
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M8 39H40" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M12 35V29" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M21 35V23" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M30 35V17" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M39 35V11" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M11 23L20 19L28 13L39 7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M33 7H39V13" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h3>Grow Together</h3>
+
+            <p>
+              Your business and Exotic Dairy actively seek opportunities
+              to strengthen each other through supply, distribution,
+              research, product development and market access.
+            </p>
+          </div>
+        </div>
+
+        <div class="partnership-step">
+          <div class="partnership-step-icon">
+            <span class="partnership-step-number">4</span>
+
+            <svg viewBox="0 0 48 48" fill="none">
+              <path d="M14 9H34V15C34 22 29.5 27 24 27C18.5 27 14 22 14 15V9Z" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M18 27V32" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M30 27V32" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M15 39H33" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M19 32H29L32 39H16L19 32Z" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M14 13H9V16C9 20 11.5 23 15 24" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M34 13H39V16C39 20 36.5 23 33 24" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div>
+            <h3>Stay &amp; Earn — or Exit</h3>
+
+            <p>
+              Stay in the ecosystem and continue participating according
+              to the partnership terms, or after the minimum five-year
+              partnership period choose to request an exit according to
+              the applicable terms.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-note">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M12 3L19 6V11C19 15.5 16.3 19.2 12 21C7.7 19.2 5 15.5 5 11V6L12 3Z" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M9 12L11 14L15 10" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        Some strategic partnership agreements may include predefined exit options under applicable terms.
+      </div>
+    </section>
+
+    <section class="mutual-growth">
+      <p class="eyebrow">Shared Growth</p>
+
+      <h2>
+        A partnership designed for mutual growth.
+      </h2>
+
+      <p>
+        Every Founder Partner brings different strengths. Exotic Dairy
+        connects them with our research, product development, brand and
+        growing ecosystem to create opportunities that benefit both sides.
+      </p>
+
+      <div class="growth-equation">
+        <div class="growth-block">
+          <h3>Your Strengths</h3>
+
+          <p>
+            Supply • Production • Science<br>
+            Technology • Distribution • Market Access
+          </p>
+        </div>
+
+        <div class="growth-symbol">
+          +
+        </div>
+
+        <div class="growth-block">
+          <h3>Exotic Dairy</h3>
+
+          <p>
+            Research • Product Development<br>
+            Brand • Network • Market Opportunities
+          </p>
+        </div>
+
+        <div class="growth-symbol">
+          =
+        </div>
+
+        <div class="growth-block shared">
+          <h3>Shared Growth</h3>
+
+          <p>
+            New Products • New Markets<br>
+            Stronger Businesses • Stronger Ecosystem
+          </p>
+        </div>
+      </div>
+
+      <p class="growth-statement">
+        When one partner grows stronger, the ecosystem becomes stronger.
+        As the Exotic Dairy ecosystem grows, it creates new opportunities
+        for every partner within it.
+      </p>
+    </section>
+
+    <section class="partnership-final-cta">
+      <div class="partnership-final-inner">
+        <div>
+          <h2>
+            Let's build the future together.
+          </h2>
+
+          <p>
+            Connect with the Exotic Dairy team to discuss partnerships,
+            collaboration and future opportunities.
+          </p>
+        </div>
+
+        <a
+          class="btn modal-trigger"
+          href="#"
+          data-modal="contactModal"
+          data-interest="Partnerships"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+  
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+          >
+  
+          <span>
+            EXOTIC<br>
+            DAIRY
+          </span>
+        </div>
+  
+        <p>
+          Building the future of functional bio-dairy through rare milk,
+          research, premium products and ecosystem innovation.
+        </p>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Explore</h3>
+  
+        <a href="products.html">
+          Products
+        </a>
+  
+        <a href="our-solution.html">
+          Our Solution
+        </a>
+  
+        <a href="experience-hub.html">
+          Experience Hub
+        </a>
+  
+        <a href="partnerships.html">
+          Partnerships
+        </a>
+  
+        <a href="about.html">
+          About Us
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Products</h3>
+  
+        <a href="products.html">
+          All Products
+        </a>
+  
+        <a href="products.html?category=camel">
+          Camel Milk Products
+        </a>
+  
+        <a href="products.html?category=donkey">
+          Donkey Milk Products
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Participate</h3>
+  
+        <a href="experience-hub.html#crowd-participation">
+          Crowd Participation
+        </a>
+  
+        <a href="partnerships.html">
+          Founder Partnership
+        </a>
+  
+        <a
+          href="#"
+          class="modal-trigger"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Resources</h3>
+  
+        <a href="faq.html">
+          FAQ
+        </a>
+  
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+  
+        <a href="terms.html">
+          Terms of Use
+        </a>
+  
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Contact</h3>
+  
+        <p>
+          Plovdiv, Bulgaria
+        </p>
+  
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+  
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+  
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+  
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="contactModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel contact-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <p class="eyebrow">Contact</p>
+
+      <h2>
+        Let's Build the Future Together
+      </h2>
+
+      <p class="modal-intro">
+        Connect with the Exotic Dairy team to discuss products, research,
+        partnerships and future opportunities.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Exotic Dairy Partnership Inquiry"
+        >
+
+        <div class="form-row">
+          <label>Name *</label>
+          <input type="text" name="name" minlength="2" required>
+        </div>
+
+        <div class="form-row">
+          <label>Email *</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+          <label>Company</label>
+          <input type="text" name="company">
+        </div>
+
+        <div class="form-row">
+          <label>Country</label>
+          <input type="text" name="country">
+        </div>
+
+        <div class="form-row">
+          <label>Interest</label>
+
+          <select name="interest">
+            <option>Research</option>
+            <option>Products</option>
+            <option>Distribution</option>
+            <option>Investment</option>
+            <option>Partnerships</option>
+            <option>Media</option>
+          </select>
+        </div>
+
+        <div class="form-row full">
+          <label>Message *</label>
+
+          <textarea
+            name="message"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-row full">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="consent"
+              value="yes"
+              required
+            >
+
+            I agree to the Privacy Policy and consent to being contacted.
+          </label>
+        </div>
+
+        <button class="btn" type="submit">
+          Send inquiry
+        </button>
+
+        <div id="form-success" style="display:none;">
+          Thank you for contacting Exotic Dairy.
+          We will get back to you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll("[data-interest]").forEach(trigger => {
+      trigger.addEventListener("click", () => {
+        const modal = document.getElementById(trigger.dataset.modal);
+        const interestSelect = modal?.querySelector('select[name="interest"]');
+
+        if (interestSelect) {
+          interestSelect.value = trigger.dataset.interest;
+        }
+      });
+    });
+
+    document.querySelectorAll(".founder-package-trigger").forEach(trigger => {
+      trigger.addEventListener("click", () => {
+        const modal = document.getElementById(trigger.dataset.modal);
+
+        if (!modal) return;
+
+        const interestSelect = modal.querySelector('select[name="interest"]');
+        const messageField = modal.querySelector('textarea[name="message"]');
+        const subjectField = modal.querySelector('input[name="_subject"]');
+
+        const packageName = trigger.dataset.package;
+        const packagePrice = trigger.dataset.price;
+
+        if (interestSelect) {
+          interestSelect.value = "Partnerships";
+        }
+
+        if (subjectField) {
+          subjectField.value = `Founder Partnership Inquiry — ${packageName}`;
+        }
+
+        if (messageField) {
+          messageField.value =
+            `I am interested in the ${packageName} (${packagePrice}). ` +
+            `Please contact me with more information about the partnership program and next steps.`;
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2823 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Exotic Dairy — About Us</title>
+
+  <meta
+    name="description"
+    content="Meet the people behind Exotic Dairy — a multidisciplinary team and international advisory network combining science, dairy innovation, livestock expertise, nutrition, financial strategy, product development and strategic partnerships."
+  />
+
+  <meta property="og:title" content="Exotic Dairy — About Us" />
+  <meta property="og:description" content="Science. People. Purpose." />
+  <meta property="og:image" content="https://exoticdairy.com/assets/images/share.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exoticdairy.com/about.html" />
+  <meta property="og:site_name" content="Exotic Dairy" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Exotic Dairy — About Us" />
+  <meta name="twitter:description" content="Science. People. Purpose." />
+  <meta name="twitter:image" content="https://exoticdairy.com/assets/images/share.png" />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* =========================
+    ABOUT HERO
+    ========================= */
+
+    .about-hero {
+    overflow: hidden;
+    background: #000000;
+    }
+
+    .about-hero-inner {
+    display: grid;
+    grid-template-columns: 34% 66%;
+    min-height: 650px;
+    background: #000000;
+    }
+
+
+    /* DARK TEXT SIDE */
+
+    .about-hero-content {
+    position: relative;
+    z-index: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+    padding: 80px 3.5vw 80px 7vw;
+
+    background:
+        linear-gradient(
+        135deg,
+        #000000 0%,
+        #030303 55%,
+        #080808 100%
+        );
+
+    color: var(--white);
+    }
+
+    .about-hero-content .eyebrow {
+    color: #8fd2ff;
+    }
+
+    .about-hero-content h1 {
+    margin: 18px 0 26px;
+
+    color: var(--white);
+
+    font-size: clamp(46px, 5vw, 78px);
+    line-height: .94;
+    letter-spacing: -2px;
+    }
+
+    .about-hero-content > p:last-child {
+    max-width: 440px;
+
+    color: #d7e3f2;
+
+    font-size: 16px;
+    line-height: 1.65;
+    }
+
+
+    /* IMAGE SIDE */
+
+    .about-hero-image {
+    position: relative;
+    min-width: 0;
+    min-height: 650px;
+    overflow: hidden;
+    background: #000000;
+    }
+
+    .about-hero-image img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center center;
+    }
+
+
+    /* FADE FROM DARK LEFT INTO IMAGE */
+
+    .about-hero-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+        90deg,
+        #000000 0%,
+        rgba(0, 0, 0, .96) 3%,
+        rgba(0, 0, 0, .78) 9%,
+        rgba(0, 0, 0, .48) 16%,
+        rgba(0, 0, 0, .20) 23%,
+        rgba(0, 0, 0, .05) 29%,
+        rgba(0, 0, 0, 0) 36%
+        );
+    }
+
+
+    /* =========================
+       MISSION & VISION
+    ========================= */
+
+    .about-direction {
+      padding: 46px 7vw;
+      background: var(--bg);
+    }
+
+    .about-direction-inner {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 48px;
+      align-items: center;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .about-direction-divider {
+      width: 1px;
+      height: 90px;
+      background: var(--line);
+    }
+
+    .about-direction-item {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .about-direction-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--blue);
+    }
+
+    .about-direction-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .about-direction-item h2 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 23px;
+      line-height: 1.1;
+    }
+
+    .about-direction-item p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       TEAM
+    ========================= */
+
+    .team-section {
+      padding: 90px 7vw 80px;
+      background: var(--white);
+    }
+
+    .team-head {
+      max-width: 760px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .team-head h2 {
+      margin: 10px 0 14px;
+      color: var(--navy);
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.05;
+    }
+
+    .team-head > p:not(.eyebrow) {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .team-head small {
+      display: block;
+      margin-top: 12px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .team-group {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .team-group + .team-group {
+      margin-top: 78px;
+    }
+
+    .team-group-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+      color: var(--navy);
+    }
+
+    .team-group-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .team-group-title span {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+
+
+   /* TWO-CARD ADVISORY ROW */
+
+    .team-grid-advisory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 772px;
+    margin: 0 auto;
+    }
+
+    @media(max-width: 820px) {
+    .team-grid-advisory {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+    }
+
+
+    /* STANDARD TEAM PROFILE */
+
+    .team-profile {
+      min-width: 0;
+    }
+
+    .team-profile-trigger {
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .team-photo {
+      position: relative;
+      height: 390px;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #edf3f8;
+    }
+
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+
+    .team-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(6, 16, 31, .36) 100%
+      );
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    .team-open {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .30);
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 10px 28px rgba(7, 21, 40, .24);
+      font-size: 25px;
+      line-height: 1;
+      transition: .3s ease;
+    }
+
+    .team-profile-trigger:hover .team-photo img {
+      transform: scale(1.035);
+    }
+
+    .team-profile-trigger:hover .team-photo::after {
+      opacity: 1;
+    }
+
+    .team-profile-trigger:hover .team-open {
+      transform: rotate(90deg) scale(1.07);
+    }
+
+    .team-profile-content {
+      padding: 22px 4px 0;
+    }
+
+    .team-profile-content h3 {
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .team-role {
+      min-height: 44px;
+      color: var(--blue);
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 800;
+    }
+
+    .team-quote {
+      position: relative;
+      margin-top: 18px;
+      padding-left: 25px;
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .team-quote::before {
+      content: "“";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      color: var(--blue);
+      font-family: Georgia, serif;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+
+    /* TEAM MESSAGE */
+
+    .team-message {
+      max-width: 1180px;
+      margin: 70px auto 0;
+      padding: 26px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      border-radius: 16px;
+      background: #eef6fd;
+      color: var(--navy);
+      font-size: 17px;
+      line-height: 1.55;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .team-message svg {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      color: var(--blue);
+    }
+
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .about-final-cta {
+      padding: 90px 7vw;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6, 16, 31, .96) 0%,
+          rgba(6, 16, 31, .88) 45%,
+          rgba(6, 16, 31, .62) 100%
+        ),
+        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .about-final-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .about-final-inner h2 {
+      margin-bottom: 16px;
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.05;
+    }
+
+    .about-final-inner p {
+      max-width: 720px;
+      color: #d7e3f2;
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       MODALS
+    ========================= */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .modal.is-open {
+      display: grid;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 16, 31, .72);
+      backdrop-filter: blur(7px);
+    }
+
+    .modal-panel {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+    }
+
+    .profile-modal-panel {
+      width: min(980px, calc(100% - 24px));
+      max-height: calc(100dvh - 48px);
+      overflow: auto;
+      padding: 0;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .30);
+    }
+
+    .profile-modal-panel .modal-x {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 5;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .95);
+      color: var(--blue);
+      box-shadow: 0 12px 28px rgba(7, 21, 40, .20);
+      font-size: 0;
+      cursor: pointer;
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+    }
+
+    .profile-modal-panel .modal-x::before,
+    .profile-modal-panel .modal-x::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 2.5px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .profile-modal-panel .modal-x::before {
+      transform: rotate(45deg);
+    }
+
+    .profile-modal-panel .modal-x::after {
+      transform: rotate(-45deg);
+    }
+
+    .profile-modal-panel .modal-x:hover {
+      transform: scale(1.06);
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .profile-modal-panel .modal-x:hover::before,
+    .profile-modal-panel .modal-x:hover::after {
+      background: var(--white);
+    }
+
+    .profile-modal-grid {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      min-height: 610px;
+    }
+
+    .profile-modal-visual {
+      display: flex;
+      flex-direction: column;
+      background: var(--navy);
+    }
+
+    .profile-modal-photo {
+      flex: 1;
+      min-height: 390px;
+    }
+
+    .profile-modal-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .profile-modal-quote {
+      position: relative;
+      padding: 36px 32px 40px;
+      color: var(--white);
+      font-size: 18px;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .profile-modal-quote::before {
+      content: "“";
+      display: block;
+      margin-bottom: 5px;
+      color: #8fd2ff;
+      font-family: Georgia, serif;
+      font-size: 48px;
+      line-height: .7;
+    }
+
+    .profile-modal-content {
+      padding: 54px 48px 44px;
+    }
+
+    .profile-modal-label {
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 900;
+    }
+
+    .profile-modal-content h2 {
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: clamp(34px, 4vw, 48px);
+      line-height: 1;
+    }
+
+    .profile-modal-role {
+      margin-bottom: 28px;
+      color: var(--blue);
+      font-size: 17px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .profile-modal-divider {
+      width: 48px;
+      height: 3px;
+      margin-bottom: 28px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .profile-modal-content > p {
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .profile-external-link {
+      color: var(--blue);
+      font-weight: 800;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(20, 119, 212, .28);
+      transition:
+        color .25s ease,
+        border-color .25s ease;
+    }
+
+    .profile-external-link:hover {
+      color: var(--blue-light);
+      border-color: var(--blue-light);
+    }
+
+    .profile-focus-title {
+      margin-top: 28px;
+      margin-bottom: 13px;
+      color: var(--navy);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 900;
+    }
+
+    .profile-focus {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .profile-focus span {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 13px;
+      border: 1px solid rgba(20, 119, 212, .20);
+      border-radius: 999px;
+      background: #f4f9fe;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width: 1050px) {
+        .about-hero-inner {
+            grid-template-columns: 38% 62%;
+            min-height: 580px;
+        }
+
+        .about-hero-content {
+            padding: 70px 4vw 70px 6vw;
+        }
+
+        .about-hero-content h1 {
+            font-size: clamp(42px, 5.5vw, 66px);
+        }
+
+        .about-hero-content > p:last-child {
+            font-size: 15px;
+        }
+
+        .about-hero-image {
+            min-height: 580px;
+        }
+
+        .team-grid {
+            gap: 28px;
+        }
+
+        .team-photo {
+            height: 330px;
+        }
+    }
+
+  
+    @media(max-width: 900px) {
+        .about-hero-inner {
+            grid-template-columns: 1fr;
+            min-height: 0;
+        }
+
+        .about-hero-content {
+            order: 1;
+            padding: 58px 7vw 58px;
+        }
+
+        .about-hero-content h1 {
+            font-size: clamp(62px, 10vw, 90px);
+            line-height: .92;
+            letter-spacing: -2px;
+        }
+
+        .about-hero-image {
+            order: 2;
+            height: 440px;
+            min-height: 440px;
+        }
+
+        .about-hero-image::before {
+            background:
+            linear-gradient(
+                180deg,
+                #000000 0%,
+                rgba(0, 0, 0, .84) 7%,
+                rgba(0, 0, 0, .46) 16%,
+                rgba(0, 0, 0, .16) 26%,
+                rgba(0, 0, 0, 0) 38%
+            );
+        }
+
+        .about-direction-inner {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .about-direction-divider {
+            width: 100%;
+            height: 1px;
+        }
+
+        .team-grid,
+        .team-grid-leadership {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .team-group + .team-group {
+            margin-top: 58px;
+        }
+
+        .team-profile-trigger {
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            gap: 18px;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .team-photo,
+        .team-grid-leadership .team-photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+        }
+
+        .team-photo::after {
+            display: none;
+        }
+
+        .team-open {
+            right: 4px;
+            bottom: 4px;
+            width: 34px;
+            height: 34px;
+            font-size: 20px;
+        }
+
+        .team-profile-content {
+            padding: 0;
+        }
+
+        .team-profile-content h3 {
+            font-size: 18px;
+        }
+
+        .team-role {
+            min-height: 0;
+            font-size: 12px;
+        }
+
+        .team-quote {
+            margin-top: 7px;
+            padding-left: 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        .team-quote::before {
+            display: none;
+        }
+
+        .profile-modal-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .profile-modal-photo {
+            min-height: 360px;
+            max-height: 430px;
+        }
+
+        .profile-modal-quote {
+            padding: 28px 24px 32px;
+        }
+
+        .profile-modal-content {
+            padding: 34px 26px;
+        }
+
+        .about-final-inner {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .about-final-inner p {
+            margin: 0 auto;
+        }
+    }
+
+
+    @media(max-width: 620px) {
+        .about-hero-image {
+            height: 390px;
+            min-height: 390px;
+        }
+
+        .about-hero-content {
+            padding: 48px 22px 52px;
+        }
+
+        .about-hero-content h1 {
+            font-size: clamp(44px, 14vw, 62px);
+            letter-spacing: -1px;
+        }
+
+        .about-hero-content > p:last-child {
+            font-size: 16px;
+        }
+
+      .about-direction,
+      .team-section,
+      .about-final-cta {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .about-direction-item {
+        grid-template-columns: 52px 1fr;
+        gap: 16px;
+      }
+
+      .about-direction-icon {
+        width: 52px;
+        height: 52px;
+      }
+
+      .about-direction-icon svg {
+        width: 27px;
+        height: 27px;
+      }
+
+      .team-section {
+        padding-top: 68px;
+      }
+
+      .team-head {
+        margin-bottom: 44px;
+      }
+
+      .team-group-title span {
+        font-size: 17px;
+      }
+
+      .team-profile-trigger {
+        grid-template-columns: 78px 1fr;
+        gap: 14px;
+      }
+
+      .team-photo,
+      .team-grid-leadership .team-photo {
+        width: 78px;
+        height: 78px;
+      }
+
+      .team-open {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+
+      .team-profile-content h3 {
+        font-size: 16px;
+      }
+
+      .team-quote {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+      }
+
+      .team-message {
+        margin-top: 50px;
+        padding: 22px;
+        font-size: 15px;
+      }
+
+      .team-message svg {
+        display: none;
+      }
+
+      .profile-modal-panel {
+        width: calc(100% - 12px);
+        max-height: calc(100dvh - 20px);
+        border-radius: 20px;
+      }
+
+      .profile-modal-photo {
+        min-height: 310px;
+        max-height: 360px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.png" alt="Exotic Dairy logo" />
+      <span>EXOTIC<br>DAIRY</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      
+        <a href="products.html">Products</a>
+        <a href="our-solution.html">Our Solution</a>
+        <a href="experience-hub.html">Experience Hub</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a class="active" href="about.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+  
+        <a
+          class="mobile-contact-btn modal-trigger"
+          href="#"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </nav>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#"
+      data-modal="contactModal"
+    >
+      Get in touch
+    </a>
+  </header>
+
+
+  <main id="top">
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="about-hero">
+        <div class="about-hero-inner">
+      
+          <div class="about-hero-content">
+            <p class="eyebrow">
+              About Us
+            </p>
+      
+            <h1>
+              Science.<br>
+              People.<br>
+              Purpose.
+            </h1>
+      
+            <p>
+              Meet the multidisciplinary team behind Exotic Dairy —
+              bringing together science, innovation, responsible animal
+              breeding, human nutrition, product development, financial
+              expertise and strategic partnerships.
+            </p>
+          </div>
+      
+          <div class="about-hero-image">
+            <img
+              src="assets/images/about-team.png"
+              alt="Exotic Dairy team"
+            >
+          </div>
+      
+        </div>
+    </section>
+
+
+    <!-- =========================
+         MISSION & VISION
+    ========================= -->
+
+    <section class="about-direction">
+      <div class="about-direction-inner">
+
+        <div class="about-direction-item">
+          <div class="about-direction-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+                <g
+                  transform="matrix(1.08 0 0 1.08 -1.41 -0.51)"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"
+                  />
+              
+                  <path
+                    d="M12 7a5 5 0 1 0 5 5"
+                  />
+              
+                  <path
+                    d="M13 3.055a9 9 0 1 0 7.941 7.945"
+                  />
+              
+                  <path
+                    d="M15 6v3h3l3 -3h-3v-3l-3 3"
+                  />
+              
+                  <path
+                    d="M15 9l-3 3"
+                  />
+                </g>
+              </svg>
+          </div>
+
+          <div>
+            <h2>
+              Our Mission
+            </h2>
+
+            <p>
+              To unlock the potential of rare milk through science,
+              innovation and responsible production, creating functional
+              products that deliver meaningful value for people and the planet.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="about-direction-divider"></div>
+
+
+        <div class="about-direction-item">
+          <div class="about-direction-icon">
+            <svg viewBox="0 0 24 24" fill="none">
+                <g
+                  transform="translate(12 12) scale(1.12) translate(-12 -12)"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+                  />
+              
+                  <path
+                    d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
+                  />
+                </g>
+              </svg>
+          </div>
+
+          <div>
+            <h2>
+              Our Vision
+            </h2>
+
+            <p>
+              To build an international ecosystem connecting science,
+              responsible agriculture, product innovation and business
+              collaboration around the future of functional bio-dairy.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         TEAM
+    ========================= -->
+
+    <section class="team-section">
+
+      <div class="team-head">
+        <p class="eyebrow">
+          Our Team
+        </p>
+
+        <h2>
+          The People Behind Exotic Dairy
+        </h2>
+
+        <p>
+          Different expertise. One shared vision.
+        </p>
+
+        <small>
+          Select a person to learn more.
+        </small>
+      </div>
+
+
+      <!-- =========================
+            LEADERSHIP
+        ========================= -->
+
+        <div class="team-group">
+            <div class="team-group-title">
+            <span>
+                Leadership &amp; Strategic Direction
+            </span>
+            </div>
+        
+            <div class="team-grid">
+        
+            <!-- ANGEL -->
+        
+            <article class="team-profile">
+                <button
+                class="team-profile-trigger modal-trigger"
+                type="button"
+                data-modal="angelModal"
+                >
+                <div class="team-photo">
+                    <img
+                    src="assets/images/team-angel.png"
+                    alt="Angel Semerdzhiev"
+                    >
+        
+                    <span class="team-open">+</span>
+                </div>
+        
+                <div class="team-profile-content">
+                    <h3>
+                    Angel Semerdzhiev
+                    </h3>
+        
+                    <div class="team-role">
+                    Founder &amp; CEO
+                    </div>
+        
+                    <div class="team-quote">
+                    We are building a global platform where science,
+                    innovation and responsible agriculture shape the
+                    future of functional nutrition.
+                    </div>
+                </div>
+                </button>
+            </article>
+        
+        
+            <!-- GEORGI -->
+        
+            <article class="team-profile">
+                <button
+                class="team-profile-trigger modal-trigger"
+                type="button"
+                data-modal="georgiModal"
+                >
+                <div class="team-photo">
+                    <img
+                    src="assets/images/team-georgi.png"
+                    alt="Georgi Gyulev"
+                    >
+        
+                    <span class="team-open">+</span>
+                </div>
+        
+                <div class="team-profile-content">
+                    <h3>
+                    Georgi Gyulev
+                    </h3>
+        
+                    <div class="team-role">
+                    Strategy, Innovation &amp; Partnerships Director
+                    </div>
+        
+                    <div class="team-quote">
+                    A vision becomes reality only when the right
+                    people build it together.
+                    </div>
+                </div>
+                </button>
+            </article>
+        
+        
+            <!-- SLAV -->
+
+            <article class="team-profile">
+                <button
+                class="team-profile-trigger modal-trigger"
+                type="button"
+                data-modal="slavModal"
+                >
+                <div class="team-photo">
+                    <img
+                    src="assets/images/team-slav.png"
+                    alt="Dr. Ir. Slav Semerdzhiev"
+                    >
+            
+                    <span class="team-open">+</span>
+                </div>
+            
+                <div class="team-profile-content">
+                    <h3>
+                    Dr. Ir. Slav Semerdzhiev
+                    </h3>
+            
+                    <div class="team-role">
+                    Director of Human Nutrition &amp; International Development
+                    </div>
+            
+                    <div class="team-quote">
+                    Nutrition creates real value when scientific knowledge
+                    is translated into better products and meaningful
+                    solutions for people.
+                    </div>
+                </div>
+                </button>
+            </article>
+        
+            </div>
+        </div>
+        
+        
+        <!-- =========================
+            ADVISORY & SPECIALIST EXPERTISE
+        ========================= -->
+        
+        <div class="team-group">
+            <div class="team-group-title">
+            <span>
+                Strategic Advisory &amp; Specialist Expertise
+            </span>
+            </div>
+        
+            <div class="team-grid team-grid-advisory">
+        
+            <!-- IVAN -->
+        
+            <article class="team-profile">
+                <button
+                class="team-profile-trigger modal-trigger"
+                type="button"
+                data-modal="ivanModal"
+                >
+                <div class="team-photo">
+                    <img
+                    src="assets/images/team-ivan.png"
+                    alt="Ivan Semerdzhiev"
+                    >
+        
+                    <span class="team-open">+</span>
+                </div>
+        
+                <div class="team-profile-content">
+                    <h3>
+                    Ivan Semerdzhiev
+                    </h3>
+        
+                    <div class="team-role">
+                    Strategic Financial &amp; Investment Advisor
+                    </div>
+        
+                    <div class="team-quote">
+                    Sustainable growth requires disciplined capital,
+                    intelligent risk management and a clear
+                    long-term financial strategy.
+                    </div>
+                </div>
+                </button>
+            </article>
+        
+        
+            <!-- LYUDMIL -->
+
+            <article class="team-profile">
+                <button
+                class="team-profile-trigger modal-trigger"
+                type="button"
+                data-modal="lyudmilModal"
+                >
+                <div class="team-photo">
+                    <img
+                    src="assets/images/team-lyudmil.png"
+                    alt="Lyudmil Shopov"
+                    >
+            
+                    <span class="team-open">+</span>
+                </div>
+            
+                <div class="team-profile-content">
+                    <h3>
+                    Lyudmil Shopov
+                    </h3>
+            
+                    <div class="team-role">
+                    Animal Breeding &amp; Livestock Development Specialist
+                    </div>
+            
+                    <div class="team-quote">
+                    Exceptional products begin with healthy animals —
+                    responsibly bred, properly nourished and cared for
+                    in harmony with nature.
+                    </div>
+                </div>
+                </button>
+            </article>
+
+            <!-- BERNARD FAYE -->
+
+            <article class="team-profile">
+                <button
+                class="team-profile-trigger modal-trigger"
+                type="button"
+                data-modal="bernardModal"
+                >
+                <div class="team-photo">
+                    <img
+                    src="assets/images/team-bernard.png"
+                    alt="Bernard Faye"
+                    >
+            
+                    <span class="team-open">+</span>
+                </div>
+            
+                <div class="team-profile-content">
+                    <h3>
+                    Bernard Faye
+                    </h3>
+            
+                    <div class="team-role">
+                    External Scientific Advisor — Camel Science &amp; Veterinary Expertise
+                    </div>
+            
+                    <div class="team-quote">
+                    Understanding camels means connecting animal health,
+                    science and production with the environments
+                    in which these remarkable animals thrive.
+                    </div>
+                </div>
+                </button>
+            </article>
+            
+            
+            <!-- GAUKHAR KONUSPAYEVA -->
+            
+            <article class="team-profile">
+                <button
+                class="team-profile-trigger modal-trigger"
+                type="button"
+                data-modal="gaukharModal"
+                >
+                <div class="team-photo">
+                    <img
+                    src="assets/images/team-gaukhar.png"
+                    alt="Prof. Gaukhar Konuspayeva"
+                    >
+            
+                    <span class="team-open">+</span>
+                </div>
+            
+                <div class="team-profile-content">
+                    <h3>
+                    Prof. Gaukhar Konuspayeva
+                    </h3>
+            
+                    <div class="team-role">
+                    External Scientific Advisor — Camel Milk &amp; Dairy Biochemistry
+                    </div>
+            
+                    <div class="team-quote">
+                    The potential of camel milk begins with understanding
+                    its unique biochemistry and translating science
+                    into safe, high-quality dairy innovation.
+                    </div>
+                </div>
+                </button>
+            </article>
+        
+            </div>
+        </div>
+
+
+      <!-- =========================
+           RESEARCH & PRODUCT
+           DEVELOPMENT
+      ========================= -->
+
+      <div class="team-group">
+        <div class="team-group-title">
+          <span>
+            Research &amp; Product Development
+          </span>
+        </div>
+
+        <div class="team-grid">
+
+          <!-- NIKOLINA -->
+
+          <article class="team-profile">
+            <button
+              class="team-profile-trigger modal-trigger"
+              type="button"
+              data-modal="nikolinaModal"
+            >
+              <div class="team-photo">
+                <img
+                  src="assets/images/team-nikolina.png"
+                  alt="Prof. Nikolina Naydenova Zheleva"
+                >
+
+                <span class="team-open">+</span>
+              </div>
+
+              <div class="team-profile-content">
+                <h3>
+                  Prof. Nikolina Naydenova Zheleva, PhD
+                </h3>
+
+                <div class="team-role">
+                  Product Development Lead
+                </div>
+
+                <div class="team-quote">
+                  Every product must begin with science and earn
+                  trust through evidence, quality and meaningful results.
+                </div>
+              </div>
+            </button>
+          </article>
+
+
+          <!-- PLAMEN -->
+
+          <article class="team-profile">
+            <button
+              class="team-profile-trigger modal-trigger"
+              type="button"
+              data-modal="plamenModal"
+            >
+              <div class="team-photo">
+                <img
+                  src="assets/images/team-plamen.png"
+                  alt="Plamen Petkov"
+                >
+
+                <span class="team-open">+</span>
+              </div>
+
+              <div class="team-profile-content">
+                <h3>
+                  Plamen Petkov, MSc
+                </h3>
+
+                <div class="team-role">
+                  Research &amp; Product Development Specialist
+                </div>
+
+                <div class="team-quote">
+                  I believe in turning research into products
+                  people need and trust every day.
+                </div>
+              </div>
+            </button>
+          </article>
+
+
+          <!-- BORISLAV -->
+
+          <article class="team-profile">
+            <button
+              class="team-profile-trigger modal-trigger"
+              type="button"
+              data-modal="borislavModal"
+            >
+              <div class="team-photo">
+                <img
+                  src="assets/images/team-borislav.png"
+                  alt="Borislav Traykov"
+                >
+
+                <span class="team-open">+</span>
+              </div>
+
+              <div class="team-profile-content">
+                <h3>
+                  Borislav Traykov, MSc
+                </h3>
+
+                <div class="team-role">
+                  Research &amp; Product Development Specialist
+                </div>
+
+                <div class="team-quote">
+                  Innovation is a daily process built on curiosity,
+                  precision and a clear purpose.
+                </div>
+              </div>
+            </button>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- TEAM MESSAGE -->
+
+      <div class="team-message">
+        <svg viewBox="0 0 24 24" fill="none">
+            <g
+              transform="translate(12 12.5) scale(1.08) translate(-12 -12)"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+              />
+          
+              <path
+                d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1"
+              />
+          
+              <path
+                d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+              />
+          
+              <path
+                d="M17 10h2a2 2 0 0 1 2 2v1"
+              />
+          
+              <path
+                d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+              />
+          
+              <path
+                d="M3 13v-1a2 2 0 0 1 2 -2h2"
+              />
+            </g>
+          </svg>
+
+        <span>
+          Together, we combine science, animal expertise,
+          strategic thinking, financial insight and product innovation
+          to create sustainable solutions for the future of functional bio-dairy.
+        </span>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================= -->
+
+    <section class="about-final-cta">
+      <div class="about-final-inner">
+        <div>
+          <h2>
+            Let's build the future together.
+          </h2>
+
+          <p>
+            Connect with the Exotic Dairy team to discuss research,
+            products, partnerships and future opportunities.
+          </p>
+        </div>
+
+        <a
+          class="btn modal-trigger"
+          href="#"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+  
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+          >
+  
+          <span>
+            EXOTIC<br>
+            DAIRY
+          </span>
+        </div>
+  
+        <p>
+          Building the future of functional bio-dairy through rare milk,
+          research, premium products and ecosystem innovation.
+        </p>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Explore</h3>
+  
+        <a href="products.html">
+          Products
+        </a>
+  
+        <a href="our-solution.html">
+          Our Solution
+        </a>
+  
+        <a href="experience-hub.html">
+          Experience Hub
+        </a>
+  
+        <a href="partnerships.html">
+          Partnerships
+        </a>
+  
+        <a href="about.html">
+          About Us
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Products</h3>
+  
+        <a href="products.html">
+          All Products
+        </a>
+  
+        <a href="products.html?category=camel">
+          Camel Milk Products
+        </a>
+  
+        <a href="products.html?category=donkey">
+          Donkey Milk Products
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Participate</h3>
+  
+        <a href="experience-hub.html#crowd-participation">
+          Crowd Participation
+        </a>
+  
+        <a href="partnerships.html">
+          Founder Partnership
+        </a>
+  
+        <a
+          href="#"
+          class="modal-trigger"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Resources</h3>
+  
+        <a href="faq.html">
+          FAQ
+        </a>
+  
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+  
+        <a href="terms.html">
+          Terms of Use
+        </a>
+  
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Contact</h3>
+  
+        <p>
+          Plovdiv, Bulgaria
+        </p>
+  
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+  
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+  
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+  
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       ANGEL MODAL
+  ========================================================== -->
+
+  <div class="modal" id="angelModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="profile-modal-grid">
+
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-angel.png"
+              alt="Angel Semerdzhiev"
+            >
+          </div>
+
+          <div class="profile-modal-quote">
+            We are building a global platform where science,
+            innovation and responsible agriculture shape the
+            future of functional nutrition.
+          </div>
+        </div>
+
+
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            Team Member Profile
+          </div>
+
+          <h2>
+            Angel Semerdzhiev
+          </h2>
+
+          <div class="profile-modal-role">
+            Founder &amp; CEO
+          </div>
+
+          <div class="profile-modal-divider"></div>
+
+          <p>
+            Angel leads the long-term vision, management and strategic
+            development of Exotic Dairy, bringing together the different
+            parts of the ecosystem around one common direction.
+          </p>
+
+          <p>
+            His focus is on building a company that connects responsible
+            agriculture, science, product development and commercial growth
+            into a scalable international platform.
+          </p>
+
+          <p>
+            As Founder and CEO, he works across the organisation to ensure
+            that innovation creates sustainable value for the company,
+            its partners and the communities around it.
+          </p>
+
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+
+          <div class="profile-focus">
+            <span>Leadership</span>
+            <span>Vision</span>
+            <span>Business Development</span>
+            <span>Growth</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       GEORGI MODAL
+  ========================================================== -->
+
+  <div class="modal" id="georgiModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="profile-modal-grid">
+
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-georgi.png"
+              alt="Georgi Gyulev"
+            >
+          </div>
+
+          <div class="profile-modal-quote">
+            A vision becomes reality only when the right people
+            build it together.
+          </div>
+        </div>
+
+
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            Team Member Profile
+          </div>
+
+          <h2>
+            Georgi Gyulev
+          </h2>
+
+          <div class="profile-modal-role">
+            Strategy, Innovation &amp; Partnerships Director
+          </div>
+
+          <div class="profile-modal-divider"></div>
+
+          <p>
+            Georgi leads strategy, innovation and partnership development
+            at Exotic Dairy, focusing on building collaborations and
+            business ecosystems that create shared long-term value.
+          </p>
+
+          <p>
+            His work connects scientific potential, product innovation,
+            commercial opportunities and strategic partners, helping turn
+            ideas into structured initiatives with a clear path toward growth.
+          </p>
+
+          <p>
+            A central part of his role is identifying complementary strengths
+            between Exotic Dairy and its partners so that collaboration can
+            create opportunities for both sides and strengthen the wider ecosystem.
+          </p>
+
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+
+          <div class="profile-focus">
+            <span>Strategy</span>
+            <span>Innovation</span>
+            <span>Partnerships</span>
+            <span>Business Development</span>
+            <span>Growth</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       SLAV MODAL
+  ========================================================== -->
+
+  <div class="modal" id="slavModal">
+    <div class="modal-backdrop modal-close"></div>
+  
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+  
+      <div class="profile-modal-grid">
+  
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-slav.png"
+              alt="Dr. Ir. Slav Semerdzhiev"
+            >
+          </div>
+  
+          <div class="profile-modal-quote">
+            Nutrition creates real value when scientific knowledge
+            is translated into better products and meaningful
+            solutions for people.
+          </div>
+        </div>
+  
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            Team Member Profile
+          </div>
+  
+          <h2>
+            Dr. Ir. Slav Semerdzhiev
+          </h2>
+  
+          <div class="profile-modal-role">
+            Director of Human Nutrition &amp; International Development
+          </div>
+  
+          <div class="profile-modal-divider"></div>
+  
+          <p>
+            Slav contributes to Exotic Dairy through his expertise
+            in human nutrition and the nutritional evaluation and
+            application of camel- and donkey-milk products.
+          </p>
+  
+          <p>
+            His work focuses on connecting the nutritional characteristics
+            of rare milk with practical food applications, functional
+            nutrition concepts and products designed around real
+            consumer needs.
+          </p>
+  
+          <p>
+            He also supports the international development of Exotic Dairy
+            through market development, B2B relationships, commercial
+            opportunities and the expansion of products into new
+            international markets.
+          </p>
+  
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+  
+          <div class="profile-focus">
+            <span>Human Nutrition</span>
+            <span>Functional Nutrition</span>
+            <span>Nutritional Evaluation</span>
+            <span>Food Applications</span>
+            <span>International Development</span>
+            <span>Market Development</span>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       IVAN MODAL
+  ========================================================== -->
+
+  <div class="modal" id="ivanModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="profile-modal-grid">
+
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-ivan.png"
+              alt="Ivan Semerdzhiev"
+            >
+          </div>
+
+          <div class="profile-modal-quote">
+            Sustainable growth requires disciplined capital,
+            intelligent risk management and a clear
+            long-term financial strategy.
+          </div>
+        </div>
+
+
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            Strategic Advisor Profile
+          </div>
+
+          <h2>
+            Ivan Semerdzhiev
+          </h2>
+
+          <div class="profile-modal-role">
+            Strategic Financial &amp; Investment Advisor
+          </div>
+
+          <div class="profile-modal-divider"></div>
+
+          <p>
+            Ivan supports Exotic Dairy as an external strategic advisor,
+            contributing expertise in financial strategy, investment planning,
+            liquidity management and financial risk.
+          </p>
+
+          <p>
+            His professional background includes institutional portfolio
+            management, international fixed-income markets, capital deployment
+            and the management of liquidity and market exposure.
+          </p>
+
+          <p>
+            Within Exotic Dairy, his advisory focus supports long-term
+            financial planning, financing decisions, investment discipline
+            and the evaluation of opportunities connected with future
+            international growth.
+          </p>
+
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+
+          <div class="profile-focus">
+            <span>Financial Strategy</span>
+            <span>Investment</span>
+            <span>Liquidity</span>
+            <span>Risk Management</span>
+            <span>Capital Planning</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+        LYUDMIL MODAL
+  ========================================================== -->
+
+    <div class="modal" id="lyudmilModal">
+        <div class="modal-backdrop modal-close"></div>
+    
+        <div class="modal-panel profile-modal-panel">
+        <button
+            class="modal-x modal-close"
+            type="button"
+            aria-label="Close"
+        >
+            ×
+        </button>
+    
+        <div class="profile-modal-grid">
+    
+            <div class="profile-modal-visual">
+            <div class="profile-modal-photo">
+                <img
+                src="assets/images/team-lyudmil.png"
+                alt="Lyudmil Shopov"
+                >
+            </div>
+    
+            <div class="profile-modal-quote">
+                Exceptional products begin with healthy animals —
+                responsibly bred, properly nourished and cared for
+                in harmony with nature.
+            </div>
+            </div>
+    
+            <div class="profile-modal-content">
+            <div class="profile-modal-label">
+                Team Member Profile
+            </div>
+    
+            <h2>
+                Lyudmil Shopov
+            </h2>
+    
+            <div class="profile-modal-role">
+                Animal Breeding &amp; Livestock Development Specialist
+            </div>
+    
+            <div class="profile-modal-divider"></div>
+    
+            <p>
+                Lyudmil focuses on the biological and technological foundation
+                of the Exotic Dairy livestock ecosystem — healthy animals,
+                responsible breeding, appropriate nutrition and the sustainable
+                development of camel and donkey populations.
+            </p>
+    
+            <p>
+                His work covers herd management, breeding and reproduction,
+                animal feeding and nutrition, husbandry technologies,
+                animal identification, health monitoring and the practical
+                development of responsible livestock production systems.
+            </p>
+    
+            <p>
+                Animal welfare and humane treatment are central to his work.
+                By combining proper nutrition, breeding, husbandry technology
+                and care in harmony with nature, he helps create the conditions
+                for healthy animals, consistent milk quality and responsible
+                long-term production.
+            </p>
+    
+            <div class="profile-focus-title">
+                Focus Areas
+            </div>
+    
+            <div class="profile-focus">
+                <span>Animal Breeding</span>
+                <span>Animal Nutrition</span>
+                <span>Feeding Management</span>
+                <span>Husbandry Technology</span>
+                <span>Animal Welfare</span>
+                <span>Livestock Development</span>
+                <span>Milk Quality</span>
+            </div>
+            </div>
+    
+        </div>
+        </div>
+    </div>
+
+  <!-- =========================================================
+       BERNARD FAYE MODAL
+  ========================================================== -->
+
+  <div class="modal" id="bernardModal">
+    <div class="modal-backdrop modal-close"></div>
+  
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+  
+      <div class="profile-modal-grid">
+  
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-bernard.png"
+              alt="Bernard Faye"
+            >
+          </div>
+  
+          <div class="profile-modal-quote">
+            Understanding camels means connecting animal health,
+            science and production with the environments
+            in which these remarkable animals thrive.
+          </div>
+        </div>
+  
+  
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            External Advisor Profile
+          </div>
+  
+          <h2>
+            Bernard Faye
+          </h2>
+  
+          <div class="profile-modal-role">
+            External Scientific Advisor — Camel Science &amp; Veterinary Expertise
+          </div>
+  
+          <div class="profile-modal-divider"></div>
+  
+          <p>
+            Bernard Faye is a veterinarian and internationally recognized
+            camel specialist whose expertise supports Exotic Dairy in the
+            scientific and practical development of its camel-related activities.
+          </p>
+  
+          <p>
+            His professional background includes specialization in tropical
+            veterinary medicine, a PhD from Paris University and HDR
+            qualification from Montpellier University, with extensive work
+            focused on camels and camel production systems.
+          </p>
+  
+          <p>
+            Within Exotic Dairy, his external advisory role contributes
+            specialist knowledge in camel health, veterinary science,
+            production systems and the responsible development of
+            camel-based dairy activities.
+          </p>
+  
+          <p>
+            More about his work, research and publications can be found at
+            <a
+              class="profile-external-link"
+              href="https://www.camelsandcamelids.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              Camels &amp; Camelids ↗
+            </a>
+          </p>
+  
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+  
+          <div class="profile-focus">
+            <span>Camel Science</span>
+            <span>Veterinary Expertise</span>
+            <span>Tropical Veterinary Medicine</span>
+            <span>Camel Health</span>
+            <span>Camel Production Systems</span>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+ <!-- =========================================================
+       GAUKHAR KONUSPAYEVA MODAL
+ ========================================================== -->
+
+ <div class="modal" id="gaukharModal">
+    <div class="modal-backdrop modal-close"></div>
+  
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+  
+      <div class="profile-modal-grid">
+  
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-gaukhar.png"
+              alt="Prof. Gaukhar Konuspayeva"
+            >
+          </div>
+  
+          <div class="profile-modal-quote">
+            The potential of camel milk begins with understanding
+            its unique biochemistry and translating science
+            into safe, high-quality dairy innovation.
+          </div>
+        </div>
+  
+  
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            External Advisor Profile
+          </div>
+  
+          <h2>
+            Prof. Gaukhar Konuspayeva
+          </h2>
+  
+          <div class="profile-modal-role">
+            External Scientific Advisor — Camel Milk &amp; Dairy Biochemistry
+          </div>
+  
+          <div class="profile-modal-divider"></div>
+  
+          <p>
+            Prof. Gaukhar Konuspayeva is a Kazakh biochemist
+            and a specialist in camel milk, unconventional dairy
+            biochemistry and dairy processing.
+          </p>
+  
+          <p>
+            She serves as a professor in the Department of Biotechnology
+            at Al-Farabi Kazakh National University in Almaty, Kazakhstan,
+            and contributes extensive scientific expertise in the
+            composition and processing of camel milk.
+          </p>
+  
+          <p>
+            Within Exotic Dairy, her external scientific advisory role
+            supports the understanding of camel milk biochemistry,
+            processing characteristics and the development of
+            scientifically grounded dairy products and technologies.
+          </p>
+  
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+  
+          <div class="profile-focus">
+            <span>Camel Milk</span>
+            <span>Dairy Biochemistry</span>
+            <span>Milk Composition</span>
+            <span>Dairy Processing</span>
+            <span>Scientific Research</span>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>  
+
+  <!-- =========================================================
+       NIKOLINA MODAL
+  ========================================================== -->
+
+  <div class="modal" id="nikolinaModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="profile-modal-grid">
+
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-nikolina.png"
+              alt="Prof. Nikolina Naydenova Zheleva"
+            >
+          </div>
+
+          <div class="profile-modal-quote">
+            Every product must begin with science and earn trust
+            through evidence, quality and meaningful results.
+          </div>
+        </div>
+
+
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            Team Member Profile
+          </div>
+
+          <h2>
+            Prof. Nikolina Naydenova Zheleva, PhD
+          </h2>
+
+          <div class="profile-modal-role">
+            Product Development Lead
+          </div>
+
+          <div class="profile-modal-divider"></div>
+
+          <p>
+            Prof. Naydenova Zheleva leads product development within
+            Exotic Dairy, connecting dairy science and applied research
+            with the creation of new functional products.
+          </p>
+
+          <p>
+            Her work focuses on translating the characteristics of
+            non-conventional milk into safe, high-quality and scientifically
+            grounded products with real consumer value.
+          </p>
+
+          <p>
+            She guides the development process from scientific understanding
+            and formulation through testing, optimisation and preparation
+            for practical production.
+          </p>
+
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+
+          <div class="profile-focus">
+            <span>Dairy Science</span>
+            <span>Product Development</span>
+            <span>Research</span>
+            <span>Functional Foods</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       PLAMEN MODAL
+  ========================================================== -->
+
+  <div class="modal" id="plamenModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="profile-modal-grid">
+
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-plamen.png"
+              alt="Plamen Petkov"
+            >
+          </div>
+
+          <div class="profile-modal-quote">
+            I believe in turning research into products
+            people need and trust every day.
+          </div>
+        </div>
+
+
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            Team Member Profile
+          </div>
+
+          <h2>
+            Plamen Petkov, MSc
+          </h2>
+
+          <div class="profile-modal-role">
+            Research &amp; Product Development Specialist
+          </div>
+
+          <div class="profile-modal-divider"></div>
+
+          <p>
+            Plamen works across research and product development,
+            helping transform scientific ideas into practical
+            formulations and product concepts.
+          </p>
+
+          <p>
+            His focus includes experimentation, formulation,
+            optimisation and quality assessment throughout the
+            development process.
+          </p>
+
+          <p>
+            By combining scientific methodology with practical
+            product thinking, he supports the transition from
+            research concepts toward reliable market applications.
+          </p>
+
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+
+          <div class="profile-focus">
+            <span>Research</span>
+            <span>Product Development</span>
+            <span>Formulation</span>
+            <span>Quality</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       BORISLAV MODAL
+  ========================================================== -->
+
+  <div class="modal" id="borislavModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel profile-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="profile-modal-grid">
+
+        <div class="profile-modal-visual">
+          <div class="profile-modal-photo">
+            <img
+              src="assets/images/team-borislav.png"
+              alt="Borislav Traykov"
+            >
+          </div>
+
+          <div class="profile-modal-quote">
+            Innovation is a daily process built on curiosity,
+            precision and a clear purpose.
+          </div>
+        </div>
+
+
+        <div class="profile-modal-content">
+          <div class="profile-modal-label">
+            Team Member Profile
+          </div>
+
+          <h2>
+            Borislav Traykov, MSc
+          </h2>
+
+          <div class="profile-modal-role">
+            Research &amp; Product Development Specialist
+          </div>
+
+          <div class="profile-modal-divider"></div>
+
+          <p>
+            Borislav contributes to the research and product development
+            process with a focus on practical dairy technology,
+            process optimisation and functional formulations.
+          </p>
+
+          <p>
+            His work supports the transformation of scientific concepts
+            into products that can be consistently produced while meeting
+            the required standards for quality and functionality.
+          </p>
+
+          <p>
+            Through detailed testing and continuous improvement,
+            he helps bridge the gap between laboratory development
+            and real-world production.
+          </p>
+
+          <div class="profile-focus-title">
+            Focus Areas
+          </div>
+
+          <div class="profile-focus">
+            <span>Dairy Technology</span>
+            <span>Process Optimisation</span>
+            <span>Product Development</span>
+            <span>Functional Formulations</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       CONTACT MODAL
+  ========================================================== -->
+
+  <div class="modal" id="contactModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel contact-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <p class="eyebrow">
+        Contact
+      </p>
+
+      <h2>
+        Let's Build the Future Together
+      </h2>
+
+      <p class="modal-intro">
+        Connect with the Exotic Dairy team to discuss products,
+        research, partnerships and future opportunities.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Exotic Dairy Inquiry"
+        >
+
+        <div class="form-row">
+          <label>
+            Name *
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            minlength="2"
+            required
+          >
+        </div>
+
+
+        <div class="form-row">
+          <label>
+            Email *
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            required
+          >
+        </div>
+
+
+        <div class="form-row">
+          <label>
+            Company
+          </label>
+
+          <input
+            type="text"
+            name="company"
+          >
+        </div>
+
+
+        <div class="form-row">
+          <label>
+            Country
+          </label>
+
+          <input
+            type="text"
+            name="country"
+          >
+        </div>
+
+
+        <div class="form-row">
+          <label>
+            Interest
+          </label>
+
+          <select name="interest">
+            <option>Research</option>
+            <option>Products</option>
+            <option>Distribution</option>
+            <option>Investment</option>
+            <option>Partnerships</option>
+            <option>Media</option>
+          </select>
+        </div>
+
+
+        <div class="form-row full">
+          <label>
+            Message *
+          </label>
+
+          <textarea
+            name="message"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+
+
+        <div class="form-row full">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="consent"
+              value="yes"
+              required
+            >
+
+            I agree to the Privacy Policy and consent to being contacted.
+          </label>
+        </div>
+
+
+        <button
+          class="btn"
+          type="submit"
+        >
+          Send inquiry
+        </button>
+
+
+        <div
+          id="form-success"
+          style="display:none;"
+        >
+          Thank you for contacting Exotic Dairy.
+          We will get back to you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

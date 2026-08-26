@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>404 — Page Not Found | Exotic Dairy</title>
+
+  <meta
+    name="description"
+    content="The page you are looking for could not be found. Return to Exotic Dairy."
+  />
+
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+
+    /* =========================
+       404 PAGE
+    ========================= */
+
+    .error-page {
+      position: relative;
+      display: flex;
+      min-height: calc(100vh - 86px);
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 100px 7vw;
+      background:
+        radial-gradient(
+          circle at 72% 32%,
+          rgba(20, 119, 212, .14),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at 25% 75%,
+          rgba(63, 169, 245, .10),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #f8fbff 0%,
+          #f3f8fd 45%,
+          #edf5fc 100%
+        );
+    }
+
+    .error-page::before {
+      content: "";
+      position: absolute;
+      top: -160px;
+      right: -140px;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(20, 119, 212, .12);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .error-page::after {
+      content: "";
+      position: absolute;
+      bottom: -220px;
+      left: -180px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(20, 119, 212, .09);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .error-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .error-code {
+      margin: 0;
+      color: var(--blue);
+      font-size: clamp(110px, 18vw, 230px);
+      font-weight: 900;
+      line-height: .78;
+      letter-spacing: -12px;
+      opacity: .10;
+      user-select: none;
+    }
+
+    .error-content {
+      position: relative;
+      max-width: 720px;
+      margin: -12px auto 0;
+      padding: 0 20px;
+    }
+
+    .error-content .eyebrow {
+      margin-bottom: 16px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .error-content h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(42px, 5.5vw, 72px);
+      line-height: .98;
+      letter-spacing: -2px;
+    }
+
+    .error-content > p:not(.eyebrow) {
+      max-width: 610px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .error-secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--white);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 900;
+      transition:
+        border-color .25s ease,
+        color .25s ease,
+        background .25s ease,
+        transform .25s ease;
+    }
+
+    .error-secondary-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: #f8fbff;
+      transform: translateY(-2px);
+    }
+
+    .error-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 42px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .error-links span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .error-links a {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+      transition: color .2s ease;
+    }
+
+    .error-links a:hover {
+      color: var(--blue);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .error-page {
+        min-height: calc(100vh - 76px);
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .error-code {
+        letter-spacing: -7px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .error-page {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .error-content {
+        padding: 0;
+      }
+
+      .error-content h1 {
+        letter-spacing: -1px;
+      }
+
+      .error-content > p:not(.eyebrow) {
+        font-size: 16px;
+      }
+
+      .error-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .error-actions .btn,
+      .error-secondary-btn {
+        width: 100%;
+      }
+
+      .error-links {
+        gap: 14px 22px;
+      }
+
+      .error-links span {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="site-header">
+
+    <a class="logo" href="index.html">
+      <img
+        src="assets/images/logo.png"
+        alt="Exotic Dairy logo"
+      />
+
+      <span>
+        EXOTIC<br>
+        DAIRY
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+
+      <a href="products.html">
+        Products
+      </a>
+
+      <a href="our-solution.html">
+        Our Solution
+      </a>
+
+      <a href="experience-hub.html">
+        Experience Hub
+      </a>
+
+      <a href="partnerships.html">
+        Partnerships
+      </a>
+
+      <a href="about.html">
+        About Us
+      </a>
+
+      <a href="faq.html">
+        FAQ
+      </a>
+
+      <a
+        class="mobile-contact-btn modal-trigger"
+        href="#"
+        data-modal="contactModal"
+      >
+        Get in Touch
+      </a>
+
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Open navigation menu"
+    >
+      ☰
+    </button>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#"
+      data-modal="contactModal"
+    >
+      Get in touch
+    </a>
+
+  </header>
+
+
+  <!-- =========================
+       404 CONTENT
+  ========================== -->
+
+  <main>
+
+    <section class="error-page">
+
+      <div class="error-inner">
+
+        <p class="error-code">
+          404
+        </p>
+
+        <div class="error-content">
+
+          <p class="eyebrow">
+            Page Not Found
+          </p>
+
+          <h1>
+            Nothing to discover here.
+          </h1>
+
+          <p>
+            The page you're looking for doesn't exist, may have been moved,
+            or the link is no longer available. Let's get you back to
+            Exotic Dairy.
+          </p>
+
+          <div class="error-actions">
+
+            <a
+              class="btn"
+              href="index.html"
+            >
+              Return to Homepage
+            </a>
+
+            <a
+              class="error-secondary-btn modal-trigger"
+              href="#"
+              data-modal="contactModal"
+            >
+              Get in Touch
+            </a>
+
+          </div>
+
+          <div class="error-links">
+
+            <span>
+              Or continue exploring:
+            </span>
+
+            <a href="products.html">
+              Products
+            </a>
+
+            <a href="our-solution.html">
+              Our Solution
+            </a>
+
+            <a href="experience-hub.html">
+              Experience Hub
+            </a>
+
+            <a href="partnerships.html">
+              Partnerships
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer" id="contact">
+
+    <div class="footer-top">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+          >
+
+          <span>
+            EXOTIC<br>
+            DAIRY
+          </span>
+
+        </div>
+
+        <p>
+          Building the future of functional bio-dairy through rare milk,
+          research, premium products and ecosystem innovation.
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>
+          Explore
+        </h3>
+
+        <a href="products.html">
+          Products
+        </a>
+
+        <a href="our-solution.html">
+          Our Solution
+        </a>
+
+        <a href="experience-hub.html">
+          Experience Hub
+        </a>
+
+        <a href="partnerships.html">
+          Partnerships
+        </a>
+
+        <a href="about.html">
+          About Us
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>
+          Products
+        </h3>
+
+        <a href="products.html">
+          All Products
+        </a>
+
+        <a href="products.html?category=camel">
+          Camel Milk Products
+        </a>
+
+        <a href="products.html?category=donkey">
+          Donkey Milk Products
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>
+          Participate
+        </h3>
+
+        <a href="experience-hub.html#crowd-participation">
+          Crowd Participation
+        </a>
+
+        <a href="partnerships.html">
+          Founder Partnership
+        </a>
+
+        <a
+          href="#"
+          class="modal-trigger"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>
+          Resources
+        </h3>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          Terms of Use
+        </a>
+
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          Plovdiv, Bulgaria
+        </p>
+
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       CONTACT MODAL
+  ========================== -->
+
+  <div
+    class="modal"
+    id="contactModal"
+  >
+
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel contact-panel">
+
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close contact form"
+      >
+        ×
+      </button>
+
+      <p class="eyebrow">
+        Contact
+      </p>
+
+      <h2>
+        Let's Build the Future Together
+      </h2>
+
+      <p class="modal-intro">
+        Connect with the Exotic Dairy team to discuss products, research,
+        partnerships and future opportunities.
+      </p>
+
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Exotic Dairy Inquiry"
+        >
+
+
+        <div class="form-row">
+
+          <label>
+            Name *
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            minlength="2"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-row">
+
+          <label>
+            Email *
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-row">
+
+          <label>
+            Company
+          </label>
+
+          <input
+            type="text"
+            name="company"
+          >
+
+        </div>
+
+
+        <div class="form-row">
+
+          <label>
+            Country
+          </label>
+
+          <input
+            type="text"
+            name="country"
+          >
+
+        </div>
+
+
+        <div class="form-row">
+
+          <label>
+            Interest
+          </label>
+
+          <select name="interest">
+            <option>Research</option>
+            <option>Products</option>
+            <option>Distribution</option>
+            <option>Investment</option>
+            <option>Partnerships</option>
+            <option>Media</option>
+          </select>
+
+        </div>
+
+
+        <div class="form-row full">
+
+          <label>
+            Message *
+          </label>
+
+          <textarea
+            name="message"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <div class="form-row full">
+
+          <label class="checkbox-label">
+
+            <input
+              type="checkbox"
+              name="consent"
+              value="yes"
+              required
+            >
+
+            I agree to the Privacy Policy and consent to being contacted.
+
+          </label>
+
+        </div>
+
+
+        <button
+          class="btn"
+          type="submit"
+        >
+          Send inquiry
+        </button>
+
+
+        <div
+          id="form-success"
+          style="display:none;"
+        >
+          Thank you for contacting Exotic Dairy.
+          We will get back to you shortly.
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       EXISTING SITE SCRIPT
+  ========================== -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>

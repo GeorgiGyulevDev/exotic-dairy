@@ -3,23 +3,891 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Exotic Dairy — Functional Bio-Dairy</title>
-  <meta name="description" content="Exotic Dairy — camel and donkey milk innovation, functional bio-dairy products, R&D and experience hub." />
+
+  <meta
+    name="description"
+    content="Exotic Dairy — camel and donkey milk innovation, functional bio-dairy products, R&D and experience hub."
+  />
+
   <meta property="og:title" content="Exotic Dairy" />
   <meta property="og:description" content="Functional Bio-Dairy Innovation" />
   <meta property="og:image" content="https://exoticdairy.com/assets/images/share.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://exoticdairy.com" />
+  <meta property="og:site_name" content="Exotic Dairy" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Exotic Dairy" />
   <meta name="twitter:description" content="Functional Bio-Dairy Innovation" />
   <meta name="twitter:image" content="https://exoticdairy.com/assets/images/share.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://exoticdairy.com" />
-  <meta property="og:site_name" content="Exotic Dairy" />
+
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .site-header .nav a.is-active {
+      color: var(--blue);
+    }
+
+    .site-header .nav a.is-active::after {
+      width: 100%;
+    }
+
+    .hero-overlay .hero-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .hero-card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 16px;
+      border: 1px solid rgba(255, 255, 255, .58);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .12);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .hero-card-btn:hover {
+      background: var(--white);
+      color: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .solution-actions {
+      margin-top: 26px;
+    }
+
+    .solution-focus {
+      padding: 58px 7vw;
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .solution-focus-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .solution-focus-item {
+      padding: 10px 28px;
+      text-align: center;
+      border-right: 1px solid var(--line);
+    }
+
+    .solution-focus-item:last-child {
+      border-right: 0;
+    }
+
+    .solution-focus-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 18px;
+      border: 1px solid rgba(20, 119, 212, .18);
+      border-radius: 50%;
+      background: #f5faff;
+    }
+
+    .solution-focus-icon img {
+      width: 29px;
+      height: 29px;
+      object-fit: contain;
+    }
+
+    .solution-focus-item h3 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .solution-focus-item p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .ecosystem-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      padding: 92px 7vw;
+      background: var(--bg);
+    }
+
+    .ecosystem-card {
+      position: relative;
+      min-height: 520px;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .ecosystem-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease, filter .45s ease;
+      filter: saturate(.9);
+    }
+
+    .ecosystem-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+      90deg,
+      rgba(6, 16, 31, .94) 0%,
+      rgba(6, 16, 31, .78) 48%,
+      rgba(6, 16, 31, .18) 100%
+    );
+      transition: background .45s ease;
+    }
+
+    .ecosystem-card:hover::after {
+      background: linear-gradient(
+        90deg,
+        rgba(6, 16, 31, .78) 0%,
+        rgba(6, 16, 31, .55) 48%,
+        rgba(6, 16, 31, .10) 100%
+      );
+    }
+
+    .ecosystem-card:hover img {
+      transform: scale(1.06);
+      filter: saturate(1.15);
+    }
+
+    .ecosystem-card-content {
+      position: relative;
+      z-index: 2;
+      max-width: 520px;
+      padding: 54px;
+    }
+
+    .ecosystem-card-content .eyebrow {
+      color: #8fd2ff;
+    }
+
+    .ecosystem-card-content h2 {
+      margin: 12px 0 16px;
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -1px;
+    }
+
+    .ecosystem-card-content p:not(.eyebrow) {
+      margin-bottom: 26px;
+      color: #d7e3f2;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .ecosystem-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+
+    .ecosystem-tags span {
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 999px;
+      color: #e7f1fb;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .ecosystem-card .btn {
+      position: relative;
+      z-index: 3;
+    }
+
+    /* =========================
+      BUSINESS NETWORK
+    ========================= */
+
+    .collaboration-section {
+      padding: 90px 7vw 96px;
+      background: var(--white);
+    }
+
+    .collaboration-head {
+      max-width: 820px;
+      margin: 0 auto 54px;
+      text-align: center;
+    }
+
+    .collaboration-head .eyebrow {
+      color: var(--blue);
+    }
+
+    .collaboration-head h2 {
+      margin: 12px 0 18px;
+      color: var(--navy);
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -1px;
+    }
+
+    .collaboration-head p:not(.eyebrow) {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+
+    /* NETWORK BLOCK */
+
+    .network-group {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .network-group + .network-group {
+      margin-top: 52px;
+    }
+
+
+    /* SECTION TITLE */
+
+    .network-title {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 26px;
+      color: var(--blue);
+    }
+
+    .network-title::before,
+    .network-title::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .network-title h3 {
+      flex: 0 0 auto;
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 900;
+      text-align: center;
+    }
+
+
+    /* ACADEMIC */
+
+    .academic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+
+    /* PARTNER CARDS */
+
+    .network-card {
+      min-width: 0;
+      height: 220px;
+      padding: 26px 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+    }
+
+    a.network-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(20, 119, 212, .28);
+      box-shadow: 0 14px 32px rgba(7, 21, 40, .08);
+    }
+
+    .network-card img {
+      width: 100%;
+      max-width: 150px;
+      height: 105px;
+      margin-bottom: 18px;
+      object-fit: contain;
+    }
+
+    .network-card strong {
+      display: block;
+      max-width: 230px;
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .network-card span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+
+    /* =========================
+      BUSINESS GRID
+    ========================= */
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+
+    .business-grid .network-card {
+      height: 220px;
+    }
+
+
+    @media(max-width:1100px){
+
+      .business-grid {
+        grid-template-columns: repeat(3,1fr);
+      }
+
+    }
+
+
+    @media(max-width:720px){
+
+      .business-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+
+      .business-grid .network-card {
+        height:190px;
+      }
+
+    }
+    
+    .home-final-cta {
+      padding: 90px 7vw;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6, 16, 31, .96) 0%,
+          rgba(6, 16, 31, .88) 45%,
+          rgba(6, 16, 31, .62) 100%
+        ),
+        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .home-final-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .home-final-inner h2 {
+      margin-bottom: 16px;
+      font-size: clamp(36px, 4vw, 56px);
+      line-height: 1.04;
+    }
+
+    .home-final-inner p {
+      max-width: 760px;
+      color: #d7e3f2;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .about-preview {
+      position: relative;
+      height: 700px;
+      overflow: hidden;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .about-preview-shell {
+      display: grid;
+      grid-template-columns: 36% 64%;
+      width: 100%;
+      height: 100%;
+      background: var(--navy);
+    }
+
+    .about-preview-image {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .about-preview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    .about-preview-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 21, 40, 0) 0%,
+          rgba(7, 21, 40, .08) 42%,
+          rgba(7, 21, 40, .46) 72%,
+          rgba(7, 21, 40, 1) 100%
+        );
+      pointer-events: none;
+    }
+
+    .about-preview-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 90px 8vw 90px 6vw;
+      background:
+        radial-gradient(
+          circle at 92% 12%,
+          rgba(20, 119, 212, .18),
+          transparent 34%
+        ),
+        linear-gradient(
+          135deg,
+          rgba(7, 21, 40, 1),
+          rgba(2, 9, 18, 1)
+        );
+      color: var(--white);
+    }
+
+    .about-preview-content .eyebrow {
+      color: #8fd2ff;
+    }
+
+    .about-preview-content h2 {
+      max-width: 760px;
+      margin: 12px 0 28px;
+      color: var(--white);
+      font-size: clamp(34px, 4vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -1px;
+    }
+
+    .about-preview-content h2::after {
+      content: "";
+      display: block;
+      width: 108px;
+      height: 2px;
+      margin-top: 22px;
+      background: linear-gradient(90deg, var(--blue-light), transparent);
+    }
+
+    .quote-carousel {
+      position: relative;
+      width: 100%;
+      max-width: 780px;
+      height: 225px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: hidden;
+    }
+
+    .team-quote-slide {
+      display: none;
+      height: 100%;
+    }
+
+    .team-quote-slide.is-active {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .team-quote-slide blockquote {
+      max-height: 148px;
+      margin: 0 0 22px;
+      overflow: hidden;
+      color: var(--white);
+      font-size: clamp(18px, 1.5vw, 23px);
+      line-height: 1.42;
+      font-weight: 700;
+    }
+
+    .team-quote-slide blockquote::before {
+      content: "“";
+      display: block;
+      margin-bottom: 10px;
+      color: var(--blue-light);
+      font-family: Georgia, serif;
+      font-size: 64px;
+      line-height: .55;
+    }
+
+    .team-quote-slide strong {
+      display: block;
+      color: #8fd2ff;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .team-quote-slide span {
+      display: block;
+      margin-top: 5px;
+      color: #c7d7e8;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .quote-controls {
+      display: flex;
+      gap: 10px;
+      margin: 22px 0 30px;
+    }
+
+    .quote-dot {
+      width: 11px;
+      height: 11px;
+      padding: 0;
+      border: 1px solid rgba(255, 255, 255, .75);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .quote-dot.is-active {
+      width: 30px;
+      border-color: var(--blue-light);
+      border-radius: 999px;
+      background: var(--blue-light);
+    }
+
+    .about-preview .btn {
+      position: relative;
+      z-index: 3;
+      margin-top: 0;
+    }
+
+    .milk-panel {
+      width: min(860px, calc(100% - 24px));
+      max-height: calc(100dvh - 48px);
+      overflow: auto;
+      padding: 0;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .30);
+    }
+
+    .milk-modal-grid {
+      display: grid;
+      grid-template-columns: 42% 58%;
+      min-height: 560px;
+    }
+
+    .milk-modal-image {
+      position: relative;
+      min-height: 560px;
+      background: var(--navy);
+    }
+
+    .milk-modal-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 65% center;
+      display: block;
+    }
+
+    .milk-modal-content {
+      padding: 54px 46px 44px;
+    }
+
+    .milk-modal-content h2 {
+      margin: 10px 0 16px;
+      color: var(--navy);
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1;
+    }
+
+    .milk-modal-content p {
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .milk-modal-list {
+      display: grid;
+      gap: 11px;
+      margin: 26px 0 30px;
+    }
+
+    .milk-modal-list span {
+      position: relative;
+      padding-left: 24px;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .milk-modal-list span::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .faq-more-card {
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          #0b2440
+        );
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow);
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+
+    .faq-more-card h3 {
+      color:var(--blue);
+      text-transform:uppercase;
+    }
+
+
+    .faq-more-card p {
+      margin-bottom:26px;
+      font-size:15px;
+    }
+
+
+    .faq-more-card .btn {
+      align-self:flex-start;
+    }
+    
+    @media(max-width: 1050px) {
+      .solution-focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .solution-focus-item {
+        padding: 26px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .solution-focus-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .solution-focus-item:nth-child(3),
+      .solution-focus-item:nth-child(4) {
+        border-bottom: 0;
+      }
+
+      .ecosystem-cards,
+      .collaboration-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-preview {
+        height: auto;
+      }
+
+      .about-preview-shell {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .about-preview-image {
+        height: 360px;
+      }
+
+      .about-preview-image img {
+        height: 100%;
+        object-position: center center;
+      }
+
+      .about-preview-image::after {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(7, 21, 40, 0) 0%,
+            rgba(7, 21, 40, .08) 42%,
+            rgba(7, 21, 40, .78) 82%,
+            rgba(7, 21, 40, 1) 100%
+          );
+      }
+
+      .about-preview-content {
+        padding: 48px 7vw 58px;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #products-preview,
+    #solution,
+    #ecosystem-cards,
+    #collaboration-preview,
+    #about-preview,
+    #faq {
+      scroll-margin-top: 86px;
+    }
+
+    @media(max-width: 720px) {
+      .solution-focus-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .solution-focus-item {
+        padding: 22px 12px;
+      }
+
+      .ecosystem-cards {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      .ecosystem-card {
+        min-height: 460px;
+      }
+
+      .ecosystem-card-content {
+        padding: 38px 28px;
+      }
+
+      .collaboration-section,
+      .about-preview {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .about-preview {
+        height: auto;
+        min-height: 0;
+      }
+
+      .about-preview-shell {
+        min-height: 0;
+      }
+
+      .about-preview-image {
+        height: 310px;
+      }
+
+      .about-preview-image img {
+        height: 100%;
+        object-position: center center;
+      }
+
+      .about-preview-content {
+        padding: 44px 24px 52px;
+      }
+
+      .about-preview-content h2 {
+        margin-bottom: 28px;
+        font-size: 34px;
+        line-height: 1.02;
+        letter-spacing: -1px;
+      }
+
+      .section h2,
+      .solution-content h2,
+      .ecosystem-card-content h2,
+      .collaboration-head h2,
+      .about-preview-content h2 {
+        font-size: 34px;
+        line-height: 1.02;
+        letter-spacing: -1px;
+      }
+
+      .quote-carousel {
+        height: 190px;
+      }
+
+      .team-quote-slide blockquote {
+        max-height: 112px;
+        font-size: 18px;
+      }
+
+      .team-quote-slide blockquote::before {
+        font-size: 58px;
+      }
+
+      .quote-controls {
+        margin-bottom: 28px;
+      }
+
+      .milk-modal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .milk-modal-image {
+        min-height: 300px;
+      }
+
+      .milk-modal-content {
+        padding: 34px 26px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -30,13 +898,24 @@
     </a>
 
     <nav class="nav" id="nav">
-      <a href="#solution">Our Solution</a>
-      <a href="#products">Products</a>
-      <a href="#hub">Experience Hub</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    
+      <a class="home-nav-link" href="#products-preview" data-section="products-preview">
+        Products
+      </a>    
+      <a class="home-nav-link" href="#solution" data-section="solution">
+        Our Solution
+      </a>    
+      <a class="home-nav-link" href="#ecosystem-cards" data-section="ecosystem-cards">
+        Experience Hub
+      </a>    
+      <a class="home-nav-link" href="#collaboration-preview" data-section="collaboration-preview">
+        Partnerships
+      </a>    
+      <a class="home-nav-link" href="#about-preview" data-section="about-preview">
+        About Us
+      </a>    
+      <a class="home-nav-link" href="#faq" data-section="faq">
+        FAQ
+      </a>    
       <a
         class="mobile-contact-btn modal-trigger"
         href="#"
@@ -47,41 +926,84 @@
     </nav>
 
     <button class="menu-btn" id="menuBtn">☰</button>
-    <a class="header-btn modal-trigger" href="#" data-modal="contactModal">Get in touch</a>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#"
+      data-modal="contactModal"
+    >
+      Get in touch
+    </a>
   </header>
 
   <main id="top">
-    <section class="hero-grid">
+    <section class="hero-grid" id="products-preview">
       <article class="hero-card">
         <img src="assets/images/hero-camel.png" alt="Camel milk" />
+
         <div class="hero-overlay">
           <h1>Camel Milk</h1>
+
           <p>Nature’s ancient superfood.</p>
+
           <span>Functional • Holistic • Global</span>
+
+          <div class="hero-card-actions">
+            <button
+              class="hero-card-btn modal-trigger"
+              type="button"
+              data-modal="camelMilkModal"
+            >
+              Learn More
+            </button>
+          </div>
         </div>
       </article>
 
       <article class="hero-card">
         <img src="assets/images/hero-donkey.png" alt="Donkey milk" />
+
         <div class="hero-overlay">
           <h1>Donkey Milk</h1>
+
           <p>Nature’s rarest premium dairy.</p>
+
           <span>Functional • Premium • Sustainable</span>
+
+          <div class="hero-card-actions">
+            <button
+              class="hero-card-btn modal-trigger"
+              type="button"
+              data-modal="donkeyMilkModal"
+            >
+              Learn More
+            </button>
+          </div>
         </div>
       </article>
 
       <article class="hero-card">
         <img src="assets/images/hero-products.png" alt="Products arriving soon" />
+
         <div class="hero-overlay">
           <h1>Products Arriving Soon</h1>
-          <p>Innovative. Functional. Exceptional.</p>
-          <span>Launching soon</span>
+
+          <p>Milk first. Innovation beyond dairy.</p>
+
+          <span>Coming soon</span>
+
+          <div class="hero-card-actions">
+            <a class="hero-card-btn" href="products.html">
+              Explore Products
+            </a>
+          </div>
         </div>
       </article>
     </section>
 
     <section class="section opportunity">
       <p class="eyebrow">The Opportunity</p>
+
       <h2>Amazing Facts. Clear Need. Global Opportunity.</h2>
 
       <div class="stats-grid">
@@ -89,28 +1011,39 @@
           <div class="icon">
             <img src="assets/icons/camel.svg" alt="">
           </div>
+
           <h3>40 Million</h3>
+
           <p>Camels worldwide in harsh environments.</p>
         </div>
+
         <div class="stat">
           <div class="icon">
             <img src="assets/icons/people.svg" alt="">
           </div>
+
           <h3>70%+</h3>
+
           <p>Of people cannot digest cow milk properly.</p>
         </div>
+
         <div class="stat">
           <div class="icon">
             <img src="assets/icons/africa.svg" alt="">
           </div>
-          <h3>Africa & MENA</h3>
+
+          <h3>Africa &amp; MENA</h3>
+
           <p>The regions that need it most produce it most.</p>
         </div>
+
         <div class="stat">
           <div class="icon">
             <img src="assets/icons/globe.svg" alt="">
           </div>
+
           <h3>Global Opportunity</h3>
+
           <p>Biggest need. Natural solution. Untapped potential.</p>
         </div>
       </div>
@@ -119,311 +1052,732 @@
     <section class="solution" id="solution">
       <div class="solution-content">
         <p class="eyebrow">Our Solution</p>
-        <h2>Science.<br>Technology.<br>Health.</h2>
+
+        <h2>
+          Science.<br>
+          Technology.<br>
+          Health.
+        </h2>
+
         <p>
           We transform camel and donkey milk into functional bio-products
           designed to improve health and quality of life.
         </p>
+
+        <div class="solution-actions">
+          <a class="btn" href="our-solution.html">
+            Explore Our Solution
+          </a>
+        </div>
       </div>
-      <img src="assets/images/solution-lab.png" alt="Functional dairy laboratory products" />
+
+      <img
+        src="assets/images/solution-lab.png"
+        alt="Functional dairy laboratory products"
+      />
     </section>
 
-    <section class="section" id="products">
-      <p class="eyebrow">Product Pipeline</p>
-      <h2>From rare milk to high-value functional products.</h2>
-    
-      <div class="pipeline-grid">
-    
-        <!-- READY FOR MARKET -->
-        <div class="pipeline-card">
-    
-          <h3>Ready for Market</h3>
-    
-          <ul>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/donkey-parmegano.png" alt="">
-              <div class="pipeline-text">
-                <strong>Donkey Milk Parmesan</strong>
-                <span>Artisanal. Aged. Exceptional.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/donkey-wine.png" alt="">
-              <div class="pipeline-text">
-                <strong>Donkey Milk Wine</strong>
-                <span>Unique. Premium. Limited.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/donkey-candy.png" alt="">
-              <div class="pipeline-text">
-                <strong>Donkey Milk Candy</strong>
-                <span>Delicious. Nutritious. Functional.</span>
-              </div>
-            </li>
-          </ul>
-    
-        </div>
-    
-        <!-- IN DEVELOPMENT -->
-        <div class="pipeline-card">
-    
-          <h3>In Development</h3>
-    
-          <ul>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/camel-yogurt.png" alt="">
-              <div class="pipeline-text">
-                <strong>Camel Yogurt</strong>
-                <span>Functional fermented dairy.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/camel-labneh.png" alt="">
-              <div class="pipeline-text">
-                <strong>Labneh</strong>
-                <span>Premium soft dairy product.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/camel-brinedcheese.png" alt="">
-              <div class="pipeline-text">
-                <strong>Brined Cheese</strong>
-                <span>Traditional format, new source.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/camel-softcheese.png" alt="">
-              <div class="pipeline-text">
-                <strong>Soft Cheese</strong>
-                <span>Clean label dairy innovation.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/camel-functional.png" alt="">
-              <div class="pipeline-text">
-                <strong>Functional Supplements</strong>
-                <span>Bioactive dairy-based nutrition.</span>
-              </div>
-            </li>
-    
-          </ul>
-    
-        </div>
-    
-        <!-- FUTURE INNOVATIONS -->
-        <div class="pipeline-card">
-    
-          <h3>Future Innovations</h3>
-    
-          <ul>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/advanced-formulations.png" alt="">
-              <div class="pipeline-text">
-                <strong>Advanced Formulations</strong>
-                <span>Science-backed solutions.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/new-dairy-categories.png" alt="">
-              <div class="pipeline-text">
-                <strong>New Dairy Categories</strong>
-                <span>Beyond conventional dairy.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/medical-nutrition.png" alt="">
-              <div class="pipeline-text">
-                <strong>Medical Nutrition</strong>
-                <span>Specialized health applications.</span>
-              </div>
-            </li>
-    
-            <li>
-              <img class="li-product-img" src="assets/images/personalized-nutrition.png" alt="">
-              <div class="pipeline-text">
-                <strong>Personalized Nutrition</strong>
-                <span>Future-focused wellness.</span>
-              </div>
-            </li>
-    
-          </ul>
-    
-        </div>
-    
-      </div>
-    </section>
+    <section class="solution-focus">
+      <div class="solution-focus-grid">
+        <article class="solution-focus-item">
+          <div class="solution-focus-icon">
+            <img src="assets/icons/food.svg" alt="">
+          </div>
 
-    <section class="beyond" id="beyond">
-      <div class="beyond-dark">
-        <p class="eyebrow">Beyond Dairy</p>
-        <h2>More than dairy.<br>A better future.</h2>
-        <p>
-          We go beyond traditional dairy to create functional foods,
-          nutraceuticals, cosmetics and wellness solutions that empower lives naturally.
-        </p>
-      </div>
-
-      <div class="beyond-icons">
-
-        <div>
-          <img src="assets/icons/food.svg" alt="">
           <h3>Functional Foods</h3>
-          <p>Nourishing. Purpose-driven.</p>
-        </div>
-      
-        <div>
-          <img src="assets/icons/capsule.svg" alt="">
+
+          <p>
+            Nourishing, purpose-driven products designed for modern nutrition.
+          </p>
+        </article>
+
+        <article class="solution-focus-item">
+          <div class="solution-focus-icon">
+            <img src="assets/icons/capsule.svg" alt="">
+          </div>
+
           <h3>Nutraceuticals</h3>
-          <p>Science-backed health solutions.</p>
-        </div>
-      
-        <div>
-          <img src="assets/icons/cosmetics.svg" alt="">
+
+          <p>
+            Science-backed health solutions based on rare milk potential.
+          </p>
+        </article>
+
+        <article class="solution-focus-item">
+          <div class="solution-focus-icon">
+            <img src="assets/icons/cosmetics.svg" alt="">
+          </div>
+
           <h3>Cosmetics</h3>
-          <p>Natural beauty from nature.</p>
-        </div>
-      
-        <div>
-          <img src="assets/icons/leaf.svg" alt="">
+
+          <p>
+            Natural beauty applications inspired by unique dairy bioactives.
+          </p>
+        </article>
+
+        <article class="solution-focus-item">
+          <div class="solution-focus-icon">
+            <img src="assets/icons/leaf.svg" alt="">
+          </div>
+
           <h3>Wellness</h3>
-          <p>Holistic care for body and mind.</p>
-        </div>
-      
+
+          <p>
+            Holistic care for body, balance and long-term well-being.
+          </p>
+        </article>
       </div>
     </section>
 
-    <section class="hub" id="hub">
-      <div class="hub-text">
-        <p class="eyebrow">Experience Hub</p>
-        <h2>Camel Innovation & Experience Hub</h2>
-        <p>
-          A unique destination where sustainable farming, advanced research
-          and public engagement come together in a closed-loop ecosystem.
+    <section class="ecosystem-cards" id="ecosystem-cards">
+      <article class="ecosystem-card" id="experience-preview">
+        <img
+          src="assets/images/experience-hub.png"
+          alt="Exotic Dairy Experience Hub"
+        >
+
+        <div class="ecosystem-card-content">
+          <p class="eyebrow">Experience Hub</p>
+
+          <h2>
+            Science. Nature. Experience.
+          </h2>
+
+          <p>
+            A future ecosystem bringing together animals, research,
+            product development, production, education and public experience.
+          </p>
+
+          <div class="ecosystem-tags">
+            <span>Animals</span>
+            <span>Research</span>
+            <span>Products</span>
+            <span>Experience</span>
+          </div>
+
+          <a class="btn" href="experience-hub.html">
+            Explore the Hub
+          </a>
+        </div>
+      </article>
+
+      <article class="ecosystem-card" id="partnerships-preview">
+        <img
+          src="assets/images/partnership.png"
+          alt="Exotic Dairy partnerships"
+        >
+
+        <div class="ecosystem-card-content">
+          <p class="eyebrow">Partnerships</p>
+
+          <h2>
+            Growth Is Stronger Together.
+          </h2>
+
+          <p>
+            We connect farms, science, production, technology, distribution
+            and market opportunities into partnerships designed for shared value.
+          </p>
+
+          <div class="ecosystem-tags">
+            <span>Strategic Partnerships</span>
+            <span>Founder Program</span>
+          </div>
+
+          <a class="btn" href="partnerships.html">
+            Explore Partnerships
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="collaboration-section" id="collaboration-preview">
+      <div class="collaboration-head">
+        <p class="eyebrow">
+          Our Business Network
         </p>
-        <a class="btn modal-trigger" href="#" data-modal="futureModal">Explore the future</a>
+    
+        <h2>
+          Science and Business Working Together.
+        </h2>
+    
+        <p>
+          Exotic Dairy brings together academic knowledge, applied research,
+          livestock expertise, food technologies, production engineering
+          and international business networks within one growing ecosystem.
+        </p>
       </div>
+    
+    
+      <!-- ACADEMIC & RESEARCH -->
+      <div class="network-group">
+        <div class="network-title">
+          <h3>
+            Academic &amp; Research Partners
+          </h3>
+        </div>
+    
+        <div class="academic-grid">
+    
+          <a
+            class="network-card"
+            href="https://trakia-uni.bg/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/trakia-university.png"
+              alt="Trakia University"
+            >
+    
+            <strong>
+              Trakia University — Stara Zagora
+            </strong>
+          </a>
+    
+    
+          <a
+            class="network-card"
+            href="http://www.pu-technocentre.eu/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/pu-technocentre.png"
+              alt="Paisii Hilendarski University of Plovdiv"
+            >
+    
+            <strong>
+              Paisii Hilendarski University of Plovdiv
+            </strong>
+    
+            <span>
+              Centre of Technologies
+            </span>
+          </a>
+    
+    
+          <a 
+            class="network-card"
+            href="https://szinstitute.bg/en/начало-english/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/agricultural-institute-stara-zagora.png"
+              alt="Agricultural Institute Stara Zagora"
+            >
+    
+            <strong>
+              Agricultural Institute — Stara Zagora
+            </strong>
+    
+            <span>
+              Bulgarian Agricultural Academy
+            </span>
+          </a>
+    
+        </div>
+      </div>
+    
+    
+      <!-- BUSINESS NETWORK -->
+      <div class="network-group">
 
-      <img src="assets/images/experience-hub.png" alt="Camel Innovation and Experience Hub" />
+        <div class="network-title">
+          <h3>
+            Business Network
+          </h3>
+        </div>
 
-      <div class="hub-points">
-        <div><h3>Research Center</h3><p>Laboratories and product development.</p></div>
-        <div><h3>Education</h3><p>Training, workshops and knowledge sharing.</p></div>
-        <div><h3>Experience</h3><p>Guided tours, farm visits and interactive exhibits.</p></div>
-        <div><h3>Sustainability</h3><p>Regenerative farming and circular solutions.</p></div>
+
+        <div class="business-grid">
+
+          <a
+            class="network-card"
+            href="http://www.blicbg.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/blic.png" alt="">
+            <strong>
+              Bulgarian Livestock Investment Company Ltd.
+            </strong>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://lactbas.com/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/lact-bas.png" alt="">
+            <strong>
+              LB Lact BAS Ltd.
+            </strong>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://lactina-ltd.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/lactina.png" alt="">
+            <strong>
+              Lactina Ltd.
+            </strong>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://tct.bg/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/tct.svg" alt="">
+            <strong>
+              TCT Ltd.
+            </strong>
+            <span>
+              Food Process Engineering & Equipment
+            </span>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://www.tomika-metal.bg/Page/cAboutUs.html"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/tomica-metal.png" alt="">
+            <strong>
+              TOMICA-METAL JSC
+            </strong>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://www.donido.com/eng/company.php"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/donido.png" alt="">
+            <strong>
+              DONIDO MACHINE INDUSTRY JSC
+            </strong>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://bgbc.ae/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/bgbc.png" alt="">
+            <strong>
+              Bulgarian Business Council
+            </strong>
+            <span>
+              UAE
+            </span>
+          </a>
+
+          <a
+            class="network-card"
+            href="https://dairynews.today/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/dairynews.png"
+              alt="DairyNews"
+            >
+
+            <strong>
+              DairyNews
+            </strong>
+
+            <span>
+              International Dairy Industry Media
+            </span>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://melasa.bg/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/otto-aa.png"
+              alt="OTTO-AA Ltd"
+            >
+
+            <strong>
+              OTTO-AA Ltd.
+            </strong>
+          </a>
+
+
+          <a
+            class="network-card"
+            href="https://www.knowledgesofia.eu/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/knowledge-sofia.png"
+              alt="Cluster Sofia Knowledge City"
+            >
+
+            <strong>
+              Cluster Sofia Knowledge City
+            </strong>
+
+            <span>
+              Innovation &amp; Knowledge Ecosystem
+            </span>
+          </a>
+
+        </div>
+
       </div>
     </section>
 
-    <section class="rd">
-      <div>
-        <p class="eyebrow">R&D Center</p>
-        <h2>Science-driven. Future-focused.</h2>
-        <div class="rd-stats">
-          <span><strong>12+</strong> Scientists</span>
-          <span><strong>3</strong> Research institutions</span>
-          <span><strong>5</strong> Patent families</span>
-          <span><strong>32+</strong> Products in development</span>
+    <section class="about-preview" id="about-preview">
+      <div class="about-preview-shell">
+        <div class="about-preview-image">
+          <img
+            src="assets/images/about-team.png"
+            alt="Exotic Dairy company structure"
+          >
         </div>
-      </div>
-      <img src="assets/images/research-center.png" alt="Research laboratory" />
-    </section>
+    
+        <div class="about-preview-content">
+          <p class="eyebrow">
+            About Exotic Dairy
+          </p>
+    
+          <h2>
+            Different Expertise.<br>
+            One Shared Vision.
+          </h2>
+    
+          <div class="quote-carousel">
 
-    <section class="section roadmap" id="roadmap">
-      <p class="eyebrow">Our Roadmap</p>
-      <h2>A clear path to leadership.</h2>
-
-      <div class="roadmap-grid">
-        <div class="road-card">
-          <img src="assets/images/roadmap-1.png" alt="" />
-          <h3>2024–2025 Foundation</h3>
-          <p>R&D, partnerships, production setup and brand preparation.</p>
-        </div>
-        <div class="road-card">
-          <img src="assets/images/roadmap-2.png" alt="" />
-          <h3>2026 Launch & Growth</h3>
-          <p>Launch first products, expand distribution and build brand presence.</p>
-        </div>
-        <div class="road-card">
-          <img src="assets/images/roadmap-3.png" alt="" />
-          <h3>2027 & Beyond Scale</h3>
-          <p>Scale production, enter global markets and lead the new category.</p>
+            <div class="team-quote-slide is-active">
+              <blockquote>
+                We are building a global platform where science, innovation
+                and responsible agriculture shape the future of functional nutrition.
+              </blockquote>
+          
+              <strong>Angel Semerdzhiev</strong>
+              <span>Founder &amp; CEO</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                A vision becomes reality only when the right people build it together.
+                True partnerships combine different strengths and create value
+                for everyone involved.
+              </blockquote>
+          
+              <strong>Georgi Gyulev</strong>
+              <span>Strategy, Innovation &amp; Partnerships Director</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                Nutrition creates real value when scientific knowledge
+                is translated into better products and meaningful
+                solutions for people.
+              </blockquote>
+          
+              <strong>Dr. Ir. Slav Semerdzhiev</strong>
+              <span>Director of Human Nutrition &amp; International Development</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                Sustainable growth requires disciplined capital,
+                intelligent risk management and a clear
+                long-term financial strategy.
+              </blockquote>
+          
+              <strong>Ivan Semerdzhiev</strong>
+              <span>Strategic Financial &amp; Investment Advisor</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                Exceptional products begin with healthy animals —
+                responsibly bred, properly nourished and cared for
+                in harmony with nature.
+              </blockquote>
+          
+              <strong>Lyudmil Shopov</strong>
+              <span>Animal Breeding &amp; Livestock Development Specialist</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                Understanding camels means connecting animal health,
+                science and production with the environments
+                in which these remarkable animals thrive.
+              </blockquote>
+          
+              <strong>Bernard Faye</strong>
+              <span>External Scientific Advisor — Camel Science &amp; Veterinary Expertise</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                The potential of camel milk begins with understanding
+                its unique biochemistry and translating science
+                into safe, high-quality dairy innovation.
+              </blockquote>
+          
+              <strong>Prof. Gaukhar Konuspayeva</strong>
+              <span>External Scientific Advisor — Camel Milk &amp; Dairy Biochemistry</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                Every product must begin with science and earn trust
+                through evidence, quality and meaningful results.
+              </blockquote>
+          
+              <strong>Prof. Nikolina Naydenova Zheleva, PhD</strong>
+              <span>Product Development Lead</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                I believe in turning research into products
+                people need and trust every day.
+              </blockquote>
+          
+              <strong>Plamen Petkov, MSc</strong>
+              <span>Research &amp; Product Development Specialist</span>
+            </div>
+          
+          
+            <div class="team-quote-slide">
+              <blockquote>
+                Innovation is a daily process built on curiosity,
+                precision and a clear purpose.
+              </blockquote>
+          
+              <strong>Borislav Traykov, MSc</strong>
+              <span>Research &amp; Product Development Specialist</span>
+            </div>
+          
+          </div>
+          
+          
+          <div class="quote-controls">
+          
+            <button class="quote-dot is-active" type="button" aria-label="Quote 1"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 2"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 3"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 4"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 5"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 6"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 7"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 8"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 9"></button>
+            <button class="quote-dot" type="button" aria-label="Quote 10"></button>
+          
+          </div>
+    
+          <a class="btn" href="about.html">
+            Learn More About the Team
+          </a>
         </div>
       </div>
     </section>
 
     <section class="section faq" id="faq">
-      <p class="eyebrow">FAQ</p>
-      <h2>Frequently Asked Questions.</h2>
+      <p class="eyebrow">
+        FAQ
+      </p>
+    
+      <h2>
+        Frequently Asked Questions.
+      </h2>
     
       <div class="faq-grid">
+    
         <div>
-          <h3>What is Exotic Dairy?</h3>
-          <p>A functional bio-dairy initiative focused on camel and donkey milk products, R&D and future experience-based ecosystems.</p>
+          <h3>
+            What makes Exotic Dairy different?
+          </h3>
+    
+          <p>
+            Exotic Dairy connects animal expertise, rare milk, science,
+            processing technology, product development and market partnerships
+            within one integrated ecosystem.
+          </p>
         </div>
     
         <div>
-          <h3>Why camel milk?</h3>
-          <p>Camel milk offers a rare nutritional profile and strong potential for functional foods, wellness and specialized nutrition.</p>
+          <h3>
+            Why camel and donkey milk?
+          </h3>
+    
+          <p>
+            Camel and donkey milk have distinctive nutritional and technological
+            characteristics, while their scarcity and processing complexity create
+            opportunities for premium and functional product innovation.
+          </p>
         </div>
     
         <div>
-          <h3>Why donkey milk?</h3>
-          <p>Donkey milk is one of the rarest premium dairy sources, suitable for high-value niche products and innovation.</p>
+          <h3>
+            What makes camel milk different from conventional dairy?
+          </h3>
+    
+          <p>
+            Camel milk has a distinctive protein and fatty-acid profile and
+            naturally contains bioactive components that continue to attract
+            scientific and functional-food research.
+          </p>
         </div>
     
         <div>
-          <h3>When will products be available?</h3>
-          <p>Selected products are being prepared for launch, while others are in development through research and product testing.</p>
+          <h3>
+            Why is donkey milk so rare?
+          </h3>
+    
+          <p>
+            Donkeys produce relatively small quantities of milk and its composition
+            creates additional processing challenges, making donkey milk a naturally
+            scarce and premium dairy raw material.
+          </p>
         </div>
     
         <div>
-          <h3>What is the Experience Hub?</h3>
-          <p>A future destination combining animals, education, research, product tasting and public engagement.</p>
+          <h3>
+            What does “Launch Soon” mean?
+          </h3>
+    
+          <p>
+            “Launch Soon” identifies products whose core development has been
+            completed and which are being prepared for commercial production
+            and market introduction.
+          </p>
         </div>
     
         <div>
-          <h3>How can I participate?</h3>
-          <p>Participation opportunities will be announced as the ecosystem develops.</p>
+          <h3>
+            What is the Exotic Dairy Experience Hub?
+          </h3>
+    
+          <p>
+            The Experience Hub connects animals, milk production, research,
+            product development, specialist training, education and visitor
+            experience within one closed ecosystem.
+          </p>
         </div>
+    
+        <div>
+          <h3>
+            How can people participate in the Experience Hub?
+          </h3>
+    
+          <p>
+            The planned Crowd Participation program will begin with
+            One-Time Participation, Membership and Adopt a Camel or Donkey —
+            combining contribution with recognition, access and program benefits.
+          </p>
+        </div>
+    
+        <div>
+          <h3>
+            What is the Founder Partnership Program?
+          </h3>
+    
+          <p>
+            Founder Partnership is designed for active strategic partners who can
+            contribute not only capital, but also expertise, technology,
+            production, distribution, market access or other business capabilities.
+          </p>
+        </div>
+    
+        <div class="faq-more-card">
+          <h3>
+            Have More Questions?
+          </h3>
+    
+          <p>
+            Explore detailed answers about camel and donkey milk, products,
+            research, the Experience Hub, Crowd Participation and partnerships.
+          </p>
+    
+          <a class="btn" href="faq.html">
+            View All FAQs
+          </a>
+        </div>
+    
       </div>
     </section>
 
-    <section class="ecosystem">
-      <img src="assets/images/ecosystem-footer.png" alt="Exotic Dairy ecosystem" />
-      <div class="ecosystem-content">
-        <p class="eyebrow">Building the Ecosystem</p>
-        <h2>Integrated. Scalable. Sustainable.</h2>
-
-        <div class="eco-steps">
-          <span>Sourcing</span>
-          <span>Processing</span>
-          <span>Products</span>
-          <span>R&D & Innovation</span>
-          <span>Distribution & Impact</span>
+    <section class="home-final-cta">
+      <div class="home-final-inner">
+        <div>
+          <h2>
+            Let’s build the future together.
+          </h2>
+    
+          <p>
+            Connect with Exotic Dairy to discuss products, research,
+            partnerships, distribution opportunities or future participation
+            in our growing functional bio-dairy ecosystem.
+          </p>
         </div>
-
-        <h3>We are not just building dairy.<br>We are building a new future.</h3>
+    
+        <a
+          class="btn modal-trigger"
+          href="#"
+          data-modal="contactModal"
+          data-interest="Partnerships"
+        >
+          Get in Touch
+        </a>
       </div>
     </section>
   </main>
 
   <footer class="footer" id="contact">
     <div class="footer-top">
+  
       <div class="footer-main">
         <div class="footer-brand">
-          <img src="assets/images/logo.png" alt="Exotic Dairy logo" />
-          <span>EXOTIC<br>DAIRY</span>
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+          >
+  
+          <span>
+            EXOTIC<br>
+            DAIRY
+          </span>
         </div>
   
         <p>
@@ -433,103 +1787,529 @@
       </div>
   
       <div class="footer-col">
-        <h3>Company</h3>
-        <a href="#solution">Our Solution</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#faq">FAQ</a>
+        <h3>Explore</h3>
+  
+        <a href="products.html">
+          Products
+        </a>
+  
+        <a href="our-solution.html">
+          Our Solution
+        </a>
+  
+        <a href="experience-hub.html">
+          Experience Hub
+        </a>
+  
+        <a href="partnerships.html">
+          Partnerships
+        </a>
+  
+        <a href="about.html">
+          About Us
+        </a>
       </div>
   
       <div class="footer-col">
         <h3>Products</h3>
-        <a href="#products">Ready for Market</a>
-        <a href="#products">In Development</a>
-        <a href="#products">Future Innovations</a>
+  
+        <a href="products.html">
+          All Products
+        </a>
+  
+        <a href="products.html?category=camel">
+          Camel Milk Products
+        </a>
+  
+        <a href="products.html?category=donkey">
+          Donkey Milk Products
+        </a>
       </div>
   
       <div class="footer-col">
-        <h3>Experience Hub</h3>
-        <a href="#hub">Research Center</a>
-        <a href="#hub">Camel Experience Hub</a>
-        <a href="#hub">Sustainability</a>
+        <h3>Participate</h3>
+  
+        <a href="experience-hub.html#crowd-participation">
+          Crowd Participation
+        </a>
+  
+        <a href="partnerships.html">
+          Founder Partnership
+        </a>
+  
+        <a
+          href="#"
+          class="modal-trigger"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
       </div>
   
       <div class="footer-col">
         <h3>Resources</h3>
-        <a href="#faq">FAQ</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="disclaimer.html">Disclaimer</a>
+  
+        <a href="faq.html">
+          FAQ
+        </a>
+  
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+  
+        <a href="terms.html">
+          Terms of Use
+        </a>
+  
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
       </div>
   
       <div class="footer-col">
         <h3>Contact</h3>
-        <p>Plovdiv, Bulgaria</p>
+  
+        <p>
+          Plovdiv, Bulgaria
+        </p>
+  
         <a href="mailto:office@exoticdairy.com">
           office@exoticdairy.com
         </a>
+  
         <a href="mailto:partners@exoticdairy.com">
           partners@exoticdairy.com
         </a>
+  
         <a href="tel:+359896733048">
           +359 896 733 048
         </a>
       </div>
+  
     </div>
   
     <div class="footer-bottom">
-      <p>© 2026 Exotic Dairy. All Rights Reserved.</p>
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+  
       <p>
         Website designed and developed by
-        <a href="https://geodynamicsonline.com" target="_blank" rel="noopener">Geo Dynamics Ltd.</a>
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
       </p>
     </div>
   </footer>
 
-  <div class="modal" id="contactModal">
+  <div class="modal" id="camelMilkModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel milk-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="milk-modal-grid">
+        <div class="milk-modal-image">
+          <img
+            src="assets/images/hero-camel.png"
+            alt="Camel milk"
+          >
+        </div>
+
+        <div class="milk-modal-content">
+          <p class="eyebrow">Camel Milk</p>
+
+          <h2>
+            Ancient Milk.<br>
+            Modern Potential.
+          </h2>
+
+          <p>
+            Camel milk is one of the most fascinating rare milk sources,
+            valued for its unique nutritional profile and potential in
+            functional dairy innovation.
+          </p>
+
+          <p>
+            Exotic Dairy is developing camel milk products across fresh,
+            fermented and functional categories — from yogurt and labneh
+            to cheese and future science-led formulations.
+          </p>
+
+          <div class="milk-modal-list">
+            <span>Functional dairy potential</span>
+            <span>Fermented dairy applications</span>
+            <span>Premium rare milk positioning</span>
+            <span>Science-led product development</span>
+          </div>
+
+          <a class="btn" href="products.html?category=camel">
+            Explore Camel Milk Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="donkeyMilkModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel milk-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <div class="milk-modal-grid">
+        <div class="milk-modal-image">
+          <img
+            src="assets/images/hero-donkey.png"
+            alt="Donkey milk"
+          >
+        </div>
+
+        <div class="milk-modal-content">
+          <p class="eyebrow">Donkey Milk</p>
+
+          <h2>
+            Rare Milk.<br>
+            Premium Innovation.
+          </h2>
+
+          <p>
+            Donkey milk is one of the rarest premium dairy sources,
+            known for its delicate profile and potential in high-value
+            niche products.
+          </p>
+
+          <p>
+            Exotic Dairy explores donkey milk as a foundation for distinctive
+            products that combine rarity, craftsmanship and functional value.
+          </p>
+
+          <div class="milk-modal-list">
+            <span>Rare premium dairy source</span>
+            <span>Distinctive product innovation</span>
+            <span>High-value niche positioning</span>
+            <span>Functional and premium applications</span>
+          </div>
+
+          <a class="btn" href="products.html?category=donkey">
+            Explore Donkey Milk Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="networkModal">
     <div class="modal-backdrop modal-close"></div>
   
-    <div class="modal-panel contact-panel">
-      <button class="modal-x modal-close">×</button>
+    <div class="modal-panel network-modal-panel">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
   
-      <p class="eyebrow">Contact</p>
-      <h2>Let's Build the Future Together</h2>
-
-      <p class="modal-intro">
-      Connect with the Exotic Dairy team to discuss products, research, partnerships and future opportunities.
+      <p class="eyebrow">
+        Our Business Network
       </p>
   
+      <h2>
+        Partners &amp; Collaborators
+      </h2>
+  
+      <p class="network-modal-intro">
+        Explore the academic, research and business organizations
+        contributing to the growing Exotic Dairy ecosystem.
+      </p>
+  
+  
+      <!-- ACADEMIC -->
+      <div class="network-modal-group">
+        <div class="network-modal-title">
+          <h3>
+            Academic &amp; Research Partners
+          </h3>
+        </div>
+  
+        <div class="network-modal-list">
+  
+          <a
+            class="network-modal-item"
+            href="https://trakia-uni.bg/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/trakia-university.png"
+              alt=""
+            >
+  
+            <div>
+              <strong>
+                Trakia University — Stara Zagora
+              </strong>
+            </div>
+  
+            <span class="network-modal-link-icon">
+              ↗
+            </span>
+          </a>
+  
+  
+          <a
+            class="network-modal-item"
+            href="http://www.pu-technocentre.eu/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="assets/logos/pu-technocentre.png"
+              alt=""
+            >
+  
+            <div>
+              <strong>
+                Paisii Hilendarski University of Plovdiv
+              </strong>
+  
+              <span>
+                Centre of Technologies
+              </span>
+            </div>
+  
+            <span class="network-modal-link-icon">
+              ↗
+            </span>
+          </a>
+  
+  
+          <div class="network-modal-item">
+            <img
+              src="assets/logos/agricultural-institute-stara-zagora.png"
+              alt=""
+            >
+  
+            <div>
+              <strong>
+                Agricultural Institute — Stara Zagora
+              </strong>
+  
+              <span>
+                Bulgarian Agricultural Academy
+              </span>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+  
+      <!-- BUSINESS -->
+      <div class="network-modal-group">
+        <div class="network-modal-title">
+          <h3>
+            Business Network
+          </h3>
+        </div>
+  
+        <div class="network-modal-list">
+  
+          <a
+            class="network-modal-item"
+            href="http://www.blicbg.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/blic.png" alt="">
+  
+            <div>
+              <strong>
+                Bulgarian Livestock Investment Company Ltd.
+              </strong>
+            </div>
+  
+            <span class="network-modal-link-icon">↗</span>
+          </a>
+  
+  
+          <a
+            class="network-modal-item"
+            href="https://lactbas.com/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/lact-bas.png" alt="">
+  
+            <div>
+              <strong>
+                LB Lact BAS Ltd.
+              </strong>
+            </div>
+  
+            <span class="network-modal-link-icon">↗</span>
+          </a>
+  
+  
+          <a
+            class="network-modal-item"
+            href="https://lactina-ltd.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/lactina.png" alt="">
+  
+            <div>
+              <strong>
+                Lactina Ltd.
+              </strong>
+            </div>
+  
+            <span class="network-modal-link-icon">↗</span>
+          </a>
+  
+  
+          <a
+            class="network-modal-item"
+            href="https://tct.bg/en/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/tct.png" alt="">
+  
+            <div>
+              <strong>
+                TCT Ltd.
+              </strong>
+  
+              <span>
+                Food Process Engineering &amp; Equipment
+              </span>
+            </div>
+  
+            <span class="network-modal-link-icon">↗</span>
+          </a>
+  
+  
+          <a
+            class="network-modal-item"
+            href="https://www.tomika-metal.bg/Page/cAboutUs.html"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/tomica-metal.png" alt="">
+  
+            <div>
+              <strong>
+                TOMICA-METAL JSC
+              </strong>
+            </div>
+  
+            <span class="network-modal-link-icon">↗</span>
+          </a>
+  
+  
+          <a
+            class="network-modal-item"
+            href="https://www.donido.com/eng/company.php"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/donido.png" alt="">
+  
+            <div>
+              <strong>
+                DONIDO MACHINE INDUSTRY JSC
+              </strong>
+            </div>
+  
+            <span class="network-modal-link-icon">↗</span>
+          </a>
+  
+  
+          <a
+            class="network-modal-item"
+            href="https://bgbc.ae/"
+            target="_blank"
+            rel="noopener"
+          >
+            <img src="assets/logos/bgbc.png" alt="">
+  
+            <div>
+              <strong>
+                Bulgarian Business Council
+              </strong>
+  
+              <span>
+                UAE
+              </span>
+            </div>
+  
+            <span class="network-modal-link-icon">↗</span>
+          </a>
+  
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <div class="modal" id="contactModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div class="modal-panel contact-panel">
+      <button class="modal-x modal-close">×</button>
+
+      <p class="eyebrow">Contact</p>
+
+      <h2>
+        Let's Build the Future Together
+      </h2>
+
+      <p class="modal-intro">
+        Connect with the Exotic Dairy team to discuss products, research,
+        partnerships and future opportunities.
+      </p>
+
       <form
-          class="contact-form"
-          action="https://formspree.io/f/mqeonyjr"
-          method="POST"
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Exotic Dairy Inquiry"
         >
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Exotic Dairy Inquiry"
-        >
+
         <div class="form-row">
           <label>Name *</label>
           <input type="text" name="name" minlength="2" required>
         </div>
-  
+
         <div class="form-row">
           <label>Email *</label>
           <input type="email" name="email" required>
         </div>
-  
+
         <div class="form-row">
           <label>Company</label>
           <input type="text" name="company">
         </div>
-  
+
         <div class="form-row">
           <label>Country</label>
           <input type="text" name="country">
         </div>
-  
+
         <div class="form-row">
           <label>Interest</label>
+
           <select name="interest">
             <option>Research</option>
             <option>Products</option>
@@ -539,7 +2319,7 @@
             <option>Media</option>
           </select>
         </div>
-  
+
         <div class="form-row full">
           <label>Message *</label>
           <textarea name="message" rows="5" minlength="10" required></textarea>
@@ -551,8 +2331,10 @@
             I agree to the Privacy Policy and consent to being contacted.
           </label>
         </div>
-  
-        <button class="btn" type="submit">Send inquiry</button>
+
+        <button class="btn" type="submit">
+          Send inquiry
+        </button>
 
         <div id="form-success" style="display:none;">
           Thank you for contacting Exotic Dairy.
@@ -561,55 +2343,128 @@
       </form>
     </div>
   </div>
-  
-  <div class="modal" id="futureModal">
-    <div class="modal-backdrop modal-close"></div>
-  
-    <div class="modal-panel future-panel">
-      <button class="modal-x modal-close">×</button>
-  
-      <p class="eyebrow">Explore the Future</p>
-      <h2>Explore the Future of Functional Bio-Dairy</h2>
-      <p class="modal-intro">
-        A new ecosystem where science, rare milk, product innovation and public participation meet.
-      </p>
-  
-      <div class="future-modal-grid">
-        <div>
-          <img src="assets/images/research-center.png" alt="">
-          <h3>Research & Innovation</h3>
-          <p>Advancing camel and donkey milk through research, biotechnology and functional food development.</p>
-        </div>
-  
-        <div>
-          <img src="assets/images/experience-hub.png" alt="">
-          <h3>Camel Experience Hub</h3>
-          <p>A future destination combining animals, education, product tasting, research visibility and public engagement.</p>
-        </div>
-  
-        <div>
-          <img src="assets/images/hero-products.png" alt="">
-          <h3>Premium Product Development</h3>
-          <p>From rare milk to high-value products: functional dairy, supplements, medical nutrition and personalized wellness.</p>
-        </div>
-      </div>
-  
-      <div class="participation-box">
-        <p class="eyebrow">A New Model of Participation</p>
-        <h3>CrowdParticipants</h3>
-        <p>
-          Traditional projects rely on banks, investors, donations or classic crowdfunding.
-          Exotic Dairy is developing a new participation model designed around long-term ecosystem impact,
-          shared purpose and real-world product development.
-        </p>
-  
-        <button class="modal-disabled-btn" disabled>CrowdParticipants — Coming Soon</button>
-  
-        <span>A new way to support, participate and grow with the ecosystem.</span>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
+
+  <script>
+    const quoteSlides = document.querySelectorAll(".team-quote-slide");
+    const quoteDots = document.querySelectorAll(".quote-dot");
+    let activeQuote = 0;
+    let quoteTimer;
+
+    function showQuote(index) {
+      quoteSlides.forEach(slide => {
+        slide.classList.remove("is-active");
+      });
+
+      quoteDots.forEach(dot => {
+        dot.classList.remove("is-active");
+      });
+
+      quoteSlides[index]?.classList.add("is-active");
+      quoteDots[index]?.classList.add("is-active");
+      activeQuote = index;
+    }
+
+    function startQuoteCarousel() {
+      quoteTimer = setInterval(() => {
+        const nextQuote = (activeQuote + 1) % quoteSlides.length;
+        showQuote(nextQuote);
+      }, 5500);
+    }
+
+    quoteDots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        clearInterval(quoteTimer);
+        showQuote(index);
+        startQuoteCarousel();
+      });
+    });
+
+    if (quoteSlides.length > 0) {
+      startQuoteCarousel();
+    }
+    
+    const homeNavSelectors = [
+      '.nav a[href="products.html"]',
+      '.nav a[href="our-solution.html"]',
+      '.nav a[href="experience-hub.html"]',
+      '.nav a[href="partnerships.html"]',
+      '.nav a[href="about.html"]',
+      '.nav a[href="faq.html"]'
+    ];
+
+    function getHomeNavMarkers() {
+      const products = document.getElementById("products-preview");
+      const solution = document.getElementById("solution");
+      const ecosystemCards = document.getElementById("ecosystem-cards");
+      const collaboration = document.getElementById("collaboration-preview");
+      const about = document.getElementById("about-preview");
+      const faq = document.getElementById("faq");
+
+      const ecosystemTop = ecosystemCards ? ecosystemCards.offsetTop : 0;
+      const ecosystemHeight = ecosystemCards ? ecosystemCards.offsetHeight : 0;
+
+      return [
+        {
+          selector: '.nav a[href="products.html"]',
+          top: products ? products.offsetTop : 0
+        },
+        {
+          selector: '.nav a[href="our-solution.html"]',
+          top: solution ? solution.offsetTop : 0
+        },
+        {
+          selector: '.nav a[href="experience-hub.html"]',
+          top: ecosystemCards ? ecosystemTop : 0
+        },
+        {
+          selector: '.nav a[href="partnerships.html"]',
+          top: collaboration
+            ? collaboration.offsetTop - 140
+            : ecosystemTop + ecosystemHeight * .55
+        },
+        {
+          selector: '.nav a[href="about.html"]',
+          top: about ? about.offsetTop : 0
+        },
+        {
+          selector: '.nav a[href="faq.html"]',
+          top: faq ? faq.offsetTop : 0
+        }
+      ];
+    }
+
+    function updateHomeActiveNav() {
+      const scrollPosition = window.scrollY + 170;
+      const markers = getHomeNavMarkers();
+      let currentItem = markers[0];
+
+      markers.forEach(item => {
+        if (item.top <= scrollPosition) {
+          currentItem = item;
+        }
+      });
+
+      homeNavSelectors.forEach(selector => {
+        const link = document.querySelector(selector);
+
+        if (link) {
+          link.classList.remove("is-active");
+        }
+      });
+
+      const activeLink = document.querySelector(currentItem.selector);
+
+      if (activeLink) {
+        activeLink.classList.add("is-active");
+      }
+    }
+
+    window.addEventListener("scroll", updateHomeActiveNav);
+    window.addEventListener("resize", updateHomeActiveNav);
+    window.addEventListener("load", updateHomeActiveNav);
+    updateHomeActiveNav();
+  </script>
 </body>
 </html>
