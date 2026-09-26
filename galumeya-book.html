@@ -1,0 +1,2520 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1001 Discoveries of Galumeya — Volume I</title>
+
+  <meta
+    name="description"
+    content="Discover eight illustrated Galumeya stories about curiosity, care and knowledge. Read the first story for free."
+  >
+
+  <link
+    rel="canonical"
+    href="https://exoticdairy.com/galumeya-book.html"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Exotic Dairy">
+  <meta property="og:title" content="1001 Discoveries of Galumeya">
+  <meta
+    property="og:description"
+    content="Eight stories. One world of discovery. Read the first story for free."
+  >
+  <meta
+    property="og:url"
+    content="https://exoticdairy.com/galumeya-book.html"
+  >
+  <meta
+    property="og:image"
+    content="https://exoticdairy.com/assets/images/galumeya-book-hero.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="1001 Discoveries of Galumeya">
+  <meta
+    name="twitter:description"
+    content="Eight stories. One world of discovery."
+  >
+  <meta
+    name="twitter:image"
+    content="https://exoticdairy.com/assets/images/galumeya-book-hero.png"
+  >
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    /* ======================================================
+       BASE
+    ====================================================== */
+
+    :root {
+      --white: #ffffff;
+      --ivory: #f7f1e7;
+      --ivory-light: #fffdf8;
+      --navy: #071a33;
+      --blue: #1477d4;
+      --gold: #c9a04f;
+      --gold-dark: #9e762d;
+      --text: #25384b;
+      --muted: #667483;
+      --line: #dfd5c3;
+      --header-height: 86px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 20px);
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--ivory-light);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 5px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 10000;
+      padding: 12px 18px;
+      transform: translateY(-160%);
+      border-radius: 6px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .skip-link:focus {
+      transform: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 14px 24px;
+      border: 1px solid var(--blue);
+      border-radius: 6px;
+      background: var(--blue);
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+      text-decoration: none;
+      text-align: center;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .btn:hover {
+      background: #1065b5;
+    }
+
+    button:disabled {
+      cursor: wait;
+      opacity: .65;
+    }
+
+    /* ======================================================
+       HEADER
+    ====================================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: var(--header-height);
+      padding: 14px 4vw;
+      border-bottom: 1px solid rgba(7, 26, 51, .07);
+      background: white;
+    }
+
+    .logo {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 12px;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .logo span {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: .12em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 1.7vw, 28px);
+    }
+
+    .nav > a {
+      position: relative;
+      padding: 8px 0;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav > a:hover,
+    .nav > a.active {
+      color: var(--blue);
+    }
+
+    .nav > a.active::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .header-btn {
+      flex-shrink: 0;
+    }
+
+    .menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #dce4eb;
+      border-radius: 6px;
+      background: white;
+      color: var(--navy);
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .nav > .mobile-contact-btn {
+      display: none;
+    }
+
+    /* ======================================================
+       BOOK — SHARED ELEMENTS
+    ====================================================== */
+
+    .book-page {
+      overflow: hidden;
+      background: var(--ivory-light);
+    }
+
+    .book-wrap {
+      width: min(1240px, 86%);
+      margin: 0 auto;
+    }
+
+    .book-eyebrow {
+      color: var(--gold-dark);
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.5;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .book-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 14px 23px;
+      border: 1px solid #bc954e;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #edcf8c, #c7a15a);
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      text-decoration: none;
+      text-align: center;
+      transition: filter .2s ease;
+    }
+
+    .book-button:hover {
+      filter: brightness(1.05);
+    }
+
+    .book-description {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .book-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .book-section-head {
+      max-width: 800px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .book-section-head h2 {
+      margin: 14px 0 18px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 3.6vw, 48px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -.8px;
+    }
+
+    /* ======================================================
+       HERO
+    ====================================================== */
+
+    .book-hero {
+      display: grid;
+      grid-template-columns: 1.12fr 1fr;
+      background: var(--ivory);
+    }
+
+    .book-hero-art {
+      position: relative;
+      min-width: 0;
+      min-height: 590px;
+      overflow: hidden;
+    }
+
+    .book-hero-art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 45% center;
+    }
+
+    .book-hero-copy {
+      align-self: center;
+      width: 100%;
+      max-width: 680px;
+      padding: 56px clamp(28px, 4.5vw, 76px);
+    }
+
+    .book-hero h1 {
+      margin: 18px 0 24px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 4.5vw, 70px);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -1.8px;
+    }
+
+    .book-hero h1 span {
+      color: var(--gold-dark);
+    }
+
+    .book-hero-lead {
+      margin-bottom: 16px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    .book-hero .book-button {
+      margin-top: 28px;
+    }
+
+    /* ======================================================
+       EIGHT STORIES
+    ====================================================== */
+
+    .book-stories {
+      padding: 84px 0 92px;
+    }
+
+    .book-story-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .book-story {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: linear-gradient(125deg, #fffdf8, #f0e9dc);
+    }
+
+    .book-story[data-status="free"] {
+      border: 2px solid #c7a15a;
+      box-shadow: 0 8px 30px rgba(167, 123, 50, .1);
+    }
+
+    .book-story-art {
+      position: relative;
+      min-width: 0;
+      min-height: 285px;
+      overflow: hidden;
+    }
+
+    .book-story-art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .book-story[data-story="1"] .book-story-art img {
+      object-position: 65% center;
+    }
+
+    .book-story[data-story="2"] .book-story-art img {
+      object-position: 25% center;
+    }
+
+    .book-story-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 0;
+      padding: 24px 22px;
+    }
+
+    .book-story-number {
+      margin-bottom: 10px;
+      color: var(--gold-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .book-story h3 {
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .book-story p {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .book-story .book-button,
+    .book-story-status {
+      margin-top: auto;
+    }
+
+    .book-story-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #687482;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .lock-icon {
+      position: relative;
+      display: inline-block;
+      flex: none;
+      width: 13px;
+      height: 11px;
+      margin-top: 5px;
+      border: 1.6px solid currentColor;
+      border-radius: 2px;
+    }
+
+    .lock-icon::before {
+      content: "";
+      position: absolute;
+      bottom: calc(100% - 1px);
+      left: 1px;
+      width: 8px;
+      height: 7px;
+      border: 1.6px solid currentColor;
+      border-bottom: 0;
+      border-radius: 6px 6px 0 0;
+    }
+
+    /* ======================================================
+       HUB / LEGACY
+    ====================================================== */
+
+    .book-legacy {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--navy);
+      color: white;
+    }
+
+    .book-legacy-art {
+      position: relative;
+      min-width: 0;
+      min-height: 390px;
+      overflow: hidden;
+    }
+
+    .book-legacy-art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    .book-legacy-copy {
+      align-self: center;
+      max-width: 700px;
+      padding: 55px clamp(28px, 5vw, 80px);
+    }
+
+    .book-legacy .book-eyebrow {
+      color: #e3c58b;
+    }
+
+    .book-legacy h2 {
+      margin: 14px 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 3.3vw, 46px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -.6px;
+    }
+
+    .book-legacy .book-description {
+      color: #d7e3f2;
+    }
+
+    .book-legacy .book-button {
+      margin-top: 26px;
+      border-color: #e3c58b;
+      background: transparent;
+      color: #e3c58b;
+    }
+
+    /* ======================================================
+       NOTIFY ME
+    ====================================================== */
+
+    .book-notify {
+      padding: 78px 22px 84px;
+      background:
+        radial-gradient(
+          ellipse at 10% 100%,
+          rgba(201, 160, 79, .12),
+          transparent 45%
+        ),
+        var(--ivory);
+    }
+
+    .book-notify .book-section-head {
+      margin-bottom: 28px;
+    }
+
+    .book-notify-form {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .book-notify-form label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .book-notify-row {
+      display: flex;
+      align-items: stretch;
+      gap: 12px;
+    }
+
+    .book-notify-row input {
+      flex: 1;
+      min-width: 0;
+      width: 100%;
+      min-height: 50px;
+      padding: 14px 16px;
+      border: 1px solid #c8cdd3;
+      border-radius: 6px;
+      background: white;
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .book-notify-row button {
+      flex-shrink: 0;
+    }
+
+    .book-note a {
+      text-underline-offset: 3px;
+    }
+
+    .form-status {
+      margin-top: 16px;
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .form-status:empty {
+      display: none;
+    }
+
+    .form-status[data-state="error"] {
+      color: #a32929;
+    }
+
+    .form-status[data-state="success"] {
+      color: #256044;
+    }
+
+    /* ======================================================
+       FOOTER
+    ====================================================== */
+
+    .footer {
+      padding: 64px 5vw 24px;
+      background: #061426;
+      color: #c5d0de;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr repeat(5, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .footer-brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .footer-brand span {
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: .08em;
+    }
+
+    .footer-main > p {
+      max-width: 280px;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .footer-col h3 {
+      margin-bottom: 7px;
+      color: #8fd2ff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .footer-col a,
+    .footer-col p {
+      font-size: 12px;
+      line-height: 1.55;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-col a:hover,
+    .footer-bottom a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1440px;
+      margin: 46px auto 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .footer-bottom p {
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .footer-bottom a {
+      color: inherit;
+      text-underline-offset: 3px;
+    }
+
+    /* ======================================================
+       CONTACT MODAL
+    ====================================================== */
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(3, 12, 24, .76);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-panel {
+      position: relative;
+      z-index: 1;
+      width: min(700px, 100%);
+      max-height: calc(100dvh - 40px);
+      overflow: auto;
+      padding: 40px;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 30px 100px rgba(0, 0, 0, .3);
+    }
+
+    .modal-x {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: 1px solid #dce4eb;
+      border-radius: 50%;
+      background: white;
+      color: var(--navy);
+      font-size: 27px;
+      line-height: 1;
+    }
+
+    .modal-panel h2 {
+      margin: 12px 36px 15px 0;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .modal-intro {
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .form-row.full,
+    .contact-form > .form-status {
+      grid-column: 1 / -1;
+    }
+
+    .form-row > label {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      width: 100%;
+      min-width: 0;
+      padding: 12px 13px;
+      border: 1px solid #c8d2dc;
+      border-radius: 6px;
+      background: white;
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .form-row textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-row .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .checkbox-label input {
+      flex: none;
+      width: 17px;
+      height: 17px;
+      margin: 2px 0 0;
+      accent-color: var(--blue);
+    }
+
+    .contact-form > button {
+      justify-self: start;
+    }
+
+    /* ======================================================
+       RESPONSIVE
+    ====================================================== */
+
+    @media (max-width: 1180px) {
+      .site-header {
+        gap: 16px;
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+
+      .nav {
+        gap: 14px;
+      }
+
+      .nav > a {
+        font-size: 12px;
+      }
+
+      .header-btn {
+        padding-right: 17px;
+        padding-left: 17px;
+      }
+
+      .footer-top {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .book-wrap {
+        width: 92%;
+      }
+
+      .book-story {
+        grid-template-columns: 1fr;
+      }
+
+      .book-story-art {
+        min-height: 0;
+        aspect-ratio: 3 / 2;
+      }
+
+      .book-story-body {
+        min-height: 250px;
+      }
+
+      .book-hero-art {
+        min-height: 540px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --header-height: 76px;
+      }
+
+      .site-header {
+        flex-wrap: wrap;
+      }
+
+      .logo img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .logo span {
+        font-size: 16px;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+        margin-left: auto;
+      }
+
+      .header-btn {
+        display: none;
+      }
+
+      .nav {
+        display: none;
+        order: 3;
+        flex-basis: 100%;
+        align-items: stretch;
+        gap: 0;
+        max-height: calc(100dvh - 100px);
+        overflow: auto;
+        padding: 8px 0 10px;
+      }
+
+      .nav.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav > a {
+        padding: 13px 4px;
+        font-size: 14px;
+      }
+
+      .nav > a.active::after {
+        display: none;
+      }
+
+      .nav > .mobile-contact-btn {
+        display: block;
+        margin-top: 8px;
+        padding: 13px 18px;
+        border-radius: 6px;
+        background: var(--blue);
+        color: white;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .book-hero,
+      .book-legacy {
+        grid-template-columns: 1fr;
+      }
+
+      .book-hero-art {
+        min-height: 0;
+        aspect-ratio: 3 / 2;
+      }
+
+      .book-hero-copy {
+        max-width: none;
+        padding: 38px 24px 46px;
+      }
+
+      .book-hero h1 {
+        font-size: clamp(42px, 8vw, 62px);
+      }
+
+      .book-legacy-art {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+      }
+
+      .book-legacy-copy {
+        padding: 38px 24px 46px;
+      }
+
+      .book-stories {
+        padding: 58px 0 64px;
+      }
+
+      .book-notify {
+        padding: 58px 22px 64px;
+      }
+
+      .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-main {
+        grid-column: 1 / -1;
+      }
+
+      .footer-main > p {
+        max-width: 460px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .site-header {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      .book-wrap {
+        width: calc(100% - 40px);
+      }
+
+      .book-story-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .book-story-body {
+        min-height: 0;
+        padding: 25px;
+      }
+
+      .book-story h3 {
+        font-size: 28px;
+      }
+
+      .book-section-head h2 {
+        font-size: 34px;
+      }
+
+      .book-notify-row {
+        flex-direction: column;
+      }
+
+      .footer {
+        padding: 48px 22px 24px;
+      }
+
+      .footer-top {
+        gap: 30px 22px;
+      }
+
+      .modal {
+        padding: 12px;
+      }
+
+      .modal-panel {
+        max-height: calc(100dvh - 24px);
+        padding: 32px 22px 26px;
+        border-radius: 16px;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+
+    /* ======================================================
+    FOOTER — SAME AS THE MAIN WEBSITE
+    ====================================================== */
+
+    .footer {
+    padding: 64px 56px 28px;
+    background: #020912;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    }
+
+    .footer,
+    .footer * {
+    box-sizing: border-box;
+    }
+
+    .footer p,
+    .footer h3 {
+    margin: 0;
+    padding: 0;
+    }
+
+    .footer a {
+    color: inherit;
+    text-decoration: none;
+    }
+
+    .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(5, 1fr);
+    gap: 34px;
+    align-items: start;
+    }
+
+    .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1477d4;
+    font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1;
+    }
+
+    .footer-brand img {
+    display: block;
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    }
+
+    .footer-brand span {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    }
+
+    .footer-main p {
+    max-width: 360px;
+    margin-top: 18px;
+    color: #c9d5e4;
+    font-size: 14px;
+    line-height: 1.5;
+    }
+
+    .footer-col {
+    display: grid;
+    gap: 10px;
+    }
+
+    .footer-col h3 {
+    margin-bottom: 6px;
+    color: #3fa9f5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    }
+
+    .footer-col a,
+    .footer-col p {
+    color: #c9d5e4;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    }
+
+    .footer-col a:hover {
+    color: #ffffff;
+    }
+
+    .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    color: #91a4bb;
+    font-size: 13px;
+    }
+
+    .footer-bottom p {
+    font-size: inherit;
+    line-height: 1.5;
+    }
+
+    .footer-bottom a {
+    color: #3fa9f5;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1100px) {
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-main {
+        grid-column: 1 / -1;
+    }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 680px) {
+    .footer {
+        padding: 48px 22px 24px;
+    }
+
+    .footer-brand {
+        font-size: 13px;
+    }
+
+    .footer-brand img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+  }
+  /* HEADER — consistent layout */
+
+    :root {
+    --header-height: 86px;
+    }
+
+    .site-header {
+    height: var(--header-height);
+    min-height: var(--header-height);
+    padding: 0 56px;
+    gap: 34px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    background: var(--ivory-light);
+    }
+
+    .site-header .logo {
+    flex-shrink: 0;
+    gap: 12px;
+    }
+
+    .site-header .logo img {
+    width: 54px;
+    height: 54px;
+    }
+
+    .site-header .logo span {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 4px;
+    }
+
+    .site-header .nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    align-items: center;
+    gap: 28px;
+    margin-left: auto;
+    padding: 0;
+    max-height: none;
+    overflow: visible;
+    }
+
+    .site-header .nav > a {
+    position: relative;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    }
+
+    .site-header .nav > a.active {
+    width: auto;
+    align-self: auto;
+    color: #1477d4;
+    }
+
+    .site-header .nav > a.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #c9a04f;
+    border-radius: 2px;
+    }
+
+    .site-header .header-btn {
+    display: inline-flex;
+    flex-shrink: 0;
+    min-height: 0;
+    padding: 14px 24px;
+    border: 0;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 12px 28px rgba(20, 119, 212, .25);
+    }
+
+    .site-header .menu-btn,
+    .site-header .nav > .mobile-contact-btn {
+    display: none;
+    }
+
+    /* Mobile navigation starts at the same width as the main site */
+
+    @media (max-width: 1100px) {
+    .site-header {
+        padding: 0 24px;
+    }
+
+    .site-header .nav,
+    .site-header .header-btn {
+        display: none;
+    }
+
+    .site-header .menu-btn {
+        display: inline-flex;
+        flex-shrink: 0;
+        margin-left: auto;
+        background: transparent;
+    }
+
+    .site-header .nav.is-open {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin: 0;
+        padding: 26px;
+        max-height: calc(100dvh - var(--header-height));
+        overflow-y: auto;
+        background: var(--ivory-light);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 20px 60px rgba(7, 21, 40, .12);
+    }
+
+    .site-header .nav > a {
+        padding: 10px 0;
+    }
+
+    .site-header .nav > a.active {
+        align-self: flex-start;
+        width: fit-content;
+    }
+
+    .site-header .nav > .mobile-contact-btn {
+        display: block;
+        margin-top: 16px;
+        padding: 14px;
+        border-radius: 12px;
+        background: #1477d4;
+        color: #ffffff;
+        text-align: center;
+    }
+    }
+
+    @media (max-width: 680px) {
+    :root {
+        --header-height: 74px;
+    }
+
+    .site-header {
+        padding: 0 18px;
+    }
+
+    .site-header .logo img {
+        width: 44px;
+        height: 44px;
+    }
+
+    .site-header .logo span {
+        font-size: 13px;
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">
+    Skip to content
+  </a>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img
+        src="assets/images/logo.png"
+        alt="Exotic Dairy logo"
+        width="50"
+        height="50"
+      >
+      <span>EXOTIC<br>DAIRY</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="products.html">Products</a>
+      <a class="active" href="galumeya.html">Galumeya</a>
+      <a href="experience-hub.html">Experience Hub</a>
+      <a href="participate.html">Participate</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="about.html">About Us</a>
+      <a href="faq.html">FAQ</a>
+
+      <a
+        class="mobile-contact-btn"
+        href="#contactModal"
+        data-open-contact
+      >
+        Get in Touch
+      </a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Open navigation"
+      aria-controls="nav"
+      aria-expanded="false"
+    >
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <a
+      class="btn header-btn"
+      href="#contactModal"
+      data-open-contact
+    >
+      Get in touch
+    </a>
+  </header>
+
+
+  <main class="book-page" id="main">
+
+    <!-- HERO -->
+
+    <section class="book-hero" aria-labelledby="bookTitle">
+      <div class="book-hero-art">
+        <img
+          src="assets/images/galumeya-book-hero.png"
+          alt="Galumeya reading an illuminated book beside a camel and donkey"
+          width="1536"
+          height="1024"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="book-hero-copy">
+        <p class="book-eyebrow">
+          An illustrated digital book · Volume I
+        </p>
+
+        <h1 id="bookTitle">
+          <span>1001</span><br>
+          Discoveries of Galumeya
+        </h1>
+
+        <p class="book-hero-lead">
+          Eight stories. One world of discovery.
+        </p>
+
+        <p class="book-description">
+          Stories of curiosity, care and the knowledge that
+          turns nature’s gifts into lasting value.
+        </p>
+
+        <a
+          class="book-button"
+          href="book-read.html?story=1"
+        >
+          Read the First Story Free →
+        </a>
+
+        <p class="book-note">
+          No account needed for the first story.
+          More stories are coming soon.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- EIGHT STORIES -->
+
+    <section
+      class="book-stories"
+      id="stories"
+      aria-labelledby="storiesTitle"
+    >
+      <div class="book-wrap">
+        <header class="book-section-head">
+          <p class="book-eyebrow">
+            Inside Volume I
+          </p>
+
+          <h2 id="storiesTitle">
+            Eight stories. One world of discovery.
+          </h2>
+
+          <p class="book-description">
+            Begin with the Sultan. Explore the people, animals
+            and ideas behind the discoveries still to come.
+          </p>
+        </header>
+
+        <div class="book-story-grid">
+
+          <!-- STORY 01 -->
+
+          <article
+            class="book-story"
+            data-story="1"
+            data-status="free"
+            aria-labelledby="story1Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-01.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">01</span>
+
+              <h3 id="story1Title">
+                The Sultan Who Had Tasted Everything
+              </h3>
+
+              <p>
+                A lavish feast begins a search for something
+                that luxury alone cannot offer.
+              </p>
+
+              <a
+                class="book-button"
+                href="book-read.html?story=1"
+              >
+                Read for Free →
+              </a>
+            </div>
+          </article>
+
+
+          <!-- STORY 02 -->
+
+          <article
+            class="book-story"
+            data-story="2"
+            data-status="coming-soon"
+            aria-labelledby="story2Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-02.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">02</span>
+
+              <h3 id="story2Title">
+                The Camel Who Remembered the Desert
+              </h3>
+
+              <p>
+                A journey into the desert reveals why
+                understanding nature begins with its origins.
+              </p>
+
+              <span class="book-story-status">
+                <span class="lock-icon" aria-hidden="true"></span>
+                Coming soon
+              </span>
+            </div>
+          </article>
+
+
+          <!-- STORY 03 -->
+
+          <article
+            class="book-story"
+            data-story="3"
+            data-status="coming-soon"
+            aria-labelledby="story3Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-03.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">03</span>
+
+              <h3 id="story3Title">
+                The Donkey No One Listened To
+              </h3>
+
+              <p>
+                An overlooked animal teaches the palace
+                to listen, observe and care.
+              </p>
+
+              <span class="book-story-status">
+                <span class="lock-icon" aria-hidden="true"></span>
+                Coming soon
+              </span>
+            </div>
+          </article>
+
+
+          <!-- STORY 04 -->
+
+          <article
+            class="book-story"
+            data-story="4"
+            data-status="coming-soon"
+            aria-labelledby="story4Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-04.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">04</span>
+
+              <h3 id="story4Title">
+                The Cheese That Would Not Hurry
+              </h3>
+
+              <p>
+                Some discoveries need patience — and
+                the freedom to take their time.
+              </p>
+
+              <span class="book-story-status">
+                <span class="lock-icon" aria-hidden="true"></span>
+                Coming soon
+              </span>
+            </div>
+          </article>
+
+
+          <!-- STORY 05 -->
+
+          <article
+            class="book-story"
+            data-story="5"
+            data-status="coming-soon"
+            aria-labelledby="story5Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-05.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">05</span>
+
+              <h3 id="story5Title">
+                The Invisible Masters
+              </h3>
+
+              <p>
+                A hidden world of tiny helpers changes
+                the way the palace understands milk.
+              </p>
+
+              <span class="book-story-status">
+                <span class="lock-icon" aria-hidden="true"></span>
+                Coming soon
+              </span>
+            </div>
+          </article>
+
+
+          <!-- STORY 06 -->
+
+          <article
+            class="book-story"
+            data-story="6"
+            data-status="coming-soon"
+            aria-labelledby="story6Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-06.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">06</span>
+
+              <h3 id="story6Title">
+                The Fire with Just the Right Heat
+              </h3>
+
+              <p>
+                The secret is not more fire, but knowing
+                how much warmth a transformation needs.
+              </p>
+
+              <span class="book-story-status">
+                <span class="lock-icon" aria-hidden="true"></span>
+                Coming soon
+              </span>
+            </div>
+          </article>
+
+
+          <!-- STORY 07 -->
+
+          <article
+            class="book-story"
+            data-story="7"
+            data-status="coming-soon"
+            aria-labelledby="story7Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-07.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">07</span>
+
+              <h3 id="story7Title">
+                The Drop That Left a Trace
+              </h3>
+
+              <p>
+                Following a drop from its source reveals
+                the people and care behind every bowl.
+              </p>
+
+              <span class="book-story-status">
+                <span class="lock-icon" aria-hidden="true"></span>
+                Coming soon
+              </span>
+            </div>
+          </article>
+
+
+          <!-- STORY 08 -->
+
+          <article
+            class="book-story"
+            data-story="8"
+            data-status="coming-soon"
+            aria-labelledby="story8Title"
+          >
+            <div class="book-story-art">
+              <img
+                src="assets/images/galumeya-book-cover-08.png"
+                alt=""
+                width="1536"
+                height="1024"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="book-story-body">
+              <span class="book-story-number">08</span>
+
+              <h3 id="story8Title">
+                The Thousand and First Discovery
+              </h3>
+
+              <p>
+                Knowledge becomes a legacy when it creates
+                a place for others to discover.
+              </p>
+
+              <span class="book-story-status">
+                <span class="lock-icon" aria-hidden="true"></span>
+                Coming soon
+              </span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- GALUMEYA LEGACY -->
+
+    <section
+      class="book-legacy"
+      aria-labelledby="legacyTitle"
+    >
+      <div class="book-legacy-art">
+        <img
+          src="assets/images/galumeya-story-hub.png"
+          alt="The future Exotic Dairy Experience and R&D Hub"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="book-legacy-copy">
+        <p class="book-eyebrow">
+          Galumeya Legacy
+        </p>
+
+        <h2 id="legacyTitle">
+          Imagination opens the way to knowledge.
+        </h2>
+
+        <p class="book-description">
+          The stories connect to our vision for the future
+          Experience &amp; R&amp;D Hub — a place for research,
+          responsible animal care, education and shared discovery.
+        </p>
+
+        <a
+          class="book-button"
+          href="experience-hub.html"
+        >
+          Discover the Hub →
+        </a>
+      </div>
+    </section>
+
+
+    <!-- NOTIFY ME -->
+
+    <section
+      class="book-notify"
+      id="notify"
+      aria-labelledby="notifyTitle"
+    >
+      <header class="book-section-head">
+        <p class="book-eyebrow">
+          The next discovery
+        </p>
+
+        <h2 id="notifyTitle">
+          Be first to hear about the next story.
+        </h2>
+
+        <p class="book-description">
+          Leave your email and ask our team to let you know
+          when a new Galumeya story is available.
+        </p>
+      </header>
+
+      <form
+        class="book-notify-form"
+        id="bookNotify"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+        data-email-form
+        data-status-id="notifyStatus"
+        data-success-message="Thank you. Your request has been sent to the Exotic Dairy team."
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="Galumeya — new story notification request"
+        >
+
+        <input
+          type="hidden"
+          name="interest"
+          value="Galumeya Book — story updates"
+        >
+
+        <input
+          type="hidden"
+          name="message"
+          value="Please email me when a new Galumeya story is available."
+        >
+
+        <label for="notifyEmail">
+          Your email address
+        </label>
+
+        <div class="book-notify-row">
+          <input
+            id="notifyEmail"
+            type="email"
+            name="email"
+            autocomplete="email"
+            placeholder="you@example.com"
+            aria-describedby="notifyPrivacy"
+            required
+          >
+
+          <button class="book-button" type="submit">
+            Notify me
+          </button>
+        </div>
+
+        <p class="book-note" id="notifyPrivacy">
+          By selecting “Notify me”, you request email updates
+          about new Galumeya stories. You can ask us to stop
+          at any time.
+          <a href="privacy.html">Privacy Policy</a>.
+        </p>
+
+        <p
+          class="form-status"
+          id="notifyStatus"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
+      </form>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+            width="48"
+            height="48"
+            loading="lazy"
+          >
+          <span>EXOTIC<br>DAIRY</span>
+        </div>
+
+        <p>
+          Connecting nature, knowledge and discovery through
+          Galumeya products and the future Experience &amp; R&amp;D Hub.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <a href="products.html">Products</a>
+        <a href="experience-hub.html">Experience Hub</a>
+        <a href="about.html">About Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Galumeya</h3>
+        <a href="galumeya.html">Our Brand</a>
+        <a href="galumeya-book.html" aria-current="page">
+          1001 Discoveries
+        </a>
+        <a href="book-read.html?story=1">Read the First Story</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Get Involved</h3>
+        <a href="participate.html">Participate</a>
+        <a href="partnerships.html">Partnerships</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Plovdiv, Bulgaria</p>
+
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+
+        <a href="#contactModal" data-open-contact>
+          Get in Touch
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- CONTACT MODAL -->
+
+  <div class="modal" id="contactModal" hidden>
+    <div
+      class="modal-backdrop"
+      data-close-contact
+      aria-hidden="true"
+    ></div>
+
+    <div
+      class="modal-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contactTitle"
+      aria-describedby="contactIntro"
+      tabindex="-1"
+    >
+      <button
+        class="modal-x"
+        type="button"
+        aria-label="Close contact form"
+        data-close-contact
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+
+      <p class="book-eyebrow">
+        Contact
+      </p>
+
+      <h2 id="contactTitle">
+        Let’s Build the Future Together
+      </h2>
+
+      <p class="modal-intro" id="contactIntro">
+        Connect with Exotic Dairy to discuss the Galumeya book,
+        products, research, partnerships and future opportunities.
+      </p>
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+        data-email-form
+        data-status-id="contactStatus"
+        data-success-message="Thank you for contacting Exotic Dairy. We will get back to you shortly."
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Galumeya Book Inquiry"
+        >
+
+        <div class="form-row">
+          <label for="contactName">Name *</label>
+          <input
+            id="contactName"
+            type="text"
+            name="name"
+            autocomplete="name"
+            minlength="2"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="contactEmail">Email *</label>
+          <input
+            id="contactEmail"
+            type="email"
+            name="email"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="contactCompany">Company</label>
+          <input
+            id="contactCompany"
+            type="text"
+            name="company"
+            autocomplete="organization"
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="contactCountry">Country</label>
+          <input
+            id="contactCountry"
+            type="text"
+            name="country"
+            autocomplete="country-name"
+          >
+        </div>
+
+        <div class="form-row full">
+          <label for="contactInterest">Interest</label>
+          <select id="contactInterest" name="interest">
+            <option>Book</option>
+            <option>Galumeya Brand</option>
+            <option>Products</option>
+            <option>Experience Hub</option>
+            <option>Research</option>
+            <option>Partnerships</option>
+            <option>Media</option>
+          </select>
+        </div>
+
+        <div class="form-row full">
+          <label for="contactMessage">Message *</label>
+          <textarea
+            id="contactMessage"
+            name="message"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-row full">
+          <label class="checkbox-label" for="contactConsent">
+            <input
+              id="contactConsent"
+              type="checkbox"
+              name="consent"
+              value="yes"
+              required
+            >
+
+            <span>
+              I agree to the
+              <a href="privacy.html" target="_blank" rel="noopener">
+                Privacy Policy
+              </a>
+              and consent to being contacted.
+            </span>
+          </label>
+        </div>
+
+        <button class="btn" type="submit">
+          Send Inquiry
+        </button>
+
+        <p
+          class="form-status"
+          id="contactStatus"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    (() => {
+      "use strict";
+
+      /* ====================================================
+         MOBILE NAVIGATION
+      ==================================================== */
+
+      const menuButton = document.getElementById("menuBtn");
+      const navigation = document.getElementById("nav");
+      const mobileBreakpoint = window.matchMedia("(max-width: 1100px)");
+
+      function setMenuOpen(open) {
+        navigation.classList.toggle("is-open", open);
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(open)
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          open ? "Close navigation" : "Open navigation"
+        );
+
+        menuButton.querySelector("span").textContent =
+          open ? "×" : "☰";
+      }
+
+      menuButton.addEventListener("click", () => {
+        const open =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        setMenuOpen(!open);
+      });
+
+      navigation.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          setMenuOpen(false);
+        });
+      });
+
+      document.addEventListener("click", event => {
+        if (!event.target.closest(".site-header")) {
+          setMenuOpen(false);
+        }
+      });
+
+      mobileBreakpoint.addEventListener("change", () => {
+        setMenuOpen(false);
+      });
+
+
+      /* ====================================================
+         CONTACT MODAL
+      ==================================================== */
+
+      const modal = document.getElementById("contactModal");
+      const panel = modal.querySelector(".modal-panel");
+
+      const pageRegions = [
+        document.querySelector(".skip-link"),
+        document.querySelector(".site-header"),
+        document.querySelector("main"),
+        document.querySelector("footer")
+      ];
+
+      let returnFocus = null;
+      let previousInertStates = [];
+
+      function getFocusableElements() {
+        return Array.from(
+          panel.querySelectorAll(
+            'a[href], button:not([disabled]), ' +
+            'input:not([disabled]):not([type="hidden"]), ' +
+            'select:not([disabled]), textarea:not([disabled]), ' +
+            '[tabindex]:not([tabindex="-1"])'
+          )
+        ).filter(element => element.getClientRects().length > 0);
+      }
+
+      function openContact(trigger) {
+        if (!modal.hidden) return;
+
+        returnFocus = trigger || document.activeElement;
+        setMenuOpen(false);
+
+        modal.hidden = false;
+        document.body.classList.add("modal-open");
+
+        previousInertStates = pageRegions.map(element => {
+          const previous = element.inert;
+          element.inert = true;
+          return previous;
+        });
+
+        requestAnimationFrame(() => {
+          modal.querySelector("[data-close-contact].modal-x").focus();
+        });
+      }
+
+      function closeContact() {
+        if (modal.hidden) return;
+
+        modal.hidden = true;
+        document.body.classList.remove("modal-open");
+
+        pageRegions.forEach((element, index) => {
+          element.inert = previousInertStates[index] || false;
+        });
+
+        if (
+          returnFocus &&
+          returnFocus.isConnected &&
+          returnFocus.getClientRects().length > 0
+        ) {
+          returnFocus.focus();
+        } else if (mobileBreakpoint.matches) {
+          menuButton.focus();
+        }
+      }
+
+      document.querySelectorAll("[data-open-contact]").forEach(trigger => {
+        trigger.addEventListener("click", event => {
+          event.preventDefault();
+          openContact(trigger);
+        });
+      });
+
+      modal.querySelectorAll("[data-close-contact]").forEach(control => {
+        control.addEventListener("click", closeContact);
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+          if (!modal.hidden) {
+            closeContact();
+          } else if (navigation.classList.contains("is-open")) {
+            setMenuOpen(false);
+            menuButton.focus();
+          }
+
+          return;
+        }
+
+        if (modal.hidden || event.key !== "Tab") return;
+
+        const focusable = getFocusableElements();
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (!first) {
+          event.preventDefault();
+          panel.focus();
+          return;
+        }
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (
+          !event.shiftKey &&
+          document.activeElement === last
+        ) {
+          event.preventDefault();
+          first.focus();
+        } else if (!panel.contains(document.activeElement)) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+
+
+      /* ====================================================
+         SHARED EMAIL FORM HANDLER
+         Notify form + contact form use the same endpoint.
+      ==================================================== */
+
+      document.querySelectorAll("[data-email-form]").forEach(form => {
+        const button = form.querySelector('button[type="submit"]');
+
+        const feedback = document.getElementById(
+          form.dataset.statusId
+        );
+
+        const originalButtonText = button.textContent.trim();
+
+        form.addEventListener("submit", async event => {
+          event.preventDefault();
+
+          if (button.disabled || !form.reportValidity()) return;
+
+          button.disabled = true;
+          button.textContent = "Sending…";
+
+          form.setAttribute("aria-busy", "true");
+
+          feedback.textContent = "";
+          feedback.removeAttribute("data-state");
+
+          const controller = new AbortController();
+
+          const timeout = setTimeout(() => {
+            controller.abort();
+          }, 20000);
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: {
+                Accept: "application/json"
+              },
+              signal: controller.signal
+            });
+
+            if (!response.ok) {
+              throw new Error("Submission failed");
+            }
+
+            feedback.dataset.state = "success";
+
+            feedback.textContent =
+              form.dataset.successMessage;
+
+            form.reset();
+
+          } catch (error) {
+            feedback.dataset.state = "error";
+
+            feedback.textContent =
+              error.name === "AbortError"
+                ? "We could not confirm delivery. Please try again later or contact office@exoticdairy.com."
+                : "Your request could not be sent. Please try again or contact office@exoticdairy.com.";
+
+          } finally {
+            clearTimeout(timeout);
+
+            button.disabled = false;
+            button.textContent = originalButtonText;
+
+            form.removeAttribute("aria-busy");
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

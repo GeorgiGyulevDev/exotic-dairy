@@ -13,7 +13,7 @@
 
   <meta property="og:title" content="Exotic Dairy — Experience Hub" />
   <meta property="og:description" content="Science. Nature. Experience." />
-  <meta property="og:image" content="https://exoticdairy.com/assets/images/experience-hub.png" />
+  <meta property="og:image" content="https://exoticdairy.com/assets/images/hub-main-galumeya-hero.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://exoticdairy.com/experience-hub.html" />
   <meta property="og:site_name" content="Exotic Dairy" />
@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Exotic Dairy — Experience Hub" />
   <meta name="twitter:description" content="Science. Nature. Experience." />
-  <meta name="twitter:image" content="https://exoticdairy.com/assets/images/experience-hub.png" />
+  <meta name="twitter:image" content="https://exoticdairy.com/assets/images/hub-main-galumeya-hero.png" />
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="styles.css" />
@@ -43,7 +43,7 @@
           rgba(6, 16, 31, .54) 64%,
           rgba(6, 16, 31, .12) 100%
         ),
-        url("assets/images/experience-hub.png") center right / cover no-repeat;
+        url("assets/images/hub-main-galumeya-hero.png") center right / cover no-repeat;
     }
 
     .hub-hero-content {
@@ -192,7 +192,8 @@
     .hub-masterplan {
       position: relative;
       overflow: hidden;
-      min-height: 470px;
+      min-height: 0;
+      aspect-ratio: 16 / 9;
       border-radius: 24px;
       background: #dfeaf5;
       box-shadow: var(--shadow);
@@ -201,8 +202,9 @@
     .hub-masterplan > img {
       width: 100%;
       height: 100%;
-      min-height: 470px;
-      object-fit: cover;
+      min-height: 0;
+      object-fit: contain;
+      object-position: center;
       display: block;
     }
 
@@ -222,28 +224,28 @@
     }
 
     .hub-map-point:nth-of-type(1) {
-      top: 53%;
-      left: 14%;
+      top: 25%;
+      left: 10%;
     }
 
     .hub-map-point:nth-of-type(2) {
-      top: 29%;
-      left: 39%;
+      top: 12%;
+      left: 29%;
     }
 
     .hub-map-point:nth-of-type(3) {
-      top: 45%;
-      left: 61%;
+      top: 25%;
+      left: 50%;
     }
 
     .hub-map-point:nth-of-type(4) {
-      top: 63%;
-      left: 78%;
+      top: 43%;
+      left: 88%;
     }
 
     .hub-map-point:nth-of-type(5) {
-      top: 24%;
-      left: 82%;
+      top: 14%;
+      left: 72%;
     }
 
     .hub-zones {
@@ -437,321 +439,7 @@
     .hub-journey-arrow {
       color: #9eb2c8;
     }
-
-    .hub-sustainability {
-      padding: 72px 7vw;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(6, 16, 31, .97) 0%,
-          rgba(6, 16, 31, .90) 48%,
-          rgba(6, 16, 31, .72) 100%
-        ),
-        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
-      color: var(--white);
-    }
-
-    .hub-sustainability-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    .hub-sustainability-head {
-      max-width: 700px;
-      margin-bottom: 45px;
-    }
-
-    .hub-sustainability-head .eyebrow {
-    color: #8fd2ff;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-weight: 900;
-    }
-
-    .hub-sustainability-head h2 {
-      margin: 12px 0 14px;
-      font-size: clamp(36px, 4vw, 54px);
-      line-height: 1.02;
-    }
-
-    .hub-sustainability-head p {
-      color: #d7e3f2;
-      font-size: 17px;
-      line-height: 1.65;
-    }
-
-    .hub-sustainability-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .hub-sustainability-item {
-      padding: 24px 24px 8px 0;
-      border-right: 1px solid rgba(255, 255, 255, .18);
-    }
-
-    .hub-sustainability-item:last-child {
-      border-right: 0;
-    }
-
-    .hub-sustainability-item svg {
-      width: 34px;
-      height: 34px;
-      margin-bottom: 17px;
-      color: #8fd2ff;
-    }
-
-    .hub-sustainability-item h3 {
-      margin-bottom: 8px;
-      font-size: 17px;
-    }
-
-    .hub-sustainability-item p {
-      color: #bfd0e2;
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .hub-coming {
-      padding: 88px 7vw;
-      background: #071a33;
-      color: var(--white);
-    }
-
-    .hub-coming-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 60px;
-      align-items: center;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .hub-coming .eyebrow {
-    color: #8fd2ff;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-weight: 900;
-    }
-
-    .hub-coming h2 {
-      max-width: 700px;
-      margin: 12px 0 18px;
-      font-size: clamp(38px, 4.5vw, 62px);
-      line-height: 1;
-    }
-
-    .hub-coming p {
-      max-width: 770px;
-      color: #cad9e9;
-      font-size: 17px;
-      line-height: 1.7;
-    }
-
-    .hub-coming-badge {
-      min-width: 230px;
-      padding: 28px;
-      border: 1px solid rgba(143, 210, 255, .28);
-      border-radius: 22px;
-      background: rgba(255, 255, 255, .05);
-      text-align: center;
-    }
-
-    .hub-coming-badge span {
-      display: block;
-      color: #8fd2ff;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 900;
-    }
-
-    .hub-coming-badge strong {
-      display: block;
-      margin-top: 8px;
-      font-size: 22px;
-      line-height: 1.2;
-    }
-
-    .hub-participation {
-      padding: 100px 7vw;
-      background: var(--bg);
-    }
-
-    .hub-participation {
-    padding: 100px 7vw;
-    background: var(--bg);
-    }
-
-    #crowd-participation {
-    scroll-margin-top: 86px;
-    }
-
-    .participation-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .participation-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 520px;
-      padding: 34px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: var(--white);
-      box-shadow: 0 18px 50px rgba(7, 21, 40, .07);
-    }
-
-    .participation-card.featured {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-    }
-
-    .participation-icon {
-      width: 62px;
-      height: 62px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 28px;
-      border-radius: 50%;
-      background: #eff7fe;
-      color: var(--blue);
-    }
-
-    .participation-card.featured .participation-icon {
-      background: rgba(255, 255, 255, .09);
-      color: #8fd2ff;
-    }
-
-    .participation-icon svg {
-      width: 31px;
-      height: 31px;
-    }
-
-    .participation-number {
-      margin-bottom: 9px;
-      color: var(--blue);
-      font-size: 12px;
-      letter-spacing: .08em;
-      font-weight: 900;
-    }
-
-    .participation-card.featured .participation-number {
-      color: #8fd2ff;
-    }
-
-    .participation-card h3 {
-      margin-bottom: 14px;
-      color: var(--navy);
-      font-size: 30px;
-      line-height: 1.05;
-    }
-
-    .participation-card.featured h3 {
-      color: var(--white);
-    }
-
-    .participation-card > p {
-      margin-bottom: 24px;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
-    .participation-card.featured > p {
-      color: #c7d7e8;
-    }
-
-    .participation-list {
-      display: grid;
-      gap: 11px;
-      margin-bottom: 30px;
-    }
-
-    .participation-list span {
-      position: relative;
-      padding-left: 22px;
-      color: var(--text);
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    .participation-card.featured .participation-list span {
-      color: #d9e5f0;
-    }
-
-    .participation-list span::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--blue);
-      font-weight: 900;
-    }
-
-    .participation-card.featured .participation-list span::before {
-      color: #8fd2ff;
-    }
-
-    .participation-card .btn,
-    .participation-card .hub-btn-outline {
-      margin-top: auto;
-      width: fit-content;
-    }
-
-    .participation-note {
-      max-width: 900px;
-      margin: 40px auto 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .hub-final-cta {
-      padding: 90px 7vw;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(6, 16, 31, .96) 0%,
-          rgba(6, 16, 31, .88) 45%,
-          rgba(6, 16, 31, .62) 100%
-        ),
-        url("assets/images/ecosystem-footer.png") center / cover no-repeat;
-      color: var(--white);
-    }
-
-    .hub-final-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 40px;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .hub-final-inner h2 {
-      margin-bottom: 16px;
-      font-size: clamp(36px, 4vw, 56px);
-      line-height: 1.04;
-    }
-
-    .hub-final-inner p {
-      max-width: 720px;
-      color: #d7e3f2;
-      font-size: 17px;
-      line-height: 1.65;
-    }
-
+      
     .modal {
       position: fixed;
       inset: 0;
@@ -1020,7 +708,7 @@
       gap: 12px;
     }
 
-    @media(max-width: 1050px) {
+    @media(max-width: 1100px) {
       .hub-pillars-inner {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1046,22 +734,7 @@
       .hub-zones {
         grid-template-columns: repeat(3, 1fr);
       }
-
-      .hub-sustainability-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hub-sustainability-item:nth-child(2) {
-        border-right: 0;
-      }
-
-      .participation-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .participation-card {
-        min-height: 0;
-      }
+      
     }
 
     @media(max-width: 820px) {
@@ -1074,7 +747,7 @@
             rgba(6, 16, 31, .76) 54%,
             rgba(6, 16, 31, .40) 100%
           ),
-          url("assets/images/experience-hub.png") center / cover no-repeat;
+          url("assets/images/hub-main-galumeya-hero.png") center / cover no-repeat;
       }
 
       .hub-hero-content {
@@ -1130,11 +803,7 @@
 
       .hub-pillars,
       .hub-concept,
-      .hub-experiences,
-      .hub-sustainability,
-      .hub-coming,
-      .hub-participation,
-      .hub-final-cta {
+      .hub-experiences {
         padding-left: 22px;
         padding-right: 22px;
       }
@@ -1160,9 +829,12 @@
         font-size: 12px;
       }
 
-      .hub-masterplan,
+      .hub-masterplan {
+        aspect-ratio: 16 / 9;
+      }
+
       .hub-masterplan > img {
-        min-height: 310px;
+        min-height: 0;
       }
 
       .hub-map-point {
@@ -1179,25 +851,7 @@
       .hub-experience-image {
         height: 270px;
       }
-
-      .hub-sustainability-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hub-sustainability-item {
-        padding: 20px 0;
-        border-right: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, .16);
-      }
-
-      .hub-sustainability-item:last-child {
-        border-bottom: 0;
-      }
-
-      .participation-card {
-        padding: 28px 24px;
-      }
-
+     
       .hub-detail-panel,
       .participation-modal-panel {
         width: calc(100% - 12px);
@@ -1222,6 +876,520 @@
         padding: 34px 24px 28px;
       }
     }
+
+    /* ==========================================================
+      GALUMEYA BOOK — DIRECT HUB SUPPORT
+    ========================================================== */
+
+    .hub-book-support {
+      --book-ivory: #f7f1e7;
+      --book-ivory-light: #fffdf8;
+      --book-gold: #c9a04f;
+      --book-gold-dark: #a87e2f;
+      --book-row-height: 510px;
+
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 680px;
+      overflow: hidden;
+      padding: 78px 7vw;
+      border-top: 1px solid rgba(201, 160, 79, .20);
+      background:
+        radial-gradient(
+          circle at 10% 45%,
+          rgba(201, 160, 79, .14),
+          transparent 34%
+        ),
+        linear-gradient(
+          110deg,
+          #f1e7d7 0%,
+          var(--book-ivory) 46%,
+          var(--book-ivory-light) 100%
+        );
+    }
+
+    /* ==========================================================
+      DESKTOP LAYOUT
+    ========================================================== */
+
+    .hub-book-support-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns:
+        minmax(480px, 1.08fr)
+        minmax(390px, .92fr);
+      gap: clamp(42px, 6vw, 92px);
+      align-items: stretch;
+      width: min(1320px, 100%);
+      height: var(--book-row-height);
+      margin: 0 auto;
+    }
+
+
+    /* ==========================================================
+      LEFT — GALUMEYA IMAGE
+    ========================================================== */
+
+    .hub-book-art {
+      position: relative;
+      align-self: stretch;
+      min-width: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+
+    /* Мек фон зад изображението */
+
+    .hub-book-art::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      inset: 7% 3%;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(6, 16, 31, .14),
+          rgba(201, 160, 79, .08) 46%,
+          transparent 72%
+        );
+      filter: blur(18px);
+    }
+
+
+    /* Преливане от изображението към текста */
+
+    .hub-book-art::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: -1px;
+      bottom: 0;
+      width: 19%;
+      background:
+        linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(247, 241, 231, .30) 46%,
+          var(--book-ivory) 100%
+        );
+      pointer-events: none;
+    }
+
+    .hub-book-art img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      /*
+        Изображението запълва фиксираната височина.
+        При по-тясна колона се режат само страничните части.
+      */
+      object-fit: cover;
+      object-position: 50% 50%;
+
+      filter:
+        drop-shadow(0 25px 28px rgba(7, 21, 40, .16))
+        saturate(1.03);
+    }
+
+
+    /* ==========================================================
+      RIGHT — BOOK CONTENT
+    ========================================================== */
+
+    .hub-book-support-content {
+      position: relative;
+      z-index: 3;
+      isolation: isolate;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      min-width: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 590px;
+    }
+
+
+    /*
+      Декоративното 1001 вече е зад заглавието,
+      а не зад цялата секция.
+    */
+
+    .hub-book-support-content::before {
+      content: "1001";
+      position: absolute;
+      z-index: 0;
+      top: -58px;
+      right: -20px;
+
+      color: rgba(201, 160, 79, .14);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(150px, 15vw, 245px);
+      font-weight: 500;
+      line-height: .82;
+      letter-spacing: -10px;
+
+      pointer-events: none;
+      user-select: none;
+    }
+
+
+    /* Съдържанието остава над декоративното 1001 */
+
+    .hub-book-support-content > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hub-book-eyebrow {
+      margin: 0 0 15px;
+      color: var(--book-gold);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .hub-book-support h2 {
+      margin: 0 0 24px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(43px, 4.1vw, 65px);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: -1.5px;
+    }
+
+    .hub-book-lead {
+      max-width: 580px;
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .hub-book-description {
+      max-width: 590px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .hub-book-description strong {
+      color: var(--navy);
+    }
+
+    .hub-book-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 27px 0 30px;
+      color: var(--navy);
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    .hub-book-details span {
+      color: var(--book-gold);
+    }
+
+
+    /* ==========================================================
+      BOOK ACTIONS
+    ========================================================== */
+
+    .hub-book-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .hub-book-actions .btn {
+      min-height: 49px;
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+
+    .hub-book-story-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--book-gold);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.3;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        color .25s ease,
+        transform .25s ease;
+    }
+
+    .hub-book-story-link span {
+      color: inherit;
+      font-size: 19px;
+      line-height: 1;
+      transition: transform .25s ease;
+    }
+
+    .hub-book-story-link:hover,
+    .hub-book-story-link:focus-visible {
+      color: var(--book-gold-dark);
+      transform: translateX(3px);
+    }
+
+    .hub-book-story-link:hover span,
+    .hub-book-story-link:focus-visible span {
+      transform: translateX(3px);
+    }
+
+    .hub-book-note {
+      max-width: 540px;
+      margin: 23px 0 0;
+      color: #7b8491;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+
+    /* ==========================================================
+      TABLET — 1100px
+      Image above, full-width content below
+    ========================================================== */
+
+    @media (max-width: 1100px) {
+      .hub-book-support {
+        display: block;
+        min-height: 0;
+        padding-top: 80px;
+        padding-bottom: 84px;
+      }
+
+      .hub-book-support-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+
+        /*
+          Премахваме фиксираната височина от desktop.
+          Изображението вече е отделен широк ред.
+        */
+        height: auto;
+      }
+
+      .hub-book-art {
+        width: 100%;
+        height: clamp(430px, 58vw, 590px);
+        margin: 0;
+      }
+
+      .hub-book-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        /*
+          Центърът винаги остава видим:
+          Галумея, камилата и магарето.
+        */
+        object-position: 50% 50%;
+      }
+
+      /*
+        На tablet преливането вече е надолу,
+        защото текстът е под изображението.
+      */
+
+      .hub-book-art::after {
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+        width: auto;
+        height: 18%;
+        background:
+          linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(247, 241, 231, .42) 52%,
+            var(--book-ivory) 100%
+          );
+      }
+
+      .hub-book-support-content {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+      }
+
+      .hub-book-support-content::before {
+        top: -55px;
+        right: 0;
+        font-size: clamp(155px, 23vw, 230px);
+        color: rgba(201, 160, 79, .13);
+      }
+
+      .hub-book-support h2,
+      .hub-book-lead,
+      .hub-book-description,
+      .hub-book-note {
+        width: 100%;
+        max-width: none;
+      }
+
+      .hub-book-support h2 br {
+        display: none;
+      }
+    }
+
+
+    /* ==========================================================
+      SMALL TABLET — 820px
+    ========================================================== */
+
+    @media (max-width: 820px) {
+      .hub-book-support {
+        padding: 72px 7vw 78px;
+      }
+
+      .hub-book-support-inner {
+        gap: 34px;
+      }
+
+      .hub-book-art {
+        width: 100%;
+        height: clamp(390px, 65vw, 530px);
+      }
+
+      .hub-book-support-content::before {
+        top: -42px;
+        right: -5px;
+        color: rgba(201, 160, 79, .14);
+        font-size: clamp(135px, 25vw, 200px);
+        letter-spacing: -7px;
+      }
+
+      .hub-book-support h2 {
+        font-size: clamp(42px, 7vw, 56px);
+      }
+
+      .hub-book-actions {
+        gap: 18px;
+      }
+    }
+
+
+    /* ==========================================================
+      MOBILE — 620px
+    ========================================================== */
+
+    @media (max-width: 620px) {
+      .hub-book-support {
+        padding: 62px 22px 70px;
+      }
+
+      .hub-book-support::before {
+        left: 22px;
+        width: 78px;
+      }
+
+      .hub-book-support-inner {
+        gap: 27px;
+      }
+
+      .hub-book-art {
+        width: 100%;
+        height: clamp(300px, 82vw, 400px);
+      }
+
+      .hub-book-art::before {
+        inset: 8%;
+        filter: blur(14px);
+      }
+
+      .hub-book-art::after {
+        height: 15%;
+        background:
+          linear-gradient(
+            180deg,
+            transparent,
+            var(--book-ivory)
+          );
+      }
+
+      .hub-book-art img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        /*
+          Леко повдигаме фокуса на mobile,
+          за да не се изреже лицето на Галумея.
+        */
+        object-position: 50% 47%;
+      }
+
+      .hub-book-support-content::before {
+        top: -25px;
+        right: -14px;
+        color: rgba(201, 160, 79, .15);
+        font-size: 126px;
+        letter-spacing: -6px;
+      }
+
+      .hub-book-support h2 {
+        margin-bottom: 20px;
+        font-size: 41px;
+        line-height: 1.02;
+        letter-spacing: -1px;
+      }
+
+      .hub-book-lead {
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+
+      .hub-book-description {
+        font-size: 15px;
+        line-height: 1.68;
+      }
+
+      .hub-book-details {
+        gap: 6px;
+        margin: 23px 0 27px;
+        font-size: 12px;
+      }
+
+      .hub-book-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .hub-book-story-link {
+        font-size: 12px;
+      }
+
+      .hub-book-note {
+        margin-top: 21px;
+      }
+    }
   </style>
 </head>
 
@@ -1232,23 +1400,23 @@
       <span>EXOTIC<br>DAIRY</span>
     </a>
 
-    <nav class="nav" id="nav">
-      
-        <a href="products.html">Products</a>
-        <a href="our-solution.html">Our Solution</a>
-        <a class="active" href="experience-hub.html">Experience Hub</a>
-        <a href="partnerships.html">Partnerships</a>
-        <a href="about.html">About Us</a>
-        <a href="faq.html">FAQ</a>
-  
-        <a
-          class="mobile-contact-btn modal-trigger"
-          href="#"
-          data-modal="contactModal"
-        >
-          Get in Touch
-        </a>
-      </nav>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="products.html">Products</a>
+      <a href="galumeya.html">Galumeya</a>
+      <a href="experience-hub.html">Experience Hub</a>
+      <a href="participate.html">Participate</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="about.html">About Us</a>
+      <a href="faq.html">FAQ</a>
+    
+      <a
+        class="mobile-contact-btn modal-trigger"
+        href="#contactModal"
+        data-modal="contactModal"
+      >
+        Get in Touch
+      </a>
+    </nav>
 
     <button class="menu-btn" id="menuBtn">☰</button>
 
@@ -1441,7 +1609,7 @@
 
         <div class="hub-masterplan">
           <img
-            src="assets/images/hub-main.png"
+            src="assets/images/hub-main-galumeya.png"
             alt="Exotic Dairy Experience Hub masterplan"
           >
 
@@ -1530,7 +1698,7 @@
           >
             <div class="hub-experience-image">
               <img
-                src="assets/images/rd-lab.png"
+                src="assets/images/galumeya-hub-lab.png"
                 alt="Exotic Dairy Research Center"
               >
 
@@ -1561,7 +1729,7 @@
           >
             <div class="hub-experience-image">
               <img
-                src="assets/images/camel-hero.png"
+                src="assets/images/galumeya-hub-animals.png"
                 alt="Camel and animal experience"
               >
 
@@ -1592,7 +1760,7 @@
           >
             <div class="hub-experience-image">
               <img
-                src="assets/images/products-hero.png"
+                src="assets/images/galumeya-hub-journey-product.png"
                 alt="Exotic Dairy product journey"
               >
 
@@ -1635,7 +1803,7 @@
           >
             <div class="hub-experience-image">
               <img
-                src="assets/images/hub-showroom.png"
+                src="assets/images/galumeya-hub-showroom.png"
                 alt="Exotic Dairy showroom and tasting area"
               >
 
@@ -1659,333 +1827,72 @@
       </div>
     </section>
 
-    <section class="hub-sustainability">
-      <div class="hub-sustainability-inner">
-        <div class="hub-sustainability-head">
-          <p class="eyebrow">
-            Designed Responsibly
-          </p>
-
-          <h2>
-            Sustainability Is Built Into the System.
-          </h2>
-
-          <p>
-            Sustainability is not a separate feature of the Hub.
-            It is designed into the way animals are cared for,
-            resources are used, products are developed and the ecosystem grows.
-          </p>
-        </div>
-
-        <div class="hub-sustainability-grid">
-          <article class="hub-sustainability-item">
-            <svg viewBox="0 0 48 48" fill="none">
-              <path d="M24 42S8 33 8 20C8 13 13 9 18 9C21 9 23 11 24 13C25 11 27 9 30 9C35 9 40 13 40 20C40 33 24 42 24 42Z" stroke="currentColor" stroke-width="2.3"/>
-            </svg>
-
-            <h3>Animal Welfare</h3>
-
-            <p>
-              Responsible care and professionally managed animal environments.
-            </p>
-          </article>
-
-          <article class="hub-sustainability-item">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 38V21L19 16V21L29 16V24H40V38H8Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
-                <path d="M34 24L35 10H39L40 24" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
-                <path d="M13 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-                <path d="M18 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-                <path d="M23 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-                <path d="M30 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-                <path d="M35 38V31" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
-            </svg>
-
-            <h3>Responsible Production</h3>
-
-            <p>
-              Efficient and responsible processing and development practices.
-            </p>
-          </article>
-
-          <article class="hub-sustainability-item">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                <path d="M0 0h24v24H0z" fill="none"/>
-                
-                <path 
-                d="M5 21c.5-4.5 2.5-8 7-10" 
-                stroke="currentColor" 
-                stroke-width="1" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
-                />
-                
-                <path 
-                d="M9 18c6.218 0 10.5-3.288 11-12v-2h-4.014c-9 0-11.986 4-12 9c0 1 0 3 2 5h3l.014 0" 
-                stroke="currentColor" 
-                stroke-width="1" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
-                />
-                
-                </svg>
-
-            <h3>Resource Efficiency</h3>
-
-            <p>
-              Smarter use of energy, water, materials and natural resources.
-            </p>
-          </article>
-
-          <article class="hub-sustainability-item">
-            <svg viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.3"/>
-              <path d="M24 14V24L31 30" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/>
-            </svg>
-
-            <h3>Research-Led Sustainability</h3>
-
-            <p>
-              Science guides long-term decisions for animals, products and people.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="hub-coming">
-      <div class="hub-coming-inner">
-        <div>
-          <p class="eyebrow">Coming Soon</p>
-
-          <h2>
-            Help Bring the Experience Hub to Life.
-          </h2>
-
-          <p>
-            The Exotic Dairy Experience Hub is currently in development.
-            As the project progresses, we plan to open participation
-            opportunities for people who want to support its creation
-            and become part of the community behind it.
-          </p>
-        </div>
-
-        <div class="hub-coming-badge">
-          <span>Future Program</span>
-
-          <strong>
-            Crowd Participation<br>
-            Coming Soon
-          </strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="hub-participation" id="crowd-participation">
-      <div class="hub-section-head">
-        <p class="eyebrow">Crowd Participation</p>
-
-        <h2>
-          Be Part of the Journey.
-        </h2>
-
-        <p>
-          Different ways to participate. One shared goal —
-          helping bring the Experience Hub and its ecosystem to life.
-        </p>
-      </div>
-
-      <div class="participation-grid">
-        <article class="participation-card">
-          <div class="participation-icon">
-            <svg xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-
-            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/>
-
-            <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25"/>
-
-            <path d="M12.5 15.5l2 2"/>
-
-            <path d="M15 13l2 2"/>
-
-            </svg>
-          </div>
-
-          <div class="participation-number">
-            01 • ONE-TIME
-          </div>
-
-          <h3>
-            Support the Hub Once.
-          </h3>
-
-          <p>
-            Make a one-time contribution toward the development of
-            the Experience Hub and become part of its founding community.
-          </p>
-
-          <div class="participation-list">
-            <span>Digital participant status</span>
-            <span>Project updates</span>
-            <span>Future Hub benefits</span>
-            <span>Priority access to selected experiences</span>
-            <span>Community recognition where applicable</span>
-          </div>
-
-          <button
-            class="btn modal-trigger"
-            type="button"
-            data-modal="oneTimeModal"
+    <section class="hub-book-support" id="support-the-hub">
+      <div class="hub-book-support-inner">
+    
+        <div class="hub-book-art" aria-hidden="true">
+          <img
+            src="assets/images/galumeya-book-support.png"
+            alt=""
           >
-            I'm Interested
-          </button>
-        </article>
-
-        <article class="participation-card">
-          <div class="participation-icon">
-            <svg xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-
-            <circle cx="12" cy="7" r="4"/>
-
-            <path d="M6 21v-2a4 4 0 0 1 4 -4h2"/>
-
-            <path d="M16 22l5 -5"/>
-
-            <path d="M21 21.5v-4.5h-4.5"/>
-
-            </svg>
-          </div>
-
-          <div class="participation-number">
-            02 • MEMBERSHIP
-          </div>
-
-          <h3>
-            Stay Connected to the Journey.
-          </h3>
-
-          <p>
-            Participate through a recurring monthly or annual model
-            and support the continuing development of the Hub and its activities.
+        </div>
+    
+        <div class="hub-book-support-content">
+          <p class="hub-book-eyebrow">
+            A Direct Way to Support the Hub
           </p>
-
-          <div class="participation-list">
-            <span>Member status</span>
-            <span>Regular development updates</span>
-            <span>Future visitor privileges</span>
-            <span>Selected product and experience benefits</span>
-            <span>Early access to Hub activities</span>
-          </div>
-
-          <button
-            class="btn modal-trigger"
-            type="button"
-            data-modal="membershipModal"
-          >
-            Join the Waitlist
-          </button>
-        </article>
-
-        <article class="participation-card featured">
-          <div class="participation-icon">
-            <svg 
-            viewBox="0 0 512 512" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
+    
+          <h2>
+            Every discovery<br>
+            can leave a legacy.
+          </h2>
+    
+          <p class="hub-book-lead">
+            The stories of Galumeya connect imagination, knowledge
+            and the future Exotic Dairy Experience &amp; R&amp;D Hub.
+          </p>
+    
+          <p class="hub-book-description">
+            By owning
+            <strong>1001 Discoveries of Galumeya — Volume I</strong>,
+            you directly support the work behind a future place for
+            research, responsible animal care, education and shared discovery.
+          </p>
+    
+          <p class="hub-book-details">
+            Volume I
+            <span>•</span>
+            8 illustrated stories
+            <span>•</span>
+            Coming soon from €10
+          </p>
+    
+          <div class="hub-book-actions">
+            <a
+              class="btn"
+              href="galumeya-book.html"
             >
-            <path
-                d="M511.874 92.334C508.528 65.511 488.404 59.923 477.229 59.923H455.712C455.712 59.923 451.525 42.321 438.95 42.321H404.585L386.703 36.734C380.003 41.208 388.937 53.496 388.937 53.496C376.642 63.278 364.347 73.06 364.347 110.975V174.677C364.347 199.268 324.372 206.021 307.867 180.386C290.589 152.745 252.583 148.271 228 110.28C211.132 84.206 193.847 75.574 182.067 75.211C170.287 74.847 158.922 79.595 150.912 88.241L30.784 178.348C8.949 198.509 0 218.626 0 243.216V310.273C0 323.681 22.35 325.923 22.35 312.506V254.384C22.35 243.201 38.007 232.033 38.007 243.216V328.162C38.007 343.812 20.124 359.46 20.124 368.402C20.124 377.344 51.415 471.217 51.415 471.217H82.706C82.706 471.217 62.59 399.694 62.59 390.753C62.59 383.607 82.055 360.553 91.42 344.911C90.466 359.417 77.073 374.763 77.929 382.933C78.86 391.829 119.751 481.939 119.751 481.939L150.868 478.684C150.868 478.684 123.423 409.644 122.492 400.748C121.561 391.853 147.454 346.095 149.097 332.785C152.739 303.19 151.232 314.584 151.232 314.584C150.255 305.279 153.662 298.791 160.302 294.635H258.846C278.962 294.635 276.722 310.284 274.496 319.225C272.255 328.166 252.586 377.34 252.586 377.34L254.82 471.22H286.111C286.111 471.22 288.351 388.515 288.351 381.814C288.351 379.49 292.508 370.662 297.951 359.639C298.746 369.549 299.526 377.34 299.526 377.34L312.934 471.22H344.225C344.225 471.22 335.291 388.515 335.291 381.814C335.291 376.128 340.651 303.621 343.18 275.29C418.724 272.731 447.091 233.074 447.091 138.311C447.091 109.253 451.566 109.245 461.621 109.245H497.341C506.29 105.898 504.049 98.071 504.049 98.071C504.049 98.071 512.994 103.509 511.874 92.334Z"
-                stroke="currentColor"
-                stroke-width="18"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
-            </svg>
+              Explore the Book
+            </a>
+    
+            <a
+              class="hub-book-story-link"
+              href="book-read.html?story=1"
+            >
+              Read the First Story Free
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
-
-          <div class="participation-number">
-            03 • ADOPT
-          </div>
-
-          <h3>
-            Adopt a Camel or Donkey.
-          </h3>
-
-          <p>
-            Support the care and long-term development of an animal
-            within the Exotic Dairy ecosystem and build a personal
-            connection with its story.
-          </p>
-
-          <div class="participation-list">
-            <span>Individual animal profile</span>
-            <span>Photos and regular updates</span>
-            <span>Milestones and development</span>
-            <span>Animal welfare information</span>
-            <span>Future visit opportunities</span>
-            <span>Digital adoption status</span>
-          </div>
-
-          <button
-            class="hub-btn-outline modal-trigger"
-            type="button"
-            data-modal="adoptionModal"
-          >
-            Discover Adoption
-          </button>
-        </article>
-      </div>
-
-      <p class="participation-note">
-        Participation options, benefits, pricing and applicable terms
-        will be announced before the official launch of the program.
-      </p>
-    </section>
-
-    <section class="hub-final-cta">
-      <div class="hub-final-inner">
-        <div>
-          <h2>
-            Be Part of What Comes Next.
-          </h2>
-
-          <p>
-            Interested in the Experience Hub, future participation opportunities,
-            research collaboration or another way to work with Exotic Dairy?
+    
+          <p class="hub-book-note">
+            Owning Volume I is an optional and direct way to support
+            the future Exotic Dairy Experience &amp; R&amp;D Hub.
           </p>
         </div>
-
-        <a
-          class="btn modal-trigger"
-          href="#"
-          data-modal="contactModal"
-          data-interest="Experience Hub"
-        >
-          Get in Touch
-        </a>
+    
       </div>
     </section>
+   
   </main>
 
   <footer class="footer" id="contact">
@@ -1996,106 +1903,52 @@
           <img
             src="assets/images/logo.png"
             alt="Exotic Dairy logo"
+            loading="lazy"
           >
-  
-          <span>
-            EXOTIC<br>
-            DAIRY
-          </span>
+          <span>EXOTIC<br>DAIRY</span>
         </div>
   
         <p>
-          Building the future of functional bio-dairy through rare milk,
-          research, premium products and ecosystem innovation.
+          Connecting nature, knowledge and discovery through
+          Galumeya products and the future Experience &amp; R&amp;D Hub.
         </p>
       </div>
   
       <div class="footer-col">
         <h3>Explore</h3>
   
-        <a href="products.html">
-          Products
-        </a>
-  
-        <a href="our-solution.html">
-          Our Solution
-        </a>
-  
-        <a href="experience-hub.html">
-          Experience Hub
-        </a>
-  
-        <a href="partnerships.html">
-          Partnerships
-        </a>
-  
-        <a href="about.html">
-          About Us
-        </a>
+        <a href="products.html">Products</a>
+        <a href="experience-hub.html">Experience Hub</a>
+        <a href="about.html">About Us</a>
       </div>
   
       <div class="footer-col">
-        <h3>Products</h3>
+        <h3>Galumeya</h3>
   
-        <a href="products.html">
-          All Products
-        </a>
-  
-        <a href="products.html?category=camel">
-          Camel Milk Products
-        </a>
-  
-        <a href="products.html?category=donkey">
-          Donkey Milk Products
-        </a>
+        <a href="galumeya.html">Our Brand</a>
+        <a href="galumeya-book.html">1001 Discoveries</a>
       </div>
   
       <div class="footer-col">
-        <h3>Participate</h3>
+        <h3>Get Involved</h3>
   
-        <a href="experience-hub.html#crowd-participation">
-          Crowd Participation
-        </a>
-  
-        <a href="partnerships.html">
-          Founder Partnership
-        </a>
-  
-        <a
-          href="#"
-          class="modal-trigger"
-          data-modal="contactModal"
-        >
-          Get in Touch
-        </a>
+        <a href="participate.html">Participate</a>
+        <a href="partnerships.html">Partnerships</a>
       </div>
   
       <div class="footer-col">
         <h3>Resources</h3>
   
-        <a href="faq.html">
-          FAQ
-        </a>
-  
-        <a href="privacy.html">
-          Privacy Policy
-        </a>
-  
-        <a href="terms.html">
-          Terms of Use
-        </a>
-  
-        <a href="disclaimer.html">
-          Disclaimer
-        </a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
       </div>
   
       <div class="footer-col">
         <h3>Contact</h3>
   
-        <p>
-          Plovdiv, Bulgaria
-        </p>
+        <p>Plovdiv, Bulgaria</p>
   
         <a href="mailto:office@exoticdairy.com">
           office@exoticdairy.com
@@ -2108,14 +1961,20 @@
         <a href="tel:+359896733048">
           +359 896 733 048
         </a>
+  
+        <a
+          class="modal-trigger"
+          href="#contactModal"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
       </div>
   
     </div>
   
     <div class="footer-bottom">
-      <p>
-        © 2026 Exotic Dairy. All Rights Reserved.
-      </p>
+      <p>© 2026 Exotic Dairy. All Rights Reserved.</p>
   
       <p>
         Website designed and developed by
@@ -2302,183 +2161,6 @@
           <span>Future innovations</span>
           <span>Exotic Dairy showroom</span>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal" id="oneTimeModal">
-    <div class="modal-backdrop modal-close"></div>
-
-    <div class="modal-panel participation-modal-panel">
-      <button class="modal-x modal-close">×</button>
-
-      <div class="participation-modal-icon">
-        <svg viewBox="0 0 48 48" fill="none">
-          <circle cx="17" cy="17" r="6" stroke="currentColor" stroke-width="2.3"/>
-          <circle cx="31" cy="17" r="6" stroke="currentColor" stroke-width="2.3"/>
-          <path d="M24 26V40M17 33H31" stroke="currentColor" stroke-width="2.3"/>
-        </svg>
-      </div>
-
-      <p class="eyebrow">Crowd Participation</p>
-
-      <h2>
-        One-Time Participation
-      </h2>
-
-      <div class="participation-modal-subtitle">
-        Support the Hub once.
-      </div>
-
-      <p>
-        Make a one-time contribution toward the development of
-        the Experience Hub and become part of its founding community.
-      </p>
-
-      <div class="participation-modal-benefits">
-        <span>Digital participant status</span>
-        <span>Project development updates</span>
-        <span>Future Hub benefits</span>
-        <span>Priority access to selected experiences</span>
-        <span>Community recognition where applicable</span>
-      </div>
-
-      <div class="participation-coming-box">
-        <strong>Coming Soon</strong>
-
-        <p>
-          Participation levels, benefits, pricing and program terms
-          will be announced before launch.
-        </p>
-      </div>
-
-      <button
-        class="btn hub-contact-trigger"
-        type="button"
-        data-message="I would like to receive information about the One-Time Crowd Participation Program for the Exotic Dairy Experience Hub."
-      >
-        Notify Me When It Opens
-      </button>
-    </div>
-  </div>
-
-  <div class="modal" id="membershipModal">
-    <div class="modal-backdrop modal-close"></div>
-
-    <div class="modal-panel participation-modal-panel">
-      <button class="modal-x modal-close">×</button>
-
-      <div class="participation-modal-icon">
-        <svg viewBox="0 0 48 48" fill="none">
-          <path d="M12 16C16 11 22 9 28 11C35 13 39 20 37 27" stroke="currentColor" stroke-width="2.3"/>
-          <path d="M36 32C32 37 26 39 20 37C13 35 9 28 11 21" stroke="currentColor" stroke-width="2.3"/>
-        </svg>
-      </div>
-
-      <p class="eyebrow">Crowd Participation</p>
-
-      <h2>
-        Membership
-      </h2>
-
-      <div class="participation-modal-subtitle">
-        Stay connected to the journey.
-      </div>
-
-      <p>
-        Participate through a recurring monthly or annual model
-        and support the long-term development of the Hub and its activities.
-      </p>
-
-      <div class="participation-modal-benefits">
-        <span>Member status</span>
-        <span>Regular project updates</span>
-        <span>Future visitor privileges</span>
-        <span>Selected product and experience benefits</span>
-        <span>Early access to future Hub activities</span>
-      </div>
-
-      <div class="participation-coming-box">
-        <strong>Coming Soon</strong>
-
-        <p>
-          Membership levels, subscription options and benefits
-          will be announced before the program launches.
-        </p>
-      </div>
-
-      <button
-        class="btn hub-contact-trigger"
-        type="button"
-        data-message="I would like to join the waitlist for the Exotic Dairy Experience Hub Membership Program."
-      >
-        Join the Waitlist
-      </button>
-    </div>
-  </div>
-
-  <div class="modal" id="adoptionModal">
-    <div class="modal-backdrop modal-close"></div>
-
-    <div class="modal-panel participation-modal-panel">
-      <button class="modal-x modal-close">×</button>
-
-      <div class="participation-modal-icon">
-        <svg viewBox="0 0 48 48" fill="none">
-          <path d="M24 42S8 33 8 20C8 13 13 9 18 9C21 9 23 11 24 13C25 11 27 9 30 9C35 9 40 13 40 20C40 33 24 42 24 42Z" stroke="currentColor" stroke-width="2.3"/>
-        </svg>
-      </div>
-
-      <p class="eyebrow">Crowd Participation</p>
-
-      <h2>
-        Adopt an Animal
-      </h2>
-
-      <div class="participation-modal-subtitle">
-        Create a personal connection.
-      </div>
-
-      <p>
-        Support the care and long-term development of a camel
-        or donkey within the Exotic Dairy ecosystem and follow
-        its individual story.
-      </p>
-
-      <div class="participation-modal-benefits">
-        <span>Individual animal profile</span>
-        <span>Photos and regular updates</span>
-        <span>Milestones and development</span>
-        <span>Animal welfare information</span>
-        <span>Future visit opportunities</span>
-        <span>Digital adoption status</span>
-      </div>
-
-      <div class="participation-coming-box">
-        <strong>Coming Soon</strong>
-
-        <p>
-          Adoption options, benefits and applicable terms
-          will be announced before the program launches.
-        </p>
-      </div>
-
-      <div class="adoption-actions">
-        <button
-          class="btn hub-contact-trigger"
-          type="button"
-          data-message="I would like to receive information about adopting a camel through the Exotic Dairy Experience Hub program."
-        >
-          Adopt a Camel
-        </button>
-
-        <button
-          class="btn hub-contact-trigger"
-          type="button"
-          data-message="I would like to receive information about adopting a donkey through the Exotic Dairy Experience Hub program."
-        >
-          Adopt a Donkey
-        </button>
       </div>
     </div>
   </div>

@@ -1,0 +1,1643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Participate — Exotic Dairy</title>
+
+  <meta
+    name="description"
+    content="Discover future ways to support the Exotic Dairy Experience & R&D Hub through one-time participation, membership and symbolic animal adoption."
+  >
+
+  <meta property="og:title" content="Participate — Exotic Dairy">
+  <meta
+    property="og:description"
+    content="Be part of the journey. Discover future participation programs and the illustrated world of Galumeya."
+  >
+  <meta
+    property="og:image"
+    content="https://exoticdairy.com/assets/images/crowd-participation.png"
+  >
+  <meta property="og:type" content="website">
+  <meta
+    property="og:url"
+    content="https://exoticdairy.com/participate.html"
+  >
+  <meta property="og:site_name" content="Exotic Dairy">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Participate — Exotic Dairy">
+  <meta
+    name="twitter:description"
+    content="Help bring the future Exotic Dairy Experience & R&D Hub to life."
+  >
+  <meta
+    name="twitter:image"
+    content="https://exoticdairy.com/assets/images/crowd-participation.png"
+  >
+
+  <link rel="canonical" href="https://exoticdairy.com/participate.html">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ==========================================================
+       CROWD PARTICIPATION
+    ========================================================== */
+
+    .crowd-page {
+      --crowd-navy: #102a43;
+      --crowd-blue: #1477d4;
+      --crowd-muted: #526477;
+      --crowd-line: #dfe7ef;
+      color: var(--crowd-navy);
+    }
+
+    .crowd-page,
+    .crowd-page *,
+    .crowd-dialog,
+    .crowd-dialog * {
+      box-sizing: border-box;
+    }
+
+    .crowd-container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .crowd-eyebrow {
+      margin: 0 0 16px;
+      color: var(--crowd-blue);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.4;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .crowd-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 23px;
+      border: 1px solid var(--crowd-blue);
+      border-radius: 12px;
+      background: var(--crowd-blue);
+      color: #fff;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition:
+        background .2s ease,
+        border-color .2s ease;
+    }
+
+    .crowd-button:hover {
+      border-color: #1063b2;
+      background: #1063b2;
+      color: #fff;
+    }
+
+    .crowd-button--outline {
+      border-color: rgba(255, 255, 255, .55);
+      background: transparent;
+      color: #fff;
+    }
+
+    .crowd-button--outline:hover {
+      border-color: #fff;
+      background: #fff;
+      color: var(--crowd-navy);
+    }
+
+    .crowd-page a:focus-visible,
+    .crowd-page button:focus-visible,
+    .crowd-dialog :focus-visible {
+      outline: 3px solid #c9a04f;
+      outline-offset: 5px;
+    }
+
+    /* HERO */
+
+    .crowd-hero {
+      padding: 90px 7vw;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(16, 42, 67, .98) 0%,
+          rgba(16, 42, 67, .92) 36%,
+          rgba(16, 42, 67, .58) 66%,
+          rgba(16, 42, 67, .18) 100%
+        ),
+        url("assets/images/crowd-participation.png")
+        center right / cover no-repeat;
+      color: #fff;
+    }
+
+    .crowd-hero-copy {
+      max-width: 650px;
+    }
+
+    .crowd-hero .crowd-eyebrow {
+      color: #8fd2ff;
+    }
+
+    .crowd-hero h1 {
+      margin: 0 0 24px;
+      color: #fff;
+      font-size: clamp(46px, 5.5vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -1.8px;
+    }
+
+    .crowd-hero-text {
+      max-width: 570px;
+      margin: 0;
+      color: #d7e3f2;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .crowd-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .crowd-hero-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 25px 0 0;
+      color: #c5d8e8;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .crowd-hero-status::before {
+      content: "";
+      flex: 0 0 6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #c9a04f;
+    }
+
+    /* PARTICIPATION OPTIONS */
+
+    .crowd-options {
+      padding: 80px 7vw;
+      background: var(--bg, #f5f7fa);
+      scroll-margin-top: 100px;
+    }
+
+    .crowd-section-head {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .crowd-section-head h2 {
+      margin: 0 0 18px;
+      color: var(--crowd-navy);
+      font-size: clamp(32px, 3.5vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -1px;
+    }
+
+    .crowd-section-head > p:last-child {
+      margin: 0;
+      color: var(--crowd-muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .crowd-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .crowd-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 32px 28px;
+      border: 1px solid var(--crowd-line);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 12px 36px rgba(16, 42, 67, .045);
+    }
+
+    .crowd-card--featured {
+      border-color: var(--crowd-navy);
+      background: var(--crowd-navy);
+      color: #fff;
+    }
+
+    .crowd-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 26px;
+    }
+
+    .crowd-icon {
+      display: grid;
+      place-items: center;
+      flex: 0 0 56px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #edf6fe;
+      color: var(--crowd-blue);
+    }
+
+    .crowd-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .crowd-card--featured .crowd-icon {
+      background: rgba(255, 255, 255, .08);
+      color: #8fd2ff;
+    }
+
+    .crowd-status {
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: #f0f4f8;
+      color: #526477;
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .crowd-card--featured .crowd-status {
+      background: rgba(255, 255, 255, .09);
+      color: #c5d8e8;
+    }
+
+    .crowd-card-label {
+      margin: 0 0 12px;
+      color: var(--crowd-blue);
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1.4;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .crowd-card--featured .crowd-card-label {
+      color: #8fd2ff;
+    }
+
+    .crowd-card h3 {
+      margin: 0 0 16px;
+      color: var(--crowd-navy);
+      font-size: clamp(25px, 2.2vw, 30px);
+      line-height: 1.12;
+      letter-spacing: -.5px;
+    }
+
+    .crowd-card--featured h3 {
+      color: #fff;
+    }
+
+    .crowd-card-description {
+      margin: 0 0 22px;
+      color: var(--crowd-muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .crowd-card--featured .crowd-card-description {
+      color: #c7d7e8;
+    }
+
+    .crowd-benefits-label {
+      margin: 0 0 12px;
+      color: var(--crowd-muted);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .crowd-card--featured .crowd-benefits-label {
+      color: #9fb8cd;
+    }
+
+    .crowd-benefits {
+      display: grid;
+      gap: 11px;
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .crowd-benefits li {
+      position: relative;
+      padding-left: 21px;
+      color: var(--crowd-navy);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .crowd-benefits li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--crowd-blue);
+      font-weight: 900;
+    }
+
+    .crowd-card--featured .crowd-benefits li {
+      color: #d9e5f0;
+    }
+
+    .crowd-card--featured .crowd-benefits li::before {
+      color: #8fd2ff;
+    }
+
+    .crowd-card-action {
+      margin-top: auto;
+    }
+
+    .crowd-card-action .crowd-button {
+      width: 100%;
+    }
+
+    .crowd-note {
+      max-width: 900px;
+      margin: 30px auto 0;
+      color: var(--crowd-muted);
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .crowd-note strong {
+      color: var(--crowd-navy);
+    }
+
+    /* ==========================================================
+       GALUMEYA BOOK — SAME SECTION AS EXPERIENCE HUB
+    ========================================================== */
+
+    .hub-book-support {
+      --book-ivory: #f7f1e7;
+      --book-ivory-light: #fffdf8;
+      --book-gold: #c9a04f;
+      --book-gold-dark: #a87e2f;
+      --book-row-height: 510px;
+
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 680px;
+      overflow: hidden;
+      padding: 78px 7vw;
+      border-top: 1px solid rgba(201, 160, 79, .20);
+      background:
+        radial-gradient(
+          circle at 10% 45%,
+          rgba(201, 160, 79, .14),
+          transparent 34%
+        ),
+        linear-gradient(
+          110deg,
+          #f1e7d7 0%,
+          var(--book-ivory) 46%,
+          var(--book-ivory-light) 100%
+        );
+    }
+
+    .hub-book-support-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns:
+        minmax(480px, 1.08fr)
+        minmax(390px, .92fr);
+      gap: clamp(42px, 6vw, 92px);
+      align-items: stretch;
+      width: min(1320px, 100%);
+      height: var(--book-row-height);
+      margin: 0 auto;
+    }
+
+    .hub-book-art {
+      position: relative;
+      align-self: stretch;
+      min-width: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .hub-book-art::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      inset: 7% 3%;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(6, 16, 31, .14),
+          rgba(201, 160, 79, .08) 46%,
+          transparent 72%
+        );
+      filter: blur(18px);
+    }
+
+    .hub-book-art::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: -1px;
+      bottom: 0;
+      width: 19%;
+      background:
+        linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(247, 241, 231, .30) 46%,
+          var(--book-ivory) 100%
+        );
+      pointer-events: none;
+    }
+
+    .hub-book-art img {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      filter:
+        drop-shadow(0 25px 28px rgba(7, 21, 40, .16))
+        saturate(1.03);
+    }
+
+    .hub-book-support-content {
+      position: relative;
+      z-index: 3;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 590px;
+    }
+
+    .hub-book-support-content::before {
+      content: "1001";
+      position: absolute;
+      z-index: 0;
+      top: -58px;
+      right: -20px;
+      color: rgba(201, 160, 79, .14);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(150px, 15vw, 245px);
+      font-weight: 500;
+      line-height: .82;
+      letter-spacing: -10px;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hub-book-support-content > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hub-book-eyebrow {
+      margin: 0 0 15px;
+      color: var(--book-gold);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .hub-book-support h2 {
+      margin: 0 0 24px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(43px, 4.1vw, 65px);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: -1.5px;
+    }
+
+    .hub-book-lead {
+      max-width: 580px;
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .hub-book-description {
+      max-width: 590px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .hub-book-description strong {
+      color: var(--navy);
+    }
+
+    .hub-book-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 27px 0 30px;
+      color: var(--navy);
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    .hub-book-details span {
+      color: var(--book-gold);
+    }
+
+    .hub-book-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .hub-book-actions .btn {
+      min-height: 49px;
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+
+    .hub-book-story-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--book-gold);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.3;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color .25s ease, transform .25s ease;
+    }
+
+    .hub-book-story-link span {
+      color: inherit;
+      font-size: 19px;
+      line-height: 1;
+      transition: transform .25s ease;
+    }
+
+    .hub-book-story-link:hover,
+    .hub-book-story-link:focus-visible {
+      color: var(--book-gold-dark);
+      transform: translateX(3px);
+    }
+
+    .hub-book-story-link:hover span,
+    .hub-book-story-link:focus-visible span {
+      transform: translateX(3px);
+    }
+
+    .hub-book-note {
+      max-width: 540px;
+      margin: 23px 0 0;
+      color: #7b8491;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* CONTACT MODAL
+       Existing script.js controls opening, closing and submission.
+    */
+
+    .crowd-dialog.modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .crowd-dialog.modal.is-open {
+      display: grid;
+    }
+
+    .crowd-dialog .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 16, 31, .72);
+      backdrop-filter: blur(7px);
+    }
+
+    .crowd-dialog .modal-panel {
+      position: relative;
+      z-index: 1;
+      width: min(640px, 100%);
+      max-height: calc(100dvh - 48px);
+      margin: 0;
+      overflow-y: auto;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1100px) {
+      .crowd-grid {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .crowd-card {
+        padding: 30px;
+      }
+
+      .crowd-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 24px;
+      }
+
+      .crowd-card-action .crowd-button {
+        width: auto;
+        min-width: 210px;
+      }
+
+      .hub-book-support {
+        display: block;
+        min-height: 0;
+        padding-top: 80px;
+        padding-bottom: 84px;
+      }
+
+      .hub-book-support-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 42px;
+        height: auto;
+      }
+
+      .hub-book-art {
+        width: 100%;
+        height: clamp(430px, 58vw, 590px);
+        margin: 0;
+      }
+
+      .hub-book-art::after {
+        top: auto;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+        width: auto;
+        height: 18%;
+        background:
+          linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(247, 241, 231, .42) 52%,
+            var(--book-ivory) 100%
+          );
+      }
+
+      .hub-book-support-content {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+      }
+
+      .hub-book-support-content::before {
+        top: -55px;
+        right: 0;
+        font-size: clamp(155px, 23vw, 230px);
+        color: rgba(201, 160, 79, .13);
+      }
+
+      .hub-book-support h2,
+      .hub-book-lead,
+      .hub-book-description,
+      .hub-book-note {
+        width: 100%;
+        max-width: none;
+      }
+
+      .hub-book-support h2 br {
+        display: none;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .crowd-hero {
+        padding: 72px 7vw;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(16, 42, 67, .96),
+            rgba(16, 42, 67, .76)
+          ),
+          url("assets/images/crowd-participation.png")
+          center / cover no-repeat;
+      }
+
+      .hub-book-support {
+        padding: 72px 7vw 78px;
+      }
+
+      .hub-book-support-inner {
+        gap: 34px;
+      }
+
+      .hub-book-art {
+        height: clamp(390px, 65vw, 530px);
+      }
+
+      .hub-book-support-content::before {
+        top: -42px;
+        right: -5px;
+        color: rgba(201, 160, 79, .14);
+        font-size: clamp(135px, 25vw, 200px);
+        letter-spacing: -7px;
+      }
+
+      .hub-book-support h2 {
+        font-size: clamp(42px, 7vw, 56px);
+      }
+
+      .hub-book-actions {
+        gap: 18px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 620px) {
+      .crowd-hero {
+        padding: 60px 22px;
+      }
+
+      .crowd-hero h1 {
+        font-size: clamp(40px, 11vw, 56px);
+        letter-spacing: -1px;
+      }
+
+      .crowd-hero-text {
+        font-size: 16px;
+      }
+
+      .crowd-options {
+        padding: 60px 22px;
+      }
+
+      .crowd-section-head {
+        margin-bottom: 28px;
+      }
+
+      .crowd-section-head > p:last-child {
+        font-size: 16px;
+      }
+
+      .crowd-card {
+        padding: 26px 23px;
+      }
+
+      .crowd-benefits {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .crowd-card-action .crowd-button {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .crowd-dialog.modal {
+        padding: 12px;
+      }
+
+      .crowd-dialog .modal-panel {
+        max-height: calc(100dvh - 24px);
+      }
+
+      .hub-book-support {
+        padding: 62px 22px 70px;
+      }
+
+      .hub-book-support-inner {
+        gap: 27px;
+      }
+
+      .hub-book-art {
+        height: clamp(300px, 82vw, 400px);
+      }
+
+      .hub-book-art::before {
+        inset: 8%;
+        filter: blur(14px);
+      }
+
+      .hub-book-art::after {
+        height: 15%;
+        background:
+          linear-gradient(
+            180deg,
+            transparent,
+            var(--book-ivory)
+          );
+      }
+
+      .hub-book-art img {
+        object-position: 50% 47%;
+      }
+
+      .hub-book-support-content::before {
+        top: -25px;
+        right: -14px;
+        color: rgba(201, 160, 79, .15);
+        font-size: 126px;
+        letter-spacing: -6px;
+      }
+
+      .hub-book-support h2 {
+        margin-bottom: 20px;
+        font-size: 41px;
+        line-height: 1.02;
+        letter-spacing: -1px;
+      }
+
+      .hub-book-lead {
+        margin-bottom: 16px;
+        font-size: 18px;
+      }
+
+      .hub-book-description {
+        font-size: 15px;
+        line-height: 1.68;
+      }
+
+      .hub-book-details {
+        gap: 6px;
+        margin: 23px 0 27px;
+        font-size: 12px;
+      }
+
+      .hub-book-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .hub-book-story-link {
+        font-size: 12px;
+      }
+
+      .hub-book-note {
+        margin-top: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .crowd-button,
+      .hub-book-story-link,
+      .hub-book-story-link span {
+        transition: none;
+      }
+
+      .hub-book-story-link:hover,
+      .hub-book-story-link:focus-visible,
+      .hub-book-story-link:hover span,
+      .hub-book-story-link:focus-visible span {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="assets/images/logo.png" alt="Exotic Dairy logo">
+      <span>EXOTIC<br>DAIRY</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="products.html">Products</a>
+      <a href="galumeya.html">Galumeya</a>
+      <a href="experience-hub.html">Experience Hub</a>
+      <a href="participate.html">Participate</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="about.html">About Us</a>
+      <a href="faq.html">FAQ</a>
+    
+      <a
+        class="mobile-contact-btn modal-trigger"
+        href="#contactModal"
+        data-modal="contactModal"
+      >
+        Get in Touch
+      </a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-controls="nav"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#contactModal"
+      data-modal="contactModal"
+    >
+      Get in touch
+    </a>
+  </header>
+
+  <main class="crowd-page" id="top">
+
+    <!-- HERO -->
+
+    <section class="crowd-hero" aria-labelledby="crowdTitle">
+      <div class="crowd-container">
+        <div class="crowd-hero-copy">
+          <p class="crowd-eyebrow">Crowd Participation</p>
+
+          <h1 id="crowdTitle">
+            Be Part of<br>
+            the Journey.
+          </h1>
+
+          <p class="crowd-hero-text">
+            Help bring the future Exotic Dairy Experience &amp; R&amp;D Hub
+            to life — a place for research, responsible animal care,
+            education and shared discovery.
+          </p>
+
+          <div class="crowd-hero-actions">
+            <a class="crowd-button" href="#participation-options">
+              Explore Ways to Participate
+            </a>
+
+            <a
+              class="crowd-button crowd-button--outline"
+              href="experience-hub.html"
+            >
+              Discover the Hub
+            </a>
+          </div>
+
+          <p class="crowd-hero-status">
+            Participation programs are in development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE WAYS TO PARTICIPATE -->
+
+    <section
+      class="crowd-options"
+      id="participation-options"
+      aria-labelledby="participationTitle"
+    >
+      <div class="crowd-container">
+        <div class="crowd-section-head">
+          <p class="crowd-eyebrow">One Shared Goal</p>
+
+          <h2 id="participationTitle">
+            Different Ways to Make a Difference.
+          </h2>
+
+          <p>
+            Discover the planned programs below and register your interest.
+            We will share participation options, pricing and terms
+            before launch.
+          </p>
+        </div>
+
+        <div class="crowd-grid">
+
+          <!-- ONE-TIME -->
+
+          <article class="crowd-card">
+            <div class="crowd-card-top">
+              <div class="crowd-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+
+                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"/>
+
+                <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25"/>
+
+                <path d="M12.5 15.5l2 2"/>
+
+                <path d="M15 13l2 2"/>
+
+                </svg>
+              </div>
+
+              <span class="crowd-status">Coming Soon</span>
+            </div>
+
+            <p class="crowd-card-label">01 · One-Time</p>
+
+            <h3>Support the Hub Once.</h3>
+
+            <p class="crowd-card-description">
+              A planned one-time contribution model for people who
+              want to help develop the Hub and join the community
+              behind its creation.
+            </p>
+
+            <p class="crowd-benefits-label">Planned Program Features</p>
+
+            <ul class="crowd-benefits">
+              <li>Digital participant status</li>
+              <li>Project development updates</li>
+              <li>Selected future Hub benefits</li>
+              <li>Priority access to selected experiences</li>
+              <li>Optional community recognition</li>
+            </ul>
+
+            <div class="crowd-card-action">
+              <button
+                class="crowd-button modal-trigger"
+                type="button"
+                data-modal="contactModal"
+                data-program="One-Time Participation"
+              >
+                Notify Me When It Opens
+              </button>
+            </div>
+          </article>
+
+          <!-- MEMBERSHIP -->
+
+          <article class="crowd-card">
+            <div class="crowd-card-top">
+              <div class="crowd-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+    
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    
+                <circle cx="12" cy="7" r="4"/>
+    
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h2"/>
+    
+                <path d="M16 22l5 -5"/>
+    
+                <path d="M21 21.5v-4.5h-4.5"/>
+    
+                </svg>
+              </div>
+
+              <span class="crowd-status">Coming Soon</span>
+            </div>
+
+            <p class="crowd-card-label">02 · Membership</p>
+
+            <h3>Stay Connected to the Journey.</h3>
+
+            <p class="crowd-card-description">
+              A planned monthly or annual membership for those
+              who want to support the Hub's continuing development
+              and follow its progress more closely.
+            </p>
+
+            <p class="crowd-benefits-label">Planned Program Features</p>
+
+            <ul class="crowd-benefits">
+              <li>Member status</li>
+              <li>Regular development updates</li>
+              <li>Future visitor privileges</li>
+              <li>Selected product and experience benefits</li>
+              <li>Early access to selected Hub activities</li>
+            </ul>
+
+            <div class="crowd-card-action">
+              <button
+                class="crowd-button modal-trigger"
+                type="button"
+                data-modal="contactModal"
+                data-program="Membership"
+              >
+                Join the Waitlist
+              </button>
+            </div>
+          </article>
+
+          <!-- SYMBOLIC ADOPTION -->
+
+          <article class="crowd-card crowd-card--featured">
+            <div class="crowd-card-top">
+              <div class="crowd-icon" aria-hidden="true">
+                <svg 
+                viewBox="0 0 512 512" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                    d="M511.874 92.334C508.528 65.511 488.404 59.923 477.229 59.923H455.712C455.712 59.923 451.525 42.321 438.95 42.321H404.585L386.703 36.734C380.003 41.208 388.937 53.496 388.937 53.496C376.642 63.278 364.347 73.06 364.347 110.975V174.677C364.347 199.268 324.372 206.021 307.867 180.386C290.589 152.745 252.583 148.271 228 110.28C211.132 84.206 193.847 75.574 182.067 75.211C170.287 74.847 158.922 79.595 150.912 88.241L30.784 178.348C8.949 198.509 0 218.626 0 243.216V310.273C0 323.681 22.35 325.923 22.35 312.506V254.384C22.35 243.201 38.007 232.033 38.007 243.216V328.162C38.007 343.812 20.124 359.46 20.124 368.402C20.124 377.344 51.415 471.217 51.415 471.217H82.706C82.706 471.217 62.59 399.694 62.59 390.753C62.59 383.607 82.055 360.553 91.42 344.911C90.466 359.417 77.073 374.763 77.929 382.933C78.86 391.829 119.751 481.939 119.751 481.939L150.868 478.684C150.868 478.684 123.423 409.644 122.492 400.748C121.561 391.853 147.454 346.095 149.097 332.785C152.739 303.19 151.232 314.584 151.232 314.584C150.255 305.279 153.662 298.791 160.302 294.635H258.846C278.962 294.635 276.722 310.284 274.496 319.225C272.255 328.166 252.586 377.34 252.586 377.34L254.82 471.22H286.111C286.111 471.22 288.351 388.515 288.351 381.814C288.351 379.49 292.508 370.662 297.951 359.639C298.746 369.549 299.526 377.34 299.526 377.34L312.934 471.22H344.225C344.225 471.22 335.291 388.515 335.291 381.814C335.291 376.128 340.651 303.621 343.18 275.29C418.724 272.731 447.091 233.074 447.091 138.311C447.091 109.253 451.566 109.245 461.621 109.245H497.341C506.29 105.898 504.049 98.071 504.049 98.071C504.049 98.071 512.994 103.509 511.874 92.334Z"
+                    stroke="currentColor"
+                    stroke-width="18"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                </svg>
+              </div>
+
+              <span class="crowd-status">Coming Soon</span>
+            </div>
+
+            <p class="crowd-card-label">03 · Symbolic Adoption</p>
+
+            <h3>Adopt a Camel or Donkey.</h3>
+
+            <p class="crowd-card-description">
+              Support an animal's care through a planned symbolic
+              adoption program and build a personal connection
+              with its story.
+            </p>
+
+            <p class="crowd-benefits-label">Planned Program Features</p>
+
+            <ul class="crowd-benefits">
+              <li>Individual animal profile</li>
+              <li>Photos and regular updates</li>
+              <li>Milestones and development</li>
+              <li>Animal welfare information</li>
+              <li>Future guided visit opportunities</li>
+              <li>Digital adoption status</li>
+            </ul>
+
+            <div class="crowd-card-action">
+              <button
+                class="crowd-button crowd-button--outline modal-trigger"
+                type="button"
+                data-modal="contactModal"
+                data-program="Symbolic Animal Adoption"
+              >
+                Register Adoption Interest
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="crowd-note">
+          <strong>Registration is an expression of interest only.</strong>
+          No payment is collected through these forms.
+          Program features are provisional and subject to final terms.
+          Symbolic adoption does not transfer ownership or custody
+          of an animal.
+        </p>
+      </div>
+    </section>
+
+    <!-- SAME BOOK SECTION AS THE EXPERIENCE HUB -->
+
+    <section class="hub-book-support" id="support-the-hub">
+      <div class="hub-book-support-inner">
+
+        <div class="hub-book-art" aria-hidden="true">
+          <img
+            src="assets/images/galumeya-book-support.png"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
+        </div>
+
+        <div class="hub-book-support-content">
+          <p class="hub-book-eyebrow">
+            A Direct Way to Support the Hub
+          </p>
+
+          <h2>
+            Every discovery<br>
+            can leave a legacy.
+          </h2>
+
+          <p class="hub-book-lead">
+            The stories of Galumeya connect imagination, knowledge
+            and the future Exotic Dairy Experience &amp; R&amp;D Hub.
+          </p>
+
+          <p class="hub-book-description">
+            By owning
+            <strong>1001 Discoveries of Galumeya — Volume I</strong>,
+            you directly support the work behind a future place for
+            research, responsible animal care, education and shared discovery.
+          </p>
+
+          <p class="hub-book-details">
+            Volume I
+            <span aria-hidden="true">•</span>
+            8 illustrated stories
+            <span aria-hidden="true">•</span>
+            Coming soon from €10
+          </p>
+
+          <div class="hub-book-actions">
+            <a class="btn" href="galumeya-book.html">
+              Explore the Book
+            </a>
+
+            <a
+              class="hub-book-story-link"
+              href="book-read.html?story=1"
+            >
+              Read the First Story Free
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <p class="hub-book-note">
+            Owning Volume I is an optional and direct way to support
+            the future Exotic Dairy Experience &amp; R&amp;D Hub.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+  
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+            loading="lazy"
+          >
+          <span>EXOTIC<br>DAIRY</span>
+        </div>
+  
+        <p>
+          Connecting nature, knowledge and discovery through
+          Galumeya products and the future Experience &amp; R&amp;D Hub.
+        </p>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Explore</h3>
+  
+        <a href="products.html">Products</a>
+        <a href="experience-hub.html">Experience Hub</a>
+        <a href="about.html">About Us</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Galumeya</h3>
+  
+        <a href="galumeya.html">Our Brand</a>
+        <a href="galumeya-book.html">1001 Discoveries</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Get Involved</h3>
+  
+        <a href="participate.html">Participate</a>
+        <a href="partnerships.html">Partnerships</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Resources</h3>
+  
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Contact</h3>
+  
+        <p>Plovdiv, Bulgaria</p>
+  
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+  
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+  
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+  
+        <a
+          class="modal-trigger"
+          href="#contactModal"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2026 Exotic Dairy. All Rights Reserved.</p>
+  
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- SHARED CONTACT / PARTICIPATION FORM -->
+
+  <div class="modal crowd-dialog" id="contactModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div
+      class="modal-panel contact-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="crowdContactTitle"
+    >
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close contact form"
+      >
+        ×
+      </button>
+
+      <p class="eyebrow">Crowd Participation</p>
+
+      <h2 id="crowdContactTitle">Register Your Interest</h2>
+
+      <p class="modal-intro" id="crowdContactIntro">
+        Tell us how you would like to participate.
+        We will contact you with information about the selected program.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          id="crowdSubject"
+          value="Exotic Dairy — Crowd Participation Inquiry"
+        >
+
+        <div class="form-row">
+          <label for="crowdName">Name *</label>
+          <input
+            id="crowdName"
+            type="text"
+            name="name"
+            minlength="2"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="crowdEmail">Email *</label>
+          <input
+            id="crowdEmail"
+            type="email"
+            name="email"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="crowdCountry">Country</label>
+          <input
+            id="crowdCountry"
+            type="text"
+            name="country"
+            autocomplete="country-name"
+          >
+        </div>
+
+        <div class="form-row">
+          <label for="crowdProgram">Program *</label>
+          <select id="crowdProgram" name="interest" required>
+            <option value="" selected disabled>Select a program</option>
+            <option value="One-Time Participation">
+              One-Time Participation
+            </option>
+            <option value="Membership">Membership</option>
+            <option value="Symbolic Animal Adoption">
+              Symbolic Animal Adoption
+            </option>
+            <option value="General Inquiry">General Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-row full" id="crowdAnimalRow" hidden>
+          <label for="crowdAnimal">Animal preference</label>
+          <select id="crowdAnimal" name="animal_preference" disabled>
+            <option value="No preference">No preference</option>
+            <option value="Camel">Camel</option>
+            <option value="Donkey">Donkey</option>
+          </select>
+        </div>
+
+        <div class="form-row full">
+          <label for="crowdMessage">Message *</label>
+          <textarea
+            id="crowdMessage"
+            name="message"
+            rows="4"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-row full">
+          <label class="checkbox-label">
+            <input type="checkbox" name="consent" value="yes" required>
+            <span>
+              I have read the
+              <a href="privacy.html">Privacy Policy</a>
+              and consent to being contacted about this inquiry
+              and the selected participation program.
+            </span>
+          </label>
+        </div>
+
+        <button class="btn" type="submit">
+          Send Interest
+        </button>
+
+        <div
+          id="form-success"
+          role="status"
+          aria-live="polite"
+          style="display:none;"
+        >
+          Thank you for your interest.
+          We will be in touch with more information.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const modal = document.getElementById("contactModal");
+      const programField = document.getElementById("crowdProgram");
+      const animalRow = document.getElementById("crowdAnimalRow");
+      const animalField = document.getElementById("crowdAnimal");
+      const messageField = document.getElementById("crowdMessage");
+      const subjectField = document.getElementById("crowdSubject");
+
+      const messages = {
+        "One-Time Participation":
+          "I would like to receive information about the One-Time " +
+          "Participation Program for the Exotic Dairy Experience & R&D Hub.",
+
+        "Membership":
+          "I would like to join the interest list for the Exotic Dairy " +
+          "Experience & R&D Hub Membership Program.",
+
+        "Symbolic Animal Adoption":
+          "I would like to receive information about the symbolic " +
+          "adoption program for camels and donkeys at the future " +
+          "Exotic Dairy Experience & R&D Hub.",
+
+        "General Inquiry": ""
+      };
+
+      let lastSuggestedMessage = "";
+
+      function updateProgram() {
+        const program = programField.value;
+
+        const isGeneral = program === "General Inquiry";
+
+        document.getElementById("crowdContactTitle").textContent =
+          isGeneral ? "Get in Touch" : "Register Your Interest";
+
+        document.getElementById("crowdContactIntro").textContent =
+          isGeneral
+            ? "Connect with Exotic Dairy to discuss products, the Hub or opportunities to work together."
+            : "Tell us how you would like to participate. We will contact you with information about the selected program.";
+
+        modal.querySelector('button[type="submit"]').textContent =
+          isGeneral ? "Send Inquiry" : "Send Interest";
+        const isAdoption = program === "Symbolic Animal Adoption";
+
+        animalRow.hidden = !isAdoption;
+        animalRow.style.display = isAdoption ? "" : "none";
+        animalField.disabled = !isAdoption;
+
+        subjectField.value = program
+          ? `Exotic Dairy — ${program} Inquiry`
+          : "Exotic Dairy — Crowd Participation Inquiry";
+
+        const suggestion = messages[program] || "";
+
+        // Preserve any message the visitor has written themselves.
+        if (
+          !messageField.value.trim() ||
+          messageField.value === lastSuggestedMessage
+        ) {
+          messageField.value = suggestion;
+        }
+
+        lastSuggestedMessage = suggestion;
+      }
+
+      programField.addEventListener("change", updateProgram);
+
+      // Populate before the shared modal handler opens the form.
+      document.addEventListener("click", event => {
+        if (!(event.target instanceof Element)) return;
+
+        const trigger = event.target.closest(
+          '.modal-trigger[data-modal="contactModal"]'
+        );
+
+        if (!trigger) return;
+
+        const selectedProgram =
+          trigger.dataset.program || "General Inquiry";
+
+        if (Object.prototype.hasOwnProperty.call(messages, selectedProgram)) {
+          programField.value = selectedProgram;
+          updateProgram();
+        }
+      }, true);
+
+      updateProgram();
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

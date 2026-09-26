@@ -1,0 +1,2098 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Galumeya — A Gift from Nature</title>
+
+  <meta
+    name="description"
+    content="Discover Galumeya — the brand world connecting camel milk, donkey milk, knowledge, products and the future Exotic Dairy Experience & R&D Hub."
+  >
+
+  <meta property="og:title" content="Galumeya — by Exotic Dairy">
+  <meta
+    property="og:description"
+    content="A gift from nature. Created through knowledge."
+  >
+  <meta
+    property="og:image"
+    content="https://exoticdairy.com/assets/images/galumeya-brand-hero.png"
+  >
+  <meta property="og:type" content="website">
+  <meta
+    property="og:url"
+    content="https://exoticdairy.com/galumeya.html"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Galumeya — by Exotic Dairy">
+  <meta
+    name="twitter:description"
+    content="A gift from nature. Created through knowledge."
+  >
+  <meta
+    name="twitter:image"
+    content="https://exoticdairy.com/assets/images/galumeya-brand-hero.png"
+  >
+
+  <link
+    rel="canonical"
+    href="https://exoticdairy.com/galumeya.html"
+  >
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    :root {
+      --gal-ivory: #f7f1e7;
+      --gal-ivory-light: #fffdf8;
+      --gal-navy: #071a33;
+      --gal-blue: #1477d4;
+      --gal-gold: #c9a04f;
+      --gal-gold-dark: #9e762d;
+      --gal-text: #25384b;
+      --gal-muted: #667483;
+      --gal-line: rgba(7, 26, 51, .12);
+      --gal-shadow: 0 24px 70px rgba(7, 26, 51, .12);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .gal-page,
+    .gal-page * {
+      box-sizing: border-box;
+    }
+
+    .gal-page {
+      overflow: hidden;
+      color: var(--gal-text);
+      background: var(--gal-ivory-light);
+    }
+
+    .gal-container {
+      width: min(1240px, 100%);
+      margin: 0 auto;
+    }
+
+    .gal-eyebrow {
+      margin: 0 0 14px;
+      color: var(--gal-gold-dark);
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 1.4;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .gal-section-head {
+      max-width: 780px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .gal-section-head h2 {
+      margin: 0 0 17px;
+      color: var(--gal-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 4.5vw, 64px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -1.5px;
+    }
+
+    .gal-section-head > p:last-child {
+      margin: 0;
+      color: var(--gal-muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+
+    /* ==========================================================
+    GALUMEYA HERO
+    ========================================================== */
+
+    .gal-brand-hero {
+    position: relative;
+    display: grid;
+    align-items: center;
+    min-height: clamp(500px, 45vw, 680px);
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--gal-ivory);
+    }
+
+    /* Изображението запълва височината и остава вдясно */
+
+    .gal-brand-hero-media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: max(80%, 960px);
+    z-index: 0;
+    pointer-events: none;
+    }
+
+    .gal-brand-hero-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: right center;
+
+    /* Само хоризонтално преливане */
+    -webkit-mask-image:
+        linear-gradient(
+        to right,
+        transparent 0%,
+        #000 22%
+        );
+    mask-image:
+        linear-gradient(
+        to right,
+        transparent 0%,
+        #000 22%
+        );
+    }
+
+    /* Мек преход зад текста */
+
+    .gal-brand-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        linear-gradient(
+        90deg,
+        var(--gal-ivory) 0%,
+        rgba(247, 241, 231, .97) 29%,
+        rgba(247, 241, 231, .55) 42%,
+        transparent 55%
+        );
+    }
+
+    .gal-brand-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 56px 7vw;
+    }
+
+    .gal-brand-hero-copy {
+    width: 44%;
+    max-width: 530px;
+    }
+
+    .gal-brand-hero .gal-eyebrow {
+    margin: 0 0 16px;
+    }
+
+    .gal-brand-hero h1 {
+    margin: 0 0 24px;
+    color: var(--gal-navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(44px, 4.5vw, 68px);
+    font-weight: 500;
+    line-height: 1.03;
+    letter-spacing: -1.8px;
+    }
+
+    .gal-brand-hero h1 span {
+    color: var(--gal-gold-dark);
+    }
+
+    .gal-brand-hero-description {
+    max-width: 460px;
+    margin: 0;
+    color: #526477;
+    font-size: 17px;
+    line-height: 1.7;
+    }
+
+    /* TABLET И MOBILE — снимка над текста */
+
+    @media (max-width: 900px) {
+    .gal-brand-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        min-height: 0;
+    }
+
+    .gal-brand-hero::before {
+        display: none;
+    }
+
+    .gal-brand-hero-media {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        aspect-ratio: 1.35;
+        overflow: hidden;
+    }
+
+    .gal-brand-hero-media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100% center;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .gal-brand-hero-inner {
+        width: 100%;
+        padding: 34px 7vw 44px;
+    }
+
+    .gal-brand-hero-copy {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .gal-brand-hero h1 {
+        font-size: clamp(38px, 6vw, 52px);
+        letter-spacing: -1.3px;
+    }
+
+    .gal-brand-hero-description {
+        max-width: 600px;
+        font-size: 16px;
+        line-height: 1.65;
+    }
+    }
+
+    @media (max-width: 620px) {
+    .gal-brand-hero-media {
+        aspect-ratio: 1.2;
+    }
+
+    .gal-brand-hero-inner {
+        padding: 28px 22px 36px;
+    }
+
+    .gal-brand-hero .gal-eyebrow {
+        margin-bottom: 12px;
+        font-size: 11px;
+    }
+
+    .gal-brand-hero h1 {
+        margin-bottom: 18px;
+        font-size: clamp(34px, 8.5vw, 46px);
+        line-height: 1.05;
+        letter-spacing: -1px;
+    }
+
+    .gal-brand-hero-description {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+    }
+
+
+    /* ==========================================================
+       THREE SYMBOLS
+    ========================================================== */
+
+    .gal-symbols {
+      padding: 92px 7vw 100px;
+      background: var(--gal-ivory-light);
+    }
+
+    .gal-symbol-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      border: 1px solid var(--gal-line);
+      background: var(--gal-line);
+    }
+
+    .gal-symbol {
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 42px 32px;
+      background: var(--gal-ivory-light);
+      text-align: center;
+    }
+
+    .gal-symbol-icon {
+      width: 88px;
+      height: 88px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 25px;
+      color: var(--gal-gold-dark);
+    }
+
+    .gal-symbol-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .gal-symbol h3 {
+      margin: 0 0 12px;
+      color: var(--gal-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .gal-symbol p {
+      max-width: 310px;
+      margin: 0;
+      color: var(--gal-muted);
+      font-size: 15px;
+      line-height: 1.68;
+    }
+
+
+    /* ==========================================================
+       INTERACTIVE STORY CARDS
+    ========================================================== */
+
+    .gal-stories {
+      padding: 96px 7vw 106px;
+      background: #f1eadf;
+    }
+
+    .gal-story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .gal-story-card {
+      --card-bg: var(--gal-ivory);
+      --card-ink: var(--gal-gold-dark);
+
+      position: relative;
+      min-width: 0;
+      height: 650px;
+      overflow: hidden;
+      padding: 0;
+      border: 0;
+      border-radius: 22px;
+      background: var(--gal-navy);
+      color: inherit;
+      box-shadow: var(--gal-shadow);
+      text-align: left;
+      cursor: pointer;
+      isolation: isolate;
+    }
+
+    .gal-story-card--donkey {
+      --card-bg: #0a2747;
+      --card-ink: #e6bd68;
+    }
+
+    .gal-story-card--hub {
+      --card-bg: #c9a04f;
+      --card-ink: #071a33;
+    }
+
+    .gal-story-reveal {
+      position: absolute;
+      inset: 0;
+    }
+
+    .gal-story-reveal img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .gal-story-reveal::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(7, 26, 51, .03) 28%,
+          rgba(7, 26, 51, .9) 100%
+        );
+    }
+
+    .gal-story-copy {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 104px;
+      left: 0;
+      padding: 34px 30px;
+      color: #fff;
+    }
+
+    .gal-story-copy span {
+      display: block;
+      margin-bottom: 9px;
+      color: #e6bd68;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .gal-story-copy h3 {
+      margin: 0 0 11px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .gal-story-copy p {
+      margin: 0;
+      color: #e4edf5;
+      font-size: 14px;
+      line-height: 1.62;
+    }
+
+    .gal-story-shutter {
+      position: absolute;
+      z-index: 3;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: var(--card-bg);
+      color: var(--card-ink);
+      transition:
+        transform .72s cubic-bezier(.22, .78, .18, 1);
+    }
+
+    .gal-story-shutter::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid currentColor;
+      opacity: .22;
+      pointer-events: none;
+    }
+
+    .gal-story-emblem {
+      width: 172px;
+      height: 172px;
+      transition:
+        width .72s ease,
+        height .72s ease,
+        transform .72s ease;
+    }
+
+    .gal-story-emblem svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .gal-story-hint {
+      position: absolute;
+      right: 0;
+      bottom: 32px;
+      left: 0;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: .75;
+      transition: opacity .25s ease;
+    }
+
+    .gal-story-card:hover .gal-story-shutter,
+    .gal-story-card:focus-visible .gal-story-shutter,
+    .gal-story-card.is-open .gal-story-shutter {
+      transform: translateY(calc(100% - 104px));
+    }
+
+    .gal-story-card:hover .gal-story-emblem,
+    .gal-story-card:focus-visible .gal-story-emblem,
+    .gal-story-card.is-open .gal-story-emblem {
+      width: 58px;
+      height: 58px;
+      transform: translateY(calc(-50% + 1px));
+    }
+
+    .gal-story-card:hover .gal-story-hint,
+    .gal-story-card:focus-visible .gal-story-hint,
+    .gal-story-card.is-open .gal-story-hint {
+      opacity: 0;
+    }
+
+
+    /* ==========================================================
+       FOUR DIRECTIONS
+    ========================================================== */
+
+    .gal-directions {
+      padding: 100px 7vw 108px;
+      background: var(--gal-ivory-light);
+    }
+
+    .gal-direction-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .gal-direction {
+      position: relative;
+      min-height: 455px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      border-radius: 20px;
+      background: var(--gal-navy);
+      box-shadow: var(--gal-shadow);
+    }
+
+    .gal-direction > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .55s ease;
+    }
+
+    .gal-direction::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(7, 26, 51, .02) 30%,
+          rgba(7, 26, 51, .88) 100%
+        );
+    }
+
+    .gal-direction:hover > img {
+      transform: scale(1.045);
+    }
+
+    .gal-direction-copy {
+      position: relative;
+      z-index: 2;
+      padding: 32px;
+      color: #fff;
+    }
+
+    .gal-direction-copy span {
+      display: block;
+      margin-bottom: 9px;
+      color: #8fd2ff;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    .gal-direction-copy h3 {
+      margin: 0 0 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .gal-direction-copy p {
+      max-width: 530px;
+      margin: 0;
+      color: #d7e3f2;
+      font-size: 15px;
+      line-height: 1.62;
+    }
+
+
+    /* ==========================================================
+       PRODUCTS
+    ========================================================== */
+
+    .gal-products {
+      padding: 0 7vw 105px;
+      background: var(--gal-ivory-light);
+    }
+
+    .gal-products-panel {
+      position: relative;
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--gal-navy);
+      box-shadow: var(--gal-shadow);
+    }
+
+    .gal-products-panel > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .gal-products-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7, 26, 51, .96) 0%,
+          rgba(7, 26, 51, .86) 34%,
+          rgba(7, 26, 51, .12) 72%
+        );
+    }
+
+    .gal-products-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 520px;
+      padding: 56px;
+      color: #fff;
+    }
+
+    .gal-products-copy .gal-eyebrow {
+      color: #e6bd68;
+    }
+
+    .gal-products-copy h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 4vw, 60px);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .gal-products-copy p {
+      margin: 0 0 28px;
+      color: #d7e3f2;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+
+    /* ==========================================================
+       BOOK
+    ========================================================== */
+
+    .gal-book {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 7vw;
+      background:
+        linear-gradient(
+          110deg,
+          #f1e7d7 0%,
+          var(--gal-ivory) 48%,
+          var(--gal-ivory-light) 100%
+        );
+    }
+
+    .gal-book-inner {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(390px, .92fr);
+      gap: clamp(44px, 6vw, 88px);
+      align-items: center;
+      width: min(1320px, 100%);
+      margin: 0 auto;
+    }
+
+    .gal-book-art {
+      position: relative;
+      height: 530px;
+      overflow: hidden;
+    }
+
+    .gal-book-art::after {
+      content: "";
+      position: absolute;
+      inset: 0 0 0 auto;
+      width: 18%;
+      background:
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gal-ivory)
+        );
+    }
+
+    .gal-book-art img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      filter:
+        drop-shadow(
+          0 24px 28px rgba(7, 26, 51, .15)
+        );
+    }
+
+    .gal-book-copy {
+      position: relative;
+      max-width: 590px;
+    }
+
+    .gal-book-copy::before {
+      content: "1001";
+      position: absolute;
+      top: -80px;
+      right: -15px;
+      color: rgba(201, 160, 79, .13);
+      font-family: Georgia, serif;
+      font-size: clamp(150px, 15vw, 235px);
+      line-height: .8;
+      letter-spacing: -10px;
+      pointer-events: none;
+    }
+
+    .gal-book-copy > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .gal-book-copy h2 {
+      margin: 0 0 22px;
+      color: var(--gal-navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(43px, 4.3vw, 66px);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: -1.5px;
+    }
+
+    .gal-book-lead {
+      margin: 0 0 16px;
+      color: var(--gal-navy);
+      font-family: Georgia, serif;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .gal-book-description {
+      margin: 0;
+      color: var(--gal-muted);
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    .gal-book-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 26px 0 29px;
+      color: var(--gal-navy);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .gal-book-details span {
+      color: var(--gal-gold);
+    }
+
+    .gal-book-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .gal-inline-link {
+      color: var(--gal-gold-dark);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .gal-inline-link:hover {
+      color: var(--gal-navy);
+    }
+
+
+    /* ==========================================================
+       TABLET
+    ========================================================== */
+
+    @media (max-width: 1080px) {
+      .gal-brand-hero {
+        min-height: 620px;
+      }
+
+      .gal-symbol-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gal-symbol {
+        min-height: 0;
+      }
+
+      .gal-story-grid {
+        grid-template-columns: 1fr;
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .gal-story-card {
+        height: 720px;
+      }
+
+      .gal-book-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .gal-book-art {
+        height: clamp(430px, 60vw, 620px);
+      }
+
+      .gal-book-art::after {
+        inset: auto 0 0;
+        width: auto;
+        height: 18%;
+        background:
+          linear-gradient(
+            180deg,
+            transparent,
+            var(--gal-ivory)
+          );
+      }
+
+      .gal-book-copy {
+        max-width: none;
+      }
+    }
+
+
+    /* ==========================================================
+       SMALL TABLET
+    ========================================================== */
+
+    @media (max-width: 820px) {
+      .gal-brand-hero {
+        min-height: 760px;
+        align-items: flex-end;
+      }
+
+      .gal-brand-hero::before {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(247, 241, 231, .08) 10%,
+            rgba(247, 241, 231, .9) 58%,
+            var(--gal-ivory) 100%
+          );
+      }
+
+      .gal-brand-hero-media img {
+        object-position: 100% center;
+      }
+
+      .gal-brand-hero-copy {
+        max-width: 620px;
+      }
+
+      .gal-direction-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gal-products-panel {
+        min-height: 650px;
+        align-items: flex-end;
+      }
+
+      .gal-products-panel::after {
+        background:
+          linear-gradient(
+            180deg,
+            rgba(7, 26, 51, .04) 20%,
+            rgba(7, 26, 51, .94) 78%
+          );
+      }
+
+      .gal-products-copy {
+        max-width: 650px;
+        padding: 42px;
+      }
+    }
+
+
+    /* ==========================================================
+       MOBILE
+    ========================================================== */
+
+    @media (max-width: 620px) {
+      
+      .gal-symbols,
+      .gal-stories,
+      .gal-directions,
+      .gal-products,
+      .gal-book {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      
+
+      .gal-section-head {
+        margin-bottom: 34px;
+      }
+
+      .gal-section-head h2 {
+        font-size: 39px;
+      }
+
+      .gal-story-card {
+        height: 590px;
+      }
+
+      .gal-story-copy {
+        padding: 26px 23px;
+      }
+
+      .gal-story-copy h3 {
+        font-size: 30px;
+      }
+
+      .gal-direction {
+        min-height: 410px;
+      }
+
+      .gal-direction-copy {
+        padding: 26px 23px;
+      }
+
+      .gal-products-panel {
+        min-height: 590px;
+      }
+
+      .gal-products-copy {
+        padding: 30px 24px;
+      }
+
+      .gal-book-art {
+        height: 340px;
+      }
+
+      .gal-book-copy::before {
+        top: -30px;
+        right: -12px;
+        font-size: 120px;
+      }
+
+      .gal-book-copy h2 {
+        font-size: 41px;
+      }
+
+      .gal-book-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gal-story-shutter,
+      .gal-story-emblem,
+      .gal-direction > img {
+        transition: none;
+      }
+    }
+
+    /* Символните картички */
+
+    .gal-symbol-icon {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin-bottom: 26px;
+    }
+
+    .gal-symbol-icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(54, 40, 20, .08);
+    }
+
+    /* Релефни материали и цветове */
+
+    .gal-story-card {
+    --card-bg: #f4ecdc;
+    --card-ink: #8a672d;
+    --card-texture:
+        url("assets/images/galumeya-card-ivory-texture.png");
+    }
+
+    .gal-story-card--donkey {
+    --card-bg: #102638;
+    --card-ink: #e3c58b;
+    --card-texture:
+        url("assets/images/galumeya-card-navy-texture.png");
+    }
+
+    .gal-story-card--hub {
+    --card-bg: #c3a16a;
+    --card-ink: #102638;
+    --card-texture:
+        url("assets/images/galumeya-card-gold-texture.png");
+    }
+
+    .gal-story-shutter {
+    display: block;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    background-image: var(--card-texture);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--card-ink);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, .25),
+        0 -8px 25px rgba(0, 0, 0, .12);
+    }
+
+    /* Деликатен кант върху материала */
+
+    .gal-story-shutter::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    opacity: .23;
+    pointer-events: none;
+    }
+
+    /* Пълното лого стои голямо в центъра */
+
+    .gal-story-emblem {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 180px;
+    height: 230px;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    transition:
+        top .72s cubic-bezier(.22, .78, .18, 1),
+        width .72s cubic-bezier(.22, .78, .18, 1),
+        height .72s cubic-bezier(.22, .78, .18, 1);
+    }
+
+    .gal-story-hint {
+    color: var(--card-ink);
+    }
+
+    /* Щората слиза, логото остава в долната лента */
+
+    .gal-story-card:hover .gal-story-shutter,
+    .gal-story-card:focus-visible .gal-story-shutter,
+    .gal-story-card.is-open .gal-story-shutter {
+        transform: translateY(calc(100% - 104px));
+    }
+
+    .gal-story-card:hover .gal-story-emblem,
+    .gal-story-card:focus-visible .gal-story-emblem,
+    .gal-story-card.is-open .gal-story-emblem {
+        top: 52px;
+        width: 54px;
+        height: 68px;
+        transform: translate(-50%, -50%);
+    }
+
+    .gal-story-card:hover .gal-story-hint,
+    .gal-story-card:focus-visible .gal-story-hint,
+    .gal-story-card.is-open .gal-story-hint {
+        opacity: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+    .gal-story-shutter,
+    .gal-story-emblem,
+    .gal-story-hint {
+        transition: none;
+      }
+    }
+
+    .gal-products-copy .gal-eyebrow {
+    color: var(--gal-gold);
+    }
+
+    .gal-symbols .gal-section-head .gal-eyebrow,
+    .gal-stories .gal-section-head .gal-eyebrow,
+    .gal-directions .gal-section-head .gal-eyebrow {
+    display: block;
+    width: 100%;
+    text-align: center;
+    }
+
+    .gal-products-copy .gal-eyebrow {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img
+        src="assets/images/logo.png"
+        alt="Exotic Dairy logo"
+      >
+      <span>
+        EXOTIC<br>
+        DAIRY
+      </span>
+    </a>
+
+    <nav
+      class="nav"
+      id="nav"
+      aria-label="Main navigation"
+    >
+      <a href="products.html">
+        Products
+      </a>
+
+      <a
+        class="active"
+        href="galumeya.html"
+      >
+        Galumeya
+      </a>
+
+      <a href="experience-hub.html">
+        Experience Hub
+      </a>
+
+      <a href="participate.html">
+        Participate
+      </a>
+
+      <a href="partnerships.html">
+        Partnerships
+      </a>
+
+      <a href="about.html">
+        About Us
+      </a>
+
+      <a href="faq.html">
+        FAQ
+      </a>
+
+      <a
+        class="mobile-contact-btn modal-trigger"
+        href="#contactModal"
+        data-modal="contactModal"
+      >
+        Get in Touch
+      </a>
+    </nav>
+
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-controls="nav"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <a
+      class="header-btn modal-trigger"
+      href="#contactModal"
+      data-modal="contactModal"
+    >
+      Get in touch
+    </a>
+  </header>
+
+
+  <main class="gal-page" id="top">
+
+    <!-- HERO -->
+
+    <section
+        class="gal-brand-hero"
+        aria-labelledby="galTitle"
+    >
+    <div class="gal-brand-hero-media" aria-hidden="true">
+        <img
+            src="assets/images/galumeya-brand-hero.png"
+            alt=""
+            fetchpriority="high"
+        >
+    </div>
+
+    <div class="gal-brand-hero-inner">
+        <div class="gal-brand-hero-copy">
+        <p class="gal-eyebrow">
+            Galumeya · by Exotic Dairy
+        </p>
+
+        <h1 id="galTitle">
+            A gift from nature.<br>
+            <span>Created through knowledge.</span>
+        </h1>
+
+        <p class="gal-brand-hero-description">
+            Galumeya brings together the strength of the camel,
+            the gentle care of the donkey and the knowledge that
+            turns nature’s gifts into lasting value.
+        </p>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- THREE SYMBOLS -->
+
+    <section
+      class="gal-symbols"
+      aria-labelledby="symbolsTitle"
+    >
+      <div class="gal-container">
+        <header class="gal-section-head">
+          <p class="gal-eyebrow">
+            The Brand Philosophy
+          </p>
+
+          <h2 id="symbolsTitle">
+            Three symbols. One world.
+          </h2>
+
+          <p>
+            Each symbol carries one part of the Galumeya story —
+            nature’s gift, care and the light of discovery.
+          </p>
+        </header>
+
+        <div class="gal-symbol-grid">
+
+          <article class="gal-symbol">
+            <!-- Капката -->
+            <div class="gal-symbol-icon" aria-hidden="true">
+                <img src="assets/images/galumeya-symbol-card-drop.png" alt="">
+            </div>
+            <h3>
+              The Drop
+            </h3>
+
+            <p>
+              The pure beginning — milk as a precious gift from
+              nature and the source of every Galumeya creation.
+            </p>
+          </article>
+
+
+          <article class="gal-symbol">
+            <!-- Лицето -->
+            <div class="gal-symbol-icon" aria-hidden="true">
+                <img src="assets/images/galumeya-symbol-card-guardian.png" alt="">
+            </div>
+
+            <h3>
+              The Guardian
+            </h3>
+
+            <p>
+              A symbol of maternal care, responsibility and respect
+              for the animals behind the story.
+            </p>
+          </article>
+
+
+          <article class="gal-symbol">
+            <!-- Звездата -->
+            <div class="gal-symbol-icon" aria-hidden="true">
+                <img src="assets/images/galumeya-symbol-card-star.png" alt="">
+            </div>
+
+            <h3>
+              The Star
+            </h3>
+
+            <p>
+              The light of knowledge — research, imagination and
+              every discovery that leaves a legacy.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTERACTIVE STORY CARDS -->
+
+    <section
+      class="gal-stories"
+      aria-labelledby="storiesTitle"
+    >
+      <div class="gal-container">
+        <header class="gal-section-head">
+          <p class="gal-eyebrow">
+            From Inspiration to Legacy
+          </p>
+
+          <h2 id="storiesTitle">
+            Open the three stories.
+          </h2>
+
+          <p>
+            Hover or tap a card to reveal the world behind
+            each Galumeya colour.
+          </p>
+        </header>
+
+        <div class="gal-story-grid">
+
+          <!-- CAMEL -->
+
+          <button
+            class="gal-story-card"
+            type="button"
+            aria-expanded="false"
+          >
+            <span class="gal-story-reveal">
+              <img
+                src="assets/images/galumeya-story-camel.png"
+                alt="Camel in a warm desert landscape"
+              >
+            </span>
+
+            <span class="gal-story-copy">
+              <span>
+                Camel · Ivory
+              </span>
+
+              <h3>
+                Strength shaped by the desert.
+              </h3>
+
+              <p>
+                Warm ivory and soft gold reflect endurance,
+                purity and the remarkable milk of an animal
+                shaped by demanding landscapes.
+              </p>
+            </span>
+
+            <!-- Камилската карта -->
+            <span class="gal-story-shutter">
+                <img
+                class="gal-story-emblem"
+                src="assets/images/galumeya-mark-gold.png"
+                alt=""
+                aria-hidden="true"
+                >
+                <span class="gal-story-hint">Discover the camel</span>
+            </span>
+          </button>
+
+
+          <!-- DONKEY -->
+
+          <button
+            class="gal-story-card gal-story-card--donkey"
+            type="button"
+            aria-expanded="false"
+          >
+            <span class="gal-story-reveal">
+              <img
+                src="assets/images/galumeya-story-donkey.png"
+                alt="Donkey in a green mountain landscape"
+              >
+            </span>
+
+            <span class="gal-story-copy">
+              <span>
+                Donkey · Blue
+              </span>
+
+              <h3>
+                Gentle care in every detail.
+              </h3>
+
+              <p>
+                Deep blue, open sky and living green express calm,
+                sensitivity and the rare character of donkey milk.
+              </p>
+            </span>
+
+            <!-- Магарешката карта -->
+            <span class="gal-story-shutter">
+                <img
+                class="gal-story-emblem"
+                src="assets/images/galumeya-mark-gold.png"
+                alt=""
+                aria-hidden="true"
+                >
+                <span class="gal-story-hint">Discover the donkey</span>
+            </span>
+          </button>
+
+
+          <!-- HUB -->
+
+          <button
+            class="gal-story-card gal-story-card--hub"
+            type="button"
+            aria-expanded="false"
+          >
+            <span class="gal-story-reveal">
+              <img
+                src="assets/images/galumeya-story-hub.png"
+                alt="Galumeya Experience and R&D Hub at sunset"
+              >
+            </span>
+
+            <span class="gal-story-copy">
+              <span>
+                Knowledge · Gold
+              </span>
+
+              <h3>
+                Where discovery becomes legacy.
+              </h3>
+
+              <p>
+                The Hub connects separate camel and donkey
+                environments with research, products, education
+                and shared experience.
+              </p>
+            </span>
+
+            <!-- Златистата карта на хъба -->
+            <span class="gal-story-shutter">
+                <img
+                class="gal-story-emblem"
+                src="assets/images/galumeya-mark-navy.png"
+                alt=""
+                aria-hidden="true"
+                >
+                <span class="gal-story-hint">Discover the legacy</span>
+            </span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOUR DIRECTIONS -->
+
+    <section
+      class="gal-directions"
+      aria-labelledby="directionsTitle"
+    >
+      <div class="gal-container">
+        <header class="gal-section-head">
+          <p class="gal-eyebrow">
+            Created Through Knowledge
+          </p>
+
+          <h2 id="directionsTitle">
+            Four directions for innovation.
+          </h2>
+
+          <p>
+            Galumeya transforms rare milk potential into products
+            and experiences for modern life.
+          </p>
+        </header>
+
+        <div class="gal-direction-grid">
+
+          <article class="gal-direction">
+            <img
+              src="assets/images/galumeya-direction-functional-foods.png"
+              alt="Functional dairy foods"
+            >
+
+            <div class="gal-direction-copy">
+              <span>
+                01 · Nutrition
+              </span>
+
+              <h3>
+                Functional Foods
+              </h3>
+
+              <p>
+                Premium everyday foods connecting rare milk,
+                distinctive taste and nutrition-led development.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="gal-direction">
+            <img
+              src="assets/images/galumeya-direction-nutraceuticals.png"
+              alt="Nutraceutical innovation"
+            >
+
+            <div class="gal-direction-copy">
+              <span>
+                02 · Science
+              </span>
+
+              <h3>
+                Nutraceuticals
+              </h3>
+
+              <p>
+                Research-led concepts exploring probiotics,
+                bioactive compounds and functional nutrition.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="gal-direction">
+            <img
+              src="assets/images/galumeya-direction-cosmetics.png"
+              alt="Cosmetic products inspired by rare milk"
+            >
+
+            <div class="gal-direction-copy">
+              <span>
+                03 · Care
+              </span>
+
+              <h3>
+                Cosmetics
+              </h3>
+
+              <p>
+                Natural personal-care concepts inspired by rare
+                milk components and biotechnology.
+              </p>
+            </div>
+          </article>
+
+
+          <article class="gal-direction">
+            <img
+              src="assets/images/galumeya-direction-wellness.png"
+              alt="Wellness and balanced lifestyle"
+            >
+
+            <div class="gal-direction-copy">
+              <span>
+                04 · Wellbeing
+              </span>
+
+              <h3>
+                Wellness
+              </h3>
+
+              <p>
+                A broader connection between nutrition, self-care,
+                balance and meaningful experience.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section
+      class="gal-products"
+      aria-labelledby="productsTitle"
+    >
+      <div class="gal-container">
+        <div class="gal-products-panel">
+          <img
+            src="assets/images/galumeya-products-hero.png"
+            alt="Galumeya camel and donkey milk product collection"
+          >
+
+          <div class="gal-products-copy">
+            <p class="gal-eyebrow">
+              The Collection
+            </p>
+
+            <h2 id="productsTitle">
+              Nature, shaped into products.
+            </h2>
+
+            <p>
+              Camel and donkey milk become distinctive yogurts,
+              labneh, cheeses and confectionery through research,
+              craft and responsible development.
+            </p>
+
+            <a
+              class="btn"
+              href="products.html"
+            >
+              Explore All Products
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BOOK -->
+
+    <section
+      class="gal-book"
+      id="book"
+      aria-labelledby="bookTitle"
+    >
+      <div class="gal-book-inner">
+        <div
+          class="gal-book-art"
+          aria-hidden="true"
+        >
+          <img
+            src="assets/images/galumeya-book-support.png"
+            alt=""
+          >
+        </div>
+
+        <div class="gal-book-copy">
+          <p class="gal-eyebrow">
+            1001 Discoveries of Galumeya
+          </p>
+
+          <h2 id="bookTitle">
+            Every discovery can leave a legacy.
+          </h2>
+
+          <p class="gal-book-lead">
+            An illustrated world connecting imagination,
+            knowledge and the future Experience &amp; R&amp;D Hub.
+          </p>
+
+          <p class="gal-book-description">
+            By owning
+            <strong>Volume I</strong>,
+            you directly support the work behind a future place
+            for research, responsible animal care, education
+            and shared discovery.
+          </p>
+
+          <p class="gal-book-details">
+            Volume I
+            <span>•</span>
+            8 illustrated stories
+            <span>•</span>
+            Coming soon from €10
+          </p>
+
+          <div class="gal-book-actions">
+            <a
+              class="btn"
+              href="galumeya-book.html"
+            >
+              Explore the Book
+            </a>
+
+            <a
+              class="gal-inline-link"
+              href="galumeya-book.html#story-one"
+            >
+              Read the First Story Free →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+          >
+
+          <span>
+            EXOTIC<br>
+            DAIRY
+          </span>
+        </div>
+
+        <p>
+          Connecting nature, knowledge and discovery through
+          Galumeya products and the future Experience &amp; R&amp;D Hub.
+        </p>
+      </div>
+
+
+      <div class="footer-col">
+        <h3>
+          Explore
+        </h3>
+
+        <a href="products.html">
+          Products
+        </a>
+
+        <a href="experience-hub.html">
+          Experience Hub
+        </a>
+
+        <a href="about.html">
+          About Us
+        </a>
+      </div>
+
+
+      <div class="footer-col">
+        <h3>
+          Galumeya
+        </h3>
+
+        <a href="galumeya.html">
+          Our Brand
+        </a>
+
+        <a href="galumeya-book.html">
+          1001 Discoveries
+        </a>
+      </div>
+
+
+      <div class="footer-col">
+        <h3>
+          Get Involved
+        </h3>
+
+        <a href="participate.html">
+          Participate
+        </a>
+
+        <a href="partnerships.html">
+          Partnerships
+        </a>
+      </div>
+
+
+      <div class="footer-col">
+        <h3>
+          Resources
+        </h3>
+
+        <a href="faq.html">
+          FAQ
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          Terms of Use
+        </a>
+
+        <a href="disclaimer.html">
+          Disclaimer
+        </a>
+      </div>
+
+
+      <div class="footer-col">
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          Plovdiv, Bulgaria
+        </p>
+
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+
+        <a
+          class="modal-trigger"
+          href="#contactModal"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        © 2026 Exotic Dairy. All Rights Reserved.
+      </p>
+
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- CONTACT MODAL -->
+
+  <div class="modal" id="contactModal">
+    <div class="modal-backdrop modal-close"></div>
+
+    <div
+      class="modal-panel contact-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contactTitle"
+    >
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <p class="eyebrow">
+        Contact
+      </p>
+
+      <h2 id="contactTitle">
+        Let's Build the Future Together
+      </h2>
+
+      <p class="modal-intro">
+        Connect with Exotic Dairy to discuss products,
+        the Galumeya brand, research, partnerships
+        and future opportunities.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mqeonyjr"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Galumeya Inquiry"
+        >
+
+        <div class="form-row">
+          <label>
+            Name *
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            minlength="2"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Email *
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Company
+          </label>
+
+          <input
+            type="text"
+            name="company"
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Country
+          </label>
+
+          <input
+            type="text"
+            name="country"
+          >
+        </div>
+
+        <div class="form-row">
+          <label>
+            Interest
+          </label>
+
+          <select name="interest">
+            <option>
+              Galumeya Brand
+            </option>
+
+            <option>
+              Products
+            </option>
+
+            <option>
+              Book
+            </option>
+
+            <option>
+              Experience Hub
+            </option>
+
+            <option>
+              Research
+            </option>
+
+            <option>
+              Partnerships
+            </option>
+
+            <option>
+              Media
+            </option>
+          </select>
+        </div>
+
+        <div class="form-row full">
+          <label>
+            Message *
+          </label>
+
+          <textarea
+            name="message"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-row full">
+          <label class="checkbox-label">
+            <input
+              type="checkbox"
+              name="consent"
+              value="yes"
+              required
+            >
+
+            I agree to the Privacy Policy and consent
+            to being contacted.
+          </label>
+        </div>
+
+        <button
+          class="btn"
+          type="submit"
+        >
+          Send Inquiry
+        </button>
+
+        <div
+          id="form-success"
+          style="display:none;"
+        >
+          Thank you for contacting Exotic Dairy.
+          We will get back to you shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    document
+      .querySelectorAll(".gal-story-card")
+      .forEach(card => {
+        card.addEventListener("click", () => {
+          const willOpen =
+            !card.classList.contains("is-open");
+
+          document
+            .querySelectorAll(".gal-story-card")
+            .forEach(item => {
+              item.classList.remove("is-open");
+              item.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+            });
+
+          if (willOpen) {
+            card.classList.add("is-open");
+
+            card.setAttribute(
+              "aria-expanded",
+              "true"
+            );
+          }
+        });
+      });
+  </script>
+</body>
+</html>

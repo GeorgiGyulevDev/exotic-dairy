@@ -4,41 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Exotic Dairy — Products</title>
+  <title>Galumeya Products — Exotic Dairy</title>
 
   <meta
     name="description"
-    content="Explore Exotic Dairy camel and donkey milk products, functional dairy innovations and future developments."
+    content="Discover the Galumeya collection by Exotic Dairy: camel and donkey milk yogurts, cheeses, labneh and milk candies."
   />
 
-  <meta property="og:title" content="Exotic Dairy — Products" />
+  <meta property="og:title" content="Galumeya Products — Exotic Dairy" />
   <meta
     property="og:description"
-    content="Rare milk. Exceptional products. Functional bio-dairy innovation."
+    content="Discover Galumeya by Exotic Dairy. Camel and donkey milk, thoughtfully transformed."
   />
   <meta
     property="og:image"
-    content="https://exoticdairy.com/assets/images/share.png"
+    content="https://exoticdairy.com/assets/images/galumeya-products-hero.png"
   />
   <meta property="og:type" content="website" />
-  <meta
-    property="og:url"
-    content="https://exoticdairy.com/products.html"
-  />
+  <meta property="og:url" content="https://exoticdairy.com/products.html" />
   <meta property="og:site_name" content="Exotic Dairy" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Exotic Dairy — Products" />
+  <meta name="twitter:title" content="Galumeya Products — Exotic Dairy" />
   <meta
     name="twitter:description"
-    content="Rare milk. Exceptional products. Functional bio-dairy innovation."
+    content="Discover Galumeya by Exotic Dairy. Camel and donkey milk, thoughtfully transformed."
   />
   <meta
     name="twitter:image"
-    content="https://exoticdairy.com/assets/images/share.png"
+    content="https://exoticdairy.com/assets/images/galumeya-products-hero.png"
   />
 
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 
   <style>
@@ -48,75 +45,90 @@
 
     .products-page-hero {
       overflow: hidden;
-      background: #000;
+      background: var(--navy);
     }
 
     .products-hero-inner {
-      display: grid;
-      grid-template-columns: 34% 66%;
-      min-height: 650px;
-      background: #000;
-    }
-
-    .products-hero-content {
       position: relative;
-      z-index: 5;
+      isolation: isolate;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      max-width: 720px;
-      padding: 90px 7vw;
-      background:
-        linear-gradient(
-          135deg,
-          #000 0%,
-          #030303 55%,
-          #080808 100%
-        );
-      color: var(--white);
-    }
-
-    .products-hero-content .eyebrow {
-      color: #8fd2ff;
-    }
-
-    .products-hero-content h1 {
-      margin: 18px 0 0;
-      color: var(--white);
-      font-size: clamp(48px, 6vw, 88px);
-      line-height: .92;
-      letter-spacing: -2px;
+      align-items: center;
+      min-height: 680px;
     }
 
     .products-hero-image {
-      position: relative;
-      min-height: 650px;
+      position: absolute;
+      inset: 0;
+      z-index: -2;
       overflow: hidden;
     }
 
     .products-hero-image img {
-      position: absolute;
-      inset: 0;
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: right center;
     }
 
-    .products-hero-image::before {
+    /* Преливането е само CSS, а снимката остава светла. */
+
+    .products-hero-inner::before {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: 2;
-      background:
-        linear-gradient(
-          90deg,
-          #000 0%,
-          rgba(0, 0, 0, .95) 4%,
-          rgba(0, 0, 0, .55) 16%,
-          rgba(0, 0, 0, .15) 30%,
-          transparent 40%
-        );
+      z-index: -1;
+      background: linear-gradient(
+        90deg,
+        rgba(6, 16, 31, .98) 0%,
+        rgba(6, 16, 31, .92) 23%,
+        rgba(6, 16, 31, .70) 38%,
+        rgba(6, 16, 31, .25) 55%,
+        rgba(6, 16, 31, .04) 76%,
+        transparent 100%
+      );
       pointer-events: none;
+    }
+
+    .products-hero-content {
+      position: relative;
+      width: 100%;
+      max-width: 710px;
+      padding: 100px 0 100px 7vw;
+      box-sizing: border-box;
+      color: var(--white);
+    }
+
+    .products-hero-content .eyebrow {
+      margin: 0 0 18px;
+      color: #e5c581;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .products-hero-content h1 {
+      margin: 0 0 26px;
+      color: var(--white);
+      font-size: clamp(48px, 5.4vw, 82px);
+      line-height: .98;
+      letter-spacing: -2px;
+    }
+
+    .products-hero-text {
+      max-width: 450px;
+      margin: 0;
+      color: #d7e3f2;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .products-hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
     }
 
     /* =========================
@@ -124,8 +136,10 @@
     ========================= */
 
     .products-catalog {
+      --catalog-gold: #c9a04f;
       padding: 90px 7vw;
       background: var(--bg);
+      scroll-margin-top: 86px;
     }
 
     .catalog-head {
@@ -135,23 +149,27 @@
     }
 
     .catalog-head h2 {
-      margin: 10px 0 12px;
+      margin: 10px 0 16px;
+      color: var(--navy);
       font-size: clamp(32px, 3.4vw, 48px);
       line-height: 1.05;
       letter-spacing: -1px;
     }
 
-    .catalog-head p {
+    .catalog-head > p:last-child {
+      margin: 0;
       color: var(--muted);
       font-size: 18px;
+      line-height: 1.65;
     }
 
     .catalog-toolbar {
       display: flex;
       justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 42px;
+      gap: 14px;
+      max-width: 1320px;
+      margin: 0 auto 22px;
     }
 
     .catalog-filter {
@@ -161,75 +179,119 @@
       border-radius: 14px;
       background: var(--white);
       color: var(--navy);
+      font: inherit;
       font-size: 13px;
       font-weight: 900;
       text-transform: uppercase;
       cursor: pointer;
-      transition: .25s ease;
+      transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
     }
 
     .catalog-filter:hover,
     .catalog-filter.active {
-      background: var(--blue);
       border-color: var(--blue);
+      background: var(--blue);
       color: var(--white);
       transform: translateY(-2px);
     }
 
+    .catalog-filter:focus-visible,
+    .product-notify-btn:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+    }
+
+    .catalog-results {
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
     .catalog-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1320px;
+      margin: 0 auto;
     }
 
     .catalog-card {
       display: flex;
       flex-direction: column;
-      min-height: 100%;
+      min-width: 0;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--white);
       box-shadow: var(--shadow);
-      transition: .3s ease;
+      transition: transform .3s ease;
     }
 
     .catalog-card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
     }
 
-    .catalog-image{
-        height:260px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        overflow:hidden;
-        background:#eef5fc;
+    .catalog-card[hidden] {
+      display: none;
     }
 
-    .catalog-image img{
-        width:auto;
-        height:90%;
-        object-fit:contain;
-        transition:.45s ease;
+    .catalog-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 260px;
+      padding: 22px;
+      box-sizing: border-box;
+      overflow: hidden;
+      background: radial-gradient(
+        ellipse at center,
+        #fffdf8 0%,
+        #f4eadb 100%
+      );
     }
 
-    .catalog-card:hover .catalog-image img{
-        transform:scale(1.08);
+    .catalog-card[data-animal="donkey"] .catalog-image {
+      background: radial-gradient(
+        ellipse at center,
+        #f5f8fc 0%,
+        #dfe8f2 100%
+      );
+    }
+
+    /* И двата размера са ограничени, без изрязване на опаковките. */
+
+    .catalog-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: transform .45s ease;
+    }
+
+    .catalog-card:hover .catalog-image img {
+      transform: scale(1.06);
     }
 
     .catalog-content {
       display: flex;
       flex: 1;
       flex-direction: column;
-      padding: 28px;
+      padding: 24px;
     }
 
     .catalog-meta {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 16px;
     }
 
@@ -237,21 +299,25 @@
     .catalog-status {
       display: inline-flex;
       align-items: center;
+      padding: 7px 10px;
       border-radius: 999px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 900;
-      line-height: 1;
+      line-height: 1.2;
       text-transform: uppercase;
     }
 
     .catalog-source {
-      padding: 7px 12px;
-      background: #eaf5ff;
-      color: var(--blue);
+      background: #f5ecdc;
+      color: #80602d;
+    }
+
+    .catalog-card[data-animal="donkey"] .catalog-source {
+      background: #e6edf6;
+      color: var(--navy);
     }
 
     .catalog-status {
-      padding: 7px 12px;
       background: #edf1f7;
       color: var(--muted);
     }
@@ -266,21 +332,28 @@
       color: var(--blue);
     }
 
+    .catalog-brand {
+      margin: 0 0 8px;
+      color: #927039;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
     .catalog-content h3 {
-      margin-bottom: 12px;
+      margin: 0 0 12px;
       color: var(--navy);
-      font-size: 24px;
+      font-size: 23px;
       line-height: 1.15;
     }
 
-    .catalog-content > p {
-      margin-bottom: 22px;
+    .catalog-content .catalog-description {
+      margin: 0 0 22px;
       color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
     }
-
-    /* =========================
-       NOTIFY ACTION
-    ========================= */
 
     .catalog-foot {
       margin-top: auto;
@@ -315,8 +388,17 @@
       transform: translateY(-1px);
     }
 
+    .catalog-note {
+      max-width: 820px;
+      margin: 32px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
     /* =========================
-       APPROACH
+       APPROACH — EXISTING SECTION
     ========================= */
 
     .products-approach {
@@ -456,72 +538,104 @@
     }
 
     /* =========================
-       RESPONSIVE
+       TABLET — 1100px
     ========================= */
 
     @media (max-width: 1100px) {
-      .products-approach {
-        grid-template-columns: 1fr;
-      }
-
-      .catalog-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 900px) {
-      .products-hero-inner {
-        grid-template-columns: 1fr;
-      }
-
       .products-hero-content {
-        order: 1;
-        padding: 58px 7vw;
+        max-width: 620px;
+        padding-top: 85px;
+        padding-bottom: 85px;
       }
 
       .products-hero-content h1 {
-        font-size: clamp(62px, 10vw, 90px);
-        line-height: .92;
+        font-size: clamp(48px, 6.5vw, 70px);
       }
 
-      .products-hero-image {
-        order: 2;
-        height: 440px;
-        min-height: 440px;
+      .products-hero-text {
+        max-width: 390px;
       }
 
-      .products-hero-image::before {
-        background:
-          linear-gradient(
-            180deg,
-            #000 0%,
-            rgba(0, 0, 0, .84) 7%,
-            rgba(0, 0, 0, .46) 16%,
-            rgba(0, 0, 0, .16) 26%,
-            transparent 38%
-          );
+      .catalog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+      }
+
+      .catalog-image {
+        height: 300px;
+        padding: 28px;
+      }
+
+      .catalog-content {
+        padding: 28px;
+      }
+
+      .products-approach {
+        grid-template-columns: 1fr;
       }
     }
 
+    /* =========================
+       SMALL TABLET — 820px
+    ========================= */
+
+    @media (max-width: 820px) {
+      .products-hero-inner {
+        min-height: 620px;
+        align-items: flex-start;
+      }
+
+      .products-hero-content {
+        max-width: 650px;
+        padding: 70px 7vw;
+      }
+
+      .products-hero-content h1 {
+        font-size: clamp(48px, 8vw, 66px);
+      }
+
+      .products-hero-text {
+        max-width: 450px;
+        font-size: 17px;
+      }
+
+      .products-hero-image img {
+        object-position: 72% center;
+      }
+
+      /* Подобно на Hub: текстът остава върху снимката. */
+
+      .products-hero-inner::before {
+        background: linear-gradient(
+          180deg,
+          rgba(6, 16, 31, .94) 0%,
+          rgba(6, 16, 31, .84) 32%,
+          rgba(6, 16, 31, .58) 65%,
+          rgba(6, 16, 31, .18) 100%
+        );
+      }
+
+      .catalog-image {
+        height: 260px;
+        padding: 22px;
+      }
+
+      .catalog-content {
+        padding: 22px;
+      }
+
+      .catalog-content h3 {
+        font-size: 22px;
+      }
+    }
+
+    /* Съществуващото поведение на долните секции е запазено. */
+
     @media (max-width: 720px) {
-      .products-catalog,
       .products-approach,
       .products-contact {
         padding-left: 22px;
         padding-right: 22px;
-      }
-
-      .catalog-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .catalog-meta {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .products-hero-content {
-        padding: 60px 22px;
       }
 
       .products-contact-inner {
@@ -531,6 +645,835 @@
 
       .products-contact p {
         margin: 0 auto;
+      }
+    }
+
+    /* =========================
+       MOBILE — 620px
+    ========================= */
+
+    @media (max-width: 620px) {
+      .products-hero-inner {
+        min-height: 580px;
+      }
+
+      .products-hero-content {
+        padding: 60px 22px;
+      }
+
+      .products-hero-content h1 {
+        font-size: clamp(40px, 10.5vw, 58px);
+        letter-spacing: -1px;
+      }
+
+      .products-hero-content .eyebrow {
+        font-size: 11px;
+        letter-spacing: 1.2px;
+      }
+
+      .products-hero-text {
+        max-width: 380px;
+        font-size: 16px;
+      }
+
+      .products-hero-image img {
+        object-position: 75% center;
+      }
+
+      .products-catalog {
+        padding: 64px 22px;
+      }
+
+      .catalog-head {
+        margin-bottom: 30px;
+      }
+
+      .catalog-head > p:last-child {
+        font-size: 16px;
+      }
+
+      .catalog-toolbar {
+        gap: 10px;
+      }
+
+      .catalog-filter {
+        padding: 12px 15px;
+        font-size: 11px;
+      }
+
+      .catalog-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+      }
+
+      .catalog-image {
+        height: 290px;
+        padding: 26px;
+      }
+
+      .catalog-content {
+        padding: 24px;
+      }
+
+      .catalog-content h3 {
+        font-size: 24px;
+      }
+
+      .catalog-meta {
+        gap: 8px;
+      }
+
+      .catalog-note {
+        margin-top: 26px;
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .catalog-card,
+      .catalog-image img,
+      .catalog-filter,
+      .product-notify-btn {
+        transition: none;
+      }
+
+      .catalog-card:hover,
+      .catalog-card:hover .catalog-image img,
+      .catalog-filter:hover,
+      .catalog-filter.active,
+      .product-notify-btn:hover {
+        transform: none;
+      }
+    }
+    /* ==========================================================
+      PRODUCT PHOTOS — ANIMAL BACKGROUNDS
+    ========================================================== */
+
+    .catalog-card .catalog-image {
+      position: relative;
+      isolation: isolate;
+      display: block;
+      height: auto;
+      aspect-ratio: 1.2 / 1;
+      padding: 0;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(7, 21, 40, .06);
+
+      /*
+      * Леко увеличаваме фона и го закрепваме отгоре.
+      * Така долният челен ръб на камъка остава почти извън кадъра.
+      */
+      background:
+        #eee9e1
+        url("assets/images/product-stone.png")
+        center top / 104% auto
+        no-repeat;
+    }
+
+    /*
+    * Използваме целия background shorthand.
+    * Така старите правила по-горе не могат да оставят
+    * background-size: auto при магарешките карти.
+    */
+
+    .catalog-card[data-animal="camel"] .catalog-image {
+      background:
+        #eee9e1
+        url("assets/images/showroom-bg.png")
+        center top / 110% auto
+        no-repeat;
+    }
+
+    .catalog-card[data-animal="donkey"] .catalog-image {
+      background:
+        #eee9e1
+        url("assets/images/showroom-bg.png")
+        center top / 110% auto
+        no-repeat;
+    }
+
+    /* Не добавяме допълнителни слоеве върху снимките. */
+
+    .catalog-card .catalog-image::before,
+    .catalog-card .catalog-image::after {
+      content: none;
+    }
+
+    /*
+    * Продуктите остават максимално големи.
+    * Долната им част стъпва върху горната повърхност на камъка.
+    */
+
+    .catalog-card .catalog-image img {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      bottom: 4%;
+
+      display: block;
+      width: 64%;
+      height: 86%;
+
+      max-width: none;
+      max-height: none;
+      min-width: 0;
+      min-height: 0;
+      margin: 0;
+
+      object-fit: contain;
+      object-position: center bottom;
+
+      filter: drop-shadow(
+        2px 6px 4px rgba(35, 30, 24, .25)
+      );
+
+      transform: none;
+      transform-origin: center bottom;
+
+      transition: transform .35s ease;
+    }
+
+    .catalog-card:hover .catalog-image img {
+      transform: scale(1.035);
+    }
+
+    /* ==========================================================
+      TABLET — 1100px
+    ========================================================== */
+
+    @media (max-width: 1100px) {
+      .catalog-card .catalog-image {
+        aspect-ratio: 1.4 / 1;
+      }
+
+      /*
+      * При по-широката рамка cover автоматично изрязва
+      * част от долния ръб на камъка.
+      */
+
+      .catalog-card .catalog-image,
+      .catalog-card[data-animal="camel"] .catalog-image,
+      .catalog-card[data-animal="donkey"] .catalog-image {
+        background-position: center top;
+        background-size: cover;
+      }
+
+      .catalog-card .catalog-image img {
+        left: 35%;
+        bottom: 3%;
+        width: 63%;
+        height: 88%;
+      }
+    }
+
+    /* ==========================================================
+      SMALL TABLET — 820px
+    ========================================================== */
+
+    @media (max-width: 820px) {
+      .catalog-card .catalog-image {
+        aspect-ratio: 1.2 / 1;
+      }
+
+      .catalog-card .catalog-image,
+      .catalog-card[data-animal="camel"] .catalog-image,
+      .catalog-card[data-animal="donkey"] .catalog-image {
+        background-position: center top;
+        background-size: 104% auto;
+      }
+
+      .catalog-card .catalog-image img {
+        left: 34%;
+        bottom: 4%;
+        width: 64%;
+        height: 86%;
+      }
+    }
+
+    /* ==========================================================
+      MOBILE — 620px
+    ========================================================== */
+
+    @media (max-width: 620px) {
+      .catalog-card .catalog-image {
+        aspect-ratio: 1.45 / 1;
+      }
+
+      .catalog-card .catalog-image,
+      .catalog-card[data-animal="camel"] .catalog-image,
+      .catalog-card[data-animal="donkey"] .catalog-image {
+        background-position: center top;
+        background-size: cover;
+      }
+
+      .catalog-card .catalog-image img {
+        left: 35%;
+        bottom: 2%;
+        width: 63%;
+        height: 90%;
+      }
+    }
+
+    /* ==========================================================
+      REDUCED MOTION
+    ========================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+      .catalog-card .catalog-image img {
+        transition: none;
+      }
+
+      .catalog-card:hover .catalog-image img {
+        transform: none;
+      }
+    }
+    /* ==========================================================
+      GALUMEYA — BRAND & DIGITAL BOOK
+    ========================================================== */
+
+    .galumeya-discover {
+      --gd-navy: #0b2239;
+      --gd-gold: #9a702c;
+
+      padding: 80px 7vw 90px;
+      color: var(--gd-navy);
+
+      background:
+        #f8f1e5
+        url("assets/images/galumeya-section-bg.png")
+        center bottom / cover
+        no-repeat;
+    }
+
+    .galumeya-discover,
+    .galumeya-discover * {
+      box-sizing: border-box;
+    }
+
+    .galumeya-discover__inner {
+      display: grid;
+      grid-template-columns:
+        minmax(0, .75fr)
+        minmax(0, 1.2fr)
+        minmax(0, 1.05fr);
+      align-items: center;
+      gap: clamp(26px, 3vw, 46px);
+
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .galumeya-discover__identity,
+    .galumeya-discover__copy,
+    .galumeya-discover__book {
+      min-width: 0;
+    }
+
+    /* BRAND IDENTITY */
+
+    .galumeya-discover__identity {
+      text-align: center;
+    }
+
+    .galumeya-discover__logo {
+      display: block;
+      width: min(200px, 80%);
+      height: auto;
+      margin: 0 auto 20px;
+    }
+
+    .galumeya-discover__name {
+      margin: 0;
+      color: var(--gd-navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(26px, 2.5vw, 38px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: .04em;
+    }
+
+    .galumeya-discover__byline {
+      margin: 12px 0 0;
+      color: var(--gd-navy);
+
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.5;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    /* MAIN COPY */
+
+    .galumeya-discover__eyebrow {
+      margin: 0 0 18px;
+      color: var(--gd-gold);
+
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1.5;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .galumeya-discover__copy h2 {
+      margin: 0 0 22px;
+      color: var(--gd-navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 3.3vw, 50px);
+      font-weight: 400;
+      line-height: 1.06;
+      letter-spacing: -1.2px;
+    }
+
+    .galumeya-discover__intro {
+      max-width: 390px;
+      margin: 0;
+      color: #405061;
+
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    /* TWO ACTIONS */
+
+    .galumeya-discover__actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      margin-top: 28px;
+    }
+
+    .galumeya-discover__brand-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+      padding: 13px 21px;
+
+      border: 1px solid var(--gd-navy);
+      border-radius: 6px;
+      background: var(--gd-navy);
+      color: #fff;
+
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-align: center;
+      text-decoration: none;
+
+      transition: background .2s ease;
+    }
+
+    .galumeya-discover__brand-btn:hover {
+      background: #173e60;
+      color: #fff;
+    }
+
+    .galumeya-discover__story-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      min-height: 48px;
+      padding: 8px 0;
+      color: var(--gd-gold);
+
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.4;
+      text-decoration: none;
+
+      transition: color .2s ease;
+    }
+
+    .galumeya-discover__story-link span {
+      flex-shrink: 0;
+      font-size: 21px;
+      line-height: 1;
+      transition: transform .2s ease;
+    }
+
+    .galumeya-discover__story-link:hover {
+      color: #704d16;
+    }
+
+    .galumeya-discover__story-link:hover span {
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================
+      MATCHED BRAND AND BOOK VISUALS
+    ========================================================== */
+
+    .galumeya-discover {
+      --gd-navy: #102a43;
+      --gd-navy-hover: #173e60;
+      --gd-gold: #a57b34;
+    }
+
+    /*
+    * Логото вляво и картичката вдясно получават
+    * еднаква визуална височина.
+    */
+
+    .galumeya-discover__identity {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 360px;
+      color: var(--gd-navy);
+      text-align: center;
+    }
+
+    .galumeya-discover__logo {
+      display: block;
+      width: min(200px, 80%);
+      height: auto;
+      margin: 0 auto 20px;
+    }
+
+    .galumeya-discover__name {
+      margin: 0;
+      color: var(--gd-navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(26px, 2.5vw, 38px);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: .04em;
+    }
+
+    .galumeya-discover__byline {
+      margin: 12px 0 0;
+      color: var(--gd-navy);
+
+      font-size: 10px;
+      font-weight: 800;
+      line-height: 1.5;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    /* Всички основни надписи използват тъмносиньото на Галумея. */
+
+    .galumeya-discover__copy h2,
+    .galumeya-discover__intro,
+    .galumeya-discover__book-title,
+    .galumeya-discover__book-meta,
+    .galumeya-discover__book-note {
+      color: var(--gd-navy);
+    }
+
+    /* ==========================================================
+      DIGITAL BOOK CARD
+    ========================================================== */
+
+    .galumeya-discover__book {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    .galumeya-discover__book-card {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      max-width: 365px;
+      min-height: 360px;
+      overflow: hidden;
+
+      border: 1px solid rgba(165, 123, 52, .28);
+      border-radius: 18px;
+
+      background: rgba(255, 253, 248, .94);
+
+      box-shadow:
+        0 18px 45px rgba(16, 42, 67, .10),
+        inset 0 1px 0 rgba(255, 255, 255, .85);
+
+      color: var(--gd-navy);
+      text-decoration: none;
+
+      transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .galumeya-discover__book-card:hover {
+      border-color: rgba(165, 123, 52, .48);
+
+      box-shadow:
+        0 24px 52px rgba(16, 42, 67, .15),
+        inset 0 1px 0 rgba(255, 255, 255, .9);
+
+      transform: translateY(-4px);
+    }
+
+    /* Снимката се показва цялата. */
+
+    .galumeya-discover__book-image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+
+      width: 100%;
+      overflow: hidden;
+
+      background: #eadfcf;
+    }
+
+    .galumeya-discover__book-image img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      object-fit: contain;
+      object-position: center;
+
+      transform: scale(1);
+      transform-origin: center;
+      transition: transform .45s ease;
+    }
+
+    /* Леко приближаване само при hover. */
+
+    .galumeya-discover__book-card:hover
+    .galumeya-discover__book-image img {
+      transform: scale(1.025);
+    }
+
+    /*
+    * Текстовата част е по-компактна и започва
+    * непосредствено под изображението.
+    */
+
+    .galumeya-discover__book-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      padding: 14px 20px 16px;
+    }
+
+    .galumeya-discover__book-title {
+      margin: 0 0 6px;
+      color: var(--gd-navy);
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(22px, 1.8vw, 27px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -.35px;
+    }
+
+    .galumeya-discover__book-title span {
+      display: block;
+    }
+
+    .galumeya-discover__book-meta {
+      margin: 0;
+      color: #42586c;
+
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .galumeya-discover__book-note {
+      margin: 7px 0 0;
+      color: #526477;
+
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .galumeya-discover__book-note strong {
+      color: var(--gd-navy);
+      font-weight: 900;
+    }
+     
+    /* TABLET — 1100px */
+
+    @media (max-width: 1100px) {
+      .galumeya-discover {
+        padding: 64px 7vw 76px;
+      }
+
+      .galumeya-discover__inner {
+        grid-template-columns:
+          minmax(0, 1.1fr)
+          minmax(0, 1fr);
+        gap: 28px 36px;
+      }
+
+      .galumeya-discover__identity {
+        grid-column: 1;
+        grid-row: 1;
+
+        align-items: flex-start;
+        min-height: 0;
+        text-align: left;
+      }
+
+      .galumeya-discover__logo {
+        width: 100px;
+        margin: 0 0 12px;
+      }
+
+      .galumeya-discover__name {
+        font-size: 30px;
+      }
+
+      .galumeya-discover__copy {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .galumeya-discover__book {
+        grid-column: 2;
+        grid-row: 1 / 3;
+      }
+
+      .galumeya-discover__book-card {
+        max-width: 390px;
+        min-height: 0;
+      }
+    }
+
+    /* SMALL TABLET — 820px */
+
+    @media (max-width: 820px) {
+      .galumeya-discover__inner {
+        gap: 26px;
+      }
+
+      .galumeya-discover__copy h2 {
+        font-size: 36px;
+      }
+
+      .galumeya-discover__intro {
+        font-size: 16px;
+      }
+
+      .galumeya-discover__actions {
+        gap: 10px 16px;
+      }
+    }
+
+    /* MOBILE — 620px */
+
+    @media (max-width: 620px) {
+      .galumeya-discover {
+        padding: 48px 22px 64px;
+      }
+
+      .galumeya-discover__inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+      }
+
+      .galumeya-discover__identity,
+      .galumeya-discover__copy,
+      .galumeya-discover__book {
+        grid-column: auto;
+        grid-row: auto;
+        text-align: center;
+      }
+
+      .galumeya-discover__logo {
+        width: 100px;
+        margin: 0 auto 14px;
+      }
+
+      .galumeya-discover__copy h2 {
+        font-size: clamp(32px, 8.5vw, 40px);
+        letter-spacing: -.8px;
+      }
+
+      .galumeya-discover__intro {
+        margin: 0 auto;
+      }
+
+      .galumeya-discover__actions {
+        justify-content: center;
+        gap: 10px 16px;
+        margin-top: 24px;
+      }
+
+      .galumeya-discover__brand-btn {
+        padding: 12px 17px;
+        font-size: 12px;
+      }
+
+      .galumeya-discover__story-link {
+        font-size: 12px;
+      }
+
+      .galumeya-discover__book {
+        width: 100%;
+        max-width: 440px;
+        margin: 4px auto 0;
+      }
+
+      .galumeya-discover__book-title {
+        font-size: 27px;
+      }
+
+      .galumeya-discover__identity {
+        align-items: center;
+        min-height: 0;
+        text-align: center;
+      }
+
+      .galumeya-discover__book {
+        width: 100%;
+        max-width: 440px;
+        margin: 4px auto 0;
+      }
+
+      .galumeya-discover__book-card {
+        max-width: 100%;
+        min-height: 0;
+      }
+
+      .galumeya-discover__book-content {
+        padding: 14px 17px 16px;
+      }
+
+      .galumeya-discover__book-title {
+        font-size: 25px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .galumeya-discover__book-card,
+      .galumeya-discover__book-image img {
+        transition: none;
+      }
+
+      .galumeya-discover__book-card:hover,
+      .galumeya-discover__book-card:hover
+      .galumeya-discover__book-image img {
+        transform: none;
       }
     }
   </style>
@@ -543,25 +1486,33 @@
       <span>EXOTIC<br>DAIRY</span>
     </a>
 
-    <nav class="nav" id="nav">
-      
-        <a class="active" href="products.html">Products</a>
-        <a href="our-solution.html">Our Solution</a>
-        <a href="experience-hub.html">Experience Hub</a>
-        <a href="partnerships.html">Partnerships</a>
-        <a href="about.html">About Us</a>
-        <a href="faq.html">FAQ</a>
-  
-        <a
-          class="mobile-contact-btn modal-trigger"
-          href="#"
-          data-modal="contactModal"
-        >
-          Get in Touch
-        </a>
-      </nav>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="products.html">Products</a>
+      <a href="galumeya.html">Galumeya</a>
+      <a href="experience-hub.html">Experience Hub</a>
+      <a href="participate.html">Participate</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="about.html">About Us</a>
+      <a href="faq.html">FAQ</a>
+    
+      <a
+        class="mobile-contact-btn modal-trigger"
+        href="#contactModal"
+        data-modal="contactModal"
+      >
+        Get in Touch
+      </a>
+    </nav>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
+    <button
+      class="menu-btn"
+      id="menuBtn"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-controls="nav"
+    >
+      ☰
+    </button>
 
     <a
       class="header-btn modal-trigger"
@@ -573,49 +1524,56 @@
   </header>
 
   <main id="top">
-    <section class="products-page-hero">
+    <section class="products-page-hero" aria-labelledby="productsTitle">
       <div class="products-hero-inner">
-        <div class="products-hero-content">
-          <p class="eyebrow">
-            Our Products
-          </p>
-
-          <h1>
-            Rare Milk.<br>
-            Exceptional Products.
-          </h1>
-        </div>
-
         <div class="products-hero-image">
           <img
-            src="assets/images/hero-products.png"
-            alt="Exotic Dairy products"
-          >
+            src="assets/images/galumeya-products-hero.png"
+            alt="Galumeya camel and donkey milk products in ivory, gold and navy packaging"
+            fetchpriority="high"
+          />
+        </div>
+
+        <div class="products-hero-content">
+          <p class="eyebrow">Galumeya by Exotic Dairy</p>
+
+          <h1 id="productsTitle">
+            Exceptional Milk.<br>
+            Distinctive Products.
+          </h1>
+
+          <p class="products-hero-text">
+            Discover the Galumeya collection — camel and donkey milk
+            transformed into yogurts, cheeses, labneh and milk candies.
+          </p>
+
+          <div class="products-hero-actions">
+            <a class="btn" href="#products">Explore the Collection</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="products-catalog" id="products">
       <div class="catalog-head">
-        <p class="eyebrow">
-          Explore Products
-        </p>
+        <p class="eyebrow">The Galumeya Collection</p>
 
-        <h2>
-          From rare milk to high-value products.
-        </h2>
+        <h2>Two milk sources. A world of discovery.</h2>
 
         <p>
-          Filter the portfolio by source and explore products approaching launch,
-          development-stage innovations and future functional applications.
+          Explore our camel and donkey milk collection.
+          Discover each product and register your interest
+          for availability updates.
         </p>
       </div>
 
-      <div class="catalog-toolbar">
+      <div class="catalog-toolbar" role="group" aria-label="Filter products">
         <button
           class="catalog-filter active"
           type="button"
           data-filter="all"
+          aria-pressed="true"
+          aria-controls="productsGrid"
         >
           All Products
         </button>
@@ -624,6 +1582,8 @@
           class="catalog-filter"
           type="button"
           data-filter="camel"
+          aria-pressed="false"
+          aria-controls="productsGrid"
         >
           Camel Milk Products
         </button>
@@ -632,73 +1592,138 @@
           class="catalog-filter"
           type="button"
           data-filter="donkey"
+          aria-pressed="false"
+          aria-controls="productsGrid"
         >
           Donkey Milk Products
         </button>
       </div>
 
-      <div
-        class="catalog-grid"
-        id="productsGrid"
-      ></div>
+      <p
+        class="catalog-results"
+        id="catalogResults"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      ></p>
+
+      <div class="catalog-grid" id="productsGrid"></div>
+
+      <noscript>
+        <p class="catalog-note">
+          Please enable JavaScript to explore and filter the collection.
+          For product information, contact office@exoticdairy.com.
+        </p>
+      </noscript>
+
+      <p class="catalog-note">
+        Products are not currently available for online purchase.
+        Register your interest to receive updates about availability
+        in your market.
+      </p>
     </section>
 
-    <section class="products-approach">
-      <div>
-        <p class="eyebrow">
-          Our Approach
-        </p>
+    <section
+      class="galumeya-discover"
+      aria-labelledby="galumeyaDiscoverTitle"
+    >
+      <div class="galumeya-discover__inner">
 
-        <h2>
-          Science.<br>
-          Technology.<br>
-          Health.
-        </h2>
+        <!-- GALUMEYA BRAND -->
 
-        <p>
-          Exotic Dairy transforms rare milk sources into functional bio-products
-          through research, product development, technology and long-term
-          ecosystem thinking.
-        </p>
+        <div class="galumeya-discover__identity">
+          <img
+            class="galumeya-discover__logo"
+            src="assets/images/galumeya-logo-gold.png"
+            alt=""
+            width="1237"
+            height="1272"
+            loading="lazy"
+            decoding="async"
+          >
 
-        <a
-          class="btn"
-          href="our-solution.html"
-        >
-          Explore Our Solution
-        </a>
-      </div>
+          <p class="galumeya-discover__name">
+            GALUMEYA
+          </p>
 
-      <div class="products-approach-card">
-        <img
-          src="assets/images/solution-lab.png"
-          alt="Functional dairy laboratory products"
-        >
-      </div>
-    </section>
-
-    <section class="products-contact">
-      <div class="products-contact-inner">
-        <div>
-          <h2>
-            Interested in our products?
-          </h2>
-
-          <p>
-            Whether you are interested in availability, distribution,
-            partnerships or future opportunities, our team would be happy
-            to connect.
+          <p class="galumeya-discover__byline">
+            By Exotic Dairy
           </p>
         </div>
 
-        <a
-          class="btn modal-trigger"
-          href="#"
-          data-modal="contactModal"
-          data-interest="Products"
-        >
-          Get in Touch
-        </a>
+        <!-- BRAND INTRODUCTION & ACTIONS -->
+
+        <div class="galumeya-discover__copy">
+          <p class="galumeya-discover__eyebrow">
+            Behind the Collection
+          </p>
+
+          <h2 id="galumeyaDiscoverTitle">
+            Discover the<br>
+            World of Galumeya.
+          </h2>
+
+          <p class="galumeya-discover__intro">
+            The story and inspiration behind every product.
+          </p>
+
+          <div class="galumeya-discover__actions">
+            <a
+              class="galumeya-discover__brand-btn"
+              href="galumeya.html"
+            >
+              Explore the Brand
+            </a>
+
+            <a
+              class="galumeya-discover__story-link"
+              href="book-read.html?story=1"
+            >
+              Read the First Story Free
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- DIGITAL BOOK -->
+
+        <div class="galumeya-discover__book">
+          <a
+            class="galumeya-discover__book-card"
+            href="galumeya-book.html"
+            aria-labelledby="galumeyaDigitalBookTitle"
+          >
+            <span class="galumeya-discover__book-image">
+              <img
+                src="assets/images/galumeya-book-support.png"
+                alt="Galumeya with a camel and donkey beside an illuminated storybook"
+                loading="lazy"
+                decoding="async"
+              >
+            </span>
+        
+            <span class="galumeya-discover__book-content">
+              <h3
+                class="galumeya-discover__book-title"
+                id="galumeyaDigitalBookTitle"
+              >
+                <span>1001 Discoveries</span>
+                of Galumeya
+              </h3>
+        
+              <span class="galumeya-discover__book-meta">
+                Volume I · 8 illustrated stories · Digital edition
+              </span>
+        
+              <span class="galumeya-discover__book-note">
+                <strong>Own Volume I from €10.</strong>
+                Support the future Experience Hub.
+              </span>
+                      
+            </span>
+          </a>
+        </div>
+
       </div>
     </section>
   </main>
@@ -711,106 +1736,52 @@
           <img
             src="assets/images/logo.png"
             alt="Exotic Dairy logo"
+            loading="lazy"
           >
-  
-          <span>
-            EXOTIC<br>
-            DAIRY
-          </span>
+          <span>EXOTIC<br>DAIRY</span>
         </div>
   
         <p>
-          Building the future of functional bio-dairy through rare milk,
-          research, premium products and ecosystem innovation.
+          Connecting nature, knowledge and discovery through
+          Galumeya products and the future Experience &amp; R&amp;D Hub.
         </p>
       </div>
   
       <div class="footer-col">
         <h3>Explore</h3>
   
-        <a href="products.html">
-          Products
-        </a>
-  
-        <a href="our-solution.html">
-          Our Solution
-        </a>
-  
-        <a href="experience-hub.html">
-          Experience Hub
-        </a>
-  
-        <a href="partnerships.html">
-          Partnerships
-        </a>
-  
-        <a href="about.html">
-          About Us
-        </a>
+        <a href="products.html">Products</a>
+        <a href="experience-hub.html">Experience Hub</a>
+        <a href="about.html">About Us</a>
       </div>
   
       <div class="footer-col">
-        <h3>Products</h3>
+        <h3>Galumeya</h3>
   
-        <a href="products.html">
-          All Products
-        </a>
-  
-        <a href="products.html?category=camel">
-          Camel Milk Products
-        </a>
-  
-        <a href="products.html?category=donkey">
-          Donkey Milk Products
-        </a>
+        <a href="galumeya.html">Our Brand</a>
+        <a href="galumeya-book.html">1001 Discoveries</a>
       </div>
   
       <div class="footer-col">
-        <h3>Participate</h3>
+        <h3>Get Involved</h3>
   
-        <a href="experience-hub.html#crowd-participation">
-          Crowd Participation
-        </a>
-  
-        <a href="partnerships.html">
-          Founder Partnership
-        </a>
-  
-        <a
-          href="#"
-          class="modal-trigger"
-          data-modal="contactModal"
-        >
-          Get in Touch
-        </a>
+        <a href="participate.html">Participate</a>
+        <a href="partnerships.html">Partnerships</a>
       </div>
   
       <div class="footer-col">
         <h3>Resources</h3>
   
-        <a href="faq.html">
-          FAQ
-        </a>
-  
-        <a href="privacy.html">
-          Privacy Policy
-        </a>
-  
-        <a href="terms.html">
-          Terms of Use
-        </a>
-  
-        <a href="disclaimer.html">
-          Disclaimer
-        </a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
       </div>
   
       <div class="footer-col">
         <h3>Contact</h3>
   
-        <p>
-          Plovdiv, Bulgaria
-        </p>
+        <p>Plovdiv, Bulgaria</p>
   
         <a href="mailto:office@exoticdairy.com">
           office@exoticdairy.com
@@ -823,14 +1794,20 @@
         <a href="tel:+359896733048">
           +359 896 733 048
         </a>
+  
+        <a
+          class="modal-trigger"
+          href="#contactModal"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
       </div>
   
     </div>
   
     <div class="footer-bottom">
-      <p>
-        © 2026 Exotic Dairy. All Rights Reserved.
-      </p>
+      <p>© 2026 Exotic Dairy. All Rights Reserved.</p>
   
       <p>
         Website designed and developed by
@@ -853,17 +1830,17 @@
     <div class="modal-backdrop modal-close"></div>
 
     <div class="modal-panel contact-panel">
-      <button class="modal-x modal-close">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close contact form"
+      >
         ×
       </button>
 
-      <p class="eyebrow">
-        Contact
-      </p>
+      <p class="eyebrow">Contact</p>
 
-      <h2>
-        Let's Build the Future Together
-      </h2>
+      <h2>Let's Build the Future Together</h2>
 
       <p class="modal-intro">
         Connect with the Exotic Dairy team to discuss products, research,
@@ -879,61 +1856,54 @@
           type="hidden"
           name="_subject"
           value="New Exotic Dairy Inquiry"
-        >
+        />
 
         <div class="form-row">
-          <label>
-            Name *
-          </label>
-
+          <label for="contactName">Name *</label>
           <input
+            id="contactName"
             type="text"
             name="name"
             minlength="2"
+            autocomplete="name"
             required
-          >
+          />
         </div>
 
         <div class="form-row">
-          <label>
-            Email *
-          </label>
-
+          <label for="contactEmail">Email *</label>
           <input
+            id="contactEmail"
             type="email"
             name="email"
+            autocomplete="email"
             required
-          >
+          />
         </div>
 
         <div class="form-row">
-          <label>
-            Company
-          </label>
-
+          <label for="contactCompany">Company</label>
           <input
+            id="contactCompany"
             type="text"
             name="company"
-          >
+            autocomplete="organization"
+          />
         </div>
 
         <div class="form-row">
-          <label>
-            Country
-          </label>
-
+          <label for="contactCountry">Country</label>
           <input
+            id="contactCountry"
             type="text"
             name="country"
-          >
+            autocomplete="country-name"
+          />
         </div>
 
         <div class="form-row">
-          <label>
-            Interest
-          </label>
-
-          <select name="interest">
+          <label for="contactInterest">Interest</label>
+          <select id="contactInterest" name="interest">
             <option>Research</option>
             <option>Products</option>
             <option>Distribution</option>
@@ -944,11 +1914,9 @@
         </div>
 
         <div class="form-row full">
-          <label>
-            Message *
-          </label>
-
+          <label for="contactMessage">Message *</label>
           <textarea
+            id="contactMessage"
             name="message"
             rows="5"
             minlength="10"
@@ -958,28 +1926,14 @@
 
         <div class="form-row full">
           <label class="checkbox-label">
-            <input
-              type="checkbox"
-              name="consent"
-              value="yes"
-              required
-            >
-
+            <input type="checkbox" name="consent" value="yes" required />
             I agree to the Privacy Policy and consent to being contacted.
           </label>
         </div>
 
-        <button
-          class="btn"
-          type="submit"
-        >
-          Send inquiry
-        </button>
+        <button class="btn" type="submit">Send inquiry</button>
 
-        <div
-          id="form-success"
-          style="display:none;"
-        >
+        <div id="form-success" style="display:none;">
           Thank you for contacting Exotic Dairy.
           We will get back to you shortly.
         </div>
@@ -995,26 +1949,21 @@
     <div class="modal-backdrop modal-close"></div>
 
     <div class="modal-panel contact-panel product-notify-panel">
-      <button class="modal-x modal-close">
+      <button
+        class="modal-x modal-close"
+        type="button"
+        aria-label="Close product notification form"
+      >
         ×
       </button>
 
-      <p class="eyebrow">
-        Product Availability
-      </p>
+      <p class="eyebrow">Product Availability</p>
 
-      <h2>
-        Get Notified When Available
-      </h2>
+      <h2>Get Notified When Available</h2>
 
       <div class="product-notify-product">
-        <span>
-          Product
-        </span>
-
-        <strong id="notifyProductName">
-          Selected Product
-        </strong>
+        <span>Galumeya Product</span>
+        <strong id="notifyProductName">Selected Product</strong>
       </div>
 
       <p
@@ -1036,90 +1985,73 @@
           name="_subject"
           id="notifySubject"
           value="Product Availability Interest"
-        >
+        />
 
         <input
           type="hidden"
           name="product"
           id="notifyProductField"
           value=""
-        >
+        />
 
         <input
           type="hidden"
           name="product_status"
           id="notifyStatusField"
           value=""
-        >
+        />
 
         <input
           type="hidden"
           name="interest"
           value="Product Availability"
-        >
+        />
 
         <div class="form-row">
-          <label>
-            Name *
-          </label>
-
+          <label for="notifyName">Name *</label>
           <input
+            id="notifyName"
             type="text"
             name="name"
             minlength="2"
+            autocomplete="name"
             required
-          >
+          />
         </div>
 
         <div class="form-row">
-          <label>
-            Email *
-          </label>
-
+          <label for="notifyEmail">Email *</label>
           <input
+            id="notifyEmail"
             type="email"
             name="email"
+            autocomplete="email"
             required
-          >
+          />
         </div>
 
         <div class="form-row full">
-          <label>
-            Country *
-          </label>
-
+          <label for="notifyCountry">Country *</label>
           <input
+            id="notifyCountry"
             type="text"
             name="country"
+            autocomplete="country-name"
             required
-          >
+          />
         </div>
 
         <div class="form-row full">
           <label class="checkbox-label">
-            <input
-              type="checkbox"
-              name="consent"
-              value="yes"
-              required
-            >
-
+            <input type="checkbox" name="consent" value="yes" required />
             I agree to the Privacy Policy and consent to receiving
             availability updates about this product.
           </label>
         </div>
 
-        <button
-          class="btn"
-          type="submit"
-        >
-          Notify Me
-        </button>
+        <button class="btn" type="submit">Notify Me</button>
 
-        <div
-          id="product-notify-success"
-          style="display:none;"
-        >
+        <div id="product-notify-success" style="display:none;">
           Thank you. We'll notify you when this product becomes
           available in your market.
         </div>
@@ -1128,133 +2060,132 @@
   </div>
 
   <script>
-    const products = [
-      {
-        name: "Donkey Milk Parmesan",
-        animal: "donkey",
-        source: "Donkey Milk",
-        status: "Launch Soon",
-        statusClass: "ready",
-        image: "assets/images/donkey-parmegano.png",
-        description: "Premium aged cheese created from rare donkey milk."
-      },
-      {
-        name: "Donkey Milk Wine",
-        animal: "donkey",
-        source: "Donkey Milk",
-        status: "Launch Soon",
-        statusClass: "ready",
-        image: "assets/images/donkey-wine.png",
-        description: "A unique premium product combining innovation and tradition."
-      },
-      {
-        name: "Donkey Milk Candy",
-        animal: "donkey",
-        source: "Donkey Milk",
-        status: "Launch Soon",
-        statusClass: "ready",
-        image: "assets/images/donkey-candy.png",
-        description: "Functional sweet innovation from rare milk."
-      },
-      {
-        name: "Camel Yogurt",
-        animal: "camel",
-        source: "Camel Milk",
-        status: "In Development",
-        statusClass: "development",
-        image: "assets/images/camel-yogurt.png",
-        description: "Functional fermented camel milk product."
-      },
-      {
-        name: "Camel Labneh",
-        animal: "camel",
-        source: "Camel Milk",
-        status: "In Development",
-        statusClass: "development",
-        image: "assets/images/camel-labneh.png",
-        description: "Premium soft dairy innovation."
-      },
-      {
-        name: "Camel Brined Cheese",
-        animal: "camel",
-        source: "Camel Milk",
-        status: "In Development",
-        statusClass: "development",
-        image: "assets/images/camel-brinedcheese.png",
-        description: "Traditional dairy format with a new source."
-      },
-      {
-        name: "Camel Soft Cheese",
-        animal: "camel",
-        source: "Camel Milk",
-        status: "In Development",
-        statusClass: "development",
-        image: "assets/images/camel-softcheese.png",
-        description: "Clean label camel milk innovation."
-      },
-      {
-        name: "Camel Functional Supplements",
-        animal: "camel",
-        source: "Camel Milk",
-        status: "In Development",
-        statusClass: "development",
-        image: "assets/images/camel-functional.png",
-        description: "Bioactive dairy-based nutrition solutions."
-      }
-    ];
+    (() => {
+      const products = [
+        {
+          name: "Camel Yogurt",
+          animal: "camel",
+          source: "Camel Milk",
+          status: "In Development",
+          statusClass: "development",
+          image: "assets/images/galumeya-camel-yogurt.png",
+          description:
+            "Camel milk yogurt, part of the Galumeya dairy collection."
+        },
+        {
+          name: "Camel Labneh",
+          animal: "camel",
+          source: "Camel Milk",
+          status: "In Development",
+          statusClass: "development",
+          image: "assets/images/galumeya-camel-labneh.png",
+          description:
+            "A camel milk interpretation of traditional strained labneh."
+        },
+        {
+          name: "Camel Brined Cheese",
+          animal: "camel",
+          source: "Camel Milk",
+          status: "In Development",
+          statusClass: "development",
+          image: "assets/images/galumeya-camel-brinedcheese.png",
+          description:
+            "White brined cheese exploring a familiar dairy tradition through camel milk."
+        },
+        {
+          name: "Camel Soft Cheese",
+          animal: "camel",
+          source: "Camel Milk",
+          status: "In Development",
+          statusClass: "development",
+          image: "assets/images/galumeya-camel-softcheese.png",
+          description:
+            "Soft cheese developed with camel milk for the Galumeya collection."
+        },
+        {
+          name: "Donkey Milk Yogurt",
+          animal: "donkey",
+          source: "Donkey Milk",
+          status: "Launch Soon",
+          statusClass: "ready",
+          image: "assets/images/galumeya-donkey-yogurt.png",
+          description:
+            "Donkey milk yogurt, part of the expanding Galumeya collection."
+        },
+        {
+          name: "Donkey Milk White Cheese",
+          animal: "donkey",
+          source: "Donkey Milk",
+          status: "Launch Soon",
+          statusClass: "ready",
+          image: "assets/images/galumeya-donkey-whitecheese.png",
+          description:
+            "A white cheese concept bringing donkey milk into a traditional dairy format."
+        },
+        {
+          name: "Donkey Milk Kashkaval",
+          animal: "donkey",
+          source: "Donkey Milk",
+          status: "Launch Soon",
+          statusClass: "ready",
+          image: "assets/images/galumeya-donkey-kashkaval.png",
+          description:
+            "A kashkaval-style cheese exploring the possibilities of donkey milk."
+        },
+        {
+          name: "Donkey Milk Candy",
+          animal: "donkey",
+          source: "Donkey Milk",
+          status: "Launch Soon",
+          statusClass: "ready",
+          image: "assets/images/galumeya-donkey-candy.png",
+          description:
+            "Milk candies bringing a sweet expression to the Galumeya donkey milk collection."
+        }
+      ];
 
-    const grid = document.getElementById("productsGrid");
-    const filterButtons = document.querySelectorAll(".catalog-filter");
+      const grid = document.getElementById("productsGrid");
+      const resultText = document.getElementById("catalogResults");
+      const filterButtons = document.querySelectorAll(".catalog-filter");
 
-    function renderProducts(filter = "all") {
-      const statusOrder = {
-        "Launch Soon": 1,
-        "In Development": 2
-      };
+      /*
+       * Картите се създават веднъж, преди script.js.
+       * Филтрирането ги скрива, без да заменя бутоните им.
+       * Така се запазват modal обработчиците от общия скрипт.
+       */
 
-      const filteredProducts = products
-        .filter(product => {
-          return filter === "all" || product.animal === filter;
-        })
-        .sort((a, b) => {
-          return statusOrder[a.status] - statusOrder[b.status];
-        });
-
-      grid.innerHTML = filteredProducts.map(product => `
-        <article class="catalog-card">
+      grid.innerHTML = products.map((product, index) => `
+        <article class="catalog-card" data-animal="${product.animal}">
           <div class="catalog-image">
             <img
               src="${product.image}"
-              alt="${product.name}"
-            >
+              alt="Galumeya ${product.name}"
+              width="1254"
+              height="1254"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           <div class="catalog-content">
             <div class="catalog-meta">
-              <span class="catalog-source">
-                ${product.source}
-              </span>
-
+              <span class="catalog-source">${product.source}</span>
               <span class="catalog-status ${product.statusClass}">
                 ${product.status}
               </span>
             </div>
 
-            <h3>
-              ${product.name}
-            </h3>
-
-            <p>
-              ${product.description}
-            </p>
+            <p class="catalog-brand">Galumeya</p>
+            <h3>${product.name}</h3>
+            <p class="catalog-description">${product.description}</p>
 
             <div class="catalog-foot">
               <button
                 class="product-notify-btn modal-trigger"
                 type="button"
                 data-modal="productNotifyModal"
-                data-product="${product.name}"
-                data-status="${product.status}"
+                data-product-index="${index}"
+                aria-label="Get availability updates for ${product.name}"
               >
                 Notify Me
               </button>
@@ -1262,119 +2193,127 @@
           </div>
         </article>
       `).join("");
-    }
 
-    function setActiveFilter(filter) {
-      filterButtons.forEach(button => {
-        button.classList.toggle(
-          "active",
-          button.dataset.filter === filter
-        );
-      });
-    }
+      const cards = grid.querySelectorAll(".catalog-card");
 
-    function updateUrl(filter) {
-      const url = new URL(window.location.href);
-
-      if (filter === "all") {
-        url.searchParams.delete("category");
-      } else {
-        url.searchParams.set("category", filter);
+      function normalizeFilter(value) {
+        return value === "camel" || value === "donkey" ? value : "all";
       }
 
-      window.history.replaceState({}, "", url);
-    }
+      function applyFilter(value, updateUrl = false) {
+        const filter = normalizeFilter(value);
+        let visibleCount = 0;
 
-    function populateProductNotifyModal(productName, productStatus) {
-      const productNameElement =
-        document.getElementById("notifyProductName");
+        cards.forEach(card => {
+          const visible =
+            filter === "all" || card.dataset.animal === filter;
 
-      const messageElement =
-        document.getElementById("notifyProductMessage");
+          card.hidden = !visible;
 
-      const productField =
-        document.getElementById("notifyProductField");
+          if (visible) {
+            visibleCount += 1;
+          }
+        });
 
-      const statusField =
-        document.getElementById("notifyStatusField");
+        filterButtons.forEach(button => {
+          const active = button.dataset.filter === filter;
+          button.classList.toggle("active", active);
+          button.setAttribute("aria-pressed", String(active));
+        });
 
-      const subjectField =
-        document.getElementById("notifySubject");
+        const label =
+          filter === "camel"
+            ? "camel milk products"
+            : filter === "donkey"
+              ? "donkey milk products"
+              : "products";
 
-      if (productNameElement) {
-        productNameElement.textContent = productName;
+        resultText.textContent = `${visibleCount} ${label}`;
+
+        if (updateUrl) {
+          const url = new URL(window.location.href);
+
+          if (filter === "all") {
+            url.searchParams.delete("category");
+          } else {
+            url.searchParams.set("category", filter);
+          }
+
+          window.history.replaceState({}, "", url);
+        }
       }
 
-      if (messageElement) {
-        messageElement.textContent =
-          `${productName} is not currently available for purchase. ` +
+      function populateProductNotifyModal(product) {
+        document.getElementById("notifyProductName").textContent =
+          `Galumeya ${product.name}`;
+
+        document.getElementById("notifyProductMessage").textContent =
+          `${product.name} is not currently available for purchase. ` +
           `Register your interest and we'll notify you when it becomes ` +
           `available in your market.`;
-      }
 
-      if (productField) {
-        productField.value = productName;
-      }
+        document.getElementById("notifyProductField").value =
+          `Galumeya ${product.name}`;
 
-      if (statusField) {
-        statusField.value = productStatus;
-      }
+        document.getElementById("notifyStatusField").value =
+          product.status;
 
-      if (subjectField) {
-        subjectField.value =
-          `Product Availability Interest — ${productName}`;
-      }
-    }
+        document.getElementById("notifySubject").value =
+          `Galumeya Product Availability — ${product.name}`;
 
-    filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
+        const successMessage =
+          document.getElementById("product-notify-success");
 
-        setActiveFilter(filter);
-        renderProducts(filter);
-        updateUrl(filter);
-      });
-    });
-
-    grid.addEventListener("click", event => {
-      const trigger = event.target.closest(".product-notify-btn");
-
-      if (!trigger) return;
-
-      populateProductNotifyModal(
-        trigger.dataset.product,
-        trigger.dataset.status
-      );
-    });
-
-    document.querySelectorAll("[data-interest]").forEach(trigger => {
-      trigger.addEventListener("click", () => {
-        const modal =
-          document.getElementById(trigger.dataset.modal);
-
-        const interestSelect =
-          modal?.querySelector('select[name="interest"]');
-
-        if (interestSelect) {
-          interestSelect.value =
-            trigger.dataset.interest;
+        if (successMessage) {
+          successMessage.style.display = "none";
         }
+      }
+
+      /*
+       * Данните се попълват преди общият modal handler
+       * да отвори прозореца.
+       */
+
+      grid.addEventListener("click", event => {
+        const trigger = event.target.closest(".product-notify-btn");
+
+        if (!trigger) return;
+
+        const product = products[Number(trigger.dataset.productIndex)];
+
+        if (product) {
+          populateProductNotifyModal(product);
+        }
+      }, true);
+
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          applyFilter(button.dataset.filter, true);
+        });
       });
-    });
 
-    const params =
-      new URLSearchParams(window.location.search);
+      document.querySelectorAll("[data-interest]").forEach(trigger => {
+        trigger.addEventListener("click", () => {
+          const modal =
+            document.getElementById(trigger.dataset.modal);
 
-    const category =
-      params.get("category");
+          const interestSelect =
+            modal?.querySelector('select[name="interest"]');
 
-    const initialFilter =
-      category === "camel" || category === "donkey"
-        ? category
-        : "all";
+          if (interestSelect) {
+            interestSelect.value = trigger.dataset.interest;
+          }
+        });
+      });
 
-    setActiveFilter(initialFilter);
-    renderProducts(initialFilter);
+      function applyFilterFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        applyFilter(params.get("category"));
+      }
+
+      window.addEventListener("popstate", applyFilterFromUrl);
+      applyFilterFromUrl();
+    })();
   </script>
 
   <script src="script.js"></script>

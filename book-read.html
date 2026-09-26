@@ -1,0 +1,2234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>The Sultan Who Had Tasted Everything — Galumeya</title>
+
+<meta
+  name="description"
+  content="Read the complete first Galumeya story for free, in English or Bulgarian."
+>
+
+<meta
+  property="og:title"
+  content="1001 Discoveries of Galumeya — Story 01"
+>
+
+<meta
+  property="og:image"
+  content="https://exoticdairy.com/assets/images/galumeya-story-01-sultan.png"
+>
+
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.png">
+
+<style>
+/* COLORS */
+
+:root {
+  color-scheme: light;
+  --paper: #fffdf8;
+  --panel: #f5efe4;
+  --ink: #132d43;
+  --muted: #667483;
+  --line: #e1d8c8;
+  --gold: #a77b32;
+  --blue: #1477d4;
+  --font: 21px;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #101e2d;
+  --panel: #172b3d;
+  --ink: #eee8dd;
+  --muted: #acbbc9;
+  --line: #34465a;
+  --gold: #dfbd77;
+  --blue: #8fc8ff;
+}
+
+/* BASE */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+h1,
+h2,
+p,
+figure {
+  margin: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 4px;
+}
+
+.skip {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 300;
+  padding: 12px;
+  background: var(--paper);
+  transform: translateY(-150%);
+}
+
+.skip:focus {
+  transform: none;
+}
+
+/* HEADER */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+  padding: 14px 4vw;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--blue);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  line-height: 1.1;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.site-nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.site-nav a {
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav .active {
+  color: var(--blue);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* TOP BAR */
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 4vw;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.bar a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.bar span {
+  text-align: right;
+}
+
+/* CONTENTS */
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  max-width: 1600px;
+  margin: auto;
+  align-items: start;
+}
+
+.contents {
+  position: sticky;
+  top: 76px;
+  max-height: calc(100dvh - 76px);
+  overflow: auto;
+  padding: 28px 18px;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  scrollbar-width: thin;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.contents h2 {
+  font: 400 27px Georgia, serif;
+  margin: 8px 0 20px;
+}
+
+.chapters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.chapter {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  text-align: left;
+  text-decoration: none;
+}
+
+.chapter.current {
+  border: 2px solid var(--gold);
+}
+
+.chapter:disabled {
+  opacity: 1;
+  color: var(--muted);
+}
+
+.chapter img {
+  width: 70px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.chapter b {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.chapter small {
+  display: block;
+  margin: 5px 0;
+  color: var(--gold);
+  font-size: 10px;
+}
+
+.chapter em {
+  display: block;
+  margin-top: 7px;
+  font-size: 10px;
+  font-style: normal;
+  color: var(--muted);
+}
+
+/* READER CONTROLS */
+
+.reader {
+  min-width: 0;
+  padding: 26px clamp(20px, 4vw, 60px) 60px;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 980px;
+  margin: 0 auto 24px;
+}
+
+.tool-group {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.tool {
+  min-height: 40px;
+  min-width: 40px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 12px;
+}
+
+.tool[aria-pressed="true"] {
+  border-color: var(--gold);
+  box-shadow: inset 0 0 0 1px var(--gold);
+}
+
+.tool:disabled {
+  opacity: .45;
+}
+
+#theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.theme-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.notice {
+  max-width: 980px;
+  margin: 0 auto 20px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.resume {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+/* STORY */
+
+.story {
+  max-width: 980px;
+  margin: auto;
+}
+
+.story-heading {
+  max-width: 760px;
+  margin: 30px auto 40px;
+  text-align: center;
+}
+
+.story-heading h1 {
+  font: 400 clamp(36px, 4.2vw, 58px)/1.08 Georgia, serif;
+  letter-spacing: -.8px;
+  margin: 16px 0 22px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font: italic 18px/1.65 Georgia, serif;
+}
+
+.story-section {
+  padding: 12px 0 26px;
+}
+
+.prose {
+  max-width: 760px;
+  margin: auto;
+  font: var(--font)/1.85 Georgia, "Times New Roman", serif;
+  overflow-wrap: break-word;
+}
+
+.prose p {
+  margin-bottom: 1.2em;
+}
+
+.prose blockquote {
+  margin: 1.6em 0;
+  padding: 10px 0 10px 24px;
+  border-left: 2px solid var(--gold);
+  font-style: italic;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+.dialogue {
+  padding-left: 12px;
+}
+
+.story-image {
+  margin: 32px 0;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.story-image figcaption {
+  padding: 12px 20px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* OPENING IMAGE */
+
+.story-cover {
+  margin: 0 0 28px;
+}
+
+.story-cover img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.story-cover + .story-heading {
+  margin-top: 24px;
+}
+
+/* NIGHT SECTION */
+
+.night {
+  margin: 20px 0 40px;
+  padding: 38px 28px 22px;
+  border-radius: 12px;
+  background: #092238;
+  color: #f0ece3;
+}
+
+.night .story-image figcaption {
+  color: #bacbd8;
+}
+
+.night .prose blockquote {
+  border-color: #dfbd77;
+}
+
+/* DISCOVERY */
+
+.discovery {
+  max-width: 760px;
+  margin: 38px auto;
+  padding: 28px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.discovery h2 {
+  margin: 10px 0 18px;
+  font: 400 29px/1.2 Georgia, serif;
+}
+
+.discovery p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.discovery .disclaimer {
+  font-size: 12px !important;
+  color: var(--muted);
+  margin-bottom: 0 !important;
+}
+
+/* END OF STORY */
+
+.story-end {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.story-end a {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.next {
+  max-width: 330px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 18px;
+  color: var(--muted);
+  text-align: left;
+}
+
+.next small {
+  display: block;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.next strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 30px 4vw;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.footer nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+/* READING PROGRESS */
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .site-header {
+    flex-wrap: wrap;
+    padding: 14px 22px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .site-nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 12px 0;
+  }
+
+  .layout {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+
+  .contents {
+    padding: 24px 12px;
+  }
+
+  .chapter {
+    grid-template-columns: 58px 1fr;
+  }
+
+  .chapter img {
+    width: 58px;
+  }
+}
+
+/* HORIZONTAL STORY MENU */
+
+@media (max-width: 860px) {
+  .layout {
+    display: block;
+  }
+
+  .contents {
+    position: relative;
+    top: auto;
+    max-height: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 22px;
+  }
+
+  .contents h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .chapters {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 4px 3px 12px;
+    scroll-snap-type: x proximity;
+  }
+
+  .chapters li {
+    flex: 0 0 175px;
+    scroll-snap-align: start;
+  }
+
+  .chapter {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    gap: 8px;
+  }
+
+  .chapter img {
+    width: 100%;
+    height: 98px;
+  }
+
+  .chapter b {
+    min-height: 35px;
+  }
+
+  .reader {
+    padding: 24px 22px 48px;
+  }
+
+  .night {
+    padding: 28px 20px 18px;
+  }
+
+  .prose {
+    line-height: 1.8;
+  }
+}
+
+/* MOBILE THEME BUTTON */
+
+@media (max-width: 620px) {
+  #theme {
+    width: 40px;
+    padding: 8px;
+  }
+
+  #theme .theme-label {
+    display: none;
+  }
+
+  .story-cover {
+    margin-bottom: 22px;
+  }
+
+  .story-cover img {
+    border-radius: 7px;
+  }
+
+  .story-cover figcaption {
+    padding: 10px 8px;
+    font-size: 11px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 520px) {
+  :root {
+    --font: 19px;
+  }
+
+  .bar {
+    padding: 18px 22px;
+    font-size: 11px;
+  }
+
+  .story-heading {
+    margin: 22px auto 30px;
+  }
+
+  .story-heading h1 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .tools {
+    gap: 12px;
+  }
+
+  .night {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 25px 16px 16px;
+  }
+
+  .discovery {
+    padding: 22px;
+  }
+
+  .story-end {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .next {
+    max-width: none;
+  }
+
+  .resume {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+/* ======================================================
+   CONSISTENT SITE HEADER
+====================================================== */
+
+.site-header {
+  height: 86px;
+  min-height: 86px;
+  padding: 0 56px;
+  gap: 34px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .brand {
+  flex-shrink: 0;
+  gap: 12px;
+  color: #1477d4;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.site-header .brand img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.site-header .site-nav {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  align-items: center;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.site-header .site-nav a {
+  padding: 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  opacity: .86;
+}
+
+.site-header .site-nav a:hover,
+.site-header .site-nav a.active {
+  color: #1477d4;
+  opacity: 1;
+}
+
+.site-header .reader-header-contact,
+.site-header .site-nav .reader-mobile-contact {
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border: 0;
+  border-radius: 12px;
+  background: #1477d4;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(20, 119, 212, .25);
+  opacity: 1;
+}
+
+.site-header .reader-header-contact {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.site-header .reader-header-contact:hover,
+.site-header .site-nav .reader-mobile-contact:hover {
+  background: #3fa9f5;
+  color: #ffffff;
+}
+
+.site-header .site-nav .reader-mobile-contact {
+  display: none;
+}
+
+/* Existing JavaScript updates aria-expanded. */
+
+.site-header .menu-toggle {
+  position: relative;
+  display: none;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  min-height: 0;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 0;
+}
+
+.site-header .menu-toggle::before,
+.site-header .menu-toggle::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  width: 26px;
+  height: 2.5px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.site-header .menu-toggle::before {
+  top: 14px;
+  box-shadow: 0 7px 0 currentColor;
+}
+
+.site-header .menu-toggle::after {
+  top: 28px;
+}
+
+.site-header .menu-toggle[aria-expanded="true"]::before {
+  top: 21px;
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.site-header .menu-toggle[aria-expanded="true"]::after {
+  top: 21px;
+  transform: rotate(-45deg);
+}
+
+/* Match the contents menu offset to the header height. */
+
+.contents {
+  top: 86px;
+  max-height: calc(100dvh - 86px);
+}
+
+@media (max-width: 1100px) {
+  .site-header {
+    padding: 0 24px;
+  }
+
+  .site-header .site-nav,
+  .site-header .reader-header-contact {
+    display: none;
+  }
+
+  .site-header .menu-toggle {
+    display: block;
+  }
+
+  .site-header .site-nav.open {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: grid;
+    gap: 18px;
+    max-height: calc(100dvh - 86px);
+    overflow-y: auto;
+    margin: 0;
+    padding: 26px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 60px rgba(7, 21, 40, .12);
+  }
+
+  .site-header .site-nav.open .reader-mobile-contact {
+    display: flex;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 860px) {
+  .contents {
+    top: auto;
+    max-height: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    height: 74px;
+    min-height: 74px;
+    padding: 0 18px;
+  }
+
+  .site-header .brand {
+    font-size: 13px;
+  }
+
+  .site-header .brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .site-header .site-nav.open {
+    max-height: calc(100dvh - 74px);
+  }
+}
+
+/* ======================================================
+   CONSISTENT SITE FOOTER
+====================================================== */
+
+.footer {
+  display: block;
+  padding: 64px 56px 28px;
+  border: 0;
+  background: #020912;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.footer p,
+.footer h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(5, 1fr);
+  gap: 34px;
+  align-items: start;
+  max-width: none;
+  margin: 0;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: #1477d4;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  line-height: 1;
+}
+
+.footer-brand img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.footer-brand span {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+.footer-main p {
+  max-width: 360px;
+  margin-top: 18px;
+  color: #c9d5e4;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-col {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-col h3 {
+  margin-bottom: 6px;
+  color: #3fa9f5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.footer-col a,
+.footer-col p {
+  color: #c9d5e4;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: none;
+  margin: 44px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, .12);
+  color: #91a4bb;
+  font-size: 13px;
+}
+
+.footer-bottom p {
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.footer-bottom a {
+  color: #3fa9f5;
+}
+
+@media (max-width: 1100px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-main {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer {
+    padding: 48px 22px 24px;
+  }
+
+  .footer-brand {
+    font-size: 13px;
+  }
+
+  .footer-brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+/* HEADER — uppercase navigation */
+
+.site-header .nav > a,
+.site-header .site-nav > a,
+.site-header .header-btn,
+.site-header .reader-header-contact {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Active parent section: GALUMEYA */
+
+.site-header .nav > a.active,
+.site-header .site-nav > a.active {
+  position: relative;
+  color: #1477d4;
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Space for the underline in the reader header */
+
+.site-header .site-nav > a.active {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Gold underline — book and reader */
+
+.site-header .nav > a.active::after,
+.site-header .site-nav > a.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: #c9a04f;
+  pointer-events: none;
+}
+
+/* Mobile: underline only the active label */
+
+@media (max-width: 1100px) {
+  .site-header .site-nav > a.active {
+    justify-self: start;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header .nav > a.active {
+    align-self: flex-start;
+    width: fit-content;
+  }
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#storyTitle" data-ui="skip">
+  Skip to the story
+</a>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+    <a class="brand" href="index.html">
+      <img
+        src="assets/images/logo.png"
+        alt="Exotic Dairy logo"
+        width="54"
+        height="54"
+      >
+      <span>EXOTIC<br>DAIRY</span>
+    </a>
+  
+    <nav
+      class="site-nav"
+      id="siteNav"
+      aria-label="Main navigation"
+    >
+      <a href="products.html">Products</a>
+      <a class="active" href="galumeya.html">Galumeya</a>
+      <a href="experience-hub.html">Experience Hub</a>
+      <a href="participate.html">Participate</a>
+      <a href="partnerships.html">Partnerships</a>
+      <a href="about.html">About Us</a>
+      <a href="faq.html">FAQ</a>
+  
+      <a
+        class="reader-mobile-contact"
+        href="mailto:office@exoticdairy.com"
+      >
+        Get in Touch
+      </a>
+    </nav>
+  
+    <button
+      class="menu-toggle"
+      id="menu"
+      type="button"
+      aria-controls="siteNav"
+      aria-expanded="false"
+      aria-label="Open navigation"
+    >☰</button>
+  
+    <a
+      class="reader-header-contact"
+      href="mailto:office@exoticdairy.com"
+    >
+      Get in touch
+    </a>
+  </header>
+<div class="bar">
+  <a href="galumeya-book.html" data-ui="back">
+    ← Back to the Book
+  </a>
+
+  <span data-ui="volume">
+    Volume I · Story 01 / 08 · Free to read
+  </span>
+</div>
+
+<div class="layout">
+  <aside class="contents">
+    <p class="eyebrow" data-ui="volumeShort">Volume I</p>
+
+    <h2 data-ui="contents">The eight stories</h2>
+
+    <nav id="contentsNav" aria-label="Book contents">
+      <ol class="chapters" id="chapters"></ol>
+    </nav>
+  </aside>
+
+  <main class="reader" id="main">
+    <p
+      class="notice"
+      id="unavailable"
+      hidden
+      data-ui="unavailable"
+    >
+      That story is coming soon. Story 01 is available below.
+    </p>
+
+    <div class="tools">
+      <div class="tool-group">
+        <button
+          class="tool"
+          id="smaller"
+          type="button"
+          aria-label="Decrease text size"
+        >A−</button>
+
+        <button
+          class="tool"
+          id="larger"
+          type="button"
+          aria-label="Increase text size"
+        >A+</button>
+
+        <button
+          class="tool"
+          id="reset"
+          type="button"
+          data-ui="reset"
+        >Reset</button>
+
+        <button
+          class="tool"
+          id="theme"
+          type="button"
+          aria-pressed="false"
+        >Dark theme</button>
+      </div>
+
+      <div
+        class="tool-group"
+        id="languageControls"
+        role="group"
+        aria-label="Reading language"
+      >
+        <button
+          class="tool"
+          type="button"
+          data-language="en"
+          lang="en"
+          aria-pressed="true"
+        >English</button>
+
+        <button
+          class="tool"
+          type="button"
+          data-language="bg"
+          lang="bg"
+          aria-pressed="false"
+        >Български</button>
+      </div>
+    </div>
+
+    <div class="notice resume" id="resume" hidden>
+      <span data-ui="saved">
+        Your reading place is saved on this device.
+      </span>
+
+      <button
+        class="tool"
+        id="resumeButton"
+        type="button"
+        data-ui="continue"
+      >Continue reading →</button>
+    </div>
+
+    <article
+      class="story"
+      id="story"
+      aria-labelledby="storyTitle"
+    ></article>
+
+    <noscript>
+      <p class="notice">
+        Please enable JavaScript to read this bilingual edition.
+        / Моля, включете JavaScript, за да прочетете двуезичното издание.
+      </p>
+    </noscript>
+  </main>
+</div>
+
+<footer class="footer" id="contact" lang="en">
+    <div class="footer-top">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <img
+            src="assets/images/logo.png"
+            alt="Exotic Dairy logo"
+            width="54"
+            height="54"
+            loading="lazy"
+          >
+          <span>EXOTIC<br>DAIRY</span>
+        </div>
+  
+        <p>
+          Connecting nature, knowledge and discovery through
+          Galumeya products and the future Experience &amp; R&amp;D Hub.
+        </p>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Explore</h3>
+        <a href="products.html">Products</a>
+        <a href="experience-hub.html">Experience Hub</a>
+        <a href="about.html">About Us</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Galumeya</h3>
+        <a href="galumeya.html">Our Brand</a>
+        <a href="galumeya-book.html">1001 Discoveries</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Get Involved</h3>
+        <a href="participate.html">Participate</a>
+        <a href="partnerships.html">Partnerships</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+      </div>
+  
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Plovdiv, Bulgaria</p>
+  
+        <a href="mailto:office@exoticdairy.com">
+          office@exoticdairy.com
+        </a>
+  
+        <a href="mailto:partners@exoticdairy.com">
+          partners@exoticdairy.com
+        </a>
+  
+        <a href="tel:+359896733048">
+          +359 896 733 048
+        </a>
+  
+        <a href="mailto:office@exoticdairy.com">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2026 Exotic Dairy. All Rights Reserved.</p>
+  
+      <p>
+        Website designed and developed by
+        <a
+          href="https://geodynamicsonline.com"
+          target="_blank"
+          rel="noopener"
+        >
+          Geo Dynamics Ltd.
+        </a>
+      </p>
+    </div>
+  </footer>
+
+<script>
+(() => {
+  "use strict";
+
+  /* STORY TITLES */
+
+  const titles = {
+    bg: [
+      "Султанът, който бил опитал всичко",
+      "Камилата, която помнела пустинята",
+      "Магарето, което никой не слушал",
+      "Сиренето, което не искало да бърза",
+      "Невидимите майстори",
+      "Огънят с точната сила",
+      "Капката, която оставяла следа",
+      "Хиляда и първото откритие"
+    ],
+
+    en: [
+      "The Sultan Who Had Tasted Everything",
+      "The Camel Who Remembered the Desert",
+      "The Donkey No One Listened To",
+      "The Cheese That Would Not Hurry",
+      "The Invisible Masters",
+      "The Fire with Just the Right Heat",
+      "The Drop That Left a Trace",
+      "The Thousand and First Discovery"
+    ]
+  };
+
+  /* INTERFACE TRANSLATIONS */
+
+  const ui = {
+    bg: {
+      skip: "Към историята",
+      products: "Продукти",
+      brand: "Галумея",
+      book: "Книгата",
+      hub: "Experience Hub",
+      partners: "Партньорства",
+      about: "За нас",
+      faq: "Въпроси",
+      back: "← Обратно към книгата",
+      volume: "Том I · История 01 / 08 · Свободно четене",
+      volumeShort: "Том I",
+      contents: "Осемте истории",
+      unavailable: "Тази история предстои. По-долу можеш да прочетеш първата.",
+      reset: "Нулирай",
+      saved: "Мястото ти за четене е запазено на това устройство.",
+      continue: "Продължи да четеш →",
+      rights: "Всички права запазени.",
+      privacy: "Поверителност",
+      terms: "Условия",
+      contact: "Контакт",
+      dark: "Тъмна тема",
+      light: "Светла тема",
+      soon: "Очаквайте скоро",
+      reading: "Четеш сега · Безплатно",
+      story: "История",
+      all: "← Всички осем истории",
+      next: "Следващото откритие · Очаквайте скоро",
+      subtitle: "Приказка за един владетел, две необикновени животни и жената, която знаела, че всяко откритие започва с правилния въпрос.",
+      menuOpen: "Отвори менюто",
+      menuClose: "Затвори менюто",
+      smaller: "Намали текста",
+      larger: "Увеличи текста",
+      language: "Език на четене"
+    },
+
+    en: {
+      skip: "Skip to the story",
+      products: "Products",
+      brand: "Galumeya",
+      book: "The Book",
+      hub: "Experience Hub",
+      partners: "Partnerships",
+      about: "About Us",
+      faq: "FAQ",
+      back: "← Back to the Book",
+      volume: "Volume I · Story 01 / 08 · Free to read",
+      volumeShort: "Volume I",
+      contents: "The eight stories",
+      unavailable: "That story is coming soon. Story 01 is available below.",
+      reset: "Reset",
+      saved: "Your reading place is saved on this device.",
+      continue: "Continue reading →",
+      rights: "All Rights Reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Use",
+      contact: "Contact",
+      dark: "Dark theme",
+      light: "Light theme",
+      soon: "Coming soon",
+      reading: "Reading now · Free",
+      story: "Story",
+      all: "← All eight stories",
+      next: "The next discovery · Coming soon",
+      subtitle: "A tale of a ruler, two extraordinary animals and the woman who knew that every discovery begins with the right question.",
+      menuOpen: "Open navigation",
+      menuClose: "Close navigation",
+      smaller: "Decrease text size",
+      larger: "Increase text size",
+      language: "Reading language"
+    }
+  };
+
+  /*
+    Само първата история е публикувана.
+    Останалите седем имат заглавия и корици,
+    но текстовете им не са включени в страницата.
+  */
+
+  const bodies = {
+    bg: `
+<section class="story-section">
+  <div class="prose">
+    <p>В едно далечно царство живеел Султанът на Сто и един вкуса. Дворецът му имал сто и една стаи, библиотека с рецепти от целия познат свят и кухня, в която работели най-добрите майстори. На трапезата му никога не липсвало нищо.</p>
+
+    <p>И все пак всяка вечер султанът поглеждал към отрупаната маса и задавал един и същ въпрос:</p>
+
+    <blockquote>
+      <p>„Нима не е останал поне един вкус, който още не съм опитал?“</p>
+    </blockquote>
+  </div>
+
+  <figure class="story-image">
+    <img
+      src="assets/images/galumeya-story-01-sultan.png"
+      width="1536"
+      height="1024"
+      alt="Султанът размишлява пред богато отрупаната трапеза на дворцовата тераса."
+      fetchpriority="high"
+    >
+    <figcaption>Султанът притежавал сто и един вкуса, но търсел онзи, който още не познавал.</figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>Готвачите смесвали най-скъпите подправки. Сладкарите строели купи от мед и плодове. Придворният познавач на млякото добавял ту канела, ту розова вода, но султанът само поклащал глава.</p>
+
+    <p>Не защото храната не била добра. Той просто разбрал, че новото не се ражда от още украса върху нещо познато.</p>
+
+    <p>Тогава най-възрастният библиотекар си спомнил за една пътешественичка, за която керваните разказвали необикновени неща. „Тя не е магьосница — казал той. — Но вижда възможности там, където другите виждат само обикновени неща.“</p>
+
+    <p class="dialogue">
+      — Как се казва? — попитал султанът.<br>
+      — Галумея.
+    </p>
+  </div>
+</section>
+
+<section class="story-section night">
+  <div class="prose">
+    <p>Същата нощ небето над двореца се изпълнило с безброй звезди. Когато големите порти се отворили, през тях влязла жена в одежди с цветовете на млякото, нощта и златната светлина.</p>
+
+    <p>На челото ѝ блестяла малка четирилъчна звезда. От едната ѝ страна пристъпвала камила — спокойна и достойна. От другата вървяло магаре, което гледало придворните така, сякаш дворецът бил построен специално за неговото пристигане.</p>
+  </div>
+
+  <figure class="story-image">
+    <img
+      src="assets/images/galumeya-story-01-arrival.png"
+      width="1536"
+      height="1024"
+      alt="Галумея пристига пред осветените дворцови порти с камила и магаре под звездното небе."
+      loading="lazy"
+    >
+    <figcaption>Галумея пристигнала без магия — само със знание, камила и едно самоуверено магаре.</figcaption>
+  </figure>
+
+  <div class="prose">
+    <p class="dialogue">
+      — Казват, че носиш чудо — посрещнал я султанът.<br>
+      — Не нося чудеса — отвърнала Галумея. — Нося знанието как да ги откриваме.
+    </p>
+
+    <p>Тя поставила пред него два малки съда. В единия имало камилско мляко, а в другия — магарешко. Султанът опитал първото, после второто. Замълчал и опитал отново. Двата вкуса били различни един от друг и различни от всичко, което познавал.</p>
+
+    <p class="dialogue">
+      — Кое от тях е по-ценно? — попитал той.<br>
+      — Даровете на природата не се състезават — казала Галумея. — Всеки носи свои възможности. Нашата работа е да ги разберем.
+    </p>
+
+    <p>Камилата кимнала одобрително. Магарето също кимнало, макар че никой не бил сигурен дали е чул разговора, или просто искало да бъде включено.</p>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="prose">
+    <p>На следващата сутрин Галумея събрала дворцовите майстори. Сред тях имало сиренари, сладкари, пазители на стари рецепти и млади изследователи, които задавали прекалено много въпроси — качество, което тя особено ценяла.</p>
+
+    <p>Тя не им дала готова рецепта. Показала им как да наблюдават: как млякото се променя с времето, как реагира на различни температури и как грижата към всяка съставка определя крайния резултат.</p>
+
+    <blockquote>
+      <p>„Не повтаряйте познатото. Първо разберете природата на дара, който държите в ръцете си.“</p>
+    </blockquote>
+  </div>
+
+  <figure class="story-image">
+    <img
+      src="assets/images/galumeya-story-01-workshop.png"
+      width="1536"
+      height="1024"
+      alt="Галумея, султанът и дворцовите майстори опитват новите млечни продукти в работилницата."
+      loading="lazy"
+    >
+    <figcaption>Където майсторството срещнало любопитството, започнали да се раждат новите продукти.</figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>Работили през целия ден. От едното мляко създали нежно кисело мляко и зряло сирене. От другото — фини сладки изкушения.</p>
+
+    <p>Някои опити не се получили. Други ги изненадали. Галумея записвала всяка промяна, защото знаела, че неуспешният опит също може да бъде част от откритието.</p>
+
+    <p>Когато слънцето започнало да залязва, султанът опитал първите им творения. Този път не извикал, не ударил с лъжицата и не наредил да пуснат сто и една гълъбици. Само се усмихнал.</p>
+
+    <p class="dialogue">
+      — Ето го вкуса, който търсех.<br>
+      — Не сте търсили един вкус — отвърнала Галумея. — Търсили сте смелостта да опитате различен път.
+    </p>
+
+    <p>От този ден в двореца създали Работилница на откритията. Камилата настоявала, че всичко е започнало благодарение на нея. Магарето твърдяло, че без неговия характер историята щяла да бъде твърде сериозна.</p>
+
+    <p>Галумея не спорела с нито едно от двете. Тя просто нарисувала върху вратата капка, лице и звезда — дара, неговата пазителка и светлината на откритието.</p>
+
+    <blockquote>
+      <p>И така всички разбрали: новото започва там, където някой има смелостта да погледне познатото по различен начин.</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="discovery">
+  <p class="eyebrow">От историята към знанието</p>
+
+  <h2>Откритието зад приказката</h2>
+
+  <p>Камилското и магарешкото мляко се различават от познатите млечни суровини по своя състав и технологично поведение.</p>
+
+  <p>Затова разработването на качествени продукти изисква наблюдение, изпитвания и подходи, съобразени с особеностите на всяко мляко.</p>
+
+  <p class="disclaimer">Приказката представя идеята. Научната програма изследва реалните възможности — без обещания и недоказани здравни ефекти.</p>
+</section>
+`,
+
+    en: `
+<section class="story-section">
+  <div class="prose">
+    <p>In a faraway kingdom lived the Sultan of a Hundred and One Flavours. His palace had a hundred and one rooms, a library of recipes from across the known world, and a kitchen where the finest masters worked. Nothing was ever missing from his table.</p>
+
+    <p>And yet, every evening, the Sultan would look at the laden table and ask the same question:</p>
+
+    <blockquote>
+      <p>“Is there not a single flavour left that I have yet to taste?”</p>
+    </blockquote>
+  </div>
+
+  <figure class="story-image">
+    <img
+      src="assets/images/galumeya-story-01-sultan.png"
+      width="1536"
+      height="1024"
+      alt="The Sultan reflects before a lavish feast on the palace terrace."
+      fetchpriority="high"
+    >
+    <figcaption>The Sultan possessed a hundred and one flavours, yet searched for the one he did not know.</figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>The cooks blended the most expensive spices. The confectioners built bowls of honey and fruit. The court’s milk expert added cinnamon one moment and rose water the next, but the Sultan only shook his head.</p>
+
+    <p>Not because the food was poor. He had simply realised that something new does not emerge by adding more decoration to something familiar.</p>
+
+    <p>Then the oldest librarian remembered a traveller about whom the caravans told extraordinary tales. “She is no sorceress,” he said. “But she sees possibilities where others see only ordinary things.”</p>
+
+    <p class="dialogue">
+      “What is her name?” asked the Sultan.<br>
+      “Galumeya.”
+    </p>
+  </div>
+</section>
+
+<section class="story-section night">
+  <div class="prose">
+    <p>That night, the sky above the palace filled with countless stars. When the great gates opened, a woman entered wearing robes in the colours of milk, night and golden light.</p>
+
+    <p>A small four-pointed star shone upon her forehead. On one side walked a camel — calm and dignified. On the other walked a donkey, who regarded the courtiers as though the palace had been built especially for his arrival.</p>
+  </div>
+
+  <figure class="story-image">
+    <img
+      src="assets/images/galumeya-story-01-arrival.png"
+      width="1536"
+      height="1024"
+      alt="Galumeya arrives at the lantern-lit palace gates with a camel and a donkey beneath a starry sky."
+      loading="lazy"
+    >
+    <figcaption>Galumeya arrived without magic — only knowledge, a camel and one very self-assured donkey.</figcaption>
+  </figure>
+
+  <div class="prose">
+    <p class="dialogue">
+      “They say you bring a miracle,” the Sultan greeted her.<br>
+      “I do not bring miracles,” Galumeya replied. “I bring the knowledge of how to discover them.”
+    </p>
+
+    <p>She placed two small vessels before him. One held camel milk, the other donkey milk. The Sultan tasted the first, then the second. He fell silent and tasted them again. The two flavours were different from one another, and different from anything he knew.</p>
+
+    <p class="dialogue">
+      “Which is more precious?” he asked.<br>
+      “Nature’s gifts do not compete,” said Galumeya. “Each holds its own possibilities. Our task is to understand them.”
+    </p>
+
+    <p>The camel nodded approvingly. The donkey nodded too, although no one was certain whether he had heard the conversation or simply wanted to be included.</p>
+  </div>
+</section>
+
+<section class="story-section">
+  <div class="prose">
+    <p>The next morning, Galumeya gathered the palace’s master craftspeople. Among them were cheesemakers, confectioners, keepers of old recipes and young researchers who asked far too many questions — a quality she especially valued.</p>
+
+    <p>She did not give them a ready-made recipe. She showed them how to observe: how milk changes over time, how it responds to different temperatures, and how care for every ingredient determines the final result.</p>
+
+    <blockquote>
+      <p>“Do not repeat what is familiar. First understand the nature of the gift you hold in your hands.”</p>
+    </blockquote>
+  </div>
+
+  <figure class="story-image">
+    <img
+      src="assets/images/galumeya-story-01-workshop.png"
+      width="1536"
+      height="1024"
+      alt="Galumeya, the Sultan and the palace craftspeople taste their new dairy creations in the workshop."
+      loading="lazy"
+    >
+    <figcaption>Where craftsmanship met curiosity, new products began to take shape.</figcaption>
+  </figure>
+
+  <div class="prose">
+    <p>They worked throughout the day. From one milk they created delicate yogurt and mature cheese. From the other — fine sweet treats.</p>
+
+    <p>Some attempts failed. Others surprised them. Galumeya recorded every change, for she knew that an unsuccessful attempt could also be part of a discovery.</p>
+
+    <p>As the sun began to set, the Sultan tasted their first creations. This time he did not shout, bang his spoon or order a hundred and one doves to be released. He simply smiled.</p>
+
+    <p class="dialogue">
+      “Here is the flavour I was searching for.”<br>
+      “You were not searching for a single flavour,” Galumeya replied. “You were searching for the courage to try a different path.”
+    </p>
+
+    <p>From that day on, the palace had a Workshop of Discoveries. The camel insisted that it had all begun thanks to her. The donkey claimed that without his character, the story would have been far too serious.</p>
+
+    <p>Galumeya argued with neither of them. She simply drew a drop, a face and a star upon the door — the gift, its guardian and the light of discovery.</p>
+
+    <blockquote>
+      <p>And so they all understood: something new begins wherever someone has the courage to see the familiar in a different way.</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="discovery">
+  <p class="eyebrow">From story to knowledge</p>
+
+  <h2>The discovery behind the tale</h2>
+
+  <p>Camel and donkey milk differ from more familiar dairy raw materials in their composition and how they behave during processing.</p>
+
+  <p>Developing quality products therefore requires observation, testing and approaches adapted to the characteristics of each milk.</p>
+
+  <p class="disclaimer">The tale presents the idea. The scientific programme explores the real possibilities — without promises or unproven health claims.</p>
+</section>
+`
+  };
+
+  /* HELPERS */
+
+  const $ = id => document.getElementById(id);
+
+  const storage = {
+    get(key) {
+      try {
+        return localStorage.getItem(key);
+      } catch {
+        return null;
+      }
+    },
+
+    set(key, value) {
+      try {
+        localStorage.setItem(key, String(value));
+      } catch {}
+    }
+  };
+
+  const root = document.documentElement;
+  const params = new URLSearchParams(location.search);
+  const storedLanguage = storage.get("galumeya.language");
+
+  let language = ["bg", "en"].includes(params.get("lang"))
+    ? params.get("lang")
+    : ["bg", "en"].includes(storedLanguage)
+      ? storedLanguage
+      : (navigator.language || "en").toLowerCase().startsWith("bg")
+        ? "bg"
+        : "en";
+
+  const story = $("story");
+
+  /* READING POSITION */
+
+  const progressKey = "galumeya.reader.story01.complete.progress";
+
+  let currentProgress = 0;
+  let readingStarted = false;
+  let timer;
+
+  const savedNumber = Number(storage.get(progressKey));
+
+  const savedProgress = Number.isFinite(savedNumber)
+    ? Math.max(0, Math.min(1, savedNumber))
+    : 0;
+
+  function bounds() {
+    const start = Math.max(
+      0,
+      story.getBoundingClientRect().top + scrollY - 100
+    );
+
+    return {
+      start,
+      end: Math.max(
+        start + 1,
+        story.getBoundingClientRect().bottom
+          + scrollY
+          - innerHeight
+          + 50
+      )
+    };
+  }
+
+  function progress() {
+    const b = bounds();
+
+    currentProgress = Math.max(
+      0,
+      Math.min(1, (scrollY - b.start) / (b.end - b.start))
+    );
+
+    $("progress").style.transform =
+      "scaleX(" + currentProgress + ")";
+  }
+
+  function saveProgress() {
+    if (readingStarted) {
+      storage.set(progressKey, currentProgress);
+    }
+  }
+
+  function jump(ratio) {
+    const b = bounds();
+
+    window.scrollTo({
+      top: b.start + ratio * (b.end - b.start),
+      behavior: "instant"
+    });
+
+    progress();
+  }
+
+  /* MENU */
+
+  function closeMenu() {
+    $("siteNav").classList.remove("open");
+    $("menu").setAttribute("aria-expanded", "false");
+    $("menu").textContent = "☰";
+    $("menu").setAttribute("aria-label", ui[language].menuOpen);
+  }
+
+  /* THEME BUTTON */
+
+  function refreshThemeLabel() {
+    const dark = root.dataset.theme === "dark";
+    const label = ui[language][dark ? "light" : "dark"];
+    const button = $("theme");
+
+    button.innerHTML = `
+      <span class="theme-icon" aria-hidden="true">
+        ${dark ? "☀" : "☾"}
+      </span>
+      <span class="theme-label">${label}</span>
+    `;
+
+    button.setAttribute("aria-label", label);
+    button.setAttribute("title", label);
+    button.setAttribute("aria-pressed", String(dark));
+  }
+
+  /* RENDER THE BOOK */
+
+  function render(lang, keepPosition = false) {
+    progress();
+
+    const oldProgress = currentProgress;
+    const wasReading = scrollY >= bounds().start;
+
+    language = lang;
+    const t = ui[lang];
+
+    root.lang = lang;
+    document.title = titles[lang][0] + " — " + t.brand;
+
+    document.querySelectorAll("[data-ui]").forEach(element => {
+      element.textContent = t[element.dataset.ui];
+    });
+
+    $("smaller").setAttribute("aria-label", t.smaller);
+    $("larger").setAttribute("aria-label", t.larger);
+    $("languageControls").setAttribute("aria-label", t.language);
+    $("contentsNav").setAttribute("aria-label", t.contents);
+
+    document.querySelectorAll("[data-language]").forEach(button => {
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.language === lang)
+      );
+    });
+
+    /* Eight illustrated story buttons */
+
+    $("chapters").innerHTML = titles[lang].map((title, index) => {
+      const number = String(index + 1).padStart(2, "0");
+
+      const content = `
+        <img
+          src="assets/images/galumeya-book-cover-${number}.png"
+          width="1536"
+          height="1024"
+          alt=""
+          loading="lazy"
+        >
+        <span>
+          <small>${t.story} ${number}</small>
+          <b>${title}</b>
+          <em>${index ? "🔒 " + t.soon : t.reading}</em>
+        </span>
+      `;
+
+      if (index > 0) {
+        return `
+          <li>
+            <button class="chapter" type="button" disabled>
+              ${content}
+            </button>
+          </li>
+        `;
+      }
+
+      return `
+        <li>
+          <a
+            class="chapter current"
+            href="book-read.html?story=1&lang=${lang}"
+            aria-current="page"
+          >
+            ${content}
+          </a>
+        </li>
+      `;
+    }).join("");
+
+    /* Full first story */
+
+    story.innerHTML = `
+      <header class="story-heading">
+        <p class="eyebrow">${t.story} 01 · ${t.volumeShort}</p>
+        <h1 id="storyTitle" tabindex="-1">${titles[lang][0]}</h1>
+        <p class="subtitle">${t.subtitle}</p>
+      </header>
+
+      ${bodies[lang]}
+
+      <nav class="story-end" aria-label="${t.contents}">
+        <a href="galumeya-book.html#stories">${t.all}</a>
+
+        <button class="next" type="button" disabled>
+          <small>${t.next}</small>
+          <strong>${titles[lang][1]}</strong>
+        </button>
+      </nav>
+    `;
+
+    /* Opening image before the title, without duplication */
+
+    const openingImage = story.querySelector(".story-image");
+    const heading = story.querySelector(".story-heading");
+
+    if (openingImage && heading) {
+      openingImage.classList.add("story-cover");
+      story.insertBefore(openingImage, heading);
+    }
+
+    closeMenu();
+    refreshThemeLabel();
+    storage.set("galumeya.language", lang);
+
+    try {
+      const url = new URL(location.href);
+      url.searchParams.set("story", "1");
+      url.searchParams.set("lang", lang);
+      history.replaceState(null, "", url);
+    } catch {}
+
+    if (keepPosition && wasReading) {
+      requestAnimationFrame(() => jump(oldProgress));
+    } else {
+      progress();
+    }
+  }
+
+  /* Unavailable story links */
+
+  if (params.get("story") && params.get("story") !== "1") {
+    $("unavailable").hidden = false;
+  }
+
+  /* Light / dark theme */
+
+  const systemTheme = matchMedia("(prefers-color-scheme: dark)");
+  const savedTheme = storage.get("galumeya.reader.theme");
+
+  root.dataset.theme = ["dark", "light"].includes(savedTheme)
+    ? savedTheme
+    : systemTheme.matches
+      ? "dark"
+      : "light";
+
+  $("theme").addEventListener("click", () => {
+    root.dataset.theme =
+      root.dataset.theme === "dark" ? "light" : "dark";
+
+    storage.set("galumeya.reader.theme", root.dataset.theme);
+    refreshThemeLabel();
+  });
+
+  systemTheme.addEventListener("change", event => {
+    if (!storage.get("galumeya.reader.theme")) {
+      root.dataset.theme = event.matches ? "dark" : "light";
+      refreshThemeLabel();
+    }
+  });
+
+  /* Text size */
+
+  const defaultFont = innerWidth <= 520 ? 19 : 21;
+  const savedFont = Number(storage.get("galumeya.reader.font"));
+
+  let font = savedFont >= 17 && savedFont <= 29
+    ? savedFont
+    : defaultFont;
+
+  function setFont() {
+    root.style.setProperty("--font", font + "px");
+    $("smaller").disabled = font <= 17;
+    $("larger").disabled = font >= 29;
+    storage.set("galumeya.reader.font", font);
+    progress();
+  }
+
+  $("smaller").addEventListener("click", () => {
+    font = Math.max(17, font - 2);
+    setFont();
+  });
+
+  $("larger").addEventListener("click", () => {
+    font = Math.min(29, font + 2);
+    setFont();
+  });
+
+  $("reset").addEventListener("click", () => {
+    font = defaultFont;
+    setFont();
+  });
+
+  /* Language switch */
+
+  document.querySelectorAll("[data-language]").forEach(button => {
+    button.addEventListener("click", () => {
+      render(button.dataset.language, true);
+    });
+  });
+
+  /* Mobile navigation */
+
+  $("menu").addEventListener("click", () => {
+    const open = !$("siteNav").classList.contains("open");
+
+    $("siteNav").classList.toggle("open", open);
+    $("menu").setAttribute("aria-expanded", String(open));
+
+    $("menu").setAttribute(
+      "aria-label",
+      ui[language][open ? "menuClose" : "menuOpen"]
+    );
+
+    $("menu").textContent = open ? "×" : "☰";
+  });
+
+  document.addEventListener("click", event => {
+    if (!event.target.closest(".site-header")) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (
+      event.key === "Escape" &&
+      $("siteNav").classList.contains("open")
+    ) {
+      closeMenu();
+      $("menu").focus();
+    }
+  });
+
+  matchMedia("(max-width:1000px)")
+    .addEventListener("change", closeMenu);
+
+  /* Initial render */
+
+  render(language);
+  setFont();
+
+  if (savedProgress > .02 && savedProgress < .98) {
+    $("resume").hidden = false;
+  }
+
+  $("resumeButton").addEventListener("click", () => {
+    $("resume").hidden = true;
+    readingStarted = true;
+    requestAnimationFrame(() => jump(savedProgress));
+  });
+
+  /* Save reading progress on this device */
+
+  let frame = null;
+
+  window.addEventListener("scroll", () => {
+    if (frame !== null) return;
+
+    frame = requestAnimationFrame(() => {
+      frame = null;
+      progress();
+
+      if (scrollY >= bounds().start) {
+        readingStarted = true;
+      }
+
+      clearTimeout(timer);
+      timer = setTimeout(saveProgress, 700);
+    });
+  }, { passive: true });
+
+  window.addEventListener("resize", progress);
+  window.addEventListener("load", progress);
+  window.addEventListener("pagehide", saveProgress);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      saveProgress();
+    }
+  });
+})();
+</script>
+</body>
+</html>

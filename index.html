@@ -899,24 +899,62 @@
     </a>
 
     <nav class="nav" id="nav">
-      <a class="home-nav-link" href="#products-preview" data-section="products-preview">
+      <a
+        class="home-nav-link"
+        href="#products-preview"
+        data-section="products-preview"
+      >
         Products
-      </a>    
-      <a class="home-nav-link" href="#solution" data-section="solution">
-        Our Solution
-      </a>    
-      <a class="home-nav-link" href="#ecosystem-cards" data-section="ecosystem-cards">
+      </a>
+    
+      <a
+        class="home-nav-link"
+        href="#galumeya"
+        data-section="galumeya"
+      >
+        Galumeya
+      </a>
+    
+      <a
+        class="home-nav-link"
+        href="#experience-preview"
+        data-section="experience-preview"
+      >
         Experience Hub
-      </a>    
-      <a class="home-nav-link" href="#collaboration-preview" data-section="collaboration-preview">
+      </a>
+    
+      <a
+        class="home-nav-link"
+        href="#participate"
+        data-section="participate"
+      >
+        Participate
+      </a>
+    
+      <a
+        class="home-nav-link"
+        href="#collaboration-preview"
+        data-section="collaboration-preview"
+      >
         Partnerships
-      </a>    
-      <a class="home-nav-link" href="#about-preview" data-section="about-preview">
+      </a>
+    
+      <a
+        class="home-nav-link"
+        href="#about-preview"
+        data-section="about-preview"
+      >
         About Us
-      </a>    
-      <a class="home-nav-link" href="#faq" data-section="faq">
+      </a>
+    
+      <a
+        class="home-nav-link"
+        href="#faq"
+        data-section="faq"
+      >
         FAQ
-      </a>    
+      </a>
+    
       <a
         class="mobile-contact-btn modal-trigger"
         href="#"
@@ -938,258 +976,357 @@
   </header>
 
   <main id="top">
-    <section class="hero-grid" id="products-preview">
-      <article class="hero-card">
-        <img src="assets/images/hero-camel.png" alt="Camel milk" />
+    <!-- 1. GALUMEYA HERO -->
+    <section
+      class="gal-hero"
+      id="products-preview"
+      aria-labelledby="gal-hero-title"
+    >
+      <div class="gal-hero__media" aria-hidden="true">
+        <img
+          src="assets/images/galumeya-home-hero.png"
+          alt=""
+        >
+      </div>
 
-        <div class="hero-overlay">
-          <h1>Camel Milk</h1>
+      <div class="gal-hero__shade"></div>
 
-          <p>Nature’s ancient superfood.</p>
+      <div class="gal-hero__content">
+        <p class="gal-eyebrow gal-eyebrow--photo">
+          Exotic Dairy · Galumeya
+        </p>
 
-          <span>Functional • Holistic • Global</span>
+        <h1 id="gal-hero-title">
+          Premium products.<br>
+          <span>Real impact.</span>
+        </h1>
 
-          <div class="hero-card-actions">
-            <button
-              class="hero-card-btn modal-trigger"
-              type="button"
-              data-modal="camelMilkModal"
-            >
-              Learn More
-            </button>
-          </div>
+        <p>
+          A gift from nature.<br>
+          Created through knowledge.
+        </p>
+        
+      </div>
+    </section>
+
+
+    <!-- 2. PRODUCT CARDS -->
+    <section
+      class="gal-product-bridge"
+      id="product-collections"
+      aria-label="Galumeya product collections"
+    >
+    <div class="gal-product-grid">
+
+      <a
+        class="gal-product-card gal-product-card--camel"
+        href="products.html?category=camel"
+      >
+        <span class="gal-product-card__image">
+          <img
+            src="assets/images/camel-products-card.png"
+            alt="Camel and Galumeya camel dairy products"
+          >
+        </span>
+
+        <span class="gal-product-card__body">
+          <span class="gal-eyebrow">
+            Galumeya collection
+          </span>
+
+          <strong>Camel Milk</strong>
+
+          <small>
+            Explore yogurt, labneh and artisan cheeses.
+          </small>
+
+          <span class="gal-text-link">
+            Camel milk products →
+          </span>
+        </span>
+      </a>
+
+
+      <a
+        class="gal-product-card gal-product-card--donkey"
+        href="products.html?category=donkey"
+      >
+        <span class="gal-product-card__image">
+          <img
+            src="assets/images/donkey-products-card.png"
+            alt="Donkey and Galumeya donkey dairy products"
+          >
+        </span>
+
+        <span class="gal-product-card__body">
+          <span class="gal-eyebrow">
+            Galumeya collection
+          </span>
+
+          <strong>Donkey Milk</strong>
+
+          <small>
+            Explore yogurt, cheeses and milk candies.
+          </small>
+
+          <span class="gal-text-link">
+            Donkey milk products →
+          </span>
+        </span>
+      </a>
+
+
+      <a
+        class="gal-product-card gal-product-card--all"
+        href="products.html"
+      >
+        <span class="gal-product-card__image">
+          <img
+            src="assets/images/all-products-card.png"
+            alt="Complete Galumeya product collection"
+          >
+        </span>
+
+        <span class="gal-product-card__body">
+          <span class="gal-eyebrow">
+            The complete collection
+          </span>
+
+          <strong>All Products</strong>
+
+          <small>
+            Discover the complete Galumeya product world.
+          </small>
+
+          <span class="gal-text-link">
+            Explore all products →
+          </span>
+        </span>
+      </a>
+
+    </div>
+    </section>
+
+
+    <!-- 3. WORLD OF GALUMEYA -->
+    <section
+    class="gal-world"
+    id="galumeya"
+    data-gal-reveal
+    >
+    <header class="gal-section-heading">
+      <p class="gal-eyebrow">Our Brand</p>
+
+      <h2>World of Galumeya</h2>
+
+      <p>
+        Discover the philosophy, the three symbols and the stories
+        behind our brand.
+      </p>
+    </header>
+
+    <div class="gal-world__grid">
+
+      <article class="gal-feature-card gal-feature-card--brand">
+        <div class="gal-feature-card__media">
+          <img
+            src="assets/images/world-of-galumeya-brand.png"
+            alt="Galumeya identity in ivory, navy and gold"
+          >
+        </div>
+
+        <div class="gal-feature-card__body">
+          <p class="gal-eyebrow">
+            Galumeya · by Exotic Dairy
+          </p>
+
+          <h3>A gift from nature.</h3>
+
+          <p>
+            The drop. The guardian. The star of discovery.
+          </p>
+
+          <a class="gal-btn gal-btn--gold" href="galumeya.html">
+            Explore the brand
+          </a>
         </div>
       </article>
 
-      <article class="hero-card">
-        <img src="assets/images/hero-donkey.png" alt="Donkey milk" />
 
-        <div class="hero-overlay">
-          <h1>Donkey Milk</h1>
-
-          <p>Nature’s rarest premium dairy.</p>
-
-          <span>Functional • Premium • Sustainable</span>
-
-          <div class="hero-card-actions">
-            <button
-              class="hero-card-btn modal-trigger"
-              type="button"
-              data-modal="donkeyMilkModal"
-            >
-              Learn More
-            </button>
-          </div>
+      <article class="gal-feature-card gal-feature-card--book">
+        <div class="gal-feature-card__media">
+          <img
+            src="assets/images/1001-discoveries-book.png"
+            alt="Galumeya with the illustrated book of discoveries"
+          >
         </div>
-      </article>
 
-      <article class="hero-card">
-        <img src="assets/images/hero-products.png" alt="Products arriving soon" />
+        <div class="gal-feature-card__body">
+          <p class="gal-eyebrow">
+            The illustrated book
+          </p>
 
-        <div class="hero-overlay">
-          <h1>Products Arriving Soon</h1>
+          <h3>1001 Discoveries of Galumeya</h3>
 
-          <p>Milk first. Innovation beyond dairy.</p>
+          <p>
+            Read the first story free · Volume I from €10.
+          </p>
 
-          <span>Coming soon</span>
+          <div class="gal-feature-card__actions">
+            <a
+              class="gal-btn gal-btn--gold"
+              href="book-read.html?story=1"
+            >
+              Read the first story
+            </a>
 
-          <div class="hero-card-actions">
-            <a class="hero-card-btn" href="products.html">
-              Explore Products
+            <a
+              class="gal-inline-link"
+              href="galumeya-book.html"
+            >
+              Explore the book →
             </a>
           </div>
         </div>
       </article>
+
+    </div>
     </section>
 
-    <section class="section opportunity">
-      <p class="eyebrow">The Opportunity</p>
 
-      <h2>Amazing Facts. Clear Need. Global Opportunity.</h2>
+    <!-- 4. GALUMEYA LEGACY / EXPERIENCE + R&D HUB -->
+    <!-- GALUMEYA EXPERIENCE & R&D HUB -->
 
-      <div class="stats-grid">
-        <div class="stat">
-          <div class="icon">
-            <img src="assets/icons/camel.svg" alt="">
-          </div>
-
-          <h3>40 Million</h3>
-
-          <p>Camels worldwide in harsh environments.</p>
-        </div>
-
-        <div class="stat">
-          <div class="icon">
-            <img src="assets/icons/people.svg" alt="">
-          </div>
-
-          <h3>70%+</h3>
-
-          <p>Of people cannot digest cow milk properly.</p>
-        </div>
-
-        <div class="stat">
-          <div class="icon">
-            <img src="assets/icons/africa.svg" alt="">
-          </div>
-
-          <h3>Africa &amp; MENA</h3>
-
-          <p>The regions that need it most produce it most.</p>
-        </div>
-
-        <div class="stat">
-          <div class="icon">
-            <img src="assets/icons/globe.svg" alt="">
-          </div>
-
-          <h3>Global Opportunity</h3>
-
-          <p>Biggest need. Natural solution. Untapped potential.</p>
-        </div>
+    <section
+      class="gal-legacy"
+      id="experience-preview"
+      data-gal-reveal
+      >
+      <div class="gal-legacy__media">
+        <img
+          src="assets/images/galumeya-experience-hub.png"
+          alt="Galumeya Experience and Research and Development Hub"
+        >
       </div>
-    </section>
 
-    <section class="solution" id="solution">
-      <div class="solution-content">
-        <p class="eyebrow">Our Solution</p>
-
-        <h2>
-          Science.<br>
-          Technology.<br>
-          Health.
-        </h2>
-
-        <p>
-          We transform camel and donkey milk into functional bio-products
-          designed to improve health and quality of life.
+      <div class="gal-legacy__content">
+        <p class="gal-eyebrow">
+          Galumeya
         </p>
 
-        <div class="solution-actions">
-          <a class="btn" href="our-solution.html">
-            Explore Our Solution
+        <h2>
+          Where knowledge<br>
+          leaves a legacy.
+        </h2>
+
+        <h3>
+          Experience &amp; R&amp;D Hub · by Exotic Dairy
+        </h3>
+
+        <p>
+          The stories inspire a real place for research, product
+          development, responsible animal care, education and shared
+          discovery. Supporting Galumeya helps us build the environment
+          where new knowledge becomes real value.
+        </p>
+
+        <div class="gal-legacy__actions">
+          <a
+            class="gal-btn gal-btn--gold"
+            href="experience-hub.html"
+          >
+            Discover the Hub
+          </a>
+
+          <a
+            class="gal-inline-link"
+            href="galumeya-book.html#support"
+          >
+            Support the legacy →
           </a>
         </div>
       </div>
-
-      <img
-        src="assets/images/solution-lab.png"
-        alt="Functional dairy laboratory products"
-      />
     </section>
 
-    <section class="solution-focus">
-      <div class="solution-focus-grid">
-        <article class="solution-focus-item">
-          <div class="solution-focus-icon">
-            <img src="assets/icons/food.svg" alt="">
-          </div>
 
-          <h3>Functional Foods</h3>
+    <!-- 5. PARTICIPATE -->
+    <section
+      class="gal-participate"
+      id="participate"
+      data-gal-reveal
+    >
+    <header class="gal-section-heading">
+      <p class="gal-eyebrow">Participate</p>
+      <h2>Be part of what comes next.</h2>
+    </header>
 
-          <p>
-            Nourishing, purpose-driven products designed for modern nutrition.
-          </p>
-        </article>
+    <div class="gal-participate__grid">
 
-        <article class="solution-focus-item">
-          <div class="solution-focus-icon">
-            <img src="assets/icons/capsule.svg" alt="">
-          </div>
-
-          <h3>Nutraceuticals</h3>
-
-          <p>
-            Science-backed health solutions based on rare milk potential.
-          </p>
-        </article>
-
-        <article class="solution-focus-item">
-          <div class="solution-focus-icon">
-            <img src="assets/icons/cosmetics.svg" alt="">
-          </div>
-
-          <h3>Cosmetics</h3>
-
-          <p>
-            Natural beauty applications inspired by unique dairy bioactives.
-          </p>
-        </article>
-
-        <article class="solution-focus-item">
-          <div class="solution-focus-icon">
-            <img src="assets/icons/leaf.svg" alt="">
-          </div>
-
-          <h3>Wellness</h3>
-
-          <p>
-            Holistic care for body, balance and long-term well-being.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="ecosystem-cards" id="ecosystem-cards">
-      <article class="ecosystem-card" id="experience-preview">
+      <article class="gal-participate-card gal-participate-card--crowd">
         <img
-          src="assets/images/experience-hub.png"
-          alt="Exotic Dairy Experience Hub"
+          src="assets/images/crowd-participation.png"
+          alt="Community supporting the Galumeya research and experience hub"
         >
-
-        <div class="ecosystem-card-content">
-          <p class="eyebrow">Experience Hub</p>
-
-          <h2>
-            Science. Nature. Experience.
-          </h2>
-
-          <p>
-            A future ecosystem bringing together animals, research,
-            product development, production, education and public experience.
+      
+        <div class="gal-participate-card__shade"></div>
+      
+        <div class="gal-participate-card__content">
+          <p class="gal-eyebrow gal-eyebrow--photo">
+            Crowd Participation
           </p>
-
-          <div class="ecosystem-tags">
-            <span>Animals</span>
-            <span>Research</span>
-            <span>Products</span>
-            <span>Experience</span>
-          </div>
-
-          <a class="btn" href="experience-hub.html">
-            Explore the Hub
+      
+          <h3>
+            Your part in<br>
+            the next discovery.
+          </h3>
+      
+          <p>
+            The book, optional support and future participation programmes.
+          </p>
+      
+          <a
+            class="gal-btn gal-btn--gold"
+            href="participate.html"
+          >
+            Explore participation
+          </a>
+        </div>
+      </article>
+      
+      
+      <article class="gal-participate-card gal-participate-card--partners">
+        <img
+          src="assets/images/business-partnerships.png"
+          alt="International business and research partnership"
+        >
+      
+        <div class="gal-participate-card__shade"></div>
+      
+        <div class="gal-participate-card__content">
+          <p class="gal-eyebrow gal-eyebrow--photo">
+            Partnerships
+          </p>
+      
+          <h3>
+            Growth is<br>
+            stronger together.
+          </h3>
+      
+          <p>
+            Farms, science, production, technology,
+            distribution and market opportunities.
+          </p>
+      
+          <a
+            class="gal-btn gal-btn--gold"
+            href="partnerships.html"
+          >
+            Explore partnerships
           </a>
         </div>
       </article>
 
-      <article class="ecosystem-card" id="partnerships-preview">
-        <img
-          src="assets/images/partnership.png"
-          alt="Exotic Dairy partnerships"
-        >
-
-        <div class="ecosystem-card-content">
-          <p class="eyebrow">Partnerships</p>
-
-          <h2>
-            Growth Is Stronger Together.
-          </h2>
-
-          <p>
-            We connect farms, science, production, technology, distribution
-            and market opportunities into partnerships designed for shared value.
-          </p>
-
-          <div class="ecosystem-tags">
-            <span>Strategic Partnerships</span>
-            <span>Founder Program</span>
-          </div>
-
-          <a class="btn" href="partnerships.html">
-            Explore Partnerships
-          </a>
-        </div>
-      </article>
+    </div>
     </section>
 
     <section class="collaboration-section" id="collaboration-preview">
@@ -1698,26 +1835,25 @@
         </div>
     
         <div>
-          <h3>
-            How can people participate in the Experience Hub?
-          </h3>
-    
+          <h3>How can I get involved?</h3>
+        
           <p>
-            The planned Crowd Participation program will begin with
-            One-Time Participation, Membership and Adopt a Camel or Donkey —
-            combining contribution with recognition, access and program benefits.
+            Explore the Galumeya book and register your interest in future
+            one-time participation, membership or symbolic animal adoption
+            programs on our
+            <a href="participate.html">Participate page</a>.
           </p>
         </div>
-    
+        
         <div>
-          <h3>
-            What is the Founder Partnership Program?
-          </h3>
-    
+          <h3>How can businesses partner with Exotic Dairy?</h3>
+        
           <p>
-            Founder Partnership is designed for active strategic partners who can
-            contribute not only capital, but also expertise, technology,
-            production, distribution, market access or other business capabilities.
+            We welcome collaboration across research, animal care,
+            production, technology, distribution and market development.
+            Visit our
+            <a href="partnerships.html">Partnerships page</a>
+            to explore opportunities.
           </p>
         </div>
     
@@ -1728,7 +1864,7 @@
     
           <p>
             Explore detailed answers about camel and donkey milk, products,
-            research, the Experience Hub, Crowd Participation and partnerships.
+            research, the Experience Hub, participation and partnerships.
           </p>
     
           <a class="btn" href="faq.html">
@@ -1773,106 +1909,52 @@
           <img
             src="assets/images/logo.png"
             alt="Exotic Dairy logo"
+            loading="lazy"
           >
-  
-          <span>
-            EXOTIC<br>
-            DAIRY
-          </span>
+          <span>EXOTIC<br>DAIRY</span>
         </div>
   
         <p>
-          Building the future of functional bio-dairy through rare milk,
-          research, premium products and ecosystem innovation.
+          Connecting nature, knowledge and discovery through
+          Galumeya products and the future Experience &amp; R&amp;D Hub.
         </p>
       </div>
   
       <div class="footer-col">
         <h3>Explore</h3>
   
-        <a href="products.html">
-          Products
-        </a>
-  
-        <a href="our-solution.html">
-          Our Solution
-        </a>
-  
-        <a href="experience-hub.html">
-          Experience Hub
-        </a>
-  
-        <a href="partnerships.html">
-          Partnerships
-        </a>
-  
-        <a href="about.html">
-          About Us
-        </a>
+        <a href="products.html">Products</a>
+        <a href="experience-hub.html">Experience Hub</a>
+        <a href="about.html">About Us</a>
       </div>
   
       <div class="footer-col">
-        <h3>Products</h3>
+        <h3>Galumeya</h3>
   
-        <a href="products.html">
-          All Products
-        </a>
-  
-        <a href="products.html?category=camel">
-          Camel Milk Products
-        </a>
-  
-        <a href="products.html?category=donkey">
-          Donkey Milk Products
-        </a>
+        <a href="galumeya.html">Our Brand</a>
+        <a href="galumeya-book.html">1001 Discoveries</a>
       </div>
   
       <div class="footer-col">
-        <h3>Participate</h3>
+        <h3>Get Involved</h3>
   
-        <a href="experience-hub.html#crowd-participation">
-          Crowd Participation
-        </a>
-  
-        <a href="partnerships.html">
-          Founder Partnership
-        </a>
-  
-        <a
-          href="#"
-          class="modal-trigger"
-          data-modal="contactModal"
-        >
-          Get in Touch
-        </a>
+        <a href="participate.html">Participate</a>
+        <a href="partnerships.html">Partnerships</a>
       </div>
   
       <div class="footer-col">
         <h3>Resources</h3>
   
-        <a href="faq.html">
-          FAQ
-        </a>
-  
-        <a href="privacy.html">
-          Privacy Policy
-        </a>
-  
-        <a href="terms.html">
-          Terms of Use
-        </a>
-  
-        <a href="disclaimer.html">
-          Disclaimer
-        </a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
       </div>
   
       <div class="footer-col">
         <h3>Contact</h3>
   
-        <p>
-          Plovdiv, Bulgaria
-        </p>
+        <p>Plovdiv, Bulgaria</p>
   
         <a href="mailto:office@exoticdairy.com">
           office@exoticdairy.com
@@ -1885,14 +1967,20 @@
         <a href="tel:+359896733048">
           +359 896 733 048
         </a>
+  
+        <a
+          class="modal-trigger"
+          href="#contactModal"
+          data-modal="contactModal"
+        >
+          Get in Touch
+        </a>
       </div>
   
     </div>
   
     <div class="footer-bottom">
-      <p>
-        © 2026 Exotic Dairy. All Rights Reserved.
-      </p>
+      <p>© 2026 Exotic Dairy. All Rights Reserved.</p>
   
       <p>
         Website designed and developed by
@@ -2385,57 +2473,7 @@
     if (quoteSlides.length > 0) {
       startQuoteCarousel();
     }
-    
-    const homeNavSelectors = [
-      '.nav a[href="products.html"]',
-      '.nav a[href="our-solution.html"]',
-      '.nav a[href="experience-hub.html"]',
-      '.nav a[href="partnerships.html"]',
-      '.nav a[href="about.html"]',
-      '.nav a[href="faq.html"]'
-    ];
-
-    function getHomeNavMarkers() {
-      const products = document.getElementById("products-preview");
-      const solution = document.getElementById("solution");
-      const ecosystemCards = document.getElementById("ecosystem-cards");
-      const collaboration = document.getElementById("collaboration-preview");
-      const about = document.getElementById("about-preview");
-      const faq = document.getElementById("faq");
-
-      const ecosystemTop = ecosystemCards ? ecosystemCards.offsetTop : 0;
-      const ecosystemHeight = ecosystemCards ? ecosystemCards.offsetHeight : 0;
-
-      return [
-        {
-          selector: '.nav a[href="products.html"]',
-          top: products ? products.offsetTop : 0
-        },
-        {
-          selector: '.nav a[href="our-solution.html"]',
-          top: solution ? solution.offsetTop : 0
-        },
-        {
-          selector: '.nav a[href="experience-hub.html"]',
-          top: ecosystemCards ? ecosystemTop : 0
-        },
-        {
-          selector: '.nav a[href="partnerships.html"]',
-          top: collaboration
-            ? collaboration.offsetTop - 140
-            : ecosystemTop + ecosystemHeight * .55
-        },
-        {
-          selector: '.nav a[href="about.html"]',
-          top: about ? about.offsetTop : 0
-        },
-        {
-          selector: '.nav a[href="faq.html"]',
-          top: faq ? faq.offsetTop : 0
-        }
-      ];
-    }
-
+        
     function updateHomeActiveNav() {
       const scrollPosition = window.scrollY + 170;
       const markers = getHomeNavMarkers();
