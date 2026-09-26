@@ -2185,12 +2185,6 @@ p:not(.gal-eyebrow) {
     background: #eadfce;
   }
 
-  .gal-product-card--camel
-  .gal-product-card__image > img {
-    object-fit: contain;
-    object-position: center center;
-  }
-
   .gal-product-card__body {
     min-height: 180px;
     padding: 23px 22px 25px;
